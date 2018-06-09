@@ -7,10 +7,10 @@
       "option": {
         "brand": {
           "logo": "./globe.svg",
-          "title": "Caldera Whatever",
-          "description": "Does whatever for Caldera Forms",
-          "repository": "https://github.com/calderawp/caldera-whatever",
-          "site": "http://calderalabs.org/caldera-npm-module-boilerplate/",
+          "title": "Caldera API Client",
+          "description": "JavaScript API client for Caldera Forms",
+          "repository": "https://github.com/calderawp/caldera-api-client",
+          "site": "http://calderalabs.org/caldera-api-client/",
           "author": "http://calderalabs.org",
           "image": "https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"
         },

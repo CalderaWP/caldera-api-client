@@ -1,12 +1,12 @@
-# caldera-npm-module-boilerplate
-Boilerplate to write npm modules in ES6 and distribute vanilla ES5 code for Caldera Forms dependencies.
+# caldera-api-client
+JavaScript API client for Caldera Forms and Caldera Forms Pro
 
-[![Build Status](https://travis-ci.org/calderawp/npm-module-boilerplate.svg?branch=master)](https://travis-ci.org/calderawp/npm-module-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/calderawp/npm-module-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/calderawp/npm-module-boilerplate?branch=master)
+[![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)
+[![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)
 
 Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)
 
-🌋 [Documentation](http://calderalabs.org/caldera-npm-module-boilerplate/)
+🌋 [Documentation](http://calderalabs.org/caldera-api-client/)
 
 ## Included
 
@@ -20,6 +20,8 @@ Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://
 
 - Auto publish to npm on every build.
 
+### Usage
+
 ## Install
 
 ### Dependencies
@@ -28,42 +30,6 @@ Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://
 * Flow
 * npm
 * Node
-
-### Create New Project
-Change `caldera-whatever` to package name.
-
-#### Step 1: Install
-* Clone:
-```
-git clone git@github.com:calderawp/npm-module-boilerplate.git ## Clone boilerplate
-mv npm-module-boilerplate caldera-whatever ## change name of directory
-cd caldera-whatever   # Change current directory to the newly created one
-yarn install          # Install dependencies
-```
-
-* Reset Git:
-- Make sure to create Github repo first
-
-```
-git remote remove
-remote add origin git@github.com:CalderaWP/caldera-whatever.git
-git add .
-git commit -m "generate from boilerpate"
-git push --set-upstream origin master
-```
-* Enable Github Pages For Docs
-
-Go to Settings in Github repo.
-
-Enable Github pages for master branch /docs dir
-
-
-
-* Step 2: Rename Stuff
-Replace 'caldera-whatever' with package name.
-
-* Step 3: Profit
-Write code and such.
 
 ## Testing
 

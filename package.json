@@ -1,7 +1,7 @@
 {
-  "name": "@caldera-labs/whatever",
+  "name": "@caldera-labs/api-client",
   "version": "0.1.0",
-  "description": "Does whatever for Caldeera Forms",
+  "description": "API client for Caldera Forms and Caldera Forms Pro",
   "main": "./dist/index.js",
   "scripts": {
     "build": "npm run build:pre && npm run build:compile && npm run build:post",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ygnr/npm-module-es6-boilerplate.git"
+    "url": "git+https://github.com/calderawp/caldera-api-client.git"
   },
   "keywords": [
     "es6",
@@ -30,9 +30,9 @@
   "author": "Josh Pollock <Josh@calderawp.com>",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/calderawp/caldera-whatever/issues"
+    "url": "https://github.com/calderawp/caldera-api-client/issues"
   },
-  "homepage": "https://github.com/calderawp/caldera-whatever/#readme",
+  "homepage": "http://calderalabs.org/caldera-api-client/",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^20.0.3",
