@@ -10,7 +10,7 @@
           "title": "Caldera Whatever",
           "description": "Does whatever for Caldera Forms",
           "repository": "https://github.com/calderawp/caldera-whatever",
-          "site": "https://whatever.calderalabs.org",
+          "site": "http://calderalabs.org/caldera-npm-module-boilerplate/",
           "author": "http://calderalabs.org",
           "image": "https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"
         },
