@@ -1,8 +1,14 @@
 window.esdocSearchIndex = [
   [
-    "@caldera-labs/api-client/src/index.js~sayhi",
-    "function/index.html#static-function-sayHi",
-    "<span>sayHi</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/index.js</span>",
+    "@caldera-labs/api-client/src/client.js~client",
+    "class/src/Client.js~Client.html",
+    "<span>Client</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/Client.js</span>",
+    "class"
+  ],
+  [
+    "@caldera-labs/api-client/src/apirequest.js~apirequest",
+    "function/index.html#static-function-apiRequest",
+    "<span>apiRequest</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/apiRequest.js</span>",
     "function"
   ],
   [
@@ -288,9 +294,105 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/index.js",
-    "file/src/index.js.html",
-    "src/index.js",
+    "src/client.js",
+    "file/src/Client.js.html",
+    "src/Client.js",
+    "file"
+  ],
+  [
+    "src/client.js~client#constructor",
+    "class/src/Client.js~Client.html#instance-constructor-constructor",
+    "src/Client.js~Client#constructor",
+    "method"
+  ],
+  [
+    "src/client.js~client#createrequest",
+    "class/src/Client.js~Client.html#instance-method-createRequest",
+    "src/Client.js~Client#createRequest",
+    "method"
+  ],
+  [
+    "src/client.js~client#credentials",
+    "class/src/Client.js~Client.html#instance-member-credentials",
+    "src/Client.js~Client#credentials",
+    "member"
+  ],
+  [
+    "src/client.js~client#handleerror",
+    "class/src/Client.js~Client.html#instance-method-handleError",
+    "src/Client.js~Client#handleError",
+    "method"
+  ],
+  [
+    "src/client.js~client#handleresponse",
+    "class/src/Client.js~Client.html#instance-method-handleResponse",
+    "src/Client.js~Client#handleResponse",
+    "method"
+  ],
+  [
+    "src/client.js~client#headers",
+    "class/src/Client.js~Client.html#instance-member-headers",
+    "src/Client.js~Client#headers",
+    "member"
+  ],
+  [
+    "src/client.js~client#mode",
+    "class/src/Client.js~Client.html#instance-member-mode",
+    "src/Client.js~Client#mode",
+    "member"
+  ],
+  [
+    "src/client.js~client#reqdelete",
+    "class/src/Client.js~Client.html#instance-method-reqDelete",
+    "src/Client.js~Client#reqDelete",
+    "method"
+  ],
+  [
+    "src/client.js~client#reqget",
+    "class/src/Client.js~Client.html#instance-method-reqGet",
+    "src/Client.js~Client#reqGet",
+    "method"
+  ],
+  [
+    "src/client.js~client#reqpost",
+    "class/src/Client.js~Client.html#instance-method-reqPost",
+    "src/Client.js~Client#reqPost",
+    "method"
+  ],
+  [
+    "src/client.js~client#reqput",
+    "class/src/Client.js~Client.html#instance-method-reqPut",
+    "src/Client.js~Client#reqPut",
+    "method"
+  ],
+  [
+    "src/client.js~client#makeRequest",
+    "class/src/Client.js~Client.html#instance-method-makeRequest",
+    "src/Client.js~Client#makeRequest",
+    "method"
+  ],
+  [
+    "src/client.js~client#route",
+    "class/src/Client.js~Client.html#instance-member-route",
+    "src/Client.js~Client#route",
+    "member"
+  ],
+  [
+    "src/client.js~client#urlfromendpoint",
+    "class/src/Client.js~Client.html#instance-method-urlFromEndpoint",
+    "src/Client.js~Client#urlFromEndpoint",
+    "method"
+  ],
+  [
+    "src/client.js~client#urlstring",
+    "class/src/Client.js~Client.html#instance-method-urlString",
+    "src/Client.js~Client#urlString",
+    "method"
+  ],
+  [
+    "src/apirequest.js",
+    "file/src/apiRequest.js.html",
+    "src/apiRequest.js",
     "file"
   ]
 ]
