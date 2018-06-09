@@ -30,12 +30,19 @@ Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://
 Change `caldera-whatever` to package name.
 
 * Step 1: Install
+- Clone:
 ```
 git clone git@github.com:calderawp/npm-module-boilerplate.git ## Clone boilerplate
 mv npm-module-boilerplate caldera-whatever ## change name of directory
 cd caldera-whatever   # Change current directory to the newly created one
 yarn install          # Install dependencies
 ```
+- Reset Git:
+`git remote remove`
+`remote add origin git@github.com:CalderaWP/caldera-whatever.git`
+`git add .`
+`git commit -m "generate from boilerpate"`
+`git push --set-upstream origin master`
 
 * Step 2: Rename Stuff
 Replace 'caldera-whatever' with package name.
