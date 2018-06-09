@@ -1,0 +1,34 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "brand": {
+          "logo": "./globe.svg",
+          "title": "Caldera Whatever",
+          "description": "Does whatever for Caldera Forms",
+          "repository": "https://github.com/calderawp/caldera-whatever",
+          "site": "https://whatever.calderalabs.org",
+          "author": "http://calderalabs.org",
+          "image": "https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"
+        },
+        "manual": {
+          "index": "./manual/index.md",
+          "globalIndex": true,
+          "files": [
+            "./manual/overview.md"
+          ]
+        }
+      }
+    },
+    {
+      "name": "esdoc-flow-plugin"
+    },
+    {
+      "name": "esdoc-jsx-plugin", "option": {"enable": true}
+    }
+
+  ]
+}

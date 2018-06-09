@@ -1,4 +1,10 @@
-export default function randomFunction() {
-	const values = [3, 5];
-	return values.map(a => a*a);
+//@flow
+/**
+ * Say Hi to (optionally) someone or by default, Roy
+ *
+ * @param who
+ * @returns {string}
+ */
+export default function sayHi(who: string = 'Roy'): string {
+	return `Hi ${who}`;
 }
