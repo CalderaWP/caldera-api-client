@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/ApiClient.js | Caldera API Client</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="JavaScript API client for Caldera Forms"><meta property="og:type" content="website"><meta property="og:url" content="http://calderalabs.org/caldera-api-client/"><meta property="og:site_name" content="Caldera API Client"><meta property="og:title" content="Caldera API Client"><meta property="og:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"><meta property="og:description" content="JavaScript API client for Caldera Forms"><meta property="og:author" content="http://calderalabs.org"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Caldera API Client"><meta property="twitter:description" content="JavaScript API client for Caldera Forms"><meta property="twitter:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/calderawp/caldera-api-client"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/ApiClient.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
+interface Body {
+	bodyUsed: boolean;
+	arrayBuffer(): Promise&lt;ArrayBuffer&gt;;
+	blob(): Promise&lt;Blob&gt;;
+	formData(): Promise&lt;FormData&gt;;
+	json(): Promise&lt;any&gt;;
+	text(): Promise&lt;string&gt;;
+}
+/**
+ * Generic API client
+ */
+export class ApiClient{
+	/**
+	 * Base route for client
+	 *
+	 * @type {String}
+	 */
+	route: string;
+	/**
+	 * Headers for all requests
+	 *
+	 * @type {Headers}
+	 */
+	headers: Headers;
+
+	/**
+	 *
+	 * @param {String} route The full URL of API route is a client for
+	 * @param {Object} headers Optional. Headers for all requests
+	 */
+	constructor(route: string,headers: ?Object = {} ){
+		this.route=route;
+		if( ! headers ){
+			headers = {};
+		}
+		this.headers=new Headers(headers);
+	}
+
+
+
+	/**
+	 * Make a request to an endpoint
+	 *
+	 * @param endpoint
+	 * @param data
+	 * @param method
+	 * @returns {Promise&lt;Response&gt;}
+	 */
+	makeRequest(endpoint: string, data: Object, method: string): Promise&lt;Response&gt; {
+		let request = this.createRequest(endpoint, data, method);
+		return fetch(request);
+	}
+	/**
+	 * Create a Request object
+	 *
+	 * @param endpoint
+	 * @param data
+	 * @param method
+	 * @returns {Request}
+	 */
+	createRequest(endpoint: string, data: Object, method: string): Request {
+		let args = {
+			method: &apos;method&apos;,
+			mode:&apos;same-origin&apos;,
+			credentials: &apos;same-origin&apos;,
+			redirect: &apos;follow&apos;,
+			body: &apos;&apos;,
+			headers: this.headers
+		};
+
+		if (&apos;POST&apos; === method || &apos;PUT&apos; === method) {
+			args.body = JSON.stringify(data);
+			args.headers.append(&apos;Content-Type&apos;, &apos;application/json&apos;);
+			args.headers.append(&apos;Content-Length&apos;, args.body.length.toString());
+		}
+
+		return new Request(this.urlFromEndpoint(endpoint, method), args);
+
+	}
+	/**
+	 * Create URL for route with endpoint
+	 * @param endpoint
+	 * @param method
+	 * @param data
+	 * @returns {*}
+	 */
+	urlFromEndpoint(endpoint: string, method: string = &apos;GET&apos;, data: ?Object = {}): string{
+		if (&apos;GET&apos; === method) {
+			if( ! data ){
+				data = {};
+			}
+			return this.urlString(data, endpoint);
+		}
+
+		return `${this.route}${endpoint}`;
+	}
+	/**
+	 * Make a GET request
+	 *
+	 * @param data Object containing query arguments
+	 * @param endpoint Optional. Endpoint to query
+	 * @returns {Promise&lt;T&gt;}
+	 */
+	reqGet(data: Object, endpoint: string = &apos;&apos;): Promise&lt;any&gt; {
+		return this.makeRequest(endpoint, data, &apos;GET&apos;)
+			.then(
+				response =&gt; {
+					return this.handleResponse(response);
+				},
+				error =&gt; {
+					return this.handleError(error);
+				}
+			);
+	}
+	/**
+	 * Make a POST request
+	 *
+	 * @param data Request body data
+	 * @param endpoint Optional. Endpoint to query
+	 * @returns {Promise&lt;T&gt;}
+	 */
+	reqPost (data: Object, endpoint: string = &apos;&apos;): Promise&lt;any&gt; {
+		return this.makeRequest(endpoint, data, &apos;POST&apos;)
+			.then(
+				response =&gt; {
+					return this.handleResponse(response);
+				},
+				error =&gt; {
+					return this.handleError(error);
+				}
+			);
+	}
+	/**
+	 * Make a PUT request
+	 *
+	 * @param data Request body data
+	 * @param endpoint Optional. Endpoint to query
+	 * @returns {Promise&lt;T&gt;}
+	 */
+	reqPut (data: Object, endpoint: string = &apos;&apos;): Promise&lt;any&gt;  {
+		return this.makeRequest(endpoint, data, &apos;PUT&apos;)
+			.then(
+				response =&gt; {
+					return this.handleResponse(response);
+				},
+				error =&gt; {
+					return this.handleError(error);
+				}
+			);
+	}
+	/**
+	 * Make a DELETE request
+	 *
+	 * @param endpoint Optional. Endpoint to query
+	 * @returns {Promise&lt;T&gt;}
+	 */
+	reqDelete(endpoint: string = &apos;&apos;): Promise&lt;any&gt; {
+		return this.makeRequest(endpoint, {}, &apos;DELETE&apos;)
+			.then(
+				response =&gt; {
+					return this.handleResponse(response);
+				},
+				error =&gt; {
+					return this.handleError(error);
+				}
+			);
+
+	}
+	/**
+	 * Given HTTP response, return body
+	 *
+	 * @param response
+	 * @returns {*}
+	 */
+	handleResponse(response: Response): Object  {
+		if(response.ok) {
+			return response.json();
+		} else {
+			return {
+
+			}
+		}
+	}
+
+
+	/**
+	 * Given an HTTP response that is an error, return statusText
+	 *
+	 * @param error
+	 * @returns {string}
+	 */
+	handleError(error: Response): string {
+		return error.statusText;
+	}
+	/**
+	 * Create a URL string with query args
+	 * @param data Query arguments
+	 * @param endpoint Optional. Endpoint to query
+	 * @returns {string}
+	 */
+	urlString (data: Object, endpoint: string = &apos;&apos;): string {
+
+		if (&apos;&apos; !== endpoint &amp;&amp; &apos;/&apos; === endpoint.charAt(0)) {
+			endpoint = endpoint.substr(1);
+		}
+
+		let str = &apos;&apos;;
+		for (let key in data) {
+			if (str !== &apos;&apos;) {
+				str += &apos;&amp;&apos;;
+			}
+			str += key + &apos;=&apos; + data[key];
+		}
+		if (endpoint) {
+			return `${this.route}/${endpoint}?${str}`;
+		}
+		return this.route + &apos;?&apos; + str;
+	}
+
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

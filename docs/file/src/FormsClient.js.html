@@ -29,19 +29,58 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-apiRequest">apiRequest</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/FormsClient.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Client from &apos;./client&apos;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
+import {WpClient} from &apos;./WpClient&apos;;
 
-export class FormsClient extends Client {
+/**
+ * Client for administrating forms on a WordPress site
+ */
+export class FormsClient extends WpClient {
 
-}
-</code></pre>
+	/**
+	 * Get forms
+	 *
+	 * @param {Numeric} page Optional. Default is 1
+	 * @returns {Promise&lt;any&gt;}
+	 */
+	getForms(page: number=1): Promise&lt;any&gt;{
+		return this.reqGet({page:page});
+	};
+
+	/**
+	 * Get a form config
+	 *
+	 * @param {String} formId ID of form to request
+	 * @returns {Promise&lt;any&gt;}
+	 */
+	getForm(formId:string): Promise&lt;any&gt;{
+		return this.reqGet({
+			preview:false
+		},formId);
+	};
+
+	/**
+	 * Get HTML preview of a form
+	 *
+	 * @param {String} formId ID of form to request
+	 * @returns {Promise&lt;any&gt;}
+	 */
+	getFormPreview(formId:string): Promise&lt;any&gt;{
+		return this.reqGet({
+			preview:true
+		},formId);
+	};
+}</code></pre>
 
 </div>
 

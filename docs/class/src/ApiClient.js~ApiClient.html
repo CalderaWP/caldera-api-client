@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">Client | Caldera API Client</title>
+  <title data-ice="title">ApiClient | Caldera API Client</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -29,32 +29,35 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Client.js~Client.html">Client</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-apiRequest">apiRequest</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Client} from &apos;<span><a href="file/src/Client.js.html#lineNumber8">@caldera-labs/api-client/src/Client.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ApiClient} from &apos;<span><a href="file/src/ApiClient.js.html#lineNumber5">@caldera-labs/api-client/src/ApiClient.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/Client.js.html#lineNumber8">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/ApiClient.js.html#lineNumber5">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">Client</h1>
+  <h1 data-ice="name">ApiClient</h1>
 
   
 
   
   
   
-  
-  
+  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></div></div>
+  <div class="flat-list" data-ice="indirectSubclass"><h4>Indirect Subclass:</h4><div><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span>, <span>src/PrivacySettingsClient.js~PrivacySettingsClient</span>, <span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></div></div>
   
   
   
@@ -62,8 +65,7 @@
 
   
   
-  <div class="description" data-ice="description"><p>Standard bas class for an API client</p>
-<p>Based on CF Pro v1 API Client</p>
+  <div class="description" data-ice="description"><p>Generic API client</p>
 </div>
   
 
@@ -96,13 +98,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Base route for client</p>
+</div>
       </div>
     </td>
     <td>
@@ -131,7 +134,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-member-credentials">credentials</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-member-headers">headers</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -159,63 +162,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-member-headers">headers</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-member-mode">mode</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-member-route">route</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-member-route">route</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -250,209 +197,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-createRequest">createRequest</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-createRequest">createRequest</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>Request</span></span>
         </p>
       </div>
       <div>
         
         
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-handleError">handleError</a></span></span><span class="code" data-ice="signature">(error: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-handleResponse">handleResponse</a></span></span><span class="code" data-ice="signature">(response: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-reqDelete">reqDelete</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-reqGet">reqGet</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-reqPost">reqPost</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-reqPut">reqPut</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-request">request</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>Request Mode</p>
+        <div data-ice="description"><p>Create a Request object</p>
 </div>
       </div>
     </td>
@@ -475,13 +226,14 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-urlFromEndpoint">urlFromEndpoint</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, method: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, data: {}): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-handleError">handleError</a></span></span><span class="code" data-ice="signature">(error: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Given an HTTP response that is an error, return statusText</p>
+</div>
       </div>
     </td>
     <td>
@@ -503,13 +255,217 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Client.js~Client.html#instance-method-urlString">urlString</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-handleResponse">handleResponse</a></span></span><span class="code" data-ice="signature">(response: <span>*</span>): <span>*</span></span>
         </p>
       </div>
       <div>
         
         
+        <div data-ice="description"><p>Given HTTP response, return body</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-makeRequest">makeRequest</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span>: <span>Headers</span></span>
+        </p>
+      </div>
+      <div>
         
+        
+        <div data-ice="description"><p>Headers for all requests</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-reqDelete">reqDelete</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Make a DELETE request</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-reqGet">reqGet</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Make a GET request</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-reqPost">reqPost</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Make a POST request</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-reqPut">reqPut</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Make a PUT request</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-urlFromEndpoint">urlFromEndpoint</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, method: <span>*</span>, data: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Create URL for route with endpoint</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-urlString">urlString</a></span></span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Create a URL string with query args</p>
+</div>
       </div>
     </td>
     <td>
@@ -535,18 +491,19 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber9">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Base route for client</p>
+</div>
 
   
 
@@ -574,49 +531,6 @@
 <div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-credentials">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">credentials</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber13">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-member-headers">
     <span class="access" data-ice="access">public</span>
     
@@ -628,50 +542,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber12">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-member-mode">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">mode</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber23">source</a></span></span>
     </span>
   </h3>
 
@@ -714,7 +585,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber10">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber19">source</a></span></span>
     </span>
   </h3>
 
@@ -756,18 +627,19 @@
     
     
     
-    <span class="code" data-ice="name">createRequest</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">createRequest</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>Request</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber52">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Create a Request object</p>
+</div>
 
   
 
@@ -807,7 +679,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span>Request</span></td>
           
         </tr>
       </tbody>
@@ -839,18 +711,19 @@
     
     
     
-    <span class="code" data-ice="name">handleError</span><span class="code" data-ice="signature">(error: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">handleError</span><span class="code" data-ice="signature">(error: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber100">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber162">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Given an HTTP response that is an error, return statusText</p>
+</div>
 
   
 
@@ -878,7 +751,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
           
         </tr>
       </tbody>
@@ -914,14 +787,15 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber148">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Given HTTP response, return body</p>
+</div>
 
   
 
@@ -974,29 +848,58 @@
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-reqDelete">
+  <h3 data-ice="anchor" id="instance-method-makeRequest">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">reqDelete</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="code" data-ice="name">makeRequest</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span>: <span>Headers</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber82">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber40">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Headers for all requests</p>
+</div>
 
   
 
-  <div data-ice="properties">
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">endpoint</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">data</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">method</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
 </div>
 
   <div class="return-params" data-ice="returnParams">
@@ -1005,6 +908,79 @@
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-reqDelete">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">reqDelete</span><span class="code" data-ice="signature">(endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber135">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Make a DELETE request</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">endpoint</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Optional. Endpoint to query</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</td>
           
         </tr>
       </tbody>
@@ -1036,18 +1012,19 @@
     
     
     
-    <span class="code" data-ice="name">reqGet</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">reqGet</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber58">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber94">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Make a GET request</p>
+</div>
 
   
 
@@ -1063,14 +1040,15 @@
       <td data-ice="name" class="code" data-depth="0">data</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Object containing query arguments</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">endpoint</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: </li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Optional. Endpoint to query</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1082,7 +1060,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</td>
           
         </tr>
       </tbody>
@@ -1114,18 +1092,19 @@
     
     
     
-    <span class="code" data-ice="name">reqPost</span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">reqPost</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber66">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber108">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Make a POST request</p>
+</div>
 
   
 
@@ -1141,7 +1120,15 @@
       <td data-ice="name" class="code" data-depth="0">data</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Request body data</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">endpoint</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Optional. Endpoint to query</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1153,7 +1140,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</td>
           
         </tr>
       </tbody>
@@ -1185,18 +1172,19 @@
     
     
     
-    <span class="code" data-ice="name">reqPut</span><span class="code" data-ice="signature">(data: <span>*</span>): <span>*</span></span>
+    <span class="code" data-ice="name">reqPut</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber74">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber122">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Make a PUT request</p>
+</div>
 
   
 
@@ -1212,91 +1200,15 @@
       <td data-ice="name" class="code" data-depth="0">data</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Request body data</p>
+</td>
     </tr>
-</tbody>
-  </table>
-</div>
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-request">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">request</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber27">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>Request Mode</p>
-</div>
-
-  
-
-  <div data-ice="properties"><div data-ice="properties">
-  <h4 data-ice="title">Params:</h4>
-  <table class="params">
-    <thead>
-    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-    
-    <tr data-ice="property" data-depth="0">
+<tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">endpoint</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
-    </tr>
-<tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">method</td>
-      <td data-ice="type" class="code"><span>*</span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Optional. Endpoint to query</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1308,7 +1220,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>T</span>&gt;</td>
           
         </tr>
       </tbody>
@@ -1340,18 +1252,19 @@
     
     
     
-    <span class="code" data-ice="name">urlFromEndpoint</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, method: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>, data: {}): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="code" data-ice="name">urlFromEndpoint</span><span class="code" data-ice="signature">(endpoint: <span>*</span>, method: <span>*</span>, data: <span>*</span>): <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber50">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber77">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Create URL for route with endpoint</p>
+</div>
 
   
 
@@ -1371,16 +1284,14 @@
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">method</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: GET</li></ul></td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">data</td>
-      <td data-ice="type" class="code">{}</td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: {}</li></ul></td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 </tbody>
@@ -1393,7 +1304,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
           
         </tr>
       </tbody>
@@ -1425,18 +1336,19 @@
     
     
     
-    <span class="code" data-ice="name">urlString</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>): <span>*</span></span>
+    <span class="code" data-ice="name">urlString</span><span class="code" data-ice="signature">(data: <span>*</span>, endpoint: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/Client.js.html#lineNumber114">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/ApiClient.js.html#lineNumber171">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  
+  <div data-ice="description"><p>Create a URL string with query args</p>
+</div>
 
   
 
@@ -1452,14 +1364,15 @@
       <td data-ice="name" class="code" data-depth="0">data</td>
       <td data-ice="type" class="code"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>Query arguments</p>
+</td>
     </tr>
 <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">endpoint</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
-      <td data-ice="appendix"><ul><li>optional</li>
-<li>default: </li></ul></td>
-      <td data-ice="description"></td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Optional. Endpoint to query</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -1471,7 +1384,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
           
         </tr>
       </tbody>

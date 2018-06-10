@@ -15,7 +15,8 @@
     "prepublish": "npm run test && npm run build",
     "document": "./node_modules/.bin/esdoc",
     "lint": "eslint src/**",
-    "flow:watch": "flow-watch"
+    "flow:watch": "flow-watch",
+    "flow": "flow "
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,8 @@
     "esdoc-flow-plugin": "^1.0.0",
     "esdoc-jsx-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
-    "jest-cli": "^20.0.4"
+    "jest-cli": "^20.0.4",
+    "sha1": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -62,9 +64,10 @@
     "uglify-js": "^3.4.0"
   },
   "standard": {
-    "plugins": [ "flowtype" ],
+    "plugins": [
+      "flowtype"
+    ],
     "parser": "babel-eslint"
-
   },
   "jest": {
     "collectCoverageFrom": [

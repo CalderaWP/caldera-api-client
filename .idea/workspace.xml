@@ -2,32 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/apiClient.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ast/source/Client.js.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ast/source/FormsClient.js.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ast/source/apiRequest.js.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/src/Client.js~Client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/file/src/Client.js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/file/src/apiRequest.js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setupJest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apiClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/apiRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/WpClient.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FormsClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrivacySettingsClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProLocalSettingClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WpClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/wpClientFactory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.esdoc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.esdoc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/index.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/function/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/identifiers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/prettify/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/prettify/prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/apiClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apiClient.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/.external-ecmascript.js.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/Client.js.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/FormsClient.js.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/apiRequest.js.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/index.js.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/Client.js~Client.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/github.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/identifiers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/manual.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/prettify-tomorrow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/source.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/css/test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/Client.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/apiRequest.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/index.js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/badge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/brand_logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/esdoc-logo-mini-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/esdoc-logo-mini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/manual-badge.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/image/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/lint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/overview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/inherited-summary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/inner-link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/manual.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/patch-for-local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/prettify/Apache-License-2.0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/prettify/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/pretty-print.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/test-summary.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manual/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/overview.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apiRequest.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,32 +73,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5536254">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
+        <leaf>
+          <file leaf-file-name=".esdoc.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.esdoc.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="setupJest.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/setupJest.js">
+          <file leaf-file-name="PrivacySettingsClient.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="42" selection-start-column="42" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="apiClient.test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="657">
-                  <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="9" selection-start-line="11" selection-end-line="12" />
                 </state>
               </provider>
             </entry>
@@ -71,24 +98,10 @@
             <entry file="file://$PROJECT_DIR$/manual/index.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor>
-                    <caret column="20" selection-start-column="20" selection-end-column="20" />
+                  <first_editor relative-caret-position="15">
+                    <caret line="1" selection-start-line="1" selection-end-line="1" />
                   </first_editor>
                   <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="globe.svg" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/globe.svg">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -97,29 +110,32 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="lib.dom.d.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="15932" column="70" lean-forward="true" selection-start-line="15932" selection-start-column="70" selection-end-line="15932" selection-end-column="87" />
+          <file leaf-file-name="overview.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/manual/overview.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="90">
+                    <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="apiRequest.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/apiRequest.js">
+          <file leaf-file-name="ProLocalSettingClient.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+                  <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="apiClient.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/apiClient.js">
+          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="599">
-                  <caret line="111" selection-start-line="111" selection-end-line="111" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
                 </state>
               </provider>
             </entry>
@@ -143,6 +159,8 @@
       <find>headers</find>
       <find>jest</find>
       <find>standard</find>
+      <find>Responde</find>
+      <find>creates</find>
     </findStrings>
     <replaceStrings>
       <replace>calderawp/npm-module-boilerplate</replace>
@@ -161,9 +179,6 @@
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/manual/index.md" />
-        <option value="$PROJECT_DIR$/manual/overview.md" />
-        <option value="$PROJECT_DIR$/.esdoc.json" />
         <option value="$PROJECT_DIR$/src/factory.js" />
         <option value="$PROJECT_DIR$/src/mockClient.js" />
         <option value="$PROJECT_DIR$/src/formClient.js" />
@@ -171,14 +186,31 @@
         <option value="$PROJECT_DIR$/setupJest.js" />
         <option value="$PROJECT_DIR$/src/apiRequest.js" />
         <option value="$PROJECT_DIR$/src/cfApiFactory.js" />
-        <option value="$PROJECT_DIR$/src/client.js" />
         <option value="$PROJECT_DIR$/src/Client.js" />
         <option value="$PROJECT_DIR$/docs/file/src/apiClient.js" />
         <option value="$PROJECT_DIR$/__tests__/client.test.js" />
         <option value="$PROJECT_DIR$/__tests__/index.test.js" />
+        <option value="$PROJECT_DIR$/__tests__/wpClient.test.js" />
+        <option value="$PROJECT_DIR$/src/wpClient.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/__tests__/formsClient.test.js" />
         <option value="$PROJECT_DIR$/src/apiClient.js" />
+        <option value="$PROJECT_DIR$/src/formsClient.js" />
+        <option value="$PROJECT_DIR$/src/WpClient.js" />
+        <option value="$PROJECT_DIR$/src/formsClientFactory.js" />
+        <option value="$PROJECT_DIR$/src/wpClientFactory.js" />
+        <option value="$PROJECT_DIR$/src/client.js" />
+        <option value="$PROJECT_DIR$/src/ApiClient.js" />
         <option value="$PROJECT_DIR$/__tests__/apiClient.test.js" />
+        <option value="$PROJECT_DIR$/__tests__/WpClient.test.js" />
+        <option value="$PROJECT_DIR$/src/FormsClient.js" />
+        <option value="$PROJECT_DIR$/src/ProClient.js" />
+        <option value="$PROJECT_DIR$/manual/index.md" />
+        <option value="$PROJECT_DIR$/manual/testing.md" />
+        <option value="$PROJECT_DIR$/.esdoc.json" />
+        <option value="$PROJECT_DIR$/src/PrivacySettingsClient.js" />
+        <option value="$PROJECT_DIR$/src/ProLocalSettingClient.js" />
+        <option value="$PROJECT_DIR$/manual/overview.md" />
       </list>
     </option>
   </component>
@@ -187,10 +219,10 @@
     <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsFlowSettings">
-    <service-enabled>false</service-enabled>
+    <service-enabled>true</service-enabled>
     <exe-path>$PROJECT_DIR$/node_modules/flow-bin</exe-path>
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>false</auto-save>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -205,9 +237,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="343" />
-    <option name="y" value="23" />
-    <option name="width" value="1568" />
+    <option name="x" value="449" />
+    <option name="y" value="27" />
+    <option name="width" value="1511" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -231,6 +263,22 @@
             <path>
               <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="manual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-client" type="462c0819:PsiDirectoryNode" />
+              <item name="manual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -241,14 +289,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
@@ -277,15 +328,15 @@
       <option name="presentableId" value="Default" />
       <updated>1528567086917</updated>
       <workItem from="1528567088462" duration="5952000" />
-      <workItem from="1528574097492" duration="9060000" />
+      <workItem from="1528574097492" duration="19990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15012000" />
+    <option name="totallyTimeSpent" value="25942000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="343" y="23" width="1568" height="1057" extended-state="0" />
+    <frame x="449" y="27" width="1511" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -294,9 +345,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="45" width="1526" height="594" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info active="true" anchor="bottom" x="0" y="45" width="1526" height="1035" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info anchor="bottom" id="Flow" />
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13237222" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14159292" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
@@ -342,48 +394,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/__tests__/apiClient.test.js</url>
-          <line>54</line>
-          <properties lambdaOrdinal="-1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.esdoc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cfApiFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manual/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor>
-            <caret column="12" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/globe.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -404,19 +418,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.min.js.map">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/globe.svg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,26 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manual/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor>
-            <caret column="20" selection-start-column="20" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manual/overview.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="60">
-            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -468,13 +452,6 @@
             <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.esdoc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -495,26 +472,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/file/src/index.js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-151" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/file/src/Client.js.html">
+    <entry file="file://$PROJECT_DIR$/docs/file/src/client.js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
@@ -543,31 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setupJest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/client.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="42" column="7" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -588,10 +530,27 @@
     <entry file="file://$PROJECT_DIR$/dist/Client.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="15932" column="70" lean-forward="true" selection-start-line="15932" selection-start-column="70" selection-end-line="15932" selection-end-column="87" />
+        <state relative-caret-position="442">
+          <caret line="330" column="47" selection-start-line="330" selection-start-column="47" selection-end-line="330" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setupJest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/globe.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -602,24 +561,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+    <entry file="file://$PROJECT_DIR$/docs/file/src/ApiClient.js.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/class/src/Client.js~Client.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/function/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/formsClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="330" column="47" selection-start-line="330" selection-start-column="47" selection-end-line="330" selection-end-column="47" />
+        <state relative-caret-position="225">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apiClient.js">
+    <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="45">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#8#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WpClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="16057" column="5" selection-start-line="16057" selection-start-column="5" selection-end-line="16057" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+        <state relative-caret-position="403">
+          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manual/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="15">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manual/testing.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.esdoc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" selection-start-line="11" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manual/overview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

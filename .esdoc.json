@@ -18,7 +18,9 @@
           "index": "./manual/index.md",
           "globalIndex": true,
           "files": [
-            "./manual/overview.md"
+            "./manual/overview.md",
+            "./README.md"
+
           ]
         }
       }

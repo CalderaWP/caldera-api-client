@@ -1,33 +1,50 @@
 {
-  "coverage": "11.76%",
-  "expectCount": 17,
-  "actualCount": 2,
+  "coverage": "82.14%",
+  "expectCount": 28,
+  "actualCount": 23,
   "files": {
-    "src/Client.js": {
-      "expectCount": 16,
-      "actualCount": 2,
+    "src/ApiClient.js": {
+      "expectCount": 14,
+      "actualCount": 12,
       "undocumentLines": [
-        9,
-        10,
-        11,
-        12,
-        13,
-        32,
-        50,
-        58,
-        66,
-        74,
-        82,
-        90,
-        100,
-        114
+        19,
+        23
       ]
     },
-    "src/apiRequest.js": {
+    "src/FormsClient.js": {
+      "expectCount": 4,
+      "actualCount": 4,
+      "undocumentLines": []
+    },
+    "src/PrivacySettingsClient.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/ProLocalSettingClient.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/WpClient.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/client.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        1
+        2
+      ]
+    },
+    "src/wpClientFactory.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
       ]
     }
   }

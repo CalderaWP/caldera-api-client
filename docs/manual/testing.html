@@ -32,15 +32,15 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Caldera API Overview</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#forms-clients" data-ice="link">Forms Clients</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#privacy-settings" data-ice="link">Privacy Settings</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-local-settings-client" data-ice="link">CF Pro Local Settings Client</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-client" data-ice="link">CF Pro Client</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#mocking-requests" data-ice="link">Mocking Requests</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#example" data-ice="link">Example</a></li>
 </ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    </ul>
   </div>
 <div data-ice="manual">
     <ul class="manual-toc">
@@ -62,32 +62,7 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-overview">Caldera API Overview</h1><h2 id="usage">Usage</h2><h3 id="forms-clients">Forms Clients</h3><p>Get form configs and collections of forms config from a WordPress site.
-<a href="./manual/class/src/ApiClient.js~ApiClient.html">class/src/ApiClient.js~ApiClient.html</a></p>
-<h3 id="privacy-settings">Privacy Settings</h3><p>Get and update a WordPress site&apos;s privacy settings</p>
-<h3 id="cf-pro-local-settings-client">CF Pro Local Settings Client</h3><p>Get and update a WordPress site&apos;s CF Pro settings</p>
-<h3 id="cf-pro-client">CF Pro Client</h3><p>Get an account&apos;s layouts from CF Pro.</p>
-<h2 id="testing">Testing</h2><h3 id="mocking-requests">Mocking Requests</h3><p>All HTTP requests use fetch.</p>
-<p>You can test using <a href="https://github.com/jefflau/jest-fetch-mock">jest-fetch-mock</a></p>
-<h4 id="example">Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">describe(&apos;testing api&apos;, () =&gt; {
-  beforeEach(() =&gt; {
-    fetch.resetMocks()
-  });
-
-  it(&apos;Gets data from API&apos;, () =&gt; {
-    fetch.mockResponseOnce(JSON.stringify({ data: &apos;12345&apos; }))
-
-    //assert on the response
-    fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
-      expect(res.data).toEqual(&apos;12345&apos;)
-    });
-
-    //assert on the times called and arguments given to fetch
-    expect(fetch.mock.calls.length).toEqual(1);
-  })
-})</code>
-</code></pre>
-</div>
+<div class="content" data-ice="content">
 </div>
 
 <footer class="footer">

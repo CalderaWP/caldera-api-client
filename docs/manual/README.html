@@ -2,14 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="./">
+  <base data-ice="baseUrl" href="../">
   <title data-ice="title">Manual | Caldera API Client</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
 <meta name="description" content="JavaScript API client for Caldera Forms"><meta property="og:type" content="website"><meta property="og:url" content="http://calderalabs.org/caldera-api-client/"><meta property="og:site_name" content="Caldera API Client"><meta property="og:title" content="Caldera API Client"><meta property="og:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"><meta property="og:description" content="JavaScript API client for Caldera Forms"><meta property="og:author" content="http://calderalabs.org"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Caldera API Client"><meta property="twitter:description" content="JavaScript API client for Caldera Forms"><meta property="twitter:image" content="https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"></head>
-<body class="layout-container manual-root manual-index" data-ice="rootContainer">
+<body class="layout-container manual-root" data-ice="rootContainer">
 
 <header>
   <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.svg" style="width:34px;"></a>
@@ -62,41 +62,12 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown">
-  <div class="manual-user-index" data-ice="manualUserIndex"><h1 id="caldera-api-client-documentation">Caldera API Client Documentation</h1></div>
-
-  
-
-  <div class="manual-cards">
-    
-  <div class="manual-card-wrap" data-ice="cards">
-      <div class="manual-card">
-        <div data-ice="card"><h1>Caldera API Overview</h1><h2>Usage</h2><h3>Forms Clients</h3><p>Get form configs and collections of forms config from a WordPress site.
-<a href="./manual/class/src/ApiClient.js~ApiClient.html">class/src/ApiClient.js~ApiClient.html</a></p><h3>Privacy Settings</h3><p>Get and update a WordPress site&apos;s privacy settings</p><h3>CF Pro Local Settings Client</h3><p>Get and update a WordPress site&apos;s CF Pro settings</p><h3>CF Pro Client</h3><p>Get an account&apos;s layouts from CF Pro.</p><h2>Testing</h2><h3>Mocking Requests</h3><p>All HTTP requests use fetch.</p><p>You can test using <a href="https://github.com/jefflau/jest-fetch-mock">jest-fetch-mock</a></p><h4>Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">describe(&apos;testing api&apos;, () =&gt; {
-  beforeEach(() =&gt; {
-    fetch.resetMocks()
-  });
-
-  it(&apos;Gets data from API&apos;, () =&gt; {
-    fetch.mockResponseOnce(JSON.stringify({ data: &apos;12345&apos; }))
-
-    //assert on the response
-    fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
-      expect(res.data).toEqual(&apos;12345&apos;)
-    });
-
-    //assert on the times called and arguments given to fetch
-    expect(fetch.mock.calls.length).toEqual(1);
-  })
-})</code>
-</code></pre></div>
-        <a data-ice="link" href="manual/overview.html"></a>
-      </div>
-    </div>
-<div class="manual-card-wrap" data-ice="cards">
-      <div class="manual-card">
-        <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for Caldera Forms and Caldera Forms Pro</p><p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p><p>Forked from: <a href="https://www.npmjs.com/package/npm-module-es6-boilerplate">https://www.npmjs.com/package/npm-module-es6-boilerplate</a></p><p>&#x1F30B; <a href="http://calderalabs.org/caldera-api-client/">Documentation</a></p><h2>Included</h2><ul>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for Caldera Forms and Caldera Forms Pro</p>
+<p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p>
+<p>Forked from: <a href="https://www.npmjs.com/package/npm-module-es6-boilerplate">https://www.npmjs.com/package/npm-module-es6-boilerplate</a></p>
+<p>&#x1F30B; <a href="http://calderalabs.org/caldera-api-client/">Documentation</a></p>
+<h2 id="included">Included</h2><ul>
 <li><a href="http://babeljs.io">babel</a> - Transpile ES6</li>
 <li><a href="https://facebook.github.io/jest/">Jest</a> - Tests, includes coverage report</li>
 <li><a href="https://coveralls.io/">Coveralls</a> - Ensure that all your new code is fully covered, and see coverage trends emerge.</li>
@@ -107,34 +78,39 @@
 </li>
 <li><p>Auto publish to npm on every build.</p>
 </li>
-</ul><h3>Usage</h3><h2>Install</h2><h3>Dependencies</h3><ul>
+</ul>
+<h3 id="usage">Usage</h3><h2 id="install">Install</h2><h3 id="dependencies">Dependencies</h3><ul>
 <li>Yarn</li>
 <li>Git</li>
 <li>Flow</li>
 <li>npm</li>
 <li>Node</li>
-</ul><h2>Testing</h2><p>This boilerplate uses <a href="https://facebook.github.io/jest/">Facebook Jest</a>. Test are in the directory named <code>__tests__</code> at any level and start writing tests.</p><ul>
+</ul>
+<h2 id="testing">Testing</h2><p>This boilerplate uses <a href="https://facebook.github.io/jest/">Facebook Jest</a>. Test are in the directory named <code>__tests__</code> at any level and start writing tests.</p>
+<ul>
 <li>Run test watcher<pre><code><code class="source-code prettyprint">yarn test</code>
 </code></pre></li>
-</ul><h2>Scripts</h2><h3>Build for release</h3><ul>
+</ul>
+<h2 id="scripts">Scripts</h2><h3 id="build-for-release">Build for release</h3><ul>
 <li><code>yarn build</code></li>
 <li>Runs tests, and flow type checks and Babel compiles with minification and source map.</li>
-</ul><p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p><h3>Tests</h3><ul>
+</ul>
+<p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p>
+<h3 id="tests">Tests</h3><ul>
 <li><code>yarn test</code> : Test Watcher</li>
 <li><code>npm test:once</code> : Run Tests once</li>
-</ul><h3>Type-checking With Flow</h3><ul>
+</ul>
+<h3 id="type-checking-with-flow">Type-checking With Flow</h3><ul>
 <li><code>yarn flow</code></li>
-</ul><h3>Lint Code</h3><ul>
+</ul>
+<h3 id="lint-code">Lint Code</h3><ul>
 <li><code>yarn lint</code></li>
-</ul><h3>Generate Documentation</h3><ul>
+</ul>
+<h3 id="generate-documentation">Generate Documentation</h3><ul>
 <li><code>npm run documentation</code></li>
 <li>Generates documentation from inline docs</li>
 <li>Generates documentation from markdown files in /manual</li>
-</ul></div>
-        <a data-ice="link" href="manual/README.html"></a>
-      </div>
-    </div>
-</div>
+</ul>
 </div>
 </div>
 

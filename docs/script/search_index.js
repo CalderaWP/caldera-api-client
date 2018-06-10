@@ -1,14 +1,32 @@
 window.esdocSearchIndex = [
   [
-    "@caldera-labs/api-client/src/client.js~client",
-    "class/src/Client.js~Client.html",
-    "<span>Client</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/Client.js</span>",
+    "@caldera-labs/api-client/src/apiclient.js~apiclient",
+    "class/src/ApiClient.js~ApiClient.html",
+    "<span>ApiClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/ApiClient.js</span>",
     "class"
   ],
   [
-    "@caldera-labs/api-client/src/apirequest.js~apirequest",
-    "function/index.html#static-function-apiRequest",
-    "<span>apiRequest</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/apiRequest.js</span>",
+    "@caldera-labs/api-client/src/formsclient.js~formsclient",
+    "class/src/FormsClient.js~FormsClient.html",
+    "<span>FormsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/FormsClient.js</span>",
+    "class"
+  ],
+  [
+    "@caldera-labs/api-client/src/prolocalsettingclient.js~prolocalsettingclient",
+    "class/src/ProLocalSettingClient.js~ProLocalSettingClient.html",
+    "<span>ProLocalSettingClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/ProLocalSettingClient.js</span>",
+    "class"
+  ],
+  [
+    "@caldera-labs/api-client/src/wpclient.js~wpclient",
+    "class/src/WpClient.js~WpClient.html",
+    "<span>WpClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/WpClient.js</span>",
+    "class"
+  ],
+  [
+    "@caldera-labs/api-client/src/wpclientfactory.js~wpclientfactory",
+    "function/index.html#static-function-wpClientFactory",
+    "<span>wpClientFactory</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/wpClientFactory.js</span>",
     "function"
   ],
   [
@@ -294,105 +312,159 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
-    "src/client.js",
-    "file/src/Client.js.html",
-    "src/Client.js",
+    "src/apiclient.js",
+    "file/src/ApiClient.js.html",
+    "src/ApiClient.js",
     "file"
   ],
   [
-    "src/client.js~client#constructor",
-    "class/src/Client.js~Client.html#instance-constructor-constructor",
-    "src/Client.js~Client#constructor",
+    "src/apiclient.js~apiclient#constructor",
+    "class/src/ApiClient.js~ApiClient.html#instance-constructor-constructor",
+    "src/ApiClient.js~ApiClient#constructor",
     "method"
   ],
   [
-    "src/client.js~client#createrequest",
-    "class/src/Client.js~Client.html#instance-method-createRequest",
-    "src/Client.js~Client#createRequest",
+    "src/apiclient.js~apiclient#createrequest",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-createRequest",
+    "src/ApiClient.js~ApiClient#createRequest",
     "method"
   ],
   [
-    "src/client.js~client#credentials",
-    "class/src/Client.js~Client.html#instance-member-credentials",
-    "src/Client.js~Client#credentials",
+    "src/apiclient.js~apiclient#handleerror",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-handleError",
+    "src/ApiClient.js~ApiClient#handleError",
+    "method"
+  ],
+  [
+    "src/apiclient.js~apiclient#handleresponse",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-handleResponse",
+    "src/ApiClient.js~ApiClient#handleResponse",
+    "method"
+  ],
+  [
+    "src/apiclient.js~apiclient#headers",
+    "class/src/ApiClient.js~ApiClient.html#instance-member-headers",
+    "src/ApiClient.js~ApiClient#headers",
     "member"
   ],
   [
-    "src/client.js~client#handleerror",
-    "class/src/Client.js~Client.html#instance-method-handleError",
-    "src/Client.js~Client#handleError",
+    "src/apiclient.js~apiclient#makerequest",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-makeRequest",
+    "src/ApiClient.js~ApiClient#makeRequest",
     "method"
   ],
   [
-    "src/client.js~client#handleresponse",
-    "class/src/Client.js~Client.html#instance-method-handleResponse",
-    "src/Client.js~Client#handleResponse",
+    "src/apiclient.js~apiclient#reqdelete",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-reqDelete",
+    "src/ApiClient.js~ApiClient#reqDelete",
     "method"
   ],
   [
-    "src/client.js~client#headers",
-    "class/src/Client.js~Client.html#instance-member-headers",
-    "src/Client.js~Client#headers",
+    "src/apiclient.js~apiclient#reqget",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-reqGet",
+    "src/ApiClient.js~ApiClient#reqGet",
+    "method"
+  ],
+  [
+    "src/apiclient.js~apiclient#reqpost",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-reqPost",
+    "src/ApiClient.js~ApiClient#reqPost",
+    "method"
+  ],
+  [
+    "src/apiclient.js~apiclient#reqput",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-reqPut",
+    "src/ApiClient.js~ApiClient#reqPut",
+    "method"
+  ],
+  [
+    "src/apiclient.js~apiclient#route",
+    "class/src/ApiClient.js~ApiClient.html#instance-member-route",
+    "src/ApiClient.js~ApiClient#route",
     "member"
   ],
   [
-    "src/client.js~client#mode",
-    "class/src/Client.js~Client.html#instance-member-mode",
-    "src/Client.js~Client#mode",
-    "member"
-  ],
-  [
-    "src/client.js~client#reqdelete",
-    "class/src/Client.js~Client.html#instance-method-reqDelete",
-    "src/Client.js~Client#reqDelete",
+    "src/apiclient.js~apiclient#urlfromendpoint",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-urlFromEndpoint",
+    "src/ApiClient.js~ApiClient#urlFromEndpoint",
     "method"
   ],
   [
-    "src/client.js~client#reqget",
-    "class/src/Client.js~Client.html#instance-method-reqGet",
-    "src/Client.js~Client#reqGet",
+    "src/apiclient.js~apiclient#urlstring",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-urlString",
+    "src/ApiClient.js~ApiClient#urlString",
     "method"
   ],
   [
-    "src/client.js~client#reqpost",
-    "class/src/Client.js~Client.html#instance-method-reqPost",
-    "src/Client.js~Client#reqPost",
+    "src/formsclient.js",
+    "file/src/FormsClient.js.html",
+    "src/FormsClient.js",
+    "file"
+  ],
+  [
+    "src/formsclient.js~formsclient#getform",
+    "class/src/FormsClient.js~FormsClient.html#instance-method-getForm",
+    "src/FormsClient.js~FormsClient#getForm",
     "method"
   ],
   [
-    "src/client.js~client#reqput",
-    "class/src/Client.js~Client.html#instance-method-reqPut",
-    "src/Client.js~Client#reqPut",
+    "src/formsclient.js~formsclient#getformpreview",
+    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormPreview",
+    "src/FormsClient.js~FormsClient#getFormPreview",
     "method"
   ],
   [
-    "src/client.js~client#makeRequest",
-    "class/src/Client.js~Client.html#instance-method-makeRequest",
-    "src/Client.js~Client#makeRequest",
+    "src/formsclient.js~formsclient#getforms",
+    "class/src/FormsClient.js~FormsClient.html#instance-method-getForms",
+    "src/FormsClient.js~FormsClient#getForms",
     "method"
   ],
   [
-    "src/client.js~client#route",
-    "class/src/Client.js~Client.html#instance-member-route",
-    "src/Client.js~Client#route",
-    "member"
+    "src/privacysettingsclient.js",
+    "file/src/PrivacySettingsClient.js.html",
+    "src/PrivacySettingsClient.js",
+    "file"
   ],
   [
-    "src/client.js~client#urlfromendpoint",
-    "class/src/Client.js~Client.html#instance-method-urlFromEndpoint",
-    "src/Client.js~Client#urlFromEndpoint",
+    "src/prolocalsettingclient.js",
+    "file/src/ProLocalSettingClient.js.html",
+    "src/ProLocalSettingClient.js",
+    "file"
+  ],
+  [
+    "src/prolocalsettingclient.js~prolocalsettingclient#getsettings",
+    "class/src/ProLocalSettingClient.js~ProLocalSettingClient.html#instance-method-getSettings",
+    "src/ProLocalSettingClient.js~ProLocalSettingClient#getSettings",
     "method"
   ],
   [
-    "src/client.js~client#urlstring",
-    "class/src/Client.js~Client.html#instance-method-urlString",
-    "src/Client.js~Client#urlString",
+    "src/prolocalsettingclient.js~prolocalsettingclient#updatesettings",
+    "class/src/ProLocalSettingClient.js~ProLocalSettingClient.html#instance-method-updateSettings",
+    "src/ProLocalSettingClient.js~ProLocalSettingClient#updateSettings",
     "method"
   ],
   [
-    "src/apirequest.js",
-    "file/src/apiRequest.js.html",
-    "src/apiRequest.js",
+    "src/wpclient.js",
+    "file/src/WpClient.js.html",
+    "src/WpClient.js",
+    "file"
+  ],
+  [
+    "src/wpclient.js~wpclient#setnonce",
+    "class/src/WpClient.js~WpClient.html#instance-method-setNonce",
+    "src/WpClient.js~WpClient#setNonce",
+    "method"
+  ],
+  [
+    "src/client.js",
+    "file/src/client.js.html",
+    "src/client.js",
+    "file"
+  ],
+  [
+    "src/wpclientfactory.js",
+    "file/src/wpClientFactory.js.html",
+    "src/wpClientFactory.js",
     "file"
   ]
 ]
