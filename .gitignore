@@ -1,3 +1,7 @@
+# WP testing dependencies
+/cf-browser-tests/wp-content/*
+/cf-browser-tests/vendor/*
+
 # Logs
 logs
 *.log
