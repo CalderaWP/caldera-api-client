@@ -1,4 +1,4 @@
-import {ApiClient} from "../src/apiClient";
+import {ApiClient} from '../src/apiClient';
 const form = {ID: 'CF1'};
 const forms = [
 	form
@@ -7,7 +7,7 @@ const formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';
 
 describe( 'ApiClient', () => {
 	beforeEach(() => {
-		fetch.resetMocks()
+		fetch.resetMocks();
 	});
 
 
@@ -38,13 +38,13 @@ describe( 'ApiClient', () => {
 			);
 			expect( client.handleError(response) ).toEqual( 'Fails' );
 		});
-	})
+	});
 
 });
 
 describe( 'Makes requests', () => {
 	beforeEach(() => {
-		fetch.resetMocks()
+		fetch.resetMocks();
 	});
 
 	describe( 'GET', () => {
@@ -55,7 +55,7 @@ describe( 'Makes requests', () => {
 				formsClient.makeRequest('/',{}).then(res => {
 					expect(JSON.parse(res.body.body)).toEqual(forms);
 				});
-				expect(fetch.mock.calls.length).toEqual(1)
+				expect(fetch.mock.calls).toHaveLength(1);
 			});
 		});
 
@@ -67,7 +67,7 @@ describe( 'Makes requests', () => {
 					expect(res).toEqual(JSON.stringify(forms));
 				});
 
-				expect(fetch.mock.calls.length).toEqual(1)
+				expect(fetch.mock.calls).toHaveLength(1);
 			});
 		});
 	});
@@ -79,7 +79,7 @@ describe( 'Makes requests', () => {
 			formClient.makeRequest('',{},'POST').then(res => {
 				expect(res.body.body).toEqual(JSON.stringify(form));
 			});
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 
 		it('Sets headers for POST requests', () => {
@@ -97,7 +97,7 @@ describe( 'Makes requests', () => {
 				expect(res).toEqual(JSON.stringify(forms));
 			});
 
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 	});
 
@@ -108,7 +108,7 @@ describe( 'Makes requests', () => {
 			formClient.makeRequest('',{},'PUT').then(res => {
 				expect(res.body.body).toEqual(JSON.stringify(form));
 			});
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 
 		it('Makes PUT requests using reqPut', () => {
@@ -118,7 +118,7 @@ describe( 'Makes requests', () => {
 				expect(res).toEqual(JSON.stringify(forms));
 			});
 
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 	});
 
@@ -126,12 +126,11 @@ describe( 'Makes requests', () => {
 		it( 'Makes DELETE requests', () => {
 			fetch.mockResponseOnce(new Response(JSON.stringify({delete:true})));
 			const formClient = new ApiClient( '/forms/cf2',  );
-			const request = formClient.createRequest('/delete',{},'DELETE');
 			formClient.makeRequest('',{}).then(res => {
 				expect(res.body.body).toEqual(JSON.stringify({delete:true}));
 			});
 
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 
 		it('Makes PUT requests using reqPut', () => {
@@ -141,7 +140,7 @@ describe( 'Makes requests', () => {
 				expect(res).toEqual(JSON.stringify(forms));
 			});
 
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 	});
 

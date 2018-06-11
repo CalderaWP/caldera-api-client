@@ -1,14 +1,13 @@
-import {wpClientFactory} from "../src/wpClientFactory";
-import {WpClient} from "../src/WpClient";
-import {FormsClient} from "../src/FormsClient";
-
+import {wpClientFactory} from '../src/wpClientFactory';
+import {WpClient} from '../src/WpClient';
+import {FormsClient} from '../src/FormsClient';
 describe( 'Factory', () => {
 	it( 'Returns generic by default', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345' );
 		expect(client ).toBeInstanceOf( WpClient );
 	});
 
-	it( 'Returns generic by default', () => {
+	it( 'Returns forms client when requested to.', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345', 'forms' );
 		expect(  client ).toBeInstanceOf( FormsClient );
 	});
@@ -45,7 +44,7 @@ describe( 'WordPress Client', () => {
 
 describe( 'Forms Client', () => {
 	beforeEach(() => {
-		fetch.resetMocks()
+		fetch.resetMocks();
 	});
 
 	const form = {ID: 'CF1'};
@@ -62,9 +61,10 @@ describe( 'Forms Client', () => {
 			client.getForms(1).then(  response => {
 				expect( response ).toEqual(forms);
 			}).catch((error) => {
+				// eslint-disable-next-line no-console
 				console.log(error);
 			});
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 
 		});
 	});
@@ -77,9 +77,10 @@ describe( 'Forms Client', () => {
 			client.getForm('CF1').then(  response => {
 				expect( response ).toEqual(form);
 			}).catch((error) => {
+				// eslint-disable-next-line no-console
 				console.log(error);
 			});
-			expect(fetch.mock.calls.length).toEqual(1)
+			expect(fetch.mock.calls).toHaveLength(1);
 		});
 	});
 

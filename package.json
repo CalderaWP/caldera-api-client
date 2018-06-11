@@ -14,9 +14,9 @@
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "prepublish": "npm run test && npm run build",
     "document": "./node_modules/.bin/esdoc",
-    "lint": "eslint src/**",
-    "lint:watch": "esw src/** --fix --watch",
-    "lint:fix": "eslint src/** --fix ",
+    "lint": "eslint src/**, __tests__/**",
+    "lint:watch": "esw src/**, __tests__/** --fix --watch",
+    "lint:fix": "eslint src/**, __tests__/** --fix ",
     "flow:watch": "flow-watch",
     "flow": "flow "
   },
@@ -47,6 +47,7 @@
     "esdoc-flow-plugin": "^1.0.0",
     "esdoc-jsx-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
+    "eslint-plugin-jest": "^21.17.0",
     "jest-cli": "^20.0.4",
     "sha1": "^1.1.1"
   },
