@@ -33,12 +33,8 @@ Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://
 
 ## Testing
 
-This boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.
 
-* Run test watcher
-```
-yarn test
-```
+
 
 ## Scripts
 
@@ -49,8 +45,25 @@ yarn test
 This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.
 
 ### Tests
-* `yarn test` : Test Watcher
-* `npm test:once` : Run Tests once
+
+#### Unit Tests
+This package uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.
+
+WordPress is not available during these tests.
+* Run tests with watcher
+- `yarn test`
+* Run tests once
+- `yarn test:once`
+
+#### Acceptance Tests With Browser/ WordPress/ Caldera Forms
+Requires
+* [Docker]()
+* [Docker Compose]()
+
+Install:
+`yarn wp-tests:install`
+
+You should now see a WordPress at [http://localhost:8888/](http://localhost:8888/)
 
 ### Type-checking With Flow
 * `yarn flow`

@@ -18,7 +18,11 @@
     "lint:watch": "esw src/**, __tests__/** --fix --watch",
     "lint:fix": "eslint src/**, __tests__/** --fix ",
     "flow:watch": "flow-watch",
-    "flow": "flow "
+    "flow": "flow",
+    "wp-tests": "1",
+    "wp-tests:install": "bash ./cf-browser-tests/install.sh",
+    "wp-tests:start": "docker compose up -d",
+    "wp-tests:stop": "docker-compose down"
   },
   "repository": {
     "type": "git",
