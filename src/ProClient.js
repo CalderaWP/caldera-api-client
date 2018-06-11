@@ -1,5 +1,14 @@
-const sha1 = require('sha1');
-export class ProClient extends Client{
+//@flow
+import {ApiClient} from './ApiClient';
+
+const sha1 = import('sha1');
+
+/**
+ * Client for remote access to Caldera Forms Pro
+ *
+ * Should only be used in admin context as it exposes public key, secret key and token.
+ */
+export class ProClient extends ApiClient{
 
 	publicKey: string;
 	secretKey: string;

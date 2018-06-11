@@ -3,15 +3,33 @@
 
 ## Usage
 ### Forms Clients
+__Admin Client__
+
 Get form configs and collections of forms config from a WordPress site.
 ### Privacy Settings
+__Admin Client__
+
 Get and update a WordPress site's privacy settings
 
 ### CF Pro Local Settings Client
+__Admin Client__
+
 Get and update a WordPress site's CF Pro settings
 
 ### CF Pro Client
-Get an account's layouts from CF Pro.
+__Admin Client__
+Get an account's layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.
+
+### Entries
+Get entries of a form.
+
+#### Acceptable Usage Of Admin Clients
+Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.
+
+OK: Caldera Forms settings page that is accessible only to admin users
+OK: Caldera Forms Pro UI that requires login
+NOT OK: Any publicly addressable page.
+NOT OK: Front-end rendering of a Caldera Form.
 
 
 ## Testing 
