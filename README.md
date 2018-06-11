@@ -21,7 +21,7 @@ Forked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://
 - Auto publish to npm on every build.
 
 ### Usage
-See: []http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http://calderalabs.org/caldera-api-client/manual/overview.html#usage)
+See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http://calderalabs.org/caldera-api-client/manual/overview.html#usage)
 
 ## Install
 `npm i -D @caldera-labs/api-client`

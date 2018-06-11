@@ -3,31 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/ApiClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/ApiClient.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/PrivacySettingsClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/PrivacySettingsClient.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/ProLocalSettingClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/ProLocalSettingClient.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/wpClientFactory.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/wpClientFactory.js.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/ProLocalSettingClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/ProLocalSettingClient.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/wpClientFactory.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/wpClientFactory.js.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/function/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/identifiers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/README.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,7 +50,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="291">
-                <caret line="23" column="145" selection-start-line="23" selection-start-column="145" selection-end-line="23" selection-end-column="145" />
+                <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -268,7 +243,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35865000" />
+    <option name="totallyTimeSpent" value="35900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="257" y="23" width="1663" height="1057" extended-state="0" />
@@ -642,7 +617,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="291">
-            <caret line="23" column="145" selection-start-line="23" selection-start-column="145" selection-end-line="23" selection-end-column="145" />
+            <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
