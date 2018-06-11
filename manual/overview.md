@@ -65,7 +65,28 @@ client.getForm('CF123456').then(form => {
 ```
 
 #### Read or Update Privacy Settings
+```js
+//create forms client
+const client = wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+	'12345', //the nonce for REST API cookie authentication
+	'privacy' //type of client to get ask for "privacy"
+);
+//Get privacy settings of form with ID CF12345
+client.getSettings('CF12345').then(settings => {
+	console.log(settings); //Object with basic form info and the privacy settings
+});
 
+//Update setting of form with ID CF12345
+client.updateSettings('CF12345',{
+    'emailIdentifyingFields': ['fld_4917648'],
+    'piiFields': ['fld_9899154', 'fld_4917648'],
+    'privacyExporterEnabled': true
+}).then(settings => {
+    console.log(settings); //Object with basic form info and the privacy settings
+});
+
+```
 #### Read or Update Caldera Forms Pro Local Settings
 
 ### Caldera Forms Pro Admin Client

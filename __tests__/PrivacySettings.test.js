@@ -32,7 +32,11 @@ describe( 'PrivacySettingsClient', () => {
 	it( 'Updates the settings', () => {
 		fetch.mockResponseOnce(new Response(JSON.stringify(settings)));
 		const client = new PrivacySettingsClient( '/forms', {}  );
-		client.updateSettings('CF5b197831b60ae',settings).then(res => {
+		client.updateSettings('CF5b197831b60ae',{
+			'emailIdentifyingFields': ['fld_4917648'],
+			'piiFields': ['fld_9899154', 'fld_4917648'],
+			'privacyExporterEnabled': true
+		}).then(res => {
 			expect(res).toEqual(settings);
 		});
 
