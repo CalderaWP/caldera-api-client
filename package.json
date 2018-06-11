@@ -1,6 +1,6 @@
 {
   "name": "@caldera-labs/api-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API client for Caldera Forms and Caldera Forms Pro",
   "main": "./dist/index.js",
   "scripts": {
@@ -22,7 +22,6 @@
     "release": "npm run release:patch",
     "release:minor": "npm version minor -m \"version %s\" && npm run publish",
     "release:patch": "npm version patch -m \"version %s\" && npm run publish"
-
   },
   "repository": {
     "type": "git",
