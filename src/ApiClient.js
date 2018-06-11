@@ -46,9 +46,9 @@ export class ApiClient{
 	/**
 	 * Create a Request object
 	 *
-	 * @param endpoint
-	 * @param data
-	 * @param method
+	 * @param {String} endpoint
+	 * @param {Object} data
+	 * @param {String}method
 	 * @returns {Request}
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {

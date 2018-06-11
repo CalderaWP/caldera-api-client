@@ -1,7 +1,7 @@
 //@flow
 import {ApiClient} from './ApiClient';
 
-import {sha1} from 'sha1'
+import sha1 from  'locutus/php/strings/sha1';
 
 /**
  * Client for remote access to Caldera Forms Pro
@@ -15,18 +15,34 @@ export class ProClient extends ApiClient{
 
 	/**
 	 * Set the public key for CF Pro
-	 * @param publicKey
+	 * @param {String} publicKey
 	 */
-	setPublic(publicKey: string){
+	setPublicKey(publicKey: string){
 		this.publicKey=publicKey;
 	}
 
 	/**
-	 * Set the secret key for CF Pro
-	 * @param secretKey
+	 * Get the public key for CF Pro
+	 * @returns {String}
 	 */
-	setSecret(secretKey: string){
+	getPublicKey() : string {
+		return this.publicKey;
+	}
+
+	/**
+	 * Set the secret key for CF Pro
+	 * @param {String} secretKey
+	 */
+	setSecretKey(secretKey: string){
 		this.secretKey=secretKey;
+	}
+
+	/**
+	 * Get the secret key for CF Pro
+	 * @returns {String}
+	 */
+	getSecretKey() : string {
+		return this.secretKey;
 	}
 
 	/**
@@ -34,11 +50,13 @@ export class ProClient extends ApiClient{
 	 * @returns {string}
 	 */
 	hasKeys(): boolean {
-		function truthy(a, b): boolean %checks {
-			return !!a && !!b;
-		}
 
-		return truthy(this.secretKey && this.publicKey );
+		return (
+			undefined !== this.secretKey
+			&& '' !== this.secretKey
+			&& undefined !== this.publicKey
+			&& '' !== this.publicKey
+		);
 	}
 
 	/**
@@ -50,7 +68,7 @@ export class ProClient extends ApiClient{
 		if( ! this.hasKeys() ){
 			return '';
 		}
-		return sha1(`${this.publicKey}${this.secretKey}`);
+		return sha1(this.publicKey + this.secretKey);
 
 	}
 
@@ -60,17 +78,40 @@ export class ProClient extends ApiClient{
 	 * @returns {*}
 	 */
 	getLayouts(): Promise<any> {
-		return this.reqGet( this.reqGetData({}), '/layouts/list' );
+		return this.reqGet( this.requestDataForGetRequests({
+			simple:true
+		}), '/layouts/list' );
 	}
 
 
-	reqGetData(data: ?Object = {}) {
+	/**
+	 * Adds public key and token to object
+	 *
+	 * Use for GET request data
+	 * @param data
+	 * @returns {{public: string, token: string}}
+	 */
+	requestDataForGetRequests(data: ?Object = {}) {
 		return {
-			...{
-				'public':this.publicKey,
-				token: this.getToken()
-			},
-			data
+			...data,
+			'public':this.publicKey,
+			token: this.getToken()
 		};
+	}
+
+
+	/**
+	 * Create a Request object
+	 *
+	 * @param {String} endpoint
+	 * @param {Object} data
+	 * @param {String}method
+	 * @returns {Request}
+	 */
+	createRequest(endpoint: string, data: Object, method: string): Request {
+		let request = super.createRequest(endpoint,data, method);
+		request.headers.set( 'X-CS-PUBLIC', this.getPublicKey() );
+		request.headers.set( 'X-CS-TOKEN', this.getToken() );
+		return request;
 	}
 }

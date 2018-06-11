@@ -68,6 +68,16 @@ client.getForm('CF123456').then(form => {
 
 #### Read or Update Caldera Forms Pro Local Settings
 
+### Caldera Forms Pro Admin Client
+
+```js
+const client = new ProClient('https://app.calderaformspro.com');
+client.setPublicKey('12345');
+client.setSecretKey('abcd1');
+client.getLayouts().then(res => {
+    expect(res).toEqual(layouts);
+});
+```
 
 ## Testing 
 ### Mocking Requests
