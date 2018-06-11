@@ -1,4 +1,4 @@
-import {WpClient} from "./WpClient";
+import {WpClient} from './WpClient';
 
 /**
  * Get and update a WordPress site's CF Pro settings
@@ -9,8 +9,8 @@ export class ProLocalSettingClient extends WpClient {
 	 *
 	 * @returns {Promise}
 	 */
-	getSettings() : Promise<any> {
-		return this.reqGet({},'/settings/pro')
+	getSettings(): Promise<any> {
+		return this.reqGet({},'/settings/pro');
 	}
 
 	/**
@@ -18,7 +18,7 @@ export class ProLocalSettingClient extends WpClient {
 	 *
 	 * @returns {Promise}
 	 */
-	updateSettings(data:Object): Promise<any>{
+	updateSettings(data: Object): Promise<any>{
 		return this.reqPost(data,'/settings/pro');
 	}
 }

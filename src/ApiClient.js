@@ -179,7 +179,7 @@ export class ApiClient{
 		} else {
 			return {
 
-			}
+			};
 		}
 	}
 

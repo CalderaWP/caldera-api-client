@@ -2,68 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/WpClient.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FormsClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrivacySettingsClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProLocalSettingClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WpClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/wpClientFactory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.esdoc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.esdoc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/apiClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apiClient.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/.external-ecmascript.js.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/Client.js.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/FormsClient.js.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/apiRequest.js.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ast/source/index.js.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/Client.js~Client.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/github.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/identifiers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/manual.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/prettify-tomorrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/source.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/css/test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/Client.js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/apiRequest.js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/file/src/index.js.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/badge.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/brand_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/esdoc-logo-mini-black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/esdoc-logo-mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/manual-badge.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/lint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/overview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/inherited-summary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/inner-link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/manual.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/patch-for-local.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/prettify/Apache-License-2.0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/prettify/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/pretty-print.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/script/test-summary.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/WpClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/WpClient.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manual/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/overview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apiRequest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FormsClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormsClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrivacySettingsClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivacySettingsClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProLocalSettingClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProLocalSettingClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,35 +18,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.49801746">
       <split-first>
         <leaf>
-          <file leaf-file-name=".esdoc.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.esdoc.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PrivacySettingsClient.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="9" selection-start-line="11" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/manual/index.md">
+          <file leaf-file-name="overview.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/manual/overview.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="15">
-                    <caret line="1" selection-start-line="1" selection-end-line="1" />
+                  <first_editor relative-caret-position="363">
+                    <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
                   </first_editor>
                   <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WpClient.test.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="783">
+                  <caret line="87" selection-start-line="87" selection-end-line="87" />
+                  <folding>
+                    <element signature="e#0#55#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -110,32 +49,29 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="overview.md" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/manual/overview.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="90">
-                    <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProLocalSettingClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="testing.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/docs/manual/testing.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="615">
+                  <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="apiClient.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="668">
+                  <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -161,6 +97,7 @@
       <find>standard</find>
       <find>Responde</find>
       <find>creates</find>
+      <find>skip</find>
     </findStrings>
     <replaceStrings>
       <replace>calderawp/npm-module-boilerplate</replace>
@@ -202,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/client.js" />
         <option value="$PROJECT_DIR$/src/ApiClient.js" />
         <option value="$PROJECT_DIR$/__tests__/apiClient.test.js" />
-        <option value="$PROJECT_DIR$/__tests__/WpClient.test.js" />
         <option value="$PROJECT_DIR$/src/FormsClient.js" />
         <option value="$PROJECT_DIR$/src/ProClient.js" />
         <option value="$PROJECT_DIR$/manual/index.md" />
@@ -210,6 +146,7 @@
         <option value="$PROJECT_DIR$/.esdoc.json" />
         <option value="$PROJECT_DIR$/src/PrivacySettingsClient.js" />
         <option value="$PROJECT_DIR$/src/ProLocalSettingClient.js" />
+        <option value="$PROJECT_DIR$/__tests__/WpClient.test.js" />
         <option value="$PROJECT_DIR$/manual/overview.md" />
       </list>
     </option>
@@ -268,12 +205,6 @@
             <path>
               <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-client" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="manual" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-client" type="462c0819:PsiDirectoryNode" />
               <item name="manual" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,12 +259,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528567086917</updated>
       <workItem from="1528567088462" duration="5952000" />
-      <workItem from="1528574097492" duration="19990000" />
+      <workItem from="1528574097492" duration="21558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25942000" />
+    <option name="totallyTimeSpent" value="27510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="449" y="27" width="1511" height="1057" extended-state="0" />
@@ -398,9 +329,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/globe.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -646,20 +574,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/manual/testing.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
+    <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="42" column="3" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state relative-caret-position="45">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.esdoc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -673,49 +615,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manual/testing.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="30">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.esdoc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        <state relative-caret-position="330">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
+    <entry file="file://$PROJECT_DIR$/docs/manual/testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="9" selection-start-line="11" selection-end-line="12" />
+        <state relative-caret-position="615">
+          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+    <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state relative-caret-position="783">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="75" column="42" lean-forward="true" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manual/overview.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+          <first_editor relative-caret-position="363">
+            <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           </first_editor>
           <second_editor />
         </state>

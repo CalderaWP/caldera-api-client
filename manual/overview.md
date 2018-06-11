@@ -16,13 +16,16 @@ Get an account's layouts from CF Pro.
 
 ## Testing 
 ### Mocking Requests
-All HTTP requests use fetch.
+All HTTP requests use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
 
 You can test using [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)
 
-#### Example
+#### Examples of Mocking Fetch
+* Mocking Fetch, in general:
 ```js
 describe('testing api', () => {
+	
   beforeEach(() => {
     fetch.resetMocks()
   });
@@ -41,3 +44,36 @@ describe('testing api', () => {
 })
 ```
 
+* Mocking API call that uses fetch.
+- Since our API clients use fetch, we need to setup a fetch mock before calling a client function.
+```js
+describe('Forms API', () => {
+	//Data likely to be reused in multiple tests.
+	const form = {ID: 'CF1'};
+	const formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';
+	
+	//Reset before each test in this describe() closure for isolation
+	beforeEach(() => {
+		fetch.resetMocks()
+	});
+
+	//Test once call per it() closure.
+	it('Gets data from API', () => {
+		fetch.mockResponseOnce(JSON.stringify(form));
+
+		//Fetch and wait for response.
+		client.getForm('CF1').then(response => {
+			expect(response).toEqual(form); //test response
+		}).catch((error) => {
+			console.log(error); //log error
+		});
+
+		//Make sure it ran.
+		expect(fetch.mock.calls.length).toEqual(1);
+	})
+});
+```
+
+#### Helpful Links About Fetch and Testing With Fetch
+* [MDN Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [David Walsh blog post about Fetch](https://davidwalsh.name/fetch)

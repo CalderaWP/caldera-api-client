@@ -1,14 +1,14 @@
 const sha1 = require('sha1');
 export class ProClient extends Client{
 
-	publicKey:string;
-	secretKey:string;
+	publicKey: string;
+	secretKey: string;
 
 	/**
 	 * Set the public key for CF Pro
 	 * @param publicKey
 	 */
-	setPublic(publicKey:string){
+	setPublic(publicKey: string){
 		this.publicKey=publicKey;
 	}
 
@@ -16,7 +16,7 @@ export class ProClient extends Client{
 	 * Set the secret key for CF Pro
 	 * @param secretKey
 	 */
-	setSecret(secretKey:string){
+	setSecret(secretKey: string){
 		this.secretKey=secretKey;
 	}
 
@@ -24,7 +24,7 @@ export class ProClient extends Client{
 	 * Check if both public and secret keys are set for CF Pro
 	 * @returns {string}
 	 */
-	hasKeys() : boolean {
+	hasKeys(): boolean {
 		return this.secretKey && this.publicKey;
 	}
 
@@ -33,7 +33,7 @@ export class ProClient extends Client{
 	 *
 	 * @returns {String}
 	 */
-	getToken():String {
+	getToken(): String {
 		if( ! this.hasKeys() ){
 			throw 'Must set keys before requesting token';
 		}
@@ -46,7 +46,7 @@ export class ProClient extends Client{
 	 *
 	 * @returns {*}
 	 */
-	getLayouts() : Promise<any> {
+	getLayouts(): Promise<any> {
 		return this.reqGet( this.reqGetData({}), '/layouts/list' );
 	}
 
@@ -58,6 +58,6 @@ export class ProClient extends Client{
 				token: this.getToken()
 			},
 			data
-		}
+		};
 	}
 }

@@ -44,6 +44,10 @@ describe( 'WordPress Client', () => {
 
 
 describe( 'Forms Client', () => {
+	beforeEach(() => {
+		fetch.resetMocks()
+	});
+
 	const form = {ID: 'CF1'};
 	const forms = [
 		form
@@ -52,27 +56,32 @@ describe( 'Forms Client', () => {
 
 	describe( 'Forms endpoint', () => {
 		it( 'Gets forms', () =>{
-			const client = new FormsClient('https://hiroy.club' );
+			const client = new FormsClient(formsApiRoute );
 			client.setNonce('12345');
 			fetch.mockResponseOnce(JSON.stringify(forms));
-			expect( client.getForms(1) ).toEqual(forms);
-
-		});
-	});
-
-	describe( 'Form endpoint', () => {
-		it.skip( 'Gets a form', () =>{
-			const client = new FormsClient('https://hiroy.club' );
-			client.setNonce('12345');
-			fetch.mockResponseOnce(JSON.stringify(form));
-			client.getForm('CF1').then(  response => {
-				expect( response ).toEqual(form);
+			client.getForms(1).then(  response => {
+				expect( response ).toEqual(forms);
+			}).catch((error) => {
+				console.log(error);
 			});
 			expect(fetch.mock.calls.length).toEqual(1)
 
 		});
 	});
 
-
+	describe( 'Form endpoint', () => {
+		it( 'Gets a form', () =>{
+			const client = new FormsClient(formsApiRoute );
+			client.setNonce('12345');
+			fetch.mockResponseOnce(JSON.stringify(form));
+			client.getForm('CF1').then(  response => {
+				expect( response ).toEqual(form);
+			}).catch((error) => {
+				console.log(error);
+			});
+			expect(fetch.mock.calls.length).toEqual(1)
+		});
+	});
 
 });
+

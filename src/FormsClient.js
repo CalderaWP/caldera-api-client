@@ -14,7 +14,7 @@ export class FormsClient extends WpClient {
 	 */
 	getForms(page: number=1): Promise<any>{
 		return this.reqGet({page:page});
-	};
+	}
 
 	/**
 	 * Get a form config
@@ -22,11 +22,11 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise<any>}
 	 */
-	getForm(formId:string): Promise<any>{
+	getForm(formId: string): Promise<any>{
 		return this.reqGet({
 			preview:false
 		},formId);
-	};
+	}
 
 	/**
 	 * Get HTML preview of a form
@@ -34,9 +34,9 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise<any>}
 	 */
-	getFormPreview(formId:string): Promise<any>{
+	getFormPreview(formId: string): Promise<any>{
 		return this.reqGet({
 			preview:true
 		},formId);
-	};
+	}
 }
