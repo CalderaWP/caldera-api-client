@@ -8,7 +8,7 @@
     "build:pre": "npm run test:once",
     "build:compile": "./node_modules/.bin/babel -d dist src/",
     "build:post": "npm run compress",
-    "compress": "uglifyjs dist/index.js -c -m --source-map -o dist/index.min.js",
+    "compress": " uglifyjs-folder dist -c -m --source-map -o dist/index.min.js",
     "test": "jest --watch",
     "test:once": "jest",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -68,7 +68,8 @@
     "jest": "^20.0.4",
     "jest-fetch-mock": "^1.6.3",
     "locutus": "^2.0.9",
-    "uglify-js": "^3.4.0"
+    "uglify-js": "^3.4.0",
+    "uglifyjs-folder": "^1.5.1"
   },
   "standard": {
     "plugins": [
