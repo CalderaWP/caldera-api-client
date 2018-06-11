@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/ApiClient.js",
-    "content": "//@flow\ninterface Body {\n\tbodyUsed: boolean;\n\tarrayBuffer(): Promise<ArrayBuffer>;\n\tblob(): Promise<Blob>;\n\tformData(): Promise<FormData>;\n\tjson(): Promise<any>;\n\ttext(): Promise<string>;\n}\n/**\n * Generic API client\n */\nexport class ApiClient{\n\t/**\n\t * Base route for client\n\t *\n\t * @type {String}\n\t */\n\troute: string;\n\t/**\n\t * Headers for all requests\n\t *\n\t * @type {Headers}\n\t */\n\theaders: Headers;\n\n\t/**\n\t *\n\t * @param {String} route The full URL of API route is a client for\n\t * @param {Object} headers Optional. Headers for all requests\n\t */\n\tconstructor(route: string,headers: ?Object = {} ){\n\t\tthis.route=route;\n\t\tif( ! headers ){\n\t\t\theaders = {};\n\t\t}\n\t\tthis.headers=new Headers(headers);\n\t}\n\n\n\n\t/**\n\t * Make a request to an endpoint\n\t *\n\t * @param endpoint\n\t * @param data\n\t * @param method\n\t * @returns {Promise<Response>}\n\t */\n\tmakeRequest(endpoint: string, data: Object, method: string): Promise<Response> {\n\t\tlet request = this.createRequest(endpoint, data, method);\n\t\treturn fetch(request);\n\t}\n\t/**\n\t * Create a Request object\n\t *\n\t * @param endpoint\n\t * @param data\n\t * @param method\n\t * @returns {Request}\n\t */\n\tcreateRequest(endpoint: string, data: Object, method: string): Request {\n\t\tlet args = {\n\t\t\tmethod: 'method',\n\t\t\tmode:'same-origin',\n\t\t\tcredentials: 'same-origin',\n\t\t\tredirect: 'follow',\n\t\t\tbody: '',\n\t\t\theaders: this.headers\n\t\t};\n\n\t\tif ('POST' === method || 'PUT' === method) {\n\t\t\targs.body = JSON.stringify(data);\n\t\t\targs.headers.append('Content-Type', 'application/json');\n\t\t\targs.headers.append('Content-Length', args.body.length.toString());\n\t\t}\n\n\t\treturn new Request(this.urlFromEndpoint(endpoint, method), args);\n\n\t}\n\t/**\n\t * Create URL for route with endpoint\n\t * @param endpoint\n\t * @param method\n\t * @param data\n\t * @returns {*}\n\t */\n\turlFromEndpoint(endpoint: string, method: string = 'GET', data: ?Object = {}): string{\n\t\tif ('GET' === method) {\n\t\t\tif( ! data ){\n\t\t\t\tdata = {};\n\t\t\t}\n\t\t\treturn this.urlString(data, endpoint);\n\t\t}\n\n\t\treturn `${this.route}${endpoint}`;\n\t}\n\t/**\n\t * Make a GET request\n\t *\n\t * @param data Object containing query arguments\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqGet(data: Object, endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, data, 'GET')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a POST request\n\t *\n\t * @param data Request body data\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqPost (data: Object, endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, data, 'POST')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a PUT request\n\t *\n\t * @param data Request body data\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqPut (data: Object, endpoint: string = ''): Promise<any>  {\n\t\treturn this.makeRequest(endpoint, data, 'PUT')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a DELETE request\n\t *\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqDelete(endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, {}, 'DELETE')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\n\t}\n\t/**\n\t * Given HTTP response, return body\n\t *\n\t * @param response\n\t * @returns {*}\n\t */\n\thandleResponse(response: Response): Object  {\n\t\tif(response.ok) {\n\t\t\treturn response.json();\n\t\t} else {\n\t\t\treturn {\n\n\t\t\t}\n\t\t}\n\t}\n\n\n\t/**\n\t * Given an HTTP response that is an error, return statusText\n\t *\n\t * @param error\n\t * @returns {string}\n\t */\n\thandleError(error: Response): string {\n\t\treturn error.statusText;\n\t}\n\t/**\n\t * Create a URL string with query args\n\t * @param data Query arguments\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {string}\n\t */\n\turlString (data: Object, endpoint: string = ''): string {\n\n\t\tif ('' !== endpoint && '/' === endpoint.charAt(0)) {\n\t\t\tendpoint = endpoint.substr(1);\n\t\t}\n\n\t\tlet str = '';\n\t\tfor (let key in data) {\n\t\t\tif (str !== '') {\n\t\t\t\tstr += '&';\n\t\t\t}\n\t\t\tstr += key + '=' + data[key];\n\t\t}\n\t\tif (endpoint) {\n\t\t\treturn `${this.route}/${endpoint}?${str}`;\n\t\t}\n\t\treturn this.route + '?' + str;\n\t}\n\n}",
+    "content": "//@flow\n/**\n * Generic API client\n */\nexport class ApiClient{\n\t/**\n\t * Base route for client\n\t *\n\t * @type {String}\n\t */\n\troute: string;\n\t/**\n\t * Headers for all requests\n\t *\n\t * @type {Headers}\n\t */\n\theaders: Headers;\n\n\t/**\n\t *\n\t * @param {String} route The full URL of API route is a client for\n\t * @param {Object} headers Optional. Headers for all requests\n\t */\n\tconstructor(route: string,headers: ?Object = {} ){\n\t\tthis.route=route;\n\t\tif( ! headers ){\n\t\t\theaders = {};\n\t\t}\n\t\tthis.headers=new Headers(headers);\n\t}\n\n\n\n\t/**\n\t * Make a request to an endpoint\n\t *\n\t * @param {String} endpoint\n\t * @param {Object} data\n\t * @param {String} method\n\t *\n\t * @returns {Promise<Response>}\n\t */\n\tmakeRequest(endpoint: string, data: Object, method: string): Promise<Response> {\n\t\tconst request = this.createRequest(endpoint, data, method);\n\t\treturn fetch(request);\n\t}\n\t/**\n\t * Create a Request object\n\t *\n\t * @param {String} endpoint\n\t * @param {Object} data\n\t * @param {String} method\n\t * @returns {Request}\n\t */\n\tcreateRequest(endpoint: string, data: Object, method: string): Request {\n\t\tlet args = {\n\t\t\tmethod: 'method',\n\t\t\tmode:'same-origin',\n\t\t\tcredentials: 'same-origin',\n\t\t\tredirect: 'follow',\n\t\t\tbody: '',\n\t\t\theaders: this.headers\n\t\t};\n\n\t\tif ('POST' === method || 'PUT' === method) {\n\t\t\targs.body = JSON.stringify(data);\n\t\t\targs.headers.append('Content-Type', 'application/json');\n\t\t\targs.headers.append('Content-Length', args.body.length.toString());\n\t\t}\n\n\t\treturn new Request(this.urlFromEndpoint(endpoint, method), args);\n\n\t}\n\t/**\n\t * Create URL for route with endpoint\n\t * @param endpoint\n\t * @param method\n\t * @param data\n\t * @returns {*}\n\t */\n\turlFromEndpoint(endpoint: string, method: string = 'GET', data: ?Object = {}): string{\n\t\tif ('GET' === method) {\n\t\t\tif( ! data ){\n\t\t\t\tdata = {};\n\t\t\t}\n\t\t\treturn this.urlString(data, endpoint);\n\t\t}\n\n\t\treturn `${this.route}${endpoint}`;\n\t}\n\t/**\n\t * Make a GET request\n\t *\n\t * @param data Object containing query arguments\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqGet(data: Object, endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, data, 'GET')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a POST request\n\t *\n\t * @param data Request body data\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqPost (data: Object, endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, data, 'POST')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a PUT request\n\t *\n\t * @param data Request body data\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqPut (data: Object, endpoint: string = ''): Promise<any>  {\n\t\treturn this.makeRequest(endpoint, data, 'PUT')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\t}\n\t/**\n\t * Make a DELETE request\n\t *\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {Promise<T>}\n\t */\n\treqDelete(endpoint: string = ''): Promise<any> {\n\t\treturn this.makeRequest(endpoint, {}, 'DELETE')\n\t\t\t.then(\n\t\t\t\tresponse => {\n\t\t\t\t\treturn this.handleResponse(response);\n\t\t\t\t},\n\t\t\t\terror => {\n\t\t\t\t\treturn this.handleError(error);\n\t\t\t\t}\n\t\t\t);\n\n\t}\n\t/**\n\t * Given HTTP response, return body\n\t *\n\t * @param response\n\t * @returns {*}\n\t */\n\thandleResponse(response: Response): Object  {\n\t\tif(response.ok) {\n\t\t\treturn response.json();\n\t\t} else {\n\t\t\treturn {\n\n\t\t\t};\n\t\t}\n\t}\n\n\n\t/**\n\t * Given an HTTP response that is an error, return statusText\n\t *\n\t * @param error\n\t * @returns {string}\n\t */\n\thandleError(error: Response): string {\n\t\treturn error.statusText;\n\t}\n\t/**\n\t * Create a URL string with query args\n\t * @param data Query arguments\n\t * @param endpoint Optional. Endpoint to query\n\t * @returns {string}\n\t */\n\turlString (data: Object, endpoint: string = ''): string {\n\n\t\tif ('' !== endpoint && '/' === endpoint.charAt(0)) {\n\t\t\tendpoint = endpoint.substr(1);\n\t\t}\n\n\t\tlet str = '';\n\t\tfor (let key in data) {\n\t\t\tif (str !== '') {\n\t\t\t\tstr += '&';\n\t\t\t}\n\t\t\tstr += key + '=' + data[key];\n\t\t}\n\t\tif (endpoint) {\n\t\t\treturn `${this.route}/${endpoint}?${str}`;\n\t\t}\n\t\treturn this.route + '?' + str;\n\t}\n\n}",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/ApiClient.js",
     "access": "public",
@@ -655,7 +655,7 @@
     "longname": "src/ApiClient.js~ApiClient#makeRequest",
     "access": "public",
     "description": "Headers for all requests",
-    "lineNumber": 40,
+    "lineNumber": 41,
     "type": {
       "nullable": null,
       "types": [
@@ -701,7 +701,7 @@
     "longname": "src/ApiClient.js~ApiClient#createRequest",
     "access": "public",
     "description": "Create a Request object",
-    "lineNumber": 52,
+    "lineNumber": 53,
     "unknown": [
       {
         "tagName": "@returns",
@@ -712,7 +712,7 @@
       {
         "nullable": null,
         "types": [
-          "*"
+          "String"
         ],
         "spread": false,
         "optional": false,
@@ -722,7 +722,7 @@
       {
         "nullable": null,
         "types": [
-          "*"
+          "Object"
         ],
         "spread": false,
         "optional": false,
@@ -732,7 +732,7 @@
       {
         "nullable": null,
         "types": [
-          "*"
+          "String"
         ],
         "spread": false,
         "optional": false,
@@ -760,7 +760,7 @@
     "longname": "src/ApiClient.js~ApiClient#urlFromEndpoint",
     "access": "public",
     "description": "Create URL for route with endpoint",
-    "lineNumber": 77,
+    "lineNumber": 78,
     "unknown": [
       {
         "tagName": "@returns",
@@ -819,7 +819,7 @@
     "longname": "src/ApiClient.js~ApiClient#reqGet",
     "access": "public",
     "description": "Make a GET request",
-    "lineNumber": 94,
+    "lineNumber": 95,
     "unknown": [
       {
         "tagName": "@returns",
@@ -868,7 +868,7 @@
     "longname": "src/ApiClient.js~ApiClient#reqPost",
     "access": "public",
     "description": "Make a POST request",
-    "lineNumber": 108,
+    "lineNumber": 109,
     "unknown": [
       {
         "tagName": "@returns",
@@ -917,7 +917,7 @@
     "longname": "src/ApiClient.js~ApiClient#reqPut",
     "access": "public",
     "description": "Make a PUT request",
-    "lineNumber": 122,
+    "lineNumber": 123,
     "unknown": [
       {
         "tagName": "@returns",
@@ -966,7 +966,7 @@
     "longname": "src/ApiClient.js~ApiClient#reqDelete",
     "access": "public",
     "description": "Make a DELETE request",
-    "lineNumber": 135,
+    "lineNumber": 136,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1005,7 +1005,7 @@
     "longname": "src/ApiClient.js~ApiClient#handleResponse",
     "access": "public",
     "description": "Given HTTP response, return body",
-    "lineNumber": 148,
+    "lineNumber": 149,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1044,7 +1044,7 @@
     "longname": "src/ApiClient.js~ApiClient#handleError",
     "access": "public",
     "description": "Given an HTTP response that is an error, return statusText",
-    "lineNumber": 162,
+    "lineNumber": 163,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1083,7 +1083,7 @@
     "longname": "src/ApiClient.js~ApiClient#urlString",
     "access": "public",
     "description": "Create a URL string with query args",
-    "lineNumber": 171,
+    "lineNumber": 172,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1125,7 +1125,7 @@
     "__docId__": 63,
     "kind": "file",
     "name": "src/FormsClient.js",
-    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Client for administrating forms on a WordPress site\n */\nexport class FormsClient extends WpClient {\n\n\t/**\n\t * Get forms\n\t *\n\t * @param {Numeric} page Optional. Default is 1\n\t * @returns {Promise<any>}\n\t */\n\tgetForms(page: number=1): Promise<any>{\n\t\treturn this.reqGet({page:page});\n\t};\n\n\t/**\n\t * Get a form config\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetForm(formId:string): Promise<any>{\n\t\treturn this.reqGet({\n\t\t\tpreview:false\n\t\t},formId);\n\t};\n\n\t/**\n\t * Get HTML preview of a form\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetFormPreview(formId:string): Promise<any>{\n\t\treturn this.reqGet({\n\t\t\tpreview:true\n\t\t},formId);\n\t};\n}",
+    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Client for administrating forms on a WordPress site\n */\nexport class FormsClient extends WpClient {\n\n\t/**\n\t * Get forms\n\t *\n\t * @param {Numeric} page Optional. Default is 1\n\t * @returns {Promise<any>}\n\t */\n\tgetForms(page: number=1): Promise<any>{\n\t\treturn this.reqGet({page:page});\n\t}\n\n\t/**\n\t * Get a form config\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetForm(formId: string): Promise<any>{\n\t\treturn this.reqGet({\n\t\t\tpreview:false\n\t\t},formId);\n\t}\n\n\t/**\n\t * Get HTML preview of a form\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetFormPreview(formId: string): Promise<any>{\n\t\treturn this.reqGet({\n\t\t\tpreview:true\n\t\t},formId);\n\t}\n}",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/FormsClient.js",
     "access": "public",
@@ -1271,7 +1271,7 @@
     "__docId__": 68,
     "kind": "file",
     "name": "src/PrivacySettingsClient.js",
-    "content": "import {WpClient} from \"./WpClient\";\n\n/**\n * Get and update a WordPress site's privacy settings\n */\nclass PrivacySettingsClient extends WpClient {\n\n\t/**\n\t * Get privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @returns {Promise}\n\t */\n\tgetSettings(formId:string) : Promise<any> {\n\t\treturn this.reqGet({privacy:true},formId);\n\t};\n\n\t/**\n\t * Update privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @param {Object} data New settings\n\t * @returns {Promise}\n\t */\n\tupdateSettings(formId:string,data:Object): Promise<any>{\n\t\treturn this.reqPost(data,`${formId}/privacy`)\n\t}\n}",
+    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's privacy settings\n */\nexport class PrivacySettingsClient extends WpClient {\n\n\t/**\n\t * Get privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @returns {Promise}\n\t */\n\tgetSettings(formId: string): Promise<any> {\n\t\treturn this.reqGet({privacy:true},formId);\n\t}\n\n\t/**\n\t * Update privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @param {Object} data New settings\n\t * @returns {Promise}\n\t */\n\tupdateSettings(formId: string,data: Object): Promise<any>{\n\t\treturn this.reqPost(data,`${formId}/privacy`);\n\t}\n\n}\n",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/PrivacySettingsClient.js",
     "access": "public",
@@ -1286,16 +1286,15 @@
     "static": true,
     "longname": "src/PrivacySettingsClient.js~PrivacySettingsClient",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "@caldera-labs/api-client/src/PrivacySettingsClient.js",
-    "importStyle": null,
+    "importStyle": "{PrivacySettingsClient}",
     "description": "Get and update a WordPress site's privacy settings",
     "lineNumber": 6,
     "interface": false,
     "extends": [
       "src/WpClient.js~WpClient"
-    ],
-    "ignore": true
+    ]
   },
   {
     "__docId__": 70,
@@ -1389,7 +1388,7 @@
     "__docId__": 72,
     "kind": "file",
     "name": "src/ProLocalSettingClient.js",
-    "content": "import {WpClient} from \"./WpClient\";\n\n/**\n * Get and update a WordPress site's CF Pro settings\n */\nexport class ProLocalSettingClient extends WpClient {\n\t/**\n\t * Get CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tgetSettings() : Promise<any> {\n\t\treturn this.reqGet({},'/settings/pro')\n\t}\n\n\t/**\n\t * Update CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tupdateSettings(data:Object): Promise<any>{\n\t\treturn this.reqPost(data,'/settings/pro');\n\t}\n}",
+    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's CF Pro settings\n */\nexport class ProLocalSettingClient extends WpClient {\n\t/**\n\t * Get CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tgetSettings(): Promise<any> {\n\t\treturn this.reqGet({},'/settings/pro');\n\t}\n\n\t/**\n\t * Update CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tupdateSettings(data: Object): Promise<any>{\n\t\treturn this.reqPost(data,'/settings/pro');\n\t}\n}",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/ProLocalSettingClient.js",
     "access": "public",
@@ -1536,40 +1535,8 @@
   {
     "__docId__": 79,
     "kind": "file",
-    "name": "src/client.js",
-    "content": "import {ApiClient} from './apiClient';\nconst module = {};\nmodule.exports = {\n\tapiClient: ApiClient,\n\n};",
-    "static": true,
-    "longname": "/Users/josh/caldera-js/api-client/src/client.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 80,
-    "kind": "variable",
-    "name": "module",
-    "memberof": "src/client.js",
-    "static": true,
-    "longname": "src/client.js~module",
-    "access": "public",
-    "export": false,
-    "importPath": "@caldera-labs/api-client/src/client.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
-    "type": {
-      "types": [
-        "{}"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 81,
-    "kind": "file",
     "name": "src/wpClientFactory.js",
-    "content": "//@flow\nimport {WpClient} from './WpClient';\nimport {FormsClient} from './FormsClient';\n\nexport function wpClientFactory(wpApiUrl: string, wpApiNonce: string,type: ?string): WpClient{\n\tlet client = new WpClient(wpApiUrl);\n\tswitch( type ){\n\tcase 'forms':\n\t\tclient = new FormsClient(wpApiUrl);\n\t\tbreak;\n\tdefault:\n\t\tclient = new WpClient(wpApiUrl);\n\t\tbreak;\n\t}\n\tclient.setNonce(wpApiNonce);\n\treturn client;\n}",
+    "content": "//@flow\nimport {WpClient} from './WpClient';\nimport {FormsClient} from './FormsClient';\nimport {PrivacySettingsClient} from './PrivacySettingsClient';\n\n/**\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n */\nexport function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = 'generic' ): WpClient {\n\tlet client = new WpClient(wpApiUrl);\n\tswitch (type) {\n\t\tcase 'forms':\n\t\t\tclient = new FormsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'privacy' :\n\t\t\tclient = new PrivacySettingsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tclient = new WpClient(wpApiUrl);\n\t\t\tbreak;\n\n\t}\n\tclient.setNonce(wpApiNonce);\n\treturn client;\n}",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/wpClientFactory.js",
     "access": "public",
@@ -1577,7 +1544,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 82,
+    "__docId__": 80,
     "kind": "function",
     "name": "wpClientFactory",
     "memberof": "src/wpClientFactory.js",
@@ -1589,38 +1556,60 @@
     "export": true,
     "importPath": "@caldera-labs/api-client/src/wpClientFactory.js",
     "importStyle": "{wpClientFactory}",
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "Create a WordPress API client",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{FormsClient|PrivacySettingsClient|WpClient}"
+      }
+    ],
     "params": [
       {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
         "name": "wpApiUrl",
-        "types": [
-          "*"
-        ]
+        "description": "Root URL for the WordPress REST API of site"
       },
       {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
         "name": "wpApiNonce",
-        "types": [
-          "*"
-        ]
+        "description": "The REST API nonce"
       },
       {
-        "name": "type",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "Optional. Type of client forms|privacy|generic Default is generic"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "FormsClient",
+        "PrivacySettingsClient",
+        "WpClient"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
     "kind": "index",
-    "content": "# caldera-api-client\nJavaScript API client for Caldera Forms and Caldera Forms Pro\n\n[![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)\n[![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)\n\nForked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)\n\n🌋 [Documentation](http://calderalabs.org/caldera-api-client/)\n\n## Included\n\n- [babel](http://babeljs.io) - Transpile ES6\n- [Jest](https://facebook.github.io/jest/) - Tests, includes coverage report\n- [Coveralls](https://coveralls.io/) - Ensure that all your new code is fully covered, and see coverage trends emerge.\n- [Travis](https://travis-ci.org) - Deploy and test.\n- [Flow](https://flow.org/en/docs/types/primitives/) - Type Checking\n- [esDoc](https://esdoc.org/) - Documentation\n- [esLint](https://eslint.org/) - Enforces tabs over spaces and other lints.\n\n- Auto publish to npm on every build.\n\n### Usage\n\n## Install\n\n### Dependencies\n* Yarn\n* Git\n* Flow\n* npm\n* Node\n\n## Testing\n\nThis boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.\n\n* Run test watcher\n```\nyarn test\n```\n\n## Scripts\n\n### Build for release\n* `yarn build`\n- Runs tests, and flow type checks and Babel compiles with minification and source map.\n\nThis script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.\n\n### Tests\n* `yarn test` : Test Watcher\n* `npm test:once` : Run Tests once\n\n### Type-checking With Flow\n* `yarn flow`\n\n### Lint Code\n* `yarn lint`\n\n### Generate Documentation\n* `npm run documentation`\n- Generates documentation from inline docs\n- Generates documentation from markdown files in /manual",
+    "content": "# caldera-api-client\nJavaScript API client for Caldera Forms and Caldera Forms Pro\n\n[![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)\n[![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)\n\nForked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)\n\n🌋 [Documentation](http://calderalabs.org/caldera-api-client/)\n\n## Included\n\n- [babel](http://babeljs.io) - Transpile ES6\n- [Jest](https://facebook.github.io/jest/) - Tests, includes coverage report\n- [Coveralls](https://coveralls.io/) - Ensure that all your new code is fully covered, and see coverage trends emerge.\n- [Travis](https://travis-ci.org) - Deploy and test.\n- [Flow](https://flow.org/en/docs/types/primitives/) - Type Checking\n- [esDoc](https://esdoc.org/) - Documentation\n- [esLint](https://eslint.org/) - Enforces tabs over spaces and other lints.\n\n- Auto publish to npm on every build.\n\n### Usage\n\n## Install\n`npm i -D @caldera-labs/api-client`\n\n### Dependencies\n* Yarn\n* Git\n* Flow\n* npm\n* Node\n\n## Testing\n\nThis boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.\n\n* Run test watcher\n```\nyarn test\n```\n\n## Scripts\n\n### Build for release\n* `yarn build`\n- Runs tests, and flow type checks and Babel compiles with minification and source map.\n\nThis script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.\n\n### Tests\n* `yarn test` : Test Watcher\n* `npm test:once` : Run Tests once\n\n### Type-checking With Flow\n* `yarn flow`\n\n### Lint Code\n* Lint code once:\n- `yarn lint`\n* Lint and fix code once\n- `yarn lint:fix`\n* Run linter and fixer watch\n- `yarn lint:watch`\n\n### Generate Documentation\n* `npm run documentation`\n- Generates documentation from inline docs\n- Generates documentation from markdown files in /manual\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* `yarn release`",
     "longname": "/Users/josh/caldera-js/api-client/README.md",
     "name": "./README.md",
     "static": true,
@@ -1628,7 +1617,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@caldera-labs/api-client\",\n  \"version\": \"0.1.0\",\n  \"description\": \"API client for Caldera Forms and Caldera Forms Pro\",\n  \"main\": \"./dist/index.js\",\n  \"scripts\": {\n    \"build\": \"npm run build:pre && npm run build:compile && npm run build:post\",\n    \"build:pre\": \"npm run test:once\",\n    \"build:compile\": \"./node_modules/.bin/babel -d dist src/\",\n    \"build:post\": \"npm run compress\",\n    \"compress\": \"uglifyjs dist/index.js -c -m --source-map -o dist/index.min.js\",\n    \"test\": \"jest --watch\",\n    \"test:once\": \"jest\",\n    \"test:coverage\": \"jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\n    \"prepublish\": \"npm run test && npm run build\",\n    \"document\": \"./node_modules/.bin/esdoc\",\n    \"lint\": \"eslint src/**\",\n    \"flow:watch\": \"flow-watch\",\n    \"flow\": \"flow \"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/calderawp/caldera-api-client.git\"\n  },\n  \"keywords\": [\n    \"es6\",\n    \"boilerplate\",\n    \"npm\",\n    \"module\",\n    \"npm-module\"\n  ],\n  \"author\": \"Josh Pollock <Josh@calderawp.com>\",\n  \"license\": \"GPL-2.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/calderawp/caldera-api-client/issues\"\n  },\n  \"homepage\": \"http://calderalabs.org/caldera-api-client/\",\n  \"dependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-jest\": \"^20.0.3\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-stage-2\": \"^6.24.1\",\n    \"coveralls\": \"^2.13.1\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-flow-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jest-cli\": \"^20.0.4\",\n    \"sha1\": \"^1.1.1\"\n  },\n  \"devDependencies\": {\n    \"babel-eslint\": \"^8.2.3\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-airbnb\": \"^16.1.0\",\n    \"eslint-plugin-flowtype\": \"^2.49.3\",\n    \"eslint-plugin-import\": \"^2.12.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.9.1\",\n    \"flow-bin\": \"^0.74.0\",\n    \"flow-watch\": \"^1.1.3\",\n    \"jest\": \"^20.0.4\",\n    \"jest-fetch-mock\": \"^1.6.3\",\n    \"uglify-js\": \"^3.4.0\"\n  },\n  \"standard\": {\n    \"plugins\": [\n      \"flowtype\"\n    ],\n    \"parser\": \"babel-eslint\"\n  },\n  \"jest\": {\n    \"collectCoverageFrom\": [\n      \"src/**/*.js\"\n    ],\n    \"coverageThreshold\": {\n      \"global\": {\n        \"statements\": 90,\n        \"branches\": 90,\n        \"functions\": 90,\n        \"lines\": 90\n      }\n    },\n    \"automock\": false,\n    \"setupFiles\": [\n      \"./setupJest.js\"\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@caldera-labs/api-client\",\n  \"version\": \"0.1.4\",\n  \"description\": \"API client for Caldera Forms and Caldera Forms Pro\",\n  \"main\": \"./dist/index.js\",\n  \"scripts\": {\n    \"build\": \"npm run build:pre && npm run build:compile && npm run build:post\",\n    \"build:pre\": \"npm run test:once\",\n    \"build:compile\": \"./node_modules/.bin/babel -d dist src/\",\n    \"build:post\": \"npm run compress\",\n    \"compress\": \" uglifyjs-folder dist -c -m --source-map -o dist/index.min.js\",\n    \"test\": \"jest --watch\",\n    \"test:once\": \"jest\",\n    \"test:coverage\": \"jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\n    \"prepublish\": \"npm run test && npm run build\",\n    \"document\": \"./node_modules/.bin/esdoc\",\n    \"lint\": \"eslint src/**, __tests__/**\",\n    \"lint:watch\": \"esw src/**, __tests__/** --fix --watch\",\n    \"lint:fix\": \"eslint src/**, __tests__/** --fix \",\n    \"flow:watch\": \"flow-watch\",\n    \"flow\": \"flow \",\n    \"release\": \"npm run release:patch\",\n    \"release:minor\": \"npm version minor -m \\\"version %s\\\" && npm publish\",\n    \"release:patch\": \"npm version patch -m \\\"version %s\\\" && npm publish\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/calderawp/caldera-api-client.git\"\n  },\n  \"keywords\": [\n    \"es6\",\n    \"boilerplate\",\n    \"npm\",\n    \"module\",\n    \"npm-module\"\n  ],\n  \"author\": \"Josh Pollock <Josh@calderawp.com>\",\n  \"license\": \"GPL-2.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/calderawp/caldera-api-client/issues\"\n  },\n  \"homepage\": \"http://calderalabs.org/caldera-api-client/\",\n  \"dependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-jest\": \"^20.0.3\",\n    \"babel-preset-es2015\": \"^6.24.1\",\n    \"babel-preset-stage-2\": \"^6.24.1\",\n    \"coveralls\": \"^2.13.1\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-flow-plugin\": \"^1.0.0\",\n    \"esdoc-jsx-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint-plugin-jest\": \"^21.17.0\",\n    \"jest-cli\": \"^20.0.4\"\n  },\n  \"devDependencies\": {\n    \"babel-eslint\": \"^8.2.3\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-airbnb\": \"^16.1.0\",\n    \"eslint-plugin-flowtype\": \"^2.49.3\",\n    \"eslint-plugin-import\": \"^2.12.0\",\n    \"eslint-plugin-jsx-a11y\": \"^6.0.3\",\n    \"eslint-plugin-react\": \"^7.9.1\",\n    \"eslint-watch\": \"^3.1.5\",\n    \"flow-bin\": \"^0.74.0\",\n    \"flow-watch\": \"^1.1.3\",\n    \"jest\": \"^20.0.4\",\n    \"jest-fetch-mock\": \"^1.6.3\",\n    \"locutus\": \"^2.0.9\",\n    \"uglify-js\": \"^3.4.0\",\n    \"uglifyjs-folder\": \"^1.5.1\"\n  },\n  \"standard\": {\n    \"plugins\": [\n      \"flowtype\"\n    ],\n    \"parser\": \"babel-eslint\"\n  },\n  \"jest\": {\n    \"collectCoverageFrom\": [\n      \"src/**/*.js\"\n    ],\n    \"coverageThreshold\": {\n      \"global\": {\n        \"statements\": 90,\n        \"branches\": 90,\n        \"functions\": 90,\n        \"lines\": 90\n      }\n    },\n    \"automock\": false,\n    \"setupFiles\": [\n      \"./setupJest.js\"\n    ]\n  }\n}\n",
     "longname": "/Users/josh/caldera-js/api-client/package.json",
     "name": "package.json",
     "static": true,
@@ -1647,7 +1636,7 @@
     "kind": "manual",
     "longname": "/Users/josh/caldera-js/api-client/manual/overview.md",
     "name": "./manual/overview.md",
-    "content": "# Caldera API Overview\n\n\n## Usage\n### Forms Clients\nGet form configs and collections of forms config from a WordPress site.\n[class/src/ApiClient.js~ApiClient.html](class/src/ApiClient.js~ApiClient.html)\n### Privacy Settings\nGet and update a WordPress site's privacy settings\n\n### CF Pro Local Settings Client\nGet and update a WordPress site's CF Pro settings\n\n### CF Pro Client\nGet an account's layouts from CF Pro.\n\n\n## Testing \n### Mocking Requests\nAll HTTP requests use fetch.\n\nYou can test using [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)\n\n#### Example\n```js\ndescribe('testing api', () => {\n  beforeEach(() => {\n    fetch.resetMocks()\n  });\n\n  it('Gets data from API', () => {\n    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }))\n\n    //assert on the response\n    fetch('https://hiroy.club/api').then(res => {\n      expect(res.data).toEqual('12345')\n    });\n\n    //assert on the times called and arguments given to fetch\n    expect(fetch.mock.calls.length).toEqual(1);\n  })\n})\n```\n\n",
+    "content": "# Caldera API Overview\n\n\n## Provided Clients\n### Forms Clients\n__Admin Client__\n\nGet form configs and collections of forms config from a WordPress site.\n### Privacy Settings\n__Admin Client__\n\nGet and update a WordPress site's privacy settings\n\n### CF Pro Local Settings Client\n__Admin Client__\n\nGet and update a WordPress site's CF Pro settings\n\n### CF Pro Client\n__Admin Client__\nGet an account's layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.\n\n### Entries\nGet entries of a form.\n\n#### Acceptable Usage Of Admin Clients\nAdmin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.\n\nOK: Caldera Forms settings page that is accessible only to admin users\nOK: Caldera Forms Pro UI that requires login\nNOT OK: Any publicly addressable page.\nNOT OK: Front-end rendering of a Caldera Form.\n\n\n## Usage\n\n### WordPress Admin Clients\n\n* Get or update Caldera Forms form configs or other settings.\n\n* [Uses REST API cookie authentication](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication)\n\n#### Get Forms or A Specific Form With The Forms Client\n```js\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'forms' //type of client to get\n);\n//Get page 1 of forms\nclient.getForms(1).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get page 2 of forms\nclient.getForms(2).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get form CF123456's configuration\nclient.getForm('CF123456').then(form => {\n\tconsole.log(form); //Object containing form configuration\n});\n```\n\n#### Read or Update Privacy Settings\n```js\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'privacy' //type of client to get ask for \"privacy\"\n);\n//Get privacy settings of form with ID CF12345\nclient.getSettings('CF12345').then(settings => {\n\tconsole.log(settings); //Object with basic form info and the privacy settings\n});\n\n//Update setting of form with ID CF12345\nclient.updateSettings('CF12345',{\n    'emailIdentifyingFields': ['fld_4917648'],\n    'piiFields': ['fld_9899154', 'fld_4917648'],\n    'privacyExporterEnabled': true\n}).then(settings => {\n    console.log(settings); //Object with basic form info and the privacy settings\n});\n\n```\n#### Read or Update Caldera Forms Pro Local Settings\n\n### Caldera Forms Pro Admin Client\n\n```js\nconst client = new ProClient('https://app.calderaformspro.com');\nclient.setPublicKey('12345');\nclient.setSecretKey('abcd1');\nclient.getLayouts().then(res => {\n    expect(res).toEqual(layouts);\n});\n```\n\n## Testing \n### Mocking Requests\nAll HTTP requests use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).\n\n\nYou can test using [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)\n\n#### Examples of Mocking Fetch\n* Mocking Fetch, in general:\n```js\ndescribe('testing api', () => {\n\t\n  beforeEach(() => {\n    fetch.resetMocks()\n  });\n\n  it('Gets data from API', () => {\n    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }))\n\n    //assert on the response\n    fetch('https://hiroy.club/api').then(res => {\n      expect(res.data).toEqual('12345')\n    });\n\n    //assert on the times called and arguments given to fetch\n    expect(fetch.mock.calls.length).toEqual(1);\n  })\n})\n```\n\n* Mocking API call that uses fetch.\n- Since our API clients use fetch, we need to setup a fetch mock before calling a client function.\n```js\ndescribe('Forms API', () => {\n\t//Data likely to be reused in multiple tests.\n\tconst form = {ID: 'CF1'};\n\tconst formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';\n\t\n\t//Reset before each test in this describe() closure for isolation\n\tbeforeEach(() => {\n\t\tfetch.resetMocks()\n\t});\n\n\t//Test once call per it() closure.\n\tit('Gets data from API', () => {\n\t\tfetch.mockResponseOnce(JSON.stringify(form));\n\n\t\t//Fetch and wait for response.\n\t\tclient.getForm('CF1').then(response => {\n\t\t\texpect(response).toEqual(form); //test response\n\t\t}).catch((error) => {\n\t\t\tconsole.log(error); //log error\n\t\t});\n\n\t\t//Make sure it ran.\n\t\texpect(fetch.mock.calls.length).toEqual(1);\n\t})\n});\n```\n\n#### Helpful Links About Fetch and Testing With Fetch\n* [MDN Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)\n* [David Walsh blog post about Fetch](https://davidwalsh.name/fetch)",
     "static": true,
     "access": "public"
   },
@@ -1655,7 +1644,7 @@
     "kind": "manual",
     "longname": "/Users/josh/caldera-js/api-client/README.md",
     "name": "./README.md",
-    "content": "# caldera-api-client\nJavaScript API client for Caldera Forms and Caldera Forms Pro\n\n[![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)\n[![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)\n\nForked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)\n\n🌋 [Documentation](http://calderalabs.org/caldera-api-client/)\n\n## Included\n\n- [babel](http://babeljs.io) - Transpile ES6\n- [Jest](https://facebook.github.io/jest/) - Tests, includes coverage report\n- [Coveralls](https://coveralls.io/) - Ensure that all your new code is fully covered, and see coverage trends emerge.\n- [Travis](https://travis-ci.org) - Deploy and test.\n- [Flow](https://flow.org/en/docs/types/primitives/) - Type Checking\n- [esDoc](https://esdoc.org/) - Documentation\n- [esLint](https://eslint.org/) - Enforces tabs over spaces and other lints.\n\n- Auto publish to npm on every build.\n\n### Usage\n\n## Install\n\n### Dependencies\n* Yarn\n* Git\n* Flow\n* npm\n* Node\n\n## Testing\n\nThis boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.\n\n* Run test watcher\n```\nyarn test\n```\n\n## Scripts\n\n### Build for release\n* `yarn build`\n- Runs tests, and flow type checks and Babel compiles with minification and source map.\n\nThis script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.\n\n### Tests\n* `yarn test` : Test Watcher\n* `npm test:once` : Run Tests once\n\n### Type-checking With Flow\n* `yarn flow`\n\n### Lint Code\n* `yarn lint`\n\n### Generate Documentation\n* `npm run documentation`\n- Generates documentation from inline docs\n- Generates documentation from markdown files in /manual",
+    "content": "# caldera-api-client\nJavaScript API client for Caldera Forms and Caldera Forms Pro\n\n[![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)\n[![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)\n\nForked from: [https://www.npmjs.com/package/npm-module-es6-boilerplate](https://www.npmjs.com/package/npm-module-es6-boilerplate)\n\n🌋 [Documentation](http://calderalabs.org/caldera-api-client/)\n\n## Included\n\n- [babel](http://babeljs.io) - Transpile ES6\n- [Jest](https://facebook.github.io/jest/) - Tests, includes coverage report\n- [Coveralls](https://coveralls.io/) - Ensure that all your new code is fully covered, and see coverage trends emerge.\n- [Travis](https://travis-ci.org) - Deploy and test.\n- [Flow](https://flow.org/en/docs/types/primitives/) - Type Checking\n- [esDoc](https://esdoc.org/) - Documentation\n- [esLint](https://eslint.org/) - Enforces tabs over spaces and other lints.\n\n- Auto publish to npm on every build.\n\n### Usage\n\n## Install\n`npm i -D @caldera-labs/api-client`\n\n### Dependencies\n* Yarn\n* Git\n* Flow\n* npm\n* Node\n\n## Testing\n\nThis boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test are in the directory named `__tests__` at any level and start writing tests.\n\n* Run test watcher\n```\nyarn test\n```\n\n## Scripts\n\n### Build for release\n* `yarn build`\n- Runs tests, and flow type checks and Babel compiles with minification and source map.\n\nThis script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.\n\n### Tests\n* `yarn test` : Test Watcher\n* `npm test:once` : Run Tests once\n\n### Type-checking With Flow\n* `yarn flow`\n\n### Lint Code\n* Lint code once:\n- `yarn lint`\n* Lint and fix code once\n- `yarn lint:fix`\n* Run linter and fixer watch\n- `yarn lint:watch`\n\n### Generate Documentation\n* `npm run documentation`\n- Generates documentation from inline docs\n- Generates documentation from markdown files in /manual\n\n### Release To npm\nMust be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)\n\n* `yarn release`",
     "static": true,
     "access": "public"
   }

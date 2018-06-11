@@ -109,7 +109,7 @@
           },
           "extra": {
             "rawValue": "./WpClient",
-            "raw": "\"./WpClient\""
+            "raw": "'./WpClient'"
           },
           "value": "./WpClient"
         },

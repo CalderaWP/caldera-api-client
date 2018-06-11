@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 374,
+  "end": 838,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 16,
+      "line": 28,
       "column": 1
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 374,
+    "end": 838,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 16,
+        "line": 28,
         "column": 1
       }
     },
@@ -201,16 +201,120 @@
         }
       },
       {
-        "type": "ExportNamedDeclaration",
-        "start": 85,
-        "end": 374,
+        "type": "ImportDeclaration",
+        "start": 84,
+        "end": 148,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 3,
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 3,
+            "column": 64
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "start": 93,
+            "end": 114,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 30
+              }
+            },
+            "imported": {
+              "type": "Identifier",
+              "start": 93,
+              "end": 114,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 30
+                },
+                "identifierName": "PrivacySettingsClient"
+              },
+              "name": "PrivacySettingsClient"
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 93,
+              "end": 114,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 30
+                },
+                "identifierName": "PrivacySettingsClient"
+              },
+              "name": "PrivacySettingsClient"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 122,
+          "end": 147,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 38
+            },
+            "end": {
+              "line": 3,
+              "column": 63
+            }
+          },
+          "extra": {
+            "rawValue": "./PrivacySettingsClient",
+            "raw": "'./PrivacySettingsClient'"
+          },
+          "value": "./PrivacySettingsClient"
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n ",
+            "start": 150,
+            "end": 458,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 459,
+        "end": 838,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 0
+          },
+          "end": {
+            "line": 28,
             "column": 1
           }
         },
@@ -218,34 +322,35 @@
         "source": null,
         "declaration": {
           "type": "FunctionDeclaration",
-          "start": 92,
-          "end": 374,
+          "start": 466,
+          "end": 838,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 12,
               "column": 7
             },
             "end": {
-              "line": 16,
+              "line": 28,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 101,
-            "end": 116,
+            "start": 475,
+            "end": 490,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 12,
                 "column": 16
               },
               "end": {
-                "line": 4,
+                "line": 12,
                 "column": 31
               },
               "identifierName": "wpClientFactory"
             },
-            "name": "wpClientFactory"
+            "name": "wpClientFactory",
+            "leadingComments": null
           },
           "generator": false,
           "expression": false,
@@ -253,15 +358,15 @@
           "params": [
             {
               "type": "Identifier",
-              "start": 117,
-              "end": 125,
+              "start": 491,
+              "end": 499,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 32
                 },
                 "end": {
-                  "line": 4,
+                  "line": 12,
                   "column": 40
                 },
                 "identifierName": "wpApiUrl"
@@ -270,15 +375,15 @@
             },
             {
               "type": "Identifier",
-              "start": 127,
-              "end": 137,
+              "start": 501,
+              "end": 511,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 42
                 },
                 "end": {
-                  "line": 4,
+                  "line": 12,
                   "column": 52
                 },
                 "identifierName": "wpApiNonce"
@@ -286,78 +391,113 @@
               "name": "wpApiNonce"
             },
             {
-              "type": "Identifier",
-              "start": 139,
-              "end": 143,
+              "type": "AssignmentPattern",
+              "start": 513,
+              "end": 529,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 12,
                   "column": 54
                 },
                 "end": {
-                  "line": 4,
-                  "column": 58
-                },
-                "identifierName": "type"
+                  "line": 12,
+                  "column": 70
+                }
               },
-              "name": "type"
+              "left": {
+                "type": "Identifier",
+                "start": 513,
+                "end": 517,
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 54
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 58
+                  },
+                  "identifierName": "type"
+                },
+                "name": "type"
+              },
+              "right": {
+                "type": "StringLiteral",
+                "start": 520,
+                "end": 529,
+                "loc": {
+                  "start": {
+                    "line": 12,
+                    "column": 61
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 70
+                  }
+                },
+                "extra": {
+                  "rawValue": "generic",
+                  "raw": "'generic'"
+                },
+                "value": "generic"
+              }
             }
           ],
           "body": {
             "type": "BlockStatement",
-            "start": 145,
-            "end": 374,
+            "start": 531,
+            "end": 838,
             "loc": {
               "start": {
-                "line": 4,
-                "column": 60
+                "line": 12,
+                "column": 72
               },
               "end": {
-                "line": 16,
+                "line": 28,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "VariableDeclaration",
-                "start": 148,
-                "end": 184,
+                "start": 534,
+                "end": 570,
                 "loc": {
                   "start": {
-                    "line": 5,
+                    "line": 13,
                     "column": 1
                   },
                   "end": {
-                    "line": 5,
+                    "line": 13,
                     "column": 37
                   }
                 },
                 "declarations": [
                   {
                     "type": "VariableDeclarator",
-                    "start": 152,
-                    "end": 183,
+                    "start": 538,
+                    "end": 569,
                     "loc": {
                       "start": {
-                        "line": 5,
+                        "line": 13,
                         "column": 5
                       },
                       "end": {
-                        "line": 5,
+                        "line": 13,
                         "column": 36
                       }
                     },
                     "id": {
                       "type": "Identifier",
-                      "start": 152,
-                      "end": 158,
+                      "start": 538,
+                      "end": 544,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 13,
                           "column": 5
                         },
                         "end": {
-                          "line": 5,
+                          "line": 13,
                           "column": 11
                         },
                         "identifierName": "client"
@@ -366,29 +506,29 @@
                     },
                     "init": {
                       "type": "NewExpression",
-                      "start": 161,
-                      "end": 183,
+                      "start": 547,
+                      "end": 569,
                       "loc": {
                         "start": {
-                          "line": 5,
+                          "line": 13,
                           "column": 14
                         },
                         "end": {
-                          "line": 5,
+                          "line": 13,
                           "column": 36
                         }
                       },
                       "callee": {
                         "type": "Identifier",
-                        "start": 165,
-                        "end": 173,
+                        "start": 551,
+                        "end": 559,
                         "loc": {
                           "start": {
-                            "line": 5,
+                            "line": 13,
                             "column": 18
                           },
                           "end": {
-                            "line": 5,
+                            "line": 13,
                             "column": 26
                           },
                           "identifierName": "WpClient"
@@ -398,15 +538,15 @@
                       "arguments": [
                         {
                           "type": "Identifier",
-                          "start": 174,
-                          "end": 182,
+                          "start": 560,
+                          "end": 568,
                           "loc": {
                             "start": {
-                              "line": 5,
+                              "line": 13,
                               "column": 27
                             },
                             "end": {
-                              "line": 5,
+                              "line": 13,
                               "column": 35
                             },
                             "identifierName": "wpApiUrl"
@@ -421,29 +561,29 @@
               },
               {
                 "type": "SwitchStatement",
-                "start": 186,
-                "end": 326,
+                "start": 572,
+                "end": 790,
                 "loc": {
                   "start": {
-                    "line": 6,
+                    "line": 14,
                     "column": 1
                   },
                   "end": {
-                    "line": 13,
+                    "line": 25,
                     "column": 2
                   }
                 },
                 "discriminant": {
                   "type": "Identifier",
-                  "start": 194,
-                  "end": 198,
+                  "start": 580,
+                  "end": 584,
                   "loc": {
                     "start": {
-                      "line": 6,
+                      "line": 14,
                       "column": 9
                     },
                     "end": {
-                      "line": 6,
+                      "line": 14,
                       "column": 13
                     },
                     "identifierName": "type"
@@ -453,59 +593,59 @@
                 "cases": [
                   {
                     "type": "SwitchCase",
-                    "start": 204,
-                    "end": 266,
+                    "start": 590,
+                    "end": 652,
                     "loc": {
                       "start": {
-                        "line": 7,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 9,
+                        "line": 17,
                         "column": 9
                       }
                     },
                     "consequent": [
                       {
                         "type": "ExpressionStatement",
-                        "start": 221,
-                        "end": 256,
+                        "start": 607,
+                        "end": 642,
                         "loc": {
                           "start": {
-                            "line": 8,
+                            "line": 16,
                             "column": 3
                           },
                           "end": {
-                            "line": 8,
+                            "line": 16,
                             "column": 38
                           }
                         },
                         "expression": {
                           "type": "AssignmentExpression",
-                          "start": 221,
-                          "end": 255,
+                          "start": 607,
+                          "end": 641,
                           "loc": {
                             "start": {
-                              "line": 8,
+                              "line": 16,
                               "column": 3
                             },
                             "end": {
-                              "line": 8,
+                              "line": 16,
                               "column": 37
                             }
                           },
                           "operator": "=",
                           "left": {
                             "type": "Identifier",
-                            "start": 221,
-                            "end": 227,
+                            "start": 607,
+                            "end": 613,
                             "loc": {
                               "start": {
-                                "line": 8,
+                                "line": 16,
                                 "column": 3
                               },
                               "end": {
-                                "line": 8,
+                                "line": 16,
                                 "column": 9
                               },
                               "identifierName": "client"
@@ -514,29 +654,29 @@
                           },
                           "right": {
                             "type": "NewExpression",
-                            "start": 230,
-                            "end": 255,
+                            "start": 616,
+                            "end": 641,
                             "loc": {
                               "start": {
-                                "line": 8,
+                                "line": 16,
                                 "column": 12
                               },
                               "end": {
-                                "line": 8,
+                                "line": 16,
                                 "column": 37
                               }
                             },
                             "callee": {
                               "type": "Identifier",
-                              "start": 234,
-                              "end": 245,
+                              "start": 620,
+                              "end": 631,
                               "loc": {
                                 "start": {
-                                  "line": 8,
+                                  "line": 16,
                                   "column": 16
                                 },
                                 "end": {
-                                  "line": 8,
+                                  "line": 16,
                                   "column": 27
                                 },
                                 "identifierName": "FormsClient"
@@ -546,15 +686,15 @@
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "start": 246,
-                                "end": 254,
+                                "start": 632,
+                                "end": 640,
                                 "loc": {
                                   "start": {
-                                    "line": 8,
+                                    "line": 16,
                                     "column": 28
                                   },
                                   "end": {
-                                    "line": 8,
+                                    "line": 16,
                                     "column": 36
                                   },
                                   "identifierName": "wpApiUrl"
@@ -567,15 +707,15 @@
                       },
                       {
                         "type": "BreakStatement",
-                        "start": 260,
-                        "end": 266,
+                        "start": 646,
+                        "end": 652,
                         "loc": {
                           "start": {
-                            "line": 9,
+                            "line": 17,
                             "column": 3
                           },
                           "end": {
-                            "line": 9,
+                            "line": 17,
                             "column": 9
                           }
                         },
@@ -584,15 +724,15 @@
                     ],
                     "test": {
                       "type": "StringLiteral",
-                      "start": 209,
-                      "end": 216,
+                      "start": 595,
+                      "end": 602,
                       "loc": {
                         "start": {
-                          "line": 7,
+                          "line": 15,
                           "column": 7
                         },
                         "end": {
-                          "line": 7,
+                          "line": 15,
                           "column": 14
                         }
                       },
@@ -605,59 +745,59 @@
                   },
                   {
                     "type": "SwitchCase",
-                    "start": 269,
-                    "end": 323,
+                    "start": 655,
+                    "end": 729,
                     "loc": {
                       "start": {
-                        "line": 10,
+                        "line": 18,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 20,
                         "column": 9
                       }
                     },
                     "consequent": [
                       {
                         "type": "ExpressionStatement",
-                        "start": 281,
-                        "end": 313,
+                        "start": 674,
+                        "end": 719,
                         "loc": {
                           "start": {
-                            "line": 11,
+                            "line": 19,
                             "column": 3
                           },
                           "end": {
-                            "line": 11,
-                            "column": 35
+                            "line": 19,
+                            "column": 48
                           }
                         },
                         "expression": {
                           "type": "AssignmentExpression",
-                          "start": 281,
-                          "end": 312,
+                          "start": 674,
+                          "end": 718,
                           "loc": {
                             "start": {
-                              "line": 11,
+                              "line": 19,
                               "column": 3
                             },
                             "end": {
-                              "line": 11,
-                              "column": 34
+                              "line": 19,
+                              "column": 47
                             }
                           },
                           "operator": "=",
                           "left": {
                             "type": "Identifier",
-                            "start": 281,
-                            "end": 287,
+                            "start": 674,
+                            "end": 680,
                             "loc": {
                               "start": {
-                                "line": 11,
+                                "line": 19,
                                 "column": 3
                               },
                               "end": {
-                                "line": 11,
+                                "line": 19,
                                 "column": 9
                               },
                               "identifierName": "client"
@@ -666,29 +806,181 @@
                           },
                           "right": {
                             "type": "NewExpression",
-                            "start": 290,
-                            "end": 312,
+                            "start": 683,
+                            "end": 718,
                             "loc": {
                               "start": {
-                                "line": 11,
+                                "line": 19,
                                 "column": 12
                               },
                               "end": {
-                                "line": 11,
+                                "line": 19,
+                                "column": 47
+                              }
+                            },
+                            "callee": {
+                              "type": "Identifier",
+                              "start": 687,
+                              "end": 708,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 16
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 37
+                                },
+                                "identifierName": "PrivacySettingsClient"
+                              },
+                              "name": "PrivacySettingsClient"
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "start": 709,
+                                "end": 717,
+                                "loc": {
+                                  "start": {
+                                    "line": 19,
+                                    "column": 38
+                                  },
+                                  "end": {
+                                    "line": 19,
+                                    "column": 46
+                                  },
+                                  "identifierName": "wpApiUrl"
+                                },
+                                "name": "wpApiUrl"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "BreakStatement",
+                        "start": 723,
+                        "end": 729,
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 3
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 9
+                          }
+                        },
+                        "label": null
+                      }
+                    ],
+                    "test": {
+                      "type": "StringLiteral",
+                      "start": 660,
+                      "end": 669,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 7
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 16
+                        }
+                      },
+                      "extra": {
+                        "rawValue": "privacy",
+                        "raw": "'privacy'"
+                      },
+                      "value": "privacy"
+                    }
+                  },
+                  {
+                    "type": "SwitchCase",
+                    "start": 732,
+                    "end": 786,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 9
+                      }
+                    },
+                    "consequent": [
+                      {
+                        "type": "ExpressionStatement",
+                        "start": 744,
+                        "end": 776,
+                        "loc": {
+                          "start": {
+                            "line": 22,
+                            "column": 3
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 35
+                          }
+                        },
+                        "expression": {
+                          "type": "AssignmentExpression",
+                          "start": 744,
+                          "end": 775,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 3
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 34
+                            }
+                          },
+                          "operator": "=",
+                          "left": {
+                            "type": "Identifier",
+                            "start": 744,
+                            "end": 750,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 3
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 9
+                              },
+                              "identifierName": "client"
+                            },
+                            "name": "client"
+                          },
+                          "right": {
+                            "type": "NewExpression",
+                            "start": 753,
+                            "end": 775,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 12
+                              },
+                              "end": {
+                                "line": 22,
                                 "column": 34
                               }
                             },
                             "callee": {
                               "type": "Identifier",
-                              "start": 294,
-                              "end": 302,
+                              "start": 757,
+                              "end": 765,
                               "loc": {
                                 "start": {
-                                  "line": 11,
+                                  "line": 22,
                                   "column": 16
                                 },
                                 "end": {
-                                  "line": 11,
+                                  "line": 22,
                                   "column": 24
                                 },
                                 "identifierName": "WpClient"
@@ -698,15 +990,15 @@
                             "arguments": [
                               {
                                 "type": "Identifier",
-                                "start": 303,
-                                "end": 311,
+                                "start": 766,
+                                "end": 774,
                                 "loc": {
                                   "start": {
-                                    "line": 11,
+                                    "line": 22,
                                     "column": 25
                                   },
                                   "end": {
-                                    "line": 11,
+                                    "line": 22,
                                     "column": 33
                                   },
                                   "identifierName": "wpApiUrl"
@@ -719,15 +1011,15 @@
                       },
                       {
                         "type": "BreakStatement",
-                        "start": 317,
-                        "end": 323,
+                        "start": 780,
+                        "end": 786,
                         "loc": {
                           "start": {
-                            "line": 12,
+                            "line": 23,
                             "column": 3
                           },
                           "end": {
-                            "line": 12,
+                            "line": 23,
                             "column": 9
                           }
                         },
@@ -740,57 +1032,57 @@
               },
               {
                 "type": "ExpressionStatement",
-                "start": 328,
-                "end": 356,
+                "start": 792,
+                "end": 820,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 26,
                     "column": 1
                   },
                   "end": {
-                    "line": 14,
+                    "line": 26,
                     "column": 29
                   }
                 },
                 "expression": {
                   "type": "CallExpression",
-                  "start": 328,
-                  "end": 355,
+                  "start": 792,
+                  "end": 819,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 26,
                       "column": 1
                     },
                     "end": {
-                      "line": 14,
+                      "line": 26,
                       "column": 28
                     }
                   },
                   "callee": {
                     "type": "MemberExpression",
-                    "start": 328,
-                    "end": 343,
+                    "start": 792,
+                    "end": 807,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 26,
                         "column": 1
                       },
                       "end": {
-                        "line": 14,
+                        "line": 26,
                         "column": 16
                       }
                     },
                     "object": {
                       "type": "Identifier",
-                      "start": 328,
-                      "end": 334,
+                      "start": 792,
+                      "end": 798,
                       "loc": {
                         "start": {
-                          "line": 14,
+                          "line": 26,
                           "column": 1
                         },
                         "end": {
-                          "line": 14,
+                          "line": 26,
                           "column": 7
                         },
                         "identifierName": "client"
@@ -799,15 +1091,15 @@
                     },
                     "property": {
                       "type": "Identifier",
-                      "start": 335,
-                      "end": 343,
+                      "start": 799,
+                      "end": 807,
                       "loc": {
                         "start": {
-                          "line": 14,
+                          "line": 26,
                           "column": 8
                         },
                         "end": {
-                          "line": 14,
+                          "line": 26,
                           "column": 16
                         },
                         "identifierName": "setNonce"
@@ -819,15 +1111,15 @@
                   "arguments": [
                     {
                       "type": "Identifier",
-                      "start": 344,
-                      "end": 354,
+                      "start": 808,
+                      "end": 818,
                       "loc": {
                         "start": {
-                          "line": 14,
+                          "line": 26,
                           "column": 17
                         },
                         "end": {
-                          "line": 14,
+                          "line": 26,
                           "column": 27
                         },
                         "identifierName": "wpApiNonce"
@@ -839,29 +1131,29 @@
               },
               {
                 "type": "ReturnStatement",
-                "start": 358,
-                "end": 372,
+                "start": 822,
+                "end": 836,
                 "loc": {
                   "start": {
-                    "line": 15,
+                    "line": 27,
                     "column": 1
                   },
                   "end": {
-                    "line": 15,
+                    "line": 27,
                     "column": 15
                   }
                 },
                 "argument": {
                   "type": "Identifier",
-                  "start": 365,
-                  "end": 371,
+                  "start": 829,
+                  "end": 835,
                   "loc": {
                     "start": {
-                      "line": 15,
+                      "line": 27,
                       "column": 8
                     },
                     "end": {
-                      "line": 15,
+                      "line": 27,
                       "column": 14
                     },
                     "identifierName": "client"
@@ -872,14 +1164,66 @@
             ],
             "directives": []
           },
-          "leadingComments": [],
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n ",
+              "start": 150,
+              "end": 458,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "trailingComments": []
-        }
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n ",
+            "start": 150,
+            "end": 458,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
+          }
+        ]
       }
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n ",
+      "start": 150,
+      "end": 458,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -1249,6 +1593,205 @@
     },
     {
       "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 84,
+      "end": 90,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 91,
+      "end": 92,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "PrivacySettingsClient",
+      "start": 93,
+      "end": 114,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 9
+        },
+        "end": {
+          "line": 3,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 115,
+      "end": 116,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 31
+        },
+        "end": {
+          "line": 3,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 117,
+      "end": 121,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 33
+        },
+        "end": {
+          "line": 3,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./PrivacySettingsClient",
+      "start": 122,
+      "end": 147,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 38
+        },
+        "end": {
+          "line": 3,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 147,
+      "end": 148,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 63
+        },
+        "end": {
+          "line": 3,
+          "column": 64
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient}\n ",
+      "start": 150,
+      "end": 458,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
         "label": "export",
         "keyword": "export",
         "beforeExpr": false,
@@ -1262,15 +1805,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 85,
-      "end": 91,
+      "start": 459,
+      "end": 465,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 6
         }
       }
@@ -1289,15 +1832,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 92,
-      "end": 100,
+      "start": 466,
+      "end": 474,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 7
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 15
         }
       }
@@ -1315,15 +1858,15 @@
         "binop": null
       },
       "value": "wpClientFactory",
-      "start": 101,
-      "end": 116,
+      "start": 475,
+      "end": 490,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 16
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 31
         }
       }
@@ -1340,15 +1883,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 116,
-      "end": 117,
+      "start": 490,
+      "end": 491,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 31
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 32
         }
       }
@@ -1366,15 +1909,15 @@
         "binop": null
       },
       "value": "wpApiUrl",
-      "start": 117,
-      "end": 125,
+      "start": 491,
+      "end": 499,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 32
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 40
         }
       }
@@ -1392,15 +1935,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 125,
-      "end": 126,
+      "start": 499,
+      "end": 500,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 40
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 41
         }
       }
@@ -1418,15 +1961,15 @@
         "binop": null
       },
       "value": "wpApiNonce",
-      "start": 127,
-      "end": 137,
+      "start": 501,
+      "end": 511,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 42
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 52
         }
       }
@@ -1444,15 +1987,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 137,
-      "end": 138,
+      "start": 511,
+      "end": 512,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 52
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 53
         }
       }
@@ -1470,16 +2013,70 @@
         "binop": null
       },
       "value": "type",
-      "start": 139,
-      "end": 143,
+      "start": 513,
+      "end": 517,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 54
         },
         "end": {
-          "line": 4,
+          "line": 12,
           "column": 58
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 518,
+      "end": 519,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 59
+        },
+        "end": {
+          "line": 12,
+          "column": 60
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "generic",
+      "start": 520,
+      "end": 529,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 61
+        },
+        "end": {
+          "line": 12,
+          "column": 70
         }
       }
     },
@@ -1495,16 +2092,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 143,
-      "end": 144,
+      "start": 529,
+      "end": 530,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 58
+          "line": 12,
+          "column": 70
         },
         "end": {
-          "line": 4,
-          "column": 59
+          "line": 12,
+          "column": 71
         }
       }
     },
@@ -1520,16 +2117,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 145,
-      "end": 146,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 60
+          "line": 12,
+          "column": 72
         },
         "end": {
-          "line": 4,
-          "column": 61
+          "line": 12,
+          "column": 73
         }
       }
     },
@@ -1548,15 +2145,15 @@
         "updateContext": null
       },
       "value": "let",
-      "start": 148,
-      "end": 151,
+      "start": 534,
+      "end": 537,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 1
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 4
         }
       }
@@ -1574,15 +2171,15 @@
         "binop": null
       },
       "value": "client",
-      "start": 152,
-      "end": 158,
+      "start": 538,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 5
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 11
         }
       }
@@ -1601,15 +2198,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 159,
-      "end": 160,
+      "start": 545,
+      "end": 546,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 12
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 13
         }
       }
@@ -1629,15 +2226,15 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 161,
-      "end": 164,
+      "start": 547,
+      "end": 550,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 14
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 17
         }
       }
@@ -1655,15 +2252,15 @@
         "binop": null
       },
       "value": "WpClient",
-      "start": 165,
-      "end": 173,
+      "start": 551,
+      "end": 559,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 18
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 26
         }
       }
@@ -1680,15 +2277,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 173,
-      "end": 174,
+      "start": 559,
+      "end": 560,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 26
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 27
         }
       }
@@ -1706,15 +2303,15 @@
         "binop": null
       },
       "value": "wpApiUrl",
-      "start": 174,
-      "end": 182,
+      "start": 560,
+      "end": 568,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 27
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 35
         }
       }
@@ -1731,15 +2328,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 182,
-      "end": 183,
+      "start": 568,
+      "end": 569,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 35
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 36
         }
       }
@@ -1757,15 +2354,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 183,
-      "end": 184,
+      "start": 569,
+      "end": 570,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 13,
           "column": 36
         },
         "end": {
-          "line": 5,
+          "line": 13,
           "column": 37
         }
       }
@@ -1785,15 +2382,15 @@
         "updateContext": null
       },
       "value": "switch",
-      "start": 186,
-      "end": 192,
+      "start": 572,
+      "end": 578,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 1
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 7
         }
       }
@@ -1810,15 +2407,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 193,
-      "end": 194,
+      "start": 579,
+      "end": 580,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 8
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 9
         }
       }
@@ -1836,15 +2433,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 194,
-      "end": 198,
+      "start": 580,
+      "end": 584,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 13
         }
       }
@@ -1861,15 +2458,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 198,
-      "end": 199,
+      "start": 584,
+      "end": 585,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 13
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 14
         }
       }
@@ -1886,15 +2483,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 200,
-      "end": 201,
+      "start": 586,
+      "end": 587,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 14,
           "column": 15
         },
         "end": {
-          "line": 6,
+          "line": 14,
           "column": 16
         }
       }
@@ -1914,15 +2511,15 @@
         "updateContext": null
       },
       "value": "case",
-      "start": 204,
-      "end": 208,
+      "start": 590,
+      "end": 594,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 7,
+          "line": 15,
           "column": 6
         }
       }
@@ -1941,15 +2538,15 @@
         "updateContext": null
       },
       "value": "forms",
-      "start": 209,
-      "end": 216,
+      "start": 595,
+      "end": 602,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 15,
           "column": 7
         },
         "end": {
-          "line": 7,
+          "line": 15,
           "column": 14
         }
       }
@@ -1967,15 +2564,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 216,
-      "end": 217,
+      "start": 602,
+      "end": 603,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 15,
           "column": 14
         },
         "end": {
-          "line": 7,
+          "line": 15,
           "column": 15
         }
       }
@@ -1993,15 +2590,15 @@
         "binop": null
       },
       "value": "client",
-      "start": 221,
-      "end": 227,
+      "start": 607,
+      "end": 613,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 3
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 9
         }
       }
@@ -2020,15 +2617,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 228,
-      "end": 229,
+      "start": 614,
+      "end": 615,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 10
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 11
         }
       }
@@ -2048,15 +2645,15 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 230,
-      "end": 233,
+      "start": 616,
+      "end": 619,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 12
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 15
         }
       }
@@ -2074,15 +2671,15 @@
         "binop": null
       },
       "value": "FormsClient",
-      "start": 234,
-      "end": 245,
+      "start": 620,
+      "end": 631,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 16
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 27
         }
       }
@@ -2099,15 +2696,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 245,
-      "end": 246,
+      "start": 631,
+      "end": 632,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 27
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 28
         }
       }
@@ -2125,15 +2722,15 @@
         "binop": null
       },
       "value": "wpApiUrl",
-      "start": 246,
-      "end": 254,
+      "start": 632,
+      "end": 640,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 28
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 36
         }
       }
@@ -2150,15 +2747,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 254,
-      "end": 255,
+      "start": 640,
+      "end": 641,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 36
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 37
         }
       }
@@ -2176,15 +2773,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 255,
-      "end": 256,
+      "start": 641,
+      "end": 642,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 16,
           "column": 37
         },
         "end": {
-          "line": 8,
+          "line": 16,
           "column": 38
         }
       }
@@ -2204,15 +2801,15 @@
         "updateContext": null
       },
       "value": "break",
-      "start": 260,
-      "end": 265,
+      "start": 646,
+      "end": 651,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 17,
           "column": 3
         },
         "end": {
-          "line": 9,
+          "line": 17,
           "column": 8
         }
       }
@@ -2230,23 +2827,23 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 265,
-      "end": 266,
+      "start": 651,
+      "end": 652,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 17,
           "column": 8
         },
         "end": {
-          "line": 9,
+          "line": 17,
           "column": 9
         }
       }
     },
     {
       "type": {
-        "label": "default",
-        "keyword": "default",
+        "label": "case",
+        "keyword": "case",
         "beforeExpr": true,
         "startsExpr": false,
         "rightAssociative": false,
@@ -2257,17 +2854,44 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "default",
-      "start": 269,
-      "end": 276,
+      "value": "case",
+      "start": 655,
+      "end": 659,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 10,
-          "column": 9
+          "line": 18,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "privacy",
+      "start": 660,
+      "end": 669,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 7
+        },
+        "end": {
+          "line": 18,
+          "column": 16
         }
       }
     },
@@ -2284,16 +2908,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 276,
-      "end": 277,
+      "start": 669,
+      "end": 670,
       "loc": {
         "start": {
-          "line": 10,
-          "column": 9
+          "line": 18,
+          "column": 16
         },
         "end": {
-          "line": 10,
-          "column": 10
+          "line": 18,
+          "column": 17
         }
       }
     },
@@ -2310,15 +2934,15 @@
         "binop": null
       },
       "value": "client",
-      "start": 281,
-      "end": 287,
+      "start": 674,
+      "end": 680,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 19,
           "column": 3
         },
         "end": {
-          "line": 11,
+          "line": 19,
           "column": 9
         }
       }
@@ -2337,15 +2961,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 288,
-      "end": 289,
+      "start": 681,
+      "end": 682,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 19,
           "column": 10
         },
         "end": {
-          "line": 11,
+          "line": 19,
           "column": 11
         }
       }
@@ -2365,15 +2989,332 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 290,
-      "end": 293,
+      "start": 683,
+      "end": 686,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 19,
           "column": 12
         },
         "end": {
-          "line": 11,
+          "line": 19,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "PrivacySettingsClient",
+      "start": 687,
+      "end": 708,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 16
+        },
+        "end": {
+          "line": 19,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 708,
+      "end": 709,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 37
+        },
+        "end": {
+          "line": 19,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "wpApiUrl",
+      "start": 709,
+      "end": 717,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 38
+        },
+        "end": {
+          "line": 19,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 717,
+      "end": 718,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 46
+        },
+        "end": {
+          "line": 19,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 718,
+      "end": 719,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 47
+        },
+        "end": {
+          "line": 19,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "break",
+        "keyword": "break",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "break",
+      "start": 723,
+      "end": 728,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 3
+        },
+        "end": {
+          "line": 20,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 728,
+      "end": 729,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 8
+        },
+        "end": {
+          "line": 20,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 732,
+      "end": 739,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 2
+        },
+        "end": {
+          "line": 21,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 739,
+      "end": 740,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 9
+        },
+        "end": {
+          "line": 21,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "client",
+      "start": 744,
+      "end": 750,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 3
+        },
+        "end": {
+          "line": 22,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 751,
+      "end": 752,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 10
+        },
+        "end": {
+          "line": 22,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 753,
+      "end": 756,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 12
+        },
+        "end": {
+          "line": 22,
           "column": 15
         }
       }
@@ -2391,15 +3332,15 @@
         "binop": null
       },
       "value": "WpClient",
-      "start": 294,
-      "end": 302,
+      "start": 757,
+      "end": 765,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 22,
           "column": 16
         },
         "end": {
-          "line": 11,
+          "line": 22,
           "column": 24
         }
       }
@@ -2416,15 +3357,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 302,
-      "end": 303,
+      "start": 765,
+      "end": 766,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 22,
           "column": 24
         },
         "end": {
-          "line": 11,
+          "line": 22,
           "column": 25
         }
       }
@@ -2442,15 +3383,15 @@
         "binop": null
       },
       "value": "wpApiUrl",
-      "start": 303,
-      "end": 311,
+      "start": 766,
+      "end": 774,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 22,
           "column": 25
         },
         "end": {
-          "line": 11,
+          "line": 22,
           "column": 33
         }
       }
@@ -2467,15 +3408,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 311,
-      "end": 312,
+      "start": 774,
+      "end": 775,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 22,
           "column": 33
         },
         "end": {
-          "line": 11,
+          "line": 22,
           "column": 34
         }
       }
@@ -2493,15 +3434,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 312,
-      "end": 313,
+      "start": 775,
+      "end": 776,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 22,
           "column": 34
         },
         "end": {
-          "line": 11,
+          "line": 22,
           "column": 35
         }
       }
@@ -2521,15 +3462,15 @@
         "updateContext": null
       },
       "value": "break",
-      "start": 317,
-      "end": 322,
+      "start": 780,
+      "end": 785,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 3
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 8
         }
       }
@@ -2547,15 +3488,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 322,
-      "end": 323,
+      "start": 785,
+      "end": 786,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 8
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 9
         }
       }
@@ -2572,15 +3513,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 325,
-      "end": 326,
+      "start": 789,
+      "end": 790,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 25,
           "column": 1
         },
         "end": {
-          "line": 13,
+          "line": 25,
           "column": 2
         }
       }
@@ -2598,15 +3539,15 @@
         "binop": null
       },
       "value": "client",
-      "start": 328,
-      "end": 334,
+      "start": 792,
+      "end": 798,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 1
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 7
         }
       }
@@ -2624,15 +3565,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 334,
-      "end": 335,
+      "start": 798,
+      "end": 799,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 8
         }
       }
@@ -2650,15 +3591,15 @@
         "binop": null
       },
       "value": "setNonce",
-      "start": 335,
-      "end": 343,
+      "start": 799,
+      "end": 807,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 16
         }
       }
@@ -2675,15 +3616,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 343,
-      "end": 344,
+      "start": 807,
+      "end": 808,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 16
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 17
         }
       }
@@ -2701,15 +3642,15 @@
         "binop": null
       },
       "value": "wpApiNonce",
-      "start": 344,
-      "end": 354,
+      "start": 808,
+      "end": 818,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 17
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 27
         }
       }
@@ -2726,15 +3667,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 354,
-      "end": 355,
+      "start": 818,
+      "end": 819,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 27
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 28
         }
       }
@@ -2752,15 +3693,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 355,
-      "end": 356,
+      "start": 819,
+      "end": 820,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 26,
           "column": 28
         },
         "end": {
-          "line": 14,
+          "line": 26,
           "column": 29
         }
       }
@@ -2780,15 +3721,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 358,
-      "end": 364,
+      "start": 822,
+      "end": 828,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 27,
           "column": 1
         },
         "end": {
-          "line": 15,
+          "line": 27,
           "column": 7
         }
       }
@@ -2806,15 +3747,15 @@
         "binop": null
       },
       "value": "client",
-      "start": 365,
-      "end": 371,
+      "start": 829,
+      "end": 835,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 27,
           "column": 8
         },
         "end": {
-          "line": 15,
+          "line": 27,
           "column": 14
         }
       }
@@ -2832,15 +3773,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 371,
-      "end": 372,
+      "start": 835,
+      "end": 836,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 27,
           "column": 14
         },
         "end": {
-          "line": 15,
+          "line": 27,
           "column": 15
         }
       }
@@ -2857,15 +3798,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 373,
-      "end": 374,
+      "start": 837,
+      "end": 838,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 28,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 28,
           "column": 1
         }
       }
@@ -2883,15 +3824,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 374,
-      "end": 374,
+      "start": 838,
+      "end": 838,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 28,
           "column": 1
         },
         "end": {
-          "line": 16,
+          "line": 28,
           "column": 1
         }
       }

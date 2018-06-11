@@ -32,14 +32,23 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Caldera API Overview</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#provided-clients" data-ice="link">Provided Clients</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#forms-clients" data-ice="link">Forms Clients</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#privacy-settings" data-ice="link">Privacy Settings</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-local-settings-client" data-ice="link">CF Pro Local Settings Client</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-client" data-ice="link">CF Pro Client</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#entries" data-ice="link">Entries</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#acceptable-usage-of-admin-clients" data-ice="link">Acceptable Usage Of Admin Clients</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-caldera-forms-pro-local-settings" data-ice="link">Read or Update Caldera Forms Pro Local Settings</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#caldera-forms-pro-admin-client" data-ice="link">Caldera Forms Pro Admin Client</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#mocking-requests" data-ice="link">Mocking Requests</a></li>
-<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#example" data-ice="link">Example</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#examples-of-mocking-fetch" data-ice="link">Examples of Mocking Fetch</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#helpful-links-about-fetch-and-testing-with-fetch" data-ice="link">Helpful Links About Fetch and Testing With Fetch</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -57,6 +66,7 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#type-checking-with-flow" data-ice="link">Type-checking With Flow</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#lint-code" data-ice="link">Lint Code</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#generate-documentation" data-ice="link">Generate Documentation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#release-to-npm" data-ice="link">Release To npm</a></li>
 </ul>
   </div>
 </div>
@@ -71,25 +81,117 @@
     
   <div class="manual-card-wrap" data-ice="cards">
       <div class="manual-card">
-        <div data-ice="card"><h1>Caldera API Overview</h1><h2>Usage</h2><h3>Forms Clients</h3><p>Get form configs and collections of forms config from a WordPress site.
-<a href="./manual/class/src/ApiClient.js~ApiClient.html">class/src/ApiClient.js~ApiClient.html</a></p><h3>Privacy Settings</h3><p>Get and update a WordPress site&apos;s privacy settings</p><h3>CF Pro Local Settings Client</h3><p>Get and update a WordPress site&apos;s CF Pro settings</p><h3>CF Pro Client</h3><p>Get an account&apos;s layouts from CF Pro.</p><h2>Testing</h2><h3>Mocking Requests</h3><p>All HTTP requests use fetch.</p><p>You can test using <a href="https://github.com/jefflau/jest-fetch-mock">jest-fetch-mock</a></p><h4>Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">describe(&apos;testing api&apos;, () =&gt; {
-  beforeEach(() =&gt; {
-    fetch.resetMocks()
+        <div data-ice="card"><h1>Caldera API Overview</h1><h2>Provided Clients</h2><h3>Forms Clients</h3><p><strong>Admin Client</strong></p><p>Get form configs and collections of forms config from a WordPress site.</p><h3>Privacy Settings</h3><p><strong>Admin Client</strong></p><p>Get and update a WordPress site&apos;s privacy settings</p><h3>CF Pro Local Settings Client</h3><p><strong>Admin Client</strong></p><p>Get and update a WordPress site&apos;s CF Pro settings</p><h3>CF Pro Client</h3><p><strong>Admin Client</strong>
+Get an account&apos;s layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.</p><h3>Entries</h3><p>Get entries of a form.</p><h4>Acceptable Usage Of Admin Clients</h4><p>Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.</p><p>OK: Caldera Forms settings page that is accessible only to admin users
+OK: Caldera Forms Pro UI that requires login
+NOT OK: Any publicly addressable page.
+NOT OK: Front-end rendering of a Caldera Form.</p><h2>Usage</h2><h3>WordPress Admin Clients</h3><ul>
+<li><p>Get or update Caldera Forms form configs or other settings.</p>
+</li>
+<li><p><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication">Uses REST API cookie authentication</a></p>
+</li>
+</ul><h4>Get Forms or A Specific Form With The Forms Client</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
+const client = wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;forms&apos; //type of client to get
+);
+//Get page 1 of forms
+client.getForms(1).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get page 2 of forms
+client.getForms(2).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get form CF123456&apos;s configuration
+client.getForm(&apos;CF123456&apos;).then(form =&gt; {
+    console.log(form); //Object containing form configuration
+});</code>
+</code></pre><h4>Read or Update Privacy Settings</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
+const client = wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;privacy&apos; //type of client to get ask for &quot;privacy&quot;
+);
+//Get privacy settings of form with ID CF12345
+client.getSettings(&apos;CF12345&apos;).then(settings =&gt; {
+    console.log(settings); //Object with basic form info and the privacy settings
+});
+
+//Update setting of form with ID CF12345
+client.updateSettings(&apos;CF12345&apos;,{
+    &apos;emailIdentifyingFields&apos;: [&apos;fld_4917648&apos;],
+    &apos;piiFields&apos;: [&apos;fld_9899154&apos;, &apos;fld_4917648&apos;],
+    &apos;privacyExporterEnabled&apos;: true
+}).then(settings =&gt; {
+    console.log(settings); //Object with basic form info and the privacy settings
+});
+</code>
+</code></pre><h4>Read or Update Caldera Forms Pro Local Settings</h4><h3>Caldera Forms Pro Admin Client</h3><pre><code class="lang-js"><code class="source-code prettyprint">const client = new ProClient(&apos;https://app.calderaformspro.com&apos;);
+client.setPublicKey(&apos;12345&apos;);
+client.setSecretKey(&apos;abcd1&apos;);
+client.getLayouts().then(res =&gt; {
+    expect(res).toEqual(layouts);
+});</code>
+</code></pre><h2>Testing</h2><h3>Mocking Requests</h3><p>All HTTP requests use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p><p>You can test using <a href="https://github.com/jefflau/jest-fetch-mock">jest-fetch-mock</a></p><h4>Examples of Mocking Fetch</h4><ul>
+<li><p>Mocking Fetch, in general:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">describe(&apos;testing api&apos;, () =&gt; {
+
+beforeEach(() =&gt; {
+  fetch.resetMocks()
+});
+
+it(&apos;Gets data from API&apos;, () =&gt; {
+  fetch.mockResponseOnce(JSON.stringify({ data: &apos;12345&apos; }))
+
+  //assert on the response
+  fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
+    expect(res.data).toEqual(&apos;12345&apos;)
   });
 
-  it(&apos;Gets data from API&apos;, () =&gt; {
-    fetch.mockResponseOnce(JSON.stringify({ data: &apos;12345&apos; }))
-
-    //assert on the response
-    fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
-      expect(res.data).toEqual(&apos;12345&apos;)
-    });
-
-    //assert on the times called and arguments given to fetch
-    expect(fetch.mock.calls.length).toEqual(1);
-  })
+  //assert on the times called and arguments given to fetch
+  expect(fetch.mock.calls.length).toEqual(1);
+})
 })</code>
-</code></pre></div>
+</code></pre>
+</li>
+<li><p>Mocking API call that uses fetch.</p>
+</li>
+<li><p>Since our API clients use fetch, we need to setup a fetch mock before calling a client function.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">describe(&apos;Forms API&apos;, () =&gt; {
+  //Data likely to be reused in multiple tests.
+  const form = {ID: &apos;CF1&apos;};
+  const formsApiRoute = &apos;https://wordpress.test/wp-json/cf-api/v2/forms&apos;;
+
+  //Reset before each test in this describe() closure for isolation
+  beforeEach(() =&gt; {
+      fetch.resetMocks()
+  });
+
+  //Test once call per it() closure.
+  it(&apos;Gets data from API&apos;, () =&gt; {
+      fetch.mockResponseOnce(JSON.stringify(form));
+
+      //Fetch and wait for response.
+      client.getForm(&apos;CF1&apos;).then(response =&gt; {
+          expect(response).toEqual(form); //test response
+      }).catch((error) =&gt; {
+          console.log(error); //log error
+      });
+
+      //Make sure it ran.
+      expect(fetch.mock.calls.length).toEqual(1);
+  })
+});</code>
+</code></pre>
+</li>
+</ul><h4>Helpful Links About Fetch and Testing With Fetch</h4><ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">MDN Fetch docs</a></li>
+<li><a href="https://davidwalsh.name/fetch">David Walsh blog post about Fetch</a></li>
+</ul></div>
         <a data-ice="link" href="manual/overview.html"></a>
       </div>
     </div>
@@ -107,7 +209,7 @@
 </li>
 <li><p>Auto publish to npm on every build.</p>
 </li>
-</ul><h3>Usage</h3><h2>Install</h2><h3>Dependencies</h3><ul>
+</ul><h3>Usage</h3><h2>Install</h2><p><code>npm i -D @caldera-labs/api-client</code></p><h3>Dependencies</h3><ul>
 <li>Yarn</li>
 <li>Git</li>
 <li>Flow</li>
@@ -125,11 +227,18 @@
 </ul><h3>Type-checking With Flow</h3><ul>
 <li><code>yarn flow</code></li>
 </ul><h3>Lint Code</h3><ul>
+<li>Lint code once:</li>
 <li><code>yarn lint</code></li>
+<li>Lint and fix code once</li>
+<li><code>yarn lint:fix</code></li>
+<li>Run linter and fixer watch</li>
+<li><code>yarn lint:watch</code></li>
 </ul><h3>Generate Documentation</h3><ul>
 <li><code>npm run documentation</code></li>
 <li>Generates documentation from inline docs</li>
 <li>Generates documentation from markdown files in /manual</li>
+</ul><h3>Release To npm</h3><p>Must be <a href="https://docs.npmjs.com/cli/adduser">logged in as project maintainer via npm cli</a></p><ul>
+<li><code>yarn release</code></li>
 </ul></div>
         <a data-ice="link" href="manual/README.html"></a>
       </div>

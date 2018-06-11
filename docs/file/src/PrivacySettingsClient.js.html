@@ -31,6 +31,7 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
@@ -39,12 +40,13 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/PrivacySettingsClient.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {WpClient} from &quot;./WpClient&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
+import {WpClient} from &apos;./WpClient&apos;;
 
 /**
  * Get and update a WordPress site&apos;s privacy settings
  */
-class PrivacySettingsClient extends WpClient {
+export class PrivacySettingsClient extends WpClient {
 
 	/**
 	 * Get privacy settings for a form
@@ -52,9 +54,9 @@ class PrivacySettingsClient extends WpClient {
 	 * @param {String} formId ID of form to get settings for
 	 * @returns {Promise}
 	 */
-	getSettings(formId:string) : Promise&lt;any&gt; {
+	getSettings(formId: string): Promise&lt;any&gt; {
 		return this.reqGet({privacy:true},formId);
-	};
+	}
 
 	/**
 	 * Update privacy settings for a form
@@ -63,10 +65,12 @@ class PrivacySettingsClient extends WpClient {
 	 * @param {Object} data New settings
 	 * @returns {Promise}
 	 */
-	updateSettings(formId:string,data:Object): Promise&lt;any&gt;{
-		return this.reqPost(data,`${formId}/privacy`)
+	updateSettings(formId: string,data: Object): Promise&lt;any&gt;{
+		return this.reqPost(data,`${formId}/privacy`);
 	}
-}</code></pre>
+
+}
+</code></pre>
 
 </div>
 

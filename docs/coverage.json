@@ -1,7 +1,7 @@
 {
-  "coverage": "82.14%",
-  "expectCount": 28,
-  "actualCount": 23,
+  "coverage": "88.88%",
+  "expectCount": 27,
+  "actualCount": 24,
   "files": {
     "src/ApiClient.js": {
       "expectCount": 14,
@@ -33,19 +33,10 @@
         3
       ]
     },
-    "src/client.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        2
-      ]
-    },
     "src/wpClientFactory.js": {
       "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        4
-      ]
+      "actualCount": 1,
+      "undocumentLines": []
     }
   }
 }

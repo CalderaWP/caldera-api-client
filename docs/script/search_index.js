@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "@caldera-labs/api-client/src/privacysettingsclient.js~privacysettingsclient",
+    "class/src/PrivacySettingsClient.js~PrivacySettingsClient.html",
+    "<span>PrivacySettingsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/PrivacySettingsClient.js</span>",
+    "class"
+  ],
+  [
     "@caldera-labs/api-client/src/prolocalsettingclient.js~prolocalsettingclient",
     "class/src/ProLocalSettingClient.js~ProLocalSettingClient.html",
     "<span>ProLocalSettingClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/ProLocalSettingClient.js</span>",
@@ -426,6 +432,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/privacysettingsclient.js~privacysettingsclient#getsettings",
+    "class/src/PrivacySettingsClient.js~PrivacySettingsClient.html#instance-method-getSettings",
+    "src/PrivacySettingsClient.js~PrivacySettingsClient#getSettings",
+    "method"
+  ],
+  [
+    "src/privacysettingsclient.js~privacysettingsclient#updatesettings",
+    "class/src/PrivacySettingsClient.js~PrivacySettingsClient.html#instance-method-updateSettings",
+    "src/PrivacySettingsClient.js~PrivacySettingsClient#updateSettings",
+    "method"
+  ],
+  [
     "src/prolocalsettingclient.js",
     "file/src/ProLocalSettingClient.js.html",
     "src/ProLocalSettingClient.js",
@@ -454,12 +472,6 @@ window.esdocSearchIndex = [
     "class/src/WpClient.js~WpClient.html#instance-method-setNonce",
     "src/WpClient.js~WpClient#setNonce",
     "method"
-  ],
-  [
-    "src/client.js",
-    "file/src/client.js.html",
-    "src/client.js",
-    "file"
   ],
   [
     "src/wpclientfactory.js",
