@@ -56,7 +56,12 @@ This script calls a pre, compile, and post subcommands.  For consistency, please
 * `yarn flow`
 
 ### Lint Code
-* `yarn lint`
+* Lint code once:
+- `yarn lint`
+* Lint and fix code once
+- `yarn lint:fix`
+* Run linter and fixer watch
+- `yarn lint:watch`
 
 ### Generate Documentation
 * `npm run documentation`
