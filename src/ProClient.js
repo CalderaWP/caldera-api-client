@@ -1,7 +1,7 @@
 //@flow
 import {ApiClient} from './ApiClient';
 
-const sha1 = import('sha1');
+import {sha1} from 'sha1'
 
 /**
  * Client for remote access to Caldera Forms Pro
@@ -34,7 +34,11 @@ export class ProClient extends ApiClient{
 	 * @returns {string}
 	 */
 	hasKeys(): boolean {
-		return this.secretKey && this.publicKey;
+		function truthy(a, b): boolean %checks {
+			return !!a && !!b;
+		}
+
+		return truthy(this.secretKey && this.publicKey );
 	}
 
 	/**
@@ -42,11 +46,11 @@ export class ProClient extends ApiClient{
 	 *
 	 * @returns {String}
 	 */
-	getToken(): String {
+	getToken(): string {
 		if( ! this.hasKeys() ){
-			throw 'Must set keys before requesting token';
+			return '';
 		}
-		return sha1(this.publicKey,this.secretKey);
+		return sha1(`${this.publicKey}${this.secretKey}`);
 
 	}
 

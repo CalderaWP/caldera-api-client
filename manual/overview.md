@@ -1,7 +1,7 @@
 # Caldera API Overview
 
 
-## Usage
+## Provided Clients
 ### Forms Clients
 __Admin Client__
 
@@ -30,6 +30,43 @@ OK: Caldera Forms settings page that is accessible only to admin users
 OK: Caldera Forms Pro UI that requires login
 NOT OK: Any publicly addressable page.
 NOT OK: Front-end rendering of a Caldera Form.
+
+
+## Usage
+
+### WordPress Admin Clients
+
+* Get or update Caldera Forms form configs or other settings.
+
+* [Uses REST API cookie authentication](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication)
+
+#### Get Forms or A Specific Form With The Forms Client
+```js
+//create forms client
+const client = wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+	'12345', //the nonce for REST API cookie authentication
+	'forms' //type of client to get
+);
+//Get page 1 of forms
+client.getForms(1).then(forms => {
+	console.log(forms); //Array of forms
+});
+
+//Get page 2 of forms
+client.getForms(2).then(forms => {
+	console.log(forms); //Array of forms
+});
+
+//Get form CF123456's configuration
+client.getForm('CF123456').then(form => {
+	console.log(form); //Object containing form configuration
+});
+```
+
+#### Read or Update Privacy Settings
+
+#### Read or Update Caldera Forms Pro Local Settings
 
 
 ## Testing 

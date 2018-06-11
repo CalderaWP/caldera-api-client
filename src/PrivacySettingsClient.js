@@ -4,7 +4,7 @@ import {WpClient} from './WpClient';
 /**
  * Get and update a WordPress site's privacy settings
  */
-class PrivacySettingsClient extends WpClient {
+export class PrivacySettingsClient extends WpClient {
 
 	/**
 	 * Get privacy settings for a form
