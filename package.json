@@ -18,7 +18,11 @@
     "lint:watch": "esw src/**, __tests__/** --fix --watch",
     "lint:fix": "eslint src/**, __tests__/** --fix ",
     "flow:watch": "flow-watch",
-    "flow": "flow "
+    "flow": "flow ",
+    "release": "npm run release:patch",
+    "release:minor": "npm version minor -m \"version %s\" && npm run publish",
+    "release:patch": "npm version patch -m \"version %s\" && npm run publish"
+
   },
   "repository": {
     "type": "git",
