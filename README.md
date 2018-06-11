@@ -67,3 +67,8 @@ This script calls a pre, compile, and post subcommands.  For consistency, please
 * `npm run documentation`
 - Generates documentation from inline docs
 - Generates documentation from markdown files in /manual
+
+### Release To npm
+Must be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)
+
+* `yarn release`
