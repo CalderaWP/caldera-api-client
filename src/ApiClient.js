@@ -34,13 +34,14 @@ export class ApiClient{
 	/**
 	 * Make a request to an endpoint
 	 *
-	 * @param endpoint
-	 * @param data
-	 * @param method
+	 * @param {String} endpoint
+	 * @param {Object} data
+	 * @param {String} method
+	 *
 	 * @returns {Promise<Response>}
 	 */
 	makeRequest(endpoint: string, data: Object, method: string): Promise<Response> {
-		let request = this.createRequest(endpoint, data, method);
+		const request = this.createRequest(endpoint, data, method);
 		return fetch(request);
 	}
 	/**
@@ -48,7 +49,7 @@ export class ApiClient{
 	 *
 	 * @param {String} endpoint
 	 * @param {Object} data
-	 * @param {String}method
+	 * @param {String} method
 	 * @returns {Request}
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {

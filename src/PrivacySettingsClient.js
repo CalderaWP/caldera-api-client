@@ -26,4 +26,5 @@ export class PrivacySettingsClient extends WpClient {
 	updateSettings(formId: string,data: Object): Promise<any>{
 		return this.reqPost(data,`${formId}/privacy`);
 	}
+
 }
