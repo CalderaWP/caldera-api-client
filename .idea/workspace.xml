@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/PrivacySettings.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/PrivacySettings.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manual/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/overview.md" afterDir="false" />
-    </list>
+    <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +31,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PrivacySettings.test.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="PrivacySettings.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="38" selection-end-column="9" />
+                <state relative-caret-position="540">
+                  <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProLocalSettingsClient.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/__tests__/ProLocalSettingsClient.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -56,7 +62,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ProClient.test.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ProClient.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/__tests__/ProClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="584">
@@ -68,12 +74,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="overview.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="overview.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/manual/overview.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="586">
-                    <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+                  <first_editor relative-caret-position="751">
+                    <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -158,6 +164,7 @@
         <option value="$PROJECT_DIR$/src/PrivacySettingsClient.js" />
         <option value="$PROJECT_DIR$/__tests__/PrivacySettings.test.js" />
         <option value="$PROJECT_DIR$/manual/overview.md" />
+        <option value="$PROJECT_DIR$/__tests__/ProLocalSettingsClient.test.js" />
       </list>
     </option>
   </component>
@@ -271,12 +278,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528567086917</updated>
       <workItem from="1528567088462" duration="5952000" />
-      <workItem from="1528574097492" duration="28237000" />
+      <workItem from="1528574097492" duration="28813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34189000" />
+    <option name="totallyTimeSpent" value="34765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="257" y="23" width="1663" height="1057" extended-state="0" />
@@ -341,13 +348,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -561,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -626,16 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/ProClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="117" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -657,20 +640,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="540">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manual/overview.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="586">
-            <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+          <first_editor relative-caret-position="751">
+            <caret line="96" column="29" lean-forward="true" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/ProClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="117" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/ProLocalSettingsClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
         </state>
       </provider>
     </entry>
