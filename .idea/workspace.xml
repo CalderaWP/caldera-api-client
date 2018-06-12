@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__tests__/WpClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/WpClient.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FormsClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormsClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrivacySettingsClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivacySettingsClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WpClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WpClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manual/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manual/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/manual/overview.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,12 +37,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manual/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="384">
-                <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+              <first_editor relative-caret-position="271">
+                <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overview.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manual/overview.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="169">
+                <caret line="40" selection-start-line="40" selection-end-line="47" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -119,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/formsClient.js" />
         <option value="$PROJECT_DIR$/src/formsClientFactory.js" />
         <option value="$PROJECT_DIR$/src/client.js" />
-        <option value="$PROJECT_DIR$/manual/index.md" />
         <option value="$PROJECT_DIR$/manual/testing.md" />
         <option value="$PROJECT_DIR$/.esdoc.json" />
         <option value="$PROJECT_DIR$/src/ProLocalSettingClient.js" />
@@ -129,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/ProClient.js" />
         <option value="$PROJECT_DIR$/__tests__/ProClient.test.js" />
         <option value="$PROJECT_DIR$/__tests__/PrivacySettings.test.js" />
-        <option value="$PROJECT_DIR$/manual/overview.md" />
         <option value="$PROJECT_DIR$/__tests__/ProLocalSettingsClient.test.js" />
         <option value="$PROJECT_DIR$/bin/release.sh" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -141,8 +157,10 @@
         <option value="$PROJECT_DIR$/src/PrivacySettingsClient.js" />
         <option value="$PROJECT_DIR$/src/ApiClient.js" />
         <option value="$PROJECT_DIR$/__tests__/apiClient.test.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/manual/overview.md" />
+        <option value="$PROJECT_DIR$/manual/index.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -257,12 +275,12 @@
       <updated>1528567086917</updated>
       <workItem from="1528567088462" duration="5952000" />
       <workItem from="1528574097492" duration="28813000" />
-      <workItem from="1528809104931" duration="2964000" />
+      <workItem from="1528809104931" duration="4210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49008000" />
+    <option name="totallyTimeSpent" value="50254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="322" y="23" width="1663" height="1057" extended-state="0" />
@@ -271,12 +289,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32916668" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="45" width="802" height="1035" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info anchor="bottom" x="0" y="45" width="802" height="1035" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
       <window_info anchor="bottom" id="Flow" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12954967" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12954967" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -432,16 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manual/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="15">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/manual/testing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -588,16 +596,6 @@
     <entry file="file://$PROJECT_DIR$/dist/PrivacySettingsClient.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manual/overview.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="144">
-            <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -615,6 +613,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -626,18 +631,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+    <entry file="file://$PROJECT_DIR$/manual/overview.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="169">
+            <caret line="40" selection-start-line="40" selection-end-line="47" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manual/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="384">
-            <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <first_editor relative-caret-position="271">
+            <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           </first_editor>
           <second_editor />
         </state>

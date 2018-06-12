@@ -1,5 +1,5 @@
 # caldera-api-client
-JavaScript API client for Caldera Forms and Caldera Forms Pro
+JavaScript API client for [Caldera Forms REST API])(https://calderaforms.com/doc/caldera-forms-rest-api/) and Caldera Forms Pro REST API.
 
 [![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)
 [![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)
@@ -7,12 +7,30 @@ JavaScript API client for Caldera Forms and Caldera Forms Pro
 🌋 [Documentation](http://calderalabs.org/caldera-api-client/)
 
 ### Usage
+Create a form client and use it to get page one of form configs via API
+```js
+import * as calderaApiClient from '@caldera-labs/api-client';
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+    '12345', //the nonce for REST API cookie authentication
+    'forms' //type of client to get
+);
+let forms = [];
+formsAdminApiClient(page).then(r => {
+	forms = r;
+}).catch(error => {
+	console.log(error);
+	throw error;
+});
+```
+
+
 See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http://calderalabs.org/caldera-api-client/manual/overview.html#usage)
 
 ## Install
 `npm i -D @caldera-labs/api-client`
 
-### Requirements
+### Development Requirements
 * [npm](https://www.npmjs.com/get-npm)
 * [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 * [Git]()
@@ -21,12 +39,14 @@ See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http
 
 ## Testing
 
-This boilerplate uses [Facebook Jest](https://facebook.github.io/jest/). Test go in the directory `__tests__`.
+We use [Facebook Jest](https://facebook.github.io/jest/) for unit tests. Test go in the directory `__tests__`.
 
 * Run test watcher
 ```
 yarn test
 ```
+
+Make sure to review the docs on [testing requests](http://calderalabs.org/caldera-api-client/manual/overview.html#mocking-requests)
 
 ## Scripts
 

@@ -34,6 +34,19 @@ NOT OK: Front-end rendering of a Caldera Form.
 
 ## Usage
 
+### Import With webpack
+`import * as calderaApiClient from '@caldera-labs/api-client';`
+
+#### Full Example
+```js
+import * as calderaApiClient from '@caldera-labs/api-client';
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+    '12345', //the nonce for REST API cookie authentication
+    'forms' //type of client to get
+);
+```
+
 ### WordPress Admin Clients
 
 * Get or update Caldera Forms form configs or other settings.
