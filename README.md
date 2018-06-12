@@ -1,5 +1,5 @@
 # caldera-api-client
-JavaScript API client for [Caldera Forms REST API])(https://calderaforms.com/doc/caldera-forms-rest-api/) and Caldera Forms Pro REST API.
+JavaScript API client for [Caldera Forms REST API)(https://calderaforms.com/doc/caldera-forms-rest-api/) and Caldera Forms Pro REST API.
 
 [![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)
 [![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)
