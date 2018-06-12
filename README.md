@@ -34,7 +34,7 @@ See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http
 * [npm](https://www.npmjs.com/get-npm)
 * [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 * [Git]()
-* [Flow](https://flow.org/en/docs/install/) - Type Checking
+* [Flow](https://flow.org/en/docs/install/)
 
 
 ## Testing
@@ -52,29 +52,32 @@ Make sure to review the docs on [testing requests](http://calderalabs.org/calder
 
 ### Build for release
 * `yarn build`
-- Runs tests, and flow type checks and Babel compiles with minification and source map.
+    - Runs tests, and flow type checks and Babel compiles with minification and source map.
 
 This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.
 
 ### Tests
-* `yarn test` : Test Watcher
-* `npm test:once` : Run Tests once
+*`yarn test`
+    - Run test watcher
+* `npm test:once` 
+    - Run tests once
 
 ### Type-checking With Flow
 * `yarn flow`
 
 ### Lint Code
-* Lint code once:
-- `yarn lint`
-* Lint and fix code once
-- `yarn lint:fix`
-* Run linter and fixer watch
-- `yarn lint:watch`
+* `yarn lint
+    - Run linter and fixer watch
+* `yarn lint:fix`
+    - Lint and fix code once
+* `yarn lint:once`
+    - Lint code once
+
 
 ### Generate Documentation
 * `npm run documentation`
-- Generates documentation from inline docs
-- Generates documentation from markdown files in /manual
+    - Generates documentation from inline docs
+    - Generates documentation from markdown files in /manual
 
 ### Release To npm
 Must be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)
