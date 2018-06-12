@@ -13,7 +13,10 @@ export class FormsClient extends WpClient {
 	 * @returns {Promise<any>}
 	 */
 	getForms(page: number=1): Promise<any>{
-		return this.reqGet({page:page});
+		return this.reqGet({
+			page:page,
+			_wpnonce:this.nonce
+		});
 	}
 
 	/**
@@ -24,8 +27,19 @@ export class FormsClient extends WpClient {
 	 */
 	getForm(formId: string): Promise<any>{
 		return this.reqGet({
-			preview:false
-		},formId);
+			preview:false,
+			_wpnonce:this.nonce
+		},this.getFormEndpoint(formId));
+	}
+
+	/**
+	 * Get endpoint for requesting forms via API
+	 *
+	 * @param {String} formId ID of form to request
+	 * @returns {string}
+	 */
+	getFormEndpoint(formId: string) :string {
+		return `forms/${formId}`;
 	}
 
 	/**
@@ -36,7 +50,10 @@ export class FormsClient extends WpClient {
 	 */
 	getFormPreview(formId: string): Promise<any>{
 		return this.reqGet({
-			preview:true
-		},formId);
+			preview:true,
+			_wpnonce:this.nonce
+		},this.getFormEndpoint(formId));
 	}
+
+
 }

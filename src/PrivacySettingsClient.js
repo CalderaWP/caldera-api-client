@@ -13,7 +13,7 @@ export class PrivacySettingsClient extends WpClient {
 	 * @returns {Promise}
 	 */
 	getSettings(formId: string): Promise<any> {
-		return this.reqGet({privacy:true},formId);
+		return this.reqGet({privacy:true},`forms/${formId}`);
 	}
 
 	/**
@@ -24,7 +24,7 @@ export class PrivacySettingsClient extends WpClient {
 	 * @returns {Promise}
 	 */
 	updateSettings(formId: string,data: Object): Promise<any>{
-		return this.reqPost(data,`${formId}/privacy`);
+		return this.reqPost(data,`forms/${formId}/privacy`);
 	}
 
 }

@@ -1,3 +1,10 @@
+function removeForwardSlash(endpoint) {
+	if ('' !== endpoint && '/' === endpoint.charAt(0)) {
+		endpoint = endpoint.substr(1);
+	}
+	return endpoint;
+}
+
 //@flow
 /**
  * Generic API client
@@ -26,10 +33,17 @@ export class ApiClient{
 		if( ! headers ){
 			headers = {};
 		}
-		this.headers=new Headers(headers);
+		this.setHeaders(new Headers(headers));
 	}
 
-
+	/**
+	 * Set or reset the headers for all requests
+	 *
+	 * @param {Headers} newHeaders
+	 */
+	setHeaders(newHeaders: Headers ){
+		this.headers = newHeaders;
+	}
 
 	/**
 	 * Make a request to an endpoint
@@ -44,6 +58,7 @@ export class ApiClient{
 		const request = this.createRequest(endpoint, data, method);
 		return fetch(request);
 	}
+
 	/**
 	 * Create a Request object
 	 *
@@ -54,21 +69,20 @@ export class ApiClient{
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {
 		let args = {
-			method: 'method',
+			method,
 			mode:'same-origin',
 			credentials: 'same-origin',
 			redirect: 'follow',
-			body: '',
 			headers: this.headers
 		};
 
 		if ('POST' === method || 'PUT' === method) {
 			args.body = JSON.stringify(data);
-			args.headers.append('Content-Type', 'application/json');
+			args.headers.set('Content-Type', 'application/json');
 			args.headers.append('Content-Length', args.body.length.toString());
 		}
 
-		return new Request(this.urlFromEndpoint(endpoint, method), args);
+		return new Request(this.urlFromEndpoint(endpoint, method,data), args);
 
 	}
 	/**
@@ -86,7 +100,7 @@ export class ApiClient{
 			return this.urlString(data, endpoint);
 		}
 
-		return `${this.route}${endpoint}`;
+		return `${this.route}/${removeForwardSlash(endpoint)}`;
 	}
 	/**
 	 * Make a GET request
@@ -171,7 +185,7 @@ export class ApiClient{
 			return response.json();
 		} else {
 			return {
-
+				responseText: 'Error'
 			};
 		}
 	}
@@ -194,9 +208,7 @@ export class ApiClient{
 	 */
 	urlString (data: Object, endpoint: string = ''): string {
 
-		if ('' !== endpoint && '/' === endpoint.charAt(0)) {
-			endpoint = endpoint.substr(1);
-		}
+		endpoint = removeForwardSlash(endpoint);
 
 		let str = '';
 		for (let key in data) {

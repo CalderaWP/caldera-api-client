@@ -53,6 +53,13 @@ describe( 'Forms Client', () => {
 	];
 	const formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';
 
+	describe( 'Urls are correct', () => {
+		it( 'creates URL for form endpoint correctly', () => {
+			const client = new FormsClient(formsApiRoute );
+			expect( client.getFormEndpoint('cf1') ).toEqual('forms/cf1');
+		});
+	});
+
 	describe( 'Forms endpoint', () => {
 		it( 'Gets forms', () =>{
 			const client = new FormsClient(formsApiRoute );
