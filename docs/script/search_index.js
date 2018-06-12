@@ -390,6 +390,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "src/apiclient.js~apiclient#setheaders",
+    "class/src/ApiClient.js~ApiClient.html#instance-method-setHeaders",
+    "src/ApiClient.js~ApiClient#setHeaders",
+    "method"
+  ],
+  [
     "src/apiclient.js~apiclient#urlfromendpoint",
     "class/src/ApiClient.js~ApiClient.html#instance-method-urlFromEndpoint",
     "src/ApiClient.js~ApiClient#urlFromEndpoint",
@@ -411,6 +417,12 @@ window.esdocSearchIndex = [
     "src/formsclient.js~formsclient#getform",
     "class/src/FormsClient.js~FormsClient.html#instance-method-getForm",
     "src/FormsClient.js~FormsClient#getForm",
+    "method"
+  ],
+  [
+    "src/formsclient.js~formsclient#getformendpoint",
+    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormEndpoint",
+    "src/FormsClient.js~FormsClient#getFormEndpoint",
     "method"
   ],
   [
@@ -468,10 +480,22 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/wpclient.js~wpclient#nonce",
+    "class/src/WpClient.js~WpClient.html#instance-member-nonce",
+    "src/WpClient.js~WpClient#nonce",
+    "member"
+  ],
+  [
     "src/wpclient.js~wpclient#setnonce",
     "class/src/WpClient.js~WpClient.html#instance-method-setNonce",
     "src/WpClient.js~WpClient#setNonce",
     "method"
+  ],
+  [
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
+    "file"
   ],
   [
     "src/wpclientfactory.js",

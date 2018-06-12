@@ -40,6 +40,8 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#entries" data-ice="link">Entries</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#acceptable-usage-of-admin-clients" data-ice="link">Acceptable Usage Of Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#import-with-webpack" data-ice="link">Import With webpack</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#full-example" data-ice="link">Full Example</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
@@ -55,10 +57,9 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/README.html"><a href="manual/README.html" data-ice="link">caldera-api-client</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#included" data-ice="link">Included</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#install" data-ice="link">Install</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#dependencies" data-ice="link">Dependencies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#development-requirements" data-ice="link">Development Requirements</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#scripts" data-ice="link">Scripts</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#build-for-release" data-ice="link">Build for release</a></li>
@@ -72,36 +73,39 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for Caldera Forms and Caldera Forms Pro</p>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API])(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p>
 <p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p>
-<p>Forked from: <a href="https://www.npmjs.com/package/npm-module-es6-boilerplate">https://www.npmjs.com/package/npm-module-es6-boilerplate</a></p>
 <p>&#x1F30B; <a href="http://calderalabs.org/caldera-api-client/">Documentation</a></p>
-<h2 id="included">Included</h2><ul>
-<li><a href="http://babeljs.io">babel</a> - Transpile ES6</li>
-<li><a href="https://facebook.github.io/jest/">Jest</a> - Tests, includes coverage report</li>
-<li><a href="https://coveralls.io/">Coveralls</a> - Ensure that all your new code is fully covered, and see coverage trends emerge.</li>
-<li><a href="https://travis-ci.org">Travis</a> - Deploy and test.</li>
-<li><a href="https://flow.org/en/docs/types/primitives/">Flow</a> - Type Checking</li>
-<li><a href="https://esdoc.org/">esDoc</a> - Documentation</li>
-<li><p><a href="https://eslint.org/">esLint</a> - Enforces tabs over spaces and other lints.</p>
-</li>
-<li><p>Auto publish to npm on every build.</p>
-</li>
+<h3 id="usage">Usage</h3><p>Create a form client and use it to get page one of form configs via API</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;forms&apos; //type of client to get
+);
+let forms = [];
+formsAdminApiClient(page).then(r =&gt; {
+    forms = r;
+}).catch(error =&gt; {
+    console.log(error);
+    throw error;
+});</code>
+</code></pre>
+<p>See: <a href="http://calderalabs.org/caldera-api-client/manual/overview.html#usage">http://calderalabs.org/caldera-api-client/manual/overview.html#usage</a></p>
+<h2 id="install">Install</h2><p><code>npm i -D @caldera-labs/api-client</code></p>
+<h3 id="development-requirements">Development Requirements</h3><ul>
+<li><a href="https://www.npmjs.com/get-npm">npm</a></li>
+<li><a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">Yarn</a></li>
+<li><a href="">Git</a></li>
+<li><a href="https://flow.org/en/docs/install/">Flow</a> - Type Checking</li>
 </ul>
-<h3 id="usage">Usage</h3><h2 id="install">Install</h2><p><code>npm i -D @caldera-labs/api-client</code></p>
-<h3 id="dependencies">Dependencies</h3><ul>
-<li>Yarn</li>
-<li>Git</li>
-<li>Flow</li>
-<li>npm</li>
-<li>Node</li>
-</ul>
-<h2 id="testing">Testing</h2><p>This boilerplate uses <a href="https://facebook.github.io/jest/">Facebook Jest</a>. Test are in the directory named <code>__tests__</code> at any level and start writing tests.</p>
+<h2 id="testing">Testing</h2><p>We use <a href="https://facebook.github.io/jest/">Facebook Jest</a> for unit tests. Test go in the directory <code>__tests__</code>.</p>
 <ul>
 <li>Run test watcher<pre><code><code class="source-code prettyprint">yarn test</code>
 </code></pre></li>
 </ul>
+<p>Make sure to review the docs on <a href="http://calderalabs.org/caldera-api-client/manual/overview.html#mocking-requests">testing requests</a></p>
 <h2 id="scripts">Scripts</h2><h3 id="build-for-release">Build for release</h3><ul>
 <li><code>yarn build</code></li>
 <li>Runs tests, and flow type checks and Babel compiles with minification and source map.</li>

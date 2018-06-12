@@ -40,7 +40,14 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/ApiClient.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">function removeForwardSlash(endpoint) {
+	if (&apos;&apos; !== endpoint &amp;&amp; &apos;/&apos; === endpoint.charAt(0)) {
+		endpoint = endpoint.substr(1);
+	}
+	return endpoint;
+}
+
+//@flow
 /**
  * Generic API client
  */
@@ -68,10 +75,17 @@ export class ApiClient{
 		if( ! headers ){
 			headers = {};
 		}
-		this.headers=new Headers(headers);
+		this.setHeaders(new Headers(headers));
 	}
 
-
+	/**
+	 * Set or reset the headers for all requests
+	 *
+	 * @param {Headers} newHeaders
+	 */
+	setHeaders(newHeaders: Headers ){
+		this.headers = newHeaders;
+	}
 
 	/**
 	 * Make a request to an endpoint
@@ -86,6 +100,7 @@ export class ApiClient{
 		const request = this.createRequest(endpoint, data, method);
 		return fetch(request);
 	}
+
 	/**
 	 * Create a Request object
 	 *
@@ -96,21 +111,20 @@ export class ApiClient{
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {
 		let args = {
-			method: &apos;method&apos;,
+			method,
 			mode:&apos;same-origin&apos;,
 			credentials: &apos;same-origin&apos;,
 			redirect: &apos;follow&apos;,
-			body: &apos;&apos;,
 			headers: this.headers
 		};
 
 		if (&apos;POST&apos; === method || &apos;PUT&apos; === method) {
 			args.body = JSON.stringify(data);
-			args.headers.append(&apos;Content-Type&apos;, &apos;application/json&apos;);
+			args.headers.set(&apos;Content-Type&apos;, &apos;application/json&apos;);
 			args.headers.append(&apos;Content-Length&apos;, args.body.length.toString());
 		}
 
-		return new Request(this.urlFromEndpoint(endpoint, method), args);
+		return new Request(this.urlFromEndpoint(endpoint, method,data), args);
 
 	}
 	/**
@@ -128,7 +142,7 @@ export class ApiClient{
 			return this.urlString(data, endpoint);
 		}
 
-		return `${this.route}${endpoint}`;
+		return `${this.route}/${removeForwardSlash(endpoint)}`;
 	}
 	/**
 	 * Make a GET request
@@ -213,7 +227,7 @@ export class ApiClient{
 			return response.json();
 		} else {
 			return {
-
+				responseText: &apos;Error&apos;
 			};
 		}
 	}
@@ -236,9 +250,7 @@ export class ApiClient{
 	 */
 	urlString (data: Object, endpoint: string = &apos;&apos;): string {
 
-		if (&apos;&apos; !== endpoint &amp;&amp; &apos;/&apos; === endpoint.charAt(0)) {
-			endpoint = endpoint.substr(1);
-		}
+		endpoint = removeForwardSlash(endpoint);
 
 		let str = &apos;&apos;;
 		for (let key in data) {

@@ -130,6 +130,35 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html#instance-method-getFormEndpoint">getFormEndpoint</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Get endpoint for requesting forms via API</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html#instance-method-getFormPreview">getFormPreview</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
         </p>
       </div>
@@ -339,13 +368,13 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-makeRequest">makeRequest</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, data: <span>*</span>, method: <span>*</span>): <span>*</span>: <span>Headers</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-makeRequest">makeRequest</a></span></span><span class="code" data-ice="signature">(endpoint: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, data: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, method: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>Response</span>&gt;</span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Headers for all requests</p>
+        <div data-ice="description"><p>Make a request to an endpoint</p>
 </div>
       </div>
     </td>
@@ -484,6 +513,35 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-setHeaders">setHeaders</a></span></span><span class="code" data-ice="signature">(newHeaders: <span>*</span>): <span>Headers</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Headers for all requests</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html#instance-method-urlFromEndpoint">urlFromEndpoint</a></span></span><span class="code" data-ice="signature">(endpoint: <span>*</span>, method: <span>*</span>, data: <span>*</span>): <span>*</span></span>
         </p>
       </div>
@@ -549,6 +607,34 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html#instance-member-nonce">nonce</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html#instance-method-setNonce">setNonce</a></span></span><span class="code" data-ice="signature">(nonce: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>)</span>
         </p>
       </div>
@@ -586,7 +672,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/FormsClient.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/FormsClient.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
@@ -648,6 +734,79 @@
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getFormEndpoint">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">getFormEndpoint</span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/FormsClient.js.html#lineNumber40">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Get endpoint for requesting forms via API</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">formId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of form to request</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-getFormPreview">
     <span class="access" data-ice="access">public</span>
     
@@ -659,7 +818,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/FormsClient.js.html#lineNumber36">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/FormsClient.js.html#lineNumber50">source</a></span></span>
     </span>
   </h3>
 

@@ -1,19 +1,20 @@
 {
-  "coverage": "88.88%",
-  "expectCount": 27,
-  "actualCount": 24,
+  "coverage": "83.87%",
+  "expectCount": 31,
+  "actualCount": 26,
   "files": {
     "src/ApiClient.js": {
-      "expectCount": 14,
-      "actualCount": 12,
+      "expectCount": 16,
+      "actualCount": 13,
       "undocumentLines": [
-        19,
-        23
+        1,
+        26,
+        45
       ]
     },
     "src/FormsClient.js": {
-      "expectCount": 4,
-      "actualCount": 4,
+      "expectCount": 5,
+      "actualCount": 5,
       "undocumentLines": []
     },
     "src/PrivacySettingsClient.js": {
@@ -27,10 +28,11 @@
       "undocumentLines": []
     },
     "src/WpClient.js": {
-      "expectCount": 2,
+      "expectCount": 3,
       "actualCount": 1,
       "undocumentLines": [
-        3
+        3,
+        10
       ]
     },
     "src/wpClientFactory.js": {

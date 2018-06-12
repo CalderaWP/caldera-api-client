@@ -40,6 +40,8 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#entries" data-ice="link">Entries</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#acceptable-usage-of-admin-clients" data-ice="link">Acceptable Usage Of Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#import-with-webpack" data-ice="link">Import With webpack</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#full-example" data-ice="link">Full Example</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
@@ -55,10 +57,9 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/README.html"><a href="manual/README.html" data-ice="link">caldera-api-client</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#included" data-ice="link">Included</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#install" data-ice="link">Install</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#dependencies" data-ice="link">Dependencies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#development-requirements" data-ice="link">Development Requirements</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#scripts" data-ice="link">Scripts</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#build-for-release" data-ice="link">Build for release</a></li>
@@ -86,7 +87,15 @@ Get an account&apos;s layouts from CF Pro. Client is designed for remote admin a
 OK: Caldera Forms Pro UI that requires login
 NOT OK: Any publicly addressable page.
 NOT OK: Front-end rendering of a Caldera Form.</p>
-<h2 id="usage">Usage</h2><h3 id="wordpress-admin-clients">WordPress Admin Clients</h3><ul>
+<h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><p><code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p>
+<h4 id="full-example">Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;forms&apos; //type of client to get
+);</code>
+</code></pre>
+<h3 id="wordpress-admin-clients">WordPress Admin Clients</h3><ul>
 <li><p>Get or update Caldera Forms form configs or other settings.</p>
 </li>
 <li><p><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication">Uses REST API cookie authentication</a></p>

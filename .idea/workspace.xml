@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/ApiClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/ApiClient.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/FormsClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/FormsClient.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/PrivacySettingsClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/PrivacySettingsClient.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/WpClient.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/WpClient.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/FormsClient.js~FormsClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/PrivacySettingsClient.js~PrivacySettingsClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/PrivacySettingsClient.js~PrivacySettingsClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/FormsClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +38,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state relative-caret-position="210">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -27,7 +48,6 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#0#50#0" expanded="true" />
@@ -41,7 +61,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="45">
-                <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
+                <caret line="3" column="26" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
               </first_editor>
               <second_editor />
             </state>
@@ -274,12 +294,12 @@
       <updated>1528567086917</updated>
       <workItem from="1528567088462" duration="5952000" />
       <workItem from="1528574097492" duration="28813000" />
-      <workItem from="1528809104931" duration="4734000" />
+      <workItem from="1528809104931" duration="4824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50778000" />
+    <option name="totallyTimeSpent" value="50868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="322" y="23" width="1663" height="1057" extended-state="0" />
@@ -615,7 +635,6 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#0#50#0" expanded="true" />
@@ -637,7 +656,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="45">
-            <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
+            <caret line="3" column="26" selection-start-line="3" selection-end-line="3" selection-end-column="93" />
           </first_editor>
           <second_editor />
         </state>
@@ -655,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
