@@ -4,7 +4,7 @@ JavaScript API client for [Caldera Forms REST API)(https://calderaforms.com/doc/
 [![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)
 [![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)
 
-🌋 [Documentation](http://calderalabs.org/caldera-api-client/)
+🌋 👀 [Documentation](https://calderalabs.org/caldera-api-client/)
 
 ### Usage
 Create a form client and use it to get page one of form configs via API

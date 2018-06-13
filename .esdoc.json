@@ -10,7 +10,7 @@
           "title": "Caldera API Client",
           "description": "JavaScript API client for Caldera Forms",
           "repository": "https://github.com/calderawp/caldera-api-client",
-          "site": "http://calderalabs.org/caldera-api-client/",
+          "site": "https://calderalabs.org/caldera-api-client/",
           "author": "http://calderalabs.org",
           "image": "https://calderaforms.com/wp-content/themes/caldera-forms-dot-com/img/caldera-forms-logo.svg"
         },

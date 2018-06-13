@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/calderawp/caldera-api-client/issues"
   },
-  "homepage": "http://calderalabs.org/caldera-api-client/",
+  "homepage": "https://calderalabs.org/caldera-api-client/",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^20.0.3",
