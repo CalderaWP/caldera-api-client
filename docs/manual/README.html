@@ -73,14 +73,14 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API])(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API)(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p>
 <p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p>
 <p>&#x1F30B; <a href="http://calderalabs.org/caldera-api-client/">Documentation</a></p>
 <h3 id="usage">Usage</h3><p>Create a form client and use it to get page one of form configs via API</p>
 <pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
-    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
     &apos;forms&apos; //type of client to get
 );
@@ -98,7 +98,7 @@ formsAdminApiClient(page).then(r =&gt; {
 <li><a href="https://www.npmjs.com/get-npm">npm</a></li>
 <li><a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">Yarn</a></li>
 <li><a href="">Git</a></li>
-<li><a href="https://flow.org/en/docs/install/">Flow</a> - Type Checking</li>
+<li><a href="https://flow.org/en/docs/install/">Flow</a></li>
 </ul>
 <h2 id="testing">Testing</h2><p>We use <a href="https://facebook.github.io/jest/">Facebook Jest</a> for unit tests. Test go in the directory <code>__tests__</code>.</p>
 <ul>
@@ -107,29 +107,43 @@ formsAdminApiClient(page).then(r =&gt; {
 </ul>
 <p>Make sure to review the docs on <a href="http://calderalabs.org/caldera-api-client/manual/overview.html#mocking-requests">testing requests</a></p>
 <h2 id="scripts">Scripts</h2><h3 id="build-for-release">Build for release</h3><ul>
-<li><code>yarn build</code></li>
+<li><code>yarn build</code><ul>
 <li>Runs tests, and flow type checks and Babel compiles with minification and source map.</li>
 </ul>
+</li>
+</ul>
 <p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p>
-<h3 id="tests">Tests</h3><ul>
-<li><code>yarn test</code> : Test Watcher</li>
-<li><code>npm test:once</code> : Run Tests once</li>
+<h3 id="tests">Tests</h3><p>*<code>yarn test</code></p>
+<pre><code><code class="source-code prettyprint">- Run test watcher</code>
+</code></pre><ul>
+<li><code>npm test:once</code> <ul>
+<li>Run tests once</li>
+</ul>
+</li>
 </ul>
 <h3 id="type-checking-with-flow">Type-checking With Flow</h3><ul>
 <li><code>yarn flow</code></li>
 </ul>
 <h3 id="lint-code">Lint Code</h3><ul>
-<li>Lint code once:</li>
-<li><code>yarn lint</code></li>
-<li>Lint and fix code once</li>
-<li><code>yarn lint:fix</code></li>
+<li><code>yarn lint</code><ul>
 <li>Run linter and fixer watch</li>
-<li><code>yarn lint:watch</code></li>
+</ul>
+</li>
+<li><code>yarn lint:fix</code><ul>
+<li>Lint and fix code once</li>
+</ul>
+</li>
+<li><code>yarn lint:once</code><ul>
+<li>Lint code once</li>
+</ul>
+</li>
 </ul>
 <h3 id="generate-documentation">Generate Documentation</h3><ul>
-<li><code>npm run documentation</code></li>
+<li><code>npm run documentation</code><ul>
 <li>Generates documentation from inline docs</li>
 <li>Generates documentation from markdown files in /manual</li>
+</ul>
+</li>
 </ul>
 <h3 id="release-to-npm">Release To npm</h3><p>Must be <a href="https://docs.npmjs.com/cli/adduser">logged in as project maintainer via npm cli</a></p>
 <ul>

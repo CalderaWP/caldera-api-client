@@ -85,10 +85,12 @@
   <div class="manual-card-wrap" data-ice="cards">
       <div class="manual-card">
         <div data-ice="card"><h1>Caldera API Overview</h1><h2>Provided Clients</h2><h3>Forms Clients</h3><p><strong>Admin Client</strong></p><p>Get form configs and collections of forms config from a WordPress site.</p><h3>Privacy Settings</h3><p><strong>Admin Client</strong></p><p>Get and update a WordPress site&apos;s privacy settings</p><h3>CF Pro Local Settings Client</h3><p><strong>Admin Client</strong></p><p>Get and update a WordPress site&apos;s CF Pro settings</p><h3>CF Pro Client</h3><p><strong>Admin Client</strong>
-Get an account&apos;s layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.</p><h3>Entries</h3><p>Get entries of a form.</p><h4>Acceptable Usage Of Admin Clients</h4><p>Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.</p><p>OK: Caldera Forms settings page that is accessible only to admin users
-OK: Caldera Forms Pro UI that requires login
-NOT OK: Any publicly addressable page.
-NOT OK: Front-end rendering of a Caldera Form.</p><h2>Usage</h2><h3>Import With webpack</h3><p><code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p><h4>Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
+Get an account&apos;s layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.</p><h3>Entries</h3><p>Get entries of a form.</p><h4>Acceptable Usage Of Admin Clients</h4><p>Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site will be authorized to view. These clients will expose secret keys, so they should only be used where the current user knows these secrets.</p><ul>
+<li>OK: Caldera Forms settings page that is accessible only to admin users</li>
+<li>OK: Caldera Forms Pro UI that requires login</li>
+<li>NOT OK: Any publicly addressable page.</li>
+<li>NOT OK: Front-end rendering of a Caldera Form.</li>
+</ul><h2>Usage</h2><h3>Import With webpack</h3><p><code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p><h4>Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
@@ -206,10 +208,10 @@ it(&apos;Gets data from API&apos;, () =&gt; {
     </div>
 <div class="manual-card-wrap" data-ice="cards">
       <div class="manual-card">
-        <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API])(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p><p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
+        <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API)(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p><p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p><p>&#x1F30B; <a href="http://calderalabs.org/caldera-api-client/">Documentation</a></p><h3>Usage</h3><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
-    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
     &apos;forms&apos; //type of client to get
 );
@@ -224,29 +226,42 @@ formsAdminApiClient(page).then(r =&gt; {
 <li><a href="https://www.npmjs.com/get-npm">npm</a></li>
 <li><a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">Yarn</a></li>
 <li><a href="">Git</a></li>
-<li><a href="https://flow.org/en/docs/install/">Flow</a> - Type Checking</li>
+<li><a href="https://flow.org/en/docs/install/">Flow</a></li>
 </ul><h2>Testing</h2><p>We use <a href="https://facebook.github.io/jest/">Facebook Jest</a> for unit tests. Test go in the directory <code>__tests__</code>.</p><ul>
 <li>Run test watcher<pre><code><code class="source-code prettyprint">yarn test</code>
 </code></pre></li>
 </ul><p>Make sure to review the docs on <a href="http://calderalabs.org/caldera-api-client/manual/overview.html#mocking-requests">testing requests</a></p><h2>Scripts</h2><h3>Build for release</h3><ul>
-<li><code>yarn build</code></li>
+<li><code>yarn build</code><ul>
 <li>Runs tests, and flow type checks and Babel compiles with minification and source map.</li>
-</ul><p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p><h3>Tests</h3><ul>
-<li><code>yarn test</code> : Test Watcher</li>
-<li><code>npm test:once</code> : Run Tests once</li>
+</ul>
+</li>
+</ul><p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p><h3>Tests</h3><p>*<code>yarn test</code></p><pre><code><code class="source-code prettyprint">- Run test watcher</code>
+</code></pre><ul>
+<li><code>npm test:once</code> <ul>
+<li>Run tests once</li>
+</ul>
+</li>
 </ul><h3>Type-checking With Flow</h3><ul>
 <li><code>yarn flow</code></li>
 </ul><h3>Lint Code</h3><ul>
-<li>Lint code once:</li>
-<li><code>yarn lint</code></li>
-<li>Lint and fix code once</li>
-<li><code>yarn lint:fix</code></li>
+<li><code>yarn lint</code><ul>
 <li>Run linter and fixer watch</li>
-<li><code>yarn lint:watch</code></li>
+</ul>
+</li>
+<li><code>yarn lint:fix</code><ul>
+<li>Lint and fix code once</li>
+</ul>
+</li>
+<li><code>yarn lint:once</code><ul>
+<li>Lint code once</li>
+</ul>
+</li>
 </ul><h3>Generate Documentation</h3><ul>
-<li><code>npm run documentation</code></li>
+<li><code>npm run documentation</code><ul>
 <li>Generates documentation from inline docs</li>
 <li>Generates documentation from markdown files in /manual</li>
+</ul>
+</li>
 </ul><h3>Release To npm</h3><p>Must be <a href="https://docs.npmjs.com/cli/adduser">logged in as project maintainer via npm cli</a></p><ul>
 <li><code>yarn release</code></li>
 </ul></div>

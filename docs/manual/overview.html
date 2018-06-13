@@ -82,11 +82,13 @@
 <h3 id="cf-pro-client">CF Pro Client</h3><p><strong>Admin Client</strong>
 Get an account&apos;s layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.</p>
 <h3 id="entries">Entries</h3><p>Get entries of a form.</p>
-<h4 id="acceptable-usage-of-admin-clients">Acceptable Usage Of Admin Clients</h4><p>Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.</p>
-<p>OK: Caldera Forms settings page that is accessible only to admin users
-OK: Caldera Forms Pro UI that requires login
-NOT OK: Any publicly addressable page.
-NOT OK: Front-end rendering of a Caldera Form.</p>
+<h4 id="acceptable-usage-of-admin-clients">Acceptable Usage Of Admin Clients</h4><p>Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site will be authorized to view. These clients will expose secret keys, so they should only be used where the current user knows these secrets.</p>
+<ul>
+<li>OK: Caldera Forms settings page that is accessible only to admin users</li>
+<li>OK: Caldera Forms Pro UI that requires login</li>
+<li>NOT OK: Any publicly addressable page.</li>
+<li>NOT OK: Front-end rendering of a Caldera Form.</li>
+</ul>
 <h2 id="usage">Usage</h2><h3 id="import-with-webpack">Import With webpack</h3><p><code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p>
 <h4 id="full-example">Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(

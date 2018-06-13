@@ -24,13 +24,12 @@ Get an account's layouts from CF Pro. Client is designed for remote admin access
 Get entries of a form.
 
 #### Acceptable Usage Of Admin Clients
-Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site. These clients will expose secret keys, so should only be employed where the use knows these secrets.
+Admin clients are designed to be used on pages that only someone who has access to the account or owns the current site will be authorized to view. These clients will expose secret keys, so they should only be used where the current user knows these secrets.
 
-OK: Caldera Forms settings page that is accessible only to admin users
-OK: Caldera Forms Pro UI that requires login
-NOT OK: Any publicly addressable page.
-NOT OK: Front-end rendering of a Caldera Form.
-
+* OK: Caldera Forms settings page that is accessible only to admin users
+* OK: Caldera Forms Pro UI that requires login
+* NOT OK: Any publicly addressable page.
+* NOT OK: Front-end rendering of a Caldera Form.
 
 ## Usage
 

@@ -11,7 +11,7 @@ Create a form client and use it to get page one of form configs via API
 ```js
 import * as calderaApiClient from '@caldera-labs/api-client';
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
-	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namespace
     '12345', //the nonce for REST API cookie authentication
     'forms' //type of client to get
 );
@@ -66,7 +66,7 @@ This script calls a pre, compile, and post subcommands.  For consistency, please
 * `yarn flow`
 
 ### Lint Code
-* `yarn lint
+* `yarn lint`
     - Run linter and fixer watch
 * `yarn lint:fix`
     - Lint and fix code once
