@@ -31,6 +31,7 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
@@ -39,7 +40,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/ProLocalSettingClient.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {WpClient} from &quot;./WpClient&quot;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
+import {WpClient} from &apos;./WpClient&apos;;
 
 /**
  * Get and update a WordPress site&apos;s CF Pro settings
@@ -50,8 +52,8 @@ export class ProLocalSettingClient extends WpClient {
 	 *
 	 * @returns {Promise}
 	 */
-	getSettings() : Promise&lt;any&gt; {
-		return this.reqGet({},&apos;/settings/pro&apos;)
+	getSettings(): Promise&lt;any&gt; {
+		return this.reqGet({},&apos;/settings/pro&apos;);
 	}
 
 	/**
@@ -59,7 +61,7 @@ export class ProLocalSettingClient extends WpClient {
 	 *
 	 * @returns {Promise}
 	 */
-	updateSettings(data:Object): Promise&lt;any&gt;{
+	updateSettings(data: Object): Promise&lt;any&gt;{
 		return this.reqPost(data,&apos;/settings/pro&apos;);
 	}
 }</code></pre>

@@ -31,6 +31,7 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
@@ -40,14 +41,6 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/ApiClient.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
-interface Body {
-	bodyUsed: boolean;
-	arrayBuffer(): Promise&lt;ArrayBuffer&gt;;
-	blob(): Promise&lt;Blob&gt;;
-	formData(): Promise&lt;FormData&gt;;
-	json(): Promise&lt;any&gt;;
-	text(): Promise&lt;string&gt;;
-}
 /**
  * Generic API client
  */
@@ -83,21 +76,22 @@ export class ApiClient{
 	/**
 	 * Make a request to an endpoint
 	 *
-	 * @param endpoint
-	 * @param data
-	 * @param method
+	 * @param {String} endpoint
+	 * @param {Object} data
+	 * @param {String} method
+	 *
 	 * @returns {Promise&lt;Response&gt;}
 	 */
 	makeRequest(endpoint: string, data: Object, method: string): Promise&lt;Response&gt; {
-		let request = this.createRequest(endpoint, data, method);
+		const request = this.createRequest(endpoint, data, method);
 		return fetch(request);
 	}
 	/**
 	 * Create a Request object
 	 *
-	 * @param endpoint
-	 * @param data
-	 * @param method
+	 * @param {String} endpoint
+	 * @param {Object} data
+	 * @param {String} method
 	 * @returns {Request}
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {
@@ -220,7 +214,7 @@ export class ApiClient{
 		} else {
 			return {
 
-			}
+			};
 		}
 	}
 

@@ -58,6 +58,6 @@ fi
 echo -e $(status_message "Server is running at:")
 echo -e $(status_message "http://localhost:$HOST_PORT")
 
-
-
+# Install Caldera Forms
+docker-compose run --rm cli wp plugin install caldera-forms --activate
 

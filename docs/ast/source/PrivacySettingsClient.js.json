@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 615,
+  "end": 623,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 28,
+      "line": 29,
       "column": 1
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 615,
+    "end": 623,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 28,
+        "line": 29,
         "column": 1
       }
     },
@@ -109,7 +109,7 @@
           },
           "extra": {
             "rawValue": "./WpClient",
-            "raw": "\"./WpClient\""
+            "raw": "'./WpClient'"
           },
           "value": "./WpClient"
         },
@@ -133,174 +133,176 @@
         ]
       },
       {
-        "type": "ClassDeclaration",
+        "type": "ExportNamedDeclaration",
         "start": 102,
-        "end": 615,
+        "end": 623,
         "loc": {
           "start": {
             "line": 6,
             "column": 0
           },
           "end": {
-            "line": 28,
+            "line": 29,
             "column": 1
           }
         },
-        "id": {
-          "type": "Identifier",
-          "start": 108,
-          "end": 129,
+        "specifiers": [],
+        "source": null,
+        "declaration": {
+          "type": "ClassDeclaration",
+          "start": 109,
+          "end": 623,
           "loc": {
             "start": {
               "line": 6,
-              "column": 6
+              "column": 7
             },
             "end": {
-              "line": 6,
-              "column": 27
-            },
-            "identifierName": "PrivacySettingsClient"
-          },
-          "name": "PrivacySettingsClient",
-          "leadingComments": null
-        },
-        "superClass": {
-          "type": "Identifier",
-          "start": 138,
-          "end": 146,
-          "loc": {
-            "start": {
-              "line": 6,
-              "column": 36
-            },
-            "end": {
-              "line": 6,
-              "column": 44
-            },
-            "identifierName": "WpClient"
-          },
-          "name": "WpClient"
-        },
-        "body": {
-          "type": "ClassBody",
-          "start": 147,
-          "end": 615,
-          "loc": {
-            "start": {
-              "line": 6,
-              "column": 45
-            },
-            "end": {
-              "line": 28,
+              "line": 29,
               "column": 1
             }
           },
-          "body": [
-            {
-              "type": "ClassMethod",
-              "start": 282,
-              "end": 355,
-              "loc": {
-                "start": {
-                  "line": 14,
-                  "column": 1
-                },
-                "end": {
-                  "line": 16,
-                  "column": 2
-                }
+          "id": {
+            "type": "Identifier",
+            "start": 115,
+            "end": 136,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 13
               },
-              "static": false,
-              "computed": false,
-              "key": {
-                "type": "Identifier",
-                "start": 282,
-                "end": 293,
+              "end": {
+                "line": 6,
+                "column": 34
+              },
+              "identifierName": "PrivacySettingsClient"
+            },
+            "name": "PrivacySettingsClient",
+            "leadingComments": null
+          },
+          "superClass": {
+            "type": "Identifier",
+            "start": 145,
+            "end": 153,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 43
+              },
+              "end": {
+                "line": 6,
+                "column": 51
+              },
+              "identifierName": "WpClient"
+            },
+            "name": "WpClient"
+          },
+          "body": {
+            "type": "ClassBody",
+            "start": 154,
+            "end": 623,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 52
+              },
+              "end": {
+                "line": 29,
+                "column": 1
+              }
+            },
+            "body": [
+              {
+                "type": "ClassMethod",
+                "start": 289,
+                "end": 362,
                 "loc": {
                   "start": {
                     "line": 14,
                     "column": 1
                   },
                   "end": {
-                    "line": 14,
-                    "column": 12
-                  },
-                  "identifierName": "getSettings"
-                },
-                "name": "getSettings",
-                "leadingComments": null
-              },
-              "kind": "method",
-              "id": null,
-              "generator": false,
-              "expression": false,
-              "async": false,
-              "params": [
-                {
-                  "type": "Identifier",
-                  "start": 294,
-                  "end": 300,
-                  "loc": {
-                    "start": {
-                      "line": 14,
-                      "column": 13
-                    },
-                    "end": {
-                      "line": 14,
-                      "column": 19
-                    },
-                    "identifierName": "formId"
-                  },
-                  "name": "formId"
-                }
-              ],
-              "body": {
-                "type": "BlockStatement",
-                "start": 302,
-                "end": 355,
-                "loc": {
-                  "start": {
-                    "line": 14,
-                    "column": 21
-                  },
-                  "end": {
                     "line": 16,
                     "column": 2
                   }
                 },
-                "body": [
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 289,
+                  "end": 300,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 12
+                    },
+                    "identifierName": "getSettings"
+                  },
+                  "name": "getSettings",
+                  "leadingComments": null
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
                   {
-                    "type": "ReturnStatement",
-                    "start": 306,
-                    "end": 352,
+                    "type": "Identifier",
+                    "start": 301,
+                    "end": 307,
                     "loc": {
                       "start": {
-                        "line": 15,
-                        "column": 2
+                        "line": 14,
+                        "column": 13
                       },
                       "end": {
-                        "line": 15,
-                        "column": 48
-                      }
+                        "line": 14,
+                        "column": 19
+                      },
+                      "identifierName": "formId"
                     },
-                    "argument": {
-                      "type": "CallExpression",
+                    "name": "formId"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 309,
+                  "end": 362,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 21
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 2
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
                       "start": 313,
-                      "end": 351,
+                      "end": 359,
                       "loc": {
                         "start": {
                           "line": 15,
-                          "column": 9
+                          "column": 2
                         },
                         "end": {
                           "line": 15,
-                          "column": 47
+                          "column": 48
                         }
                       },
-                      "callee": {
-                        "type": "MemberExpression",
-                        "start": 313,
-                        "end": 324,
+                      "argument": {
+                        "type": "CallExpression",
+                        "start": 320,
+                        "end": 358,
                         "loc": {
                           "start": {
                             "line": 15,
@@ -308,13 +310,13 @@
                           },
                           "end": {
                             "line": 15,
-                            "column": 20
+                            "column": 47
                           }
                         },
-                        "object": {
-                          "type": "ThisExpression",
-                          "start": 313,
-                          "end": 317,
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 320,
+                          "end": 331,
                           "loc": {
                             "start": {
                               "line": 15,
@@ -322,66 +324,63 @@
                             },
                             "end": {
                               "line": 15,
-                              "column": 13
-                            }
-                          }
-                        },
-                        "property": {
-                          "type": "Identifier",
-                          "start": 318,
-                          "end": 324,
-                          "loc": {
-                            "start": {
-                              "line": 15,
-                              "column": 14
-                            },
-                            "end": {
-                              "line": 15,
                               "column": 20
-                            },
-                            "identifierName": "reqGet"
-                          },
-                          "name": "reqGet"
-                        },
-                        "computed": false
-                      },
-                      "arguments": [
-                        {
-                          "type": "ObjectExpression",
-                          "start": 325,
-                          "end": 342,
-                          "loc": {
-                            "start": {
-                              "line": 15,
-                              "column": 21
-                            },
-                            "end": {
-                              "line": 15,
-                              "column": 38
                             }
                           },
-                          "properties": [
-                            {
-                              "type": "ObjectProperty",
-                              "start": 327,
-                              "end": 340,
-                              "loc": {
-                                "start": {
-                                  "line": 15,
-                                  "column": 23
-                                },
-                                "end": {
-                                  "line": 15,
-                                  "column": 36
-                                }
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 320,
+                            "end": 324,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 9
                               },
-                              "method": false,
-                              "shorthand": false,
-                              "computed": false,
-                              "key": {
-                                "type": "Identifier",
-                                "start": 327,
-                                "end": 334,
+                              "end": {
+                                "line": 15,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 325,
+                            "end": 331,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 20
+                              },
+                              "identifierName": "reqGet"
+                            },
+                            "name": "reqGet"
+                          },
+                          "computed": false
+                        },
+                        "arguments": [
+                          {
+                            "type": "ObjectExpression",
+                            "start": 332,
+                            "end": 349,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 21
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 38
+                              }
+                            },
+                            "properties": [
+                              {
+                                "type": "ObjectProperty",
+                                "start": 334,
+                                "end": 347,
                                 "loc": {
                                   "start": {
                                     "line": 15,
@@ -389,214 +388,217 @@
                                   },
                                   "end": {
                                     "line": 15,
-                                    "column": 30
-                                  },
-                                  "identifierName": "privacy"
-                                },
-                                "name": "privacy"
-                              },
-                              "value": {
-                                "type": "BooleanLiteral",
-                                "start": 336,
-                                "end": 340,
-                                "loc": {
-                                  "start": {
-                                    "line": 15,
-                                    "column": 32
-                                  },
-                                  "end": {
-                                    "line": 15,
                                     "column": 36
                                   }
                                 },
-                                "value": true
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                  "type": "Identifier",
+                                  "start": 334,
+                                  "end": 341,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 23
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 30
+                                    },
+                                    "identifierName": "privacy"
+                                  },
+                                  "name": "privacy"
+                                },
+                                "value": {
+                                  "type": "BooleanLiteral",
+                                  "start": 343,
+                                  "end": 347,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 32
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 36
+                                    }
+                                  },
+                                  "value": true
+                                }
                               }
-                            }
-                          ]
-                        },
-                        {
-                          "type": "Identifier",
-                          "start": 344,
-                          "end": 350,
-                          "loc": {
-                            "start": {
-                              "line": 15,
-                              "column": 40
-                            },
-                            "end": {
-                              "line": 15,
-                              "column": 46
-                            },
-                            "identifierName": "formId"
+                            ]
                           },
-                          "name": "formId"
-                        }
-                      ]
+                          {
+                            "type": "Identifier",
+                            "start": 351,
+                            "end": 357,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 40
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 46
+                              },
+                              "identifierName": "formId"
+                            },
+                            "name": "formId"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n  * Get privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @returns {Promise}\n  ",
+                    "start": 158,
+                    "end": 287,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 4
+                      }
                     }
                   }
                 ],
-                "directives": [],
-                "trailingComments": null
-              },
-              "leadingComments": [
-                {
-                  "type": "CommentBlock",
-                  "value": "*\n  * Get privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @returns {Promise}\n  ",
-                  "start": 151,
-                  "end": 280,
-                  "loc": {
-                    "start": {
-                      "line": 8,
-                      "column": 1
-                    },
-                    "end": {
-                      "line": 13,
-                      "column": 4
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
+                    "start": 365,
+                    "end": 535,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 1
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 4
+                      }
                     }
                   }
-                }
-              ],
-              "trailingComments": [
-                {
-                  "type": "CommentBlock",
-                  "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
-                  "start": 358,
-                  "end": 528,
-                  "loc": {
-                    "start": {
-                      "line": 18,
-                      "column": 1
-                    },
-                    "end": {
-                      "line": 24,
-                      "column": 4
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "ClassMethod",
-              "start": 530,
-              "end": 613,
-              "loc": {
-                "start": {
-                  "line": 25,
-                  "column": 1
-                },
-                "end": {
-                  "line": 27,
-                  "column": 2
-                }
+                ]
               },
-              "static": false,
-              "computed": false,
-              "key": {
-                "type": "Identifier",
-                "start": 530,
-                "end": 544,
+              {
+                "type": "ClassMethod",
+                "start": 537,
+                "end": 620,
                 "loc": {
                   "start": {
                     "line": 25,
                     "column": 1
                   },
                   "end": {
-                    "line": 25,
-                    "column": 15
-                  },
-                  "identifierName": "updateSettings"
-                },
-                "name": "updateSettings",
-                "leadingComments": null
-              },
-              "kind": "method",
-              "id": null,
-              "generator": false,
-              "expression": false,
-              "async": false,
-              "params": [
-                {
-                  "type": "Identifier",
-                  "start": 545,
-                  "end": 551,
-                  "loc": {
-                    "start": {
-                      "line": 25,
-                      "column": 16
-                    },
-                    "end": {
-                      "line": 25,
-                      "column": 22
-                    },
-                    "identifierName": "formId"
-                  },
-                  "name": "formId"
-                },
-                {
-                  "type": "Identifier",
-                  "start": 553,
-                  "end": 557,
-                  "loc": {
-                    "start": {
-                      "line": 25,
-                      "column": 24
-                    },
-                    "end": {
-                      "line": 25,
-                      "column": 28
-                    },
-                    "identifierName": "data"
-                  },
-                  "name": "data"
-                }
-              ],
-              "body": {
-                "type": "BlockStatement",
-                "start": 559,
-                "end": 613,
-                "loc": {
-                  "start": {
-                    "line": 25,
-                    "column": 30
-                  },
-                  "end": {
                     "line": 27,
                     "column": 2
                   }
                 },
-                "body": [
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 537,
+                  "end": 551,
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 15
+                    },
+                    "identifierName": "updateSettings"
+                  },
+                  "name": "updateSettings",
+                  "leadingComments": null
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
                   {
-                    "type": "ReturnStatement",
-                    "start": 563,
-                    "end": 610,
+                    "type": "Identifier",
+                    "start": 552,
+                    "end": 558,
                     "loc": {
                       "start": {
-                        "line": 26,
-                        "column": 2
+                        "line": 25,
+                        "column": 16
                       },
                       "end": {
-                        "line": 26,
-                        "column": 49
-                      }
+                        "line": 25,
+                        "column": 22
+                      },
+                      "identifierName": "formId"
                     },
-                    "argument": {
-                      "type": "CallExpression",
+                    "name": "formId"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 560,
+                    "end": 564,
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 24
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 28
+                      },
+                      "identifierName": "data"
+                    },
+                    "name": "data"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 566,
+                  "end": 620,
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 30
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 2
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
                       "start": 570,
-                      "end": 609,
+                      "end": 617,
                       "loc": {
                         "start": {
                           "line": 26,
-                          "column": 9
+                          "column": 2
                         },
                         "end": {
                           "line": 26,
-                          "column": 48
+                          "column": 49
                         }
                       },
-                      "callee": {
-                        "type": "MemberExpression",
-                        "start": 570,
-                        "end": 582,
+                      "argument": {
+                        "type": "CallExpression",
+                        "start": 577,
+                        "end": 616,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -604,13 +606,13 @@
                           },
                           "end": {
                             "line": 26,
-                            "column": 21
+                            "column": 48
                           }
                         },
-                        "object": {
-                          "type": "ThisExpression",
-                          "start": 570,
-                          "end": 574,
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 577,
+                          "end": 589,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -618,149 +620,183 @@
                             },
                             "end": {
                               "line": 26,
-                              "column": 13
-                            }
-                          }
-                        },
-                        "property": {
-                          "type": "Identifier",
-                          "start": 575,
-                          "end": 582,
-                          "loc": {
-                            "start": {
-                              "line": 26,
-                              "column": 14
-                            },
-                            "end": {
-                              "line": 26,
                               "column": 21
-                            },
-                            "identifierName": "reqPost"
+                            }
                           },
-                          "name": "reqPost"
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 577,
+                            "end": 581,
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 13
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 582,
+                            "end": 589,
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 21
+                              },
+                              "identifierName": "reqPost"
+                            },
+                            "name": "reqPost"
+                          },
+                          "computed": false
                         },
-                        "computed": false
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 590,
+                            "end": 594,
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 26
+                              },
+                              "identifierName": "data"
+                            },
+                            "name": "data"
+                          },
+                          {
+                            "type": "TemplateLiteral",
+                            "start": 596,
+                            "end": 615,
+                            "loc": {
+                              "start": {
+                                "line": 26,
+                                "column": 28
+                              },
+                              "end": {
+                                "line": 26,
+                                "column": 47
+                              }
+                            },
+                            "expressions": [
+                              {
+                                "type": "Identifier",
+                                "start": 599,
+                                "end": 605,
+                                "loc": {
+                                  "start": {
+                                    "line": 26,
+                                    "column": 31
+                                  },
+                                  "end": {
+                                    "line": 26,
+                                    "column": 37
+                                  },
+                                  "identifierName": "formId"
+                                },
+                                "name": "formId"
+                              }
+                            ],
+                            "quasis": [
+                              {
+                                "type": "TemplateElement",
+                                "start": 597,
+                                "end": 597,
+                                "loc": {
+                                  "start": {
+                                    "line": 26,
+                                    "column": 29
+                                  },
+                                  "end": {
+                                    "line": 26,
+                                    "column": 29
+                                  }
+                                },
+                                "value": {
+                                  "raw": "",
+                                  "cooked": ""
+                                },
+                                "tail": false
+                              },
+                              {
+                                "type": "TemplateElement",
+                                "start": 606,
+                                "end": 614,
+                                "loc": {
+                                  "start": {
+                                    "line": 26,
+                                    "column": 38
+                                  },
+                                  "end": {
+                                    "line": 26,
+                                    "column": 46
+                                  }
+                                },
+                                "value": {
+                                  "raw": "/privacy",
+                                  "cooked": "/privacy"
+                                },
+                                "tail": true
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "directives": []
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
+                    "start": 365,
+                    "end": 535,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 1
                       },
-                      "arguments": [
-                        {
-                          "type": "Identifier",
-                          "start": 583,
-                          "end": 587,
-                          "loc": {
-                            "start": {
-                              "line": 26,
-                              "column": 22
-                            },
-                            "end": {
-                              "line": 26,
-                              "column": 26
-                            },
-                            "identifierName": "data"
-                          },
-                          "name": "data"
-                        },
-                        {
-                          "type": "TemplateLiteral",
-                          "start": 589,
-                          "end": 608,
-                          "loc": {
-                            "start": {
-                              "line": 26,
-                              "column": 28
-                            },
-                            "end": {
-                              "line": 26,
-                              "column": 47
-                            }
-                          },
-                          "expressions": [
-                            {
-                              "type": "Identifier",
-                              "start": 592,
-                              "end": 598,
-                              "loc": {
-                                "start": {
-                                  "line": 26,
-                                  "column": 31
-                                },
-                                "end": {
-                                  "line": 26,
-                                  "column": 37
-                                },
-                                "identifierName": "formId"
-                              },
-                              "name": "formId"
-                            }
-                          ],
-                          "quasis": [
-                            {
-                              "type": "TemplateElement",
-                              "start": 590,
-                              "end": 590,
-                              "loc": {
-                                "start": {
-                                  "line": 26,
-                                  "column": 29
-                                },
-                                "end": {
-                                  "line": 26,
-                                  "column": 29
-                                }
-                              },
-                              "value": {
-                                "raw": "",
-                                "cooked": ""
-                              },
-                              "tail": false
-                            },
-                            {
-                              "type": "TemplateElement",
-                              "start": 599,
-                              "end": 607,
-                              "loc": {
-                                "start": {
-                                  "line": 26,
-                                  "column": 38
-                                },
-                                "end": {
-                                  "line": 26,
-                                  "column": 46
-                                }
-                              },
-                              "value": {
-                                "raw": "/privacy",
-                                "cooked": "/privacy"
-                              },
-                              "tail": true
-                            }
-                          ]
-                        }
-                      ]
+                      "end": {
+                        "line": 24,
+                        "column": 4
+                      }
                     }
                   }
-                ],
-                "directives": []
-              },
-              "leadingComments": [
-                {
-                  "type": "CommentBlock",
-                  "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
-                  "start": 358,
-                  "end": 528,
-                  "loc": {
-                    "start": {
-                      "line": 18,
-                      "column": 1
-                    },
-                    "end": {
-                      "line": 24,
-                      "column": 4
-                    }
-                  }
+                ]
+              }
+            ]
+          },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Get and update a WordPress site's privacy settings\n ",
+              "start": 40,
+              "end": 101,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 3
                 }
-              ]
+              }
             }
-          ]
+          ],
+          "trailingComments": []
         },
         "leadingComments": [
           {
@@ -804,8 +840,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n  * Get privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @returns {Promise}\n  ",
-      "start": 151,
-      "end": 280,
+      "start": 158,
+      "end": 287,
       "loc": {
         "start": {
           "line": 8,
@@ -820,8 +856,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
-      "start": 358,
-      "end": 528,
+      "start": 365,
+      "end": 535,
       "loc": {
         "start": {
           "line": 18,
@@ -1036,6 +1072,34 @@
     },
     {
       "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 102,
+      "end": 108,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
         "label": "class",
         "keyword": "class",
         "beforeExpr": false,
@@ -1049,16 +1113,16 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 102,
-      "end": 107,
+      "start": 109,
+      "end": 114,
       "loc": {
         "start": {
           "line": 6,
-          "column": 0
+          "column": 7
         },
         "end": {
           "line": 6,
-          "column": 5
+          "column": 12
         }
       }
     },
@@ -1075,16 +1139,16 @@
         "binop": null
       },
       "value": "PrivacySettingsClient",
-      "start": 108,
-      "end": 129,
+      "start": 115,
+      "end": 136,
       "loc": {
         "start": {
           "line": 6,
-          "column": 6
+          "column": 13
         },
         "end": {
           "line": 6,
-          "column": 27
+          "column": 34
         }
       }
     },
@@ -1103,16 +1167,16 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 130,
-      "end": 137,
+      "start": 137,
+      "end": 144,
       "loc": {
         "start": {
           "line": 6,
-          "column": 28
+          "column": 35
         },
         "end": {
           "line": 6,
-          "column": 35
+          "column": 42
         }
       }
     },
@@ -1129,16 +1193,16 @@
         "binop": null
       },
       "value": "WpClient",
-      "start": 138,
-      "end": 146,
+      "start": 145,
+      "end": 153,
       "loc": {
         "start": {
           "line": 6,
-          "column": 36
+          "column": 43
         },
         "end": {
           "line": 6,
-          "column": 44
+          "column": 51
         }
       }
     },
@@ -1154,24 +1218,24 @@
         "postfix": false,
         "binop": null
       },
-      "start": 147,
-      "end": 148,
+      "start": 154,
+      "end": 155,
       "loc": {
         "start": {
           "line": 6,
-          "column": 45
+          "column": 52
         },
         "end": {
           "line": 6,
-          "column": 46
+          "column": 53
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n  * Get privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @returns {Promise}\n  ",
-      "start": 151,
-      "end": 280,
+      "start": 158,
+      "end": 287,
       "loc": {
         "start": {
           "line": 8,
@@ -1196,8 +1260,8 @@
         "binop": null
       },
       "value": "getSettings",
-      "start": 282,
-      "end": 293,
+      "start": 289,
+      "end": 300,
       "loc": {
         "start": {
           "line": 14,
@@ -1221,8 +1285,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 293,
-      "end": 294,
+      "start": 300,
+      "end": 301,
       "loc": {
         "start": {
           "line": 14,
@@ -1247,8 +1311,8 @@
         "binop": null
       },
       "value": "formId",
-      "start": 294,
-      "end": 300,
+      "start": 301,
+      "end": 307,
       "loc": {
         "start": {
           "line": 14,
@@ -1272,8 +1336,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 300,
-      "end": 301,
+      "start": 307,
+      "end": 308,
       "loc": {
         "start": {
           "line": 14,
@@ -1297,8 +1361,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 302,
-      "end": 303,
+      "start": 309,
+      "end": 310,
       "loc": {
         "start": {
           "line": 14,
@@ -1325,8 +1389,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 306,
-      "end": 312,
+      "start": 313,
+      "end": 319,
       "loc": {
         "start": {
           "line": 15,
@@ -1353,8 +1417,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 313,
-      "end": 317,
+      "start": 320,
+      "end": 324,
       "loc": {
         "start": {
           "line": 15,
@@ -1379,8 +1443,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 317,
-      "end": 318,
+      "start": 324,
+      "end": 325,
       "loc": {
         "start": {
           "line": 15,
@@ -1405,8 +1469,8 @@
         "binop": null
       },
       "value": "reqGet",
-      "start": 318,
-      "end": 324,
+      "start": 325,
+      "end": 331,
       "loc": {
         "start": {
           "line": 15,
@@ -1430,8 +1494,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 324,
-      "end": 325,
+      "start": 331,
+      "end": 332,
       "loc": {
         "start": {
           "line": 15,
@@ -1455,8 +1519,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 325,
-      "end": 326,
+      "start": 332,
+      "end": 333,
       "loc": {
         "start": {
           "line": 15,
@@ -1481,8 +1545,8 @@
         "binop": null
       },
       "value": "privacy",
-      "start": 327,
-      "end": 334,
+      "start": 334,
+      "end": 341,
       "loc": {
         "start": {
           "line": 15,
@@ -1507,8 +1571,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 334,
-      "end": 335,
+      "start": 341,
+      "end": 342,
       "loc": {
         "start": {
           "line": 15,
@@ -1535,8 +1599,8 @@
         "updateContext": null
       },
       "value": "true",
-      "start": 336,
-      "end": 340,
+      "start": 343,
+      "end": 347,
       "loc": {
         "start": {
           "line": 15,
@@ -1560,8 +1624,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 341,
-      "end": 342,
+      "start": 348,
+      "end": 349,
       "loc": {
         "start": {
           "line": 15,
@@ -1586,8 +1650,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 342,
-      "end": 343,
+      "start": 349,
+      "end": 350,
       "loc": {
         "start": {
           "line": 15,
@@ -1612,8 +1676,8 @@
         "binop": null
       },
       "value": "formId",
-      "start": 344,
-      "end": 350,
+      "start": 351,
+      "end": 357,
       "loc": {
         "start": {
           "line": 15,
@@ -1637,8 +1701,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 350,
-      "end": 351,
+      "start": 357,
+      "end": 358,
       "loc": {
         "start": {
           "line": 15,
@@ -1663,8 +1727,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 351,
-      "end": 352,
+      "start": 358,
+      "end": 359,
       "loc": {
         "start": {
           "line": 15,
@@ -1688,8 +1752,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 354,
-      "end": 355,
+      "start": 361,
+      "end": 362,
       "loc": {
         "start": {
           "line": 16,
@@ -1704,8 +1768,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n  * Update privacy settings for a form\n  *\n  * @param {String} formId ID of form to get settings for\n  * @param {Object} data New settings\n  * @returns {Promise}\n  ",
-      "start": 358,
-      "end": 528,
+      "start": 365,
+      "end": 535,
       "loc": {
         "start": {
           "line": 18,
@@ -1730,8 +1794,8 @@
         "binop": null
       },
       "value": "updateSettings",
-      "start": 530,
-      "end": 544,
+      "start": 537,
+      "end": 551,
       "loc": {
         "start": {
           "line": 25,
@@ -1755,8 +1819,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 544,
-      "end": 545,
+      "start": 551,
+      "end": 552,
       "loc": {
         "start": {
           "line": 25,
@@ -1781,8 +1845,8 @@
         "binop": null
       },
       "value": "formId",
-      "start": 545,
-      "end": 551,
+      "start": 552,
+      "end": 558,
       "loc": {
         "start": {
           "line": 25,
@@ -1807,8 +1871,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 551,
-      "end": 552,
+      "start": 558,
+      "end": 559,
       "loc": {
         "start": {
           "line": 25,
@@ -1833,8 +1897,8 @@
         "binop": null
       },
       "value": "data",
-      "start": 553,
-      "end": 557,
+      "start": 560,
+      "end": 564,
       "loc": {
         "start": {
           "line": 25,
@@ -1858,8 +1922,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 557,
-      "end": 558,
+      "start": 564,
+      "end": 565,
       "loc": {
         "start": {
           "line": 25,
@@ -1883,8 +1947,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 559,
-      "end": 560,
+      "start": 566,
+      "end": 567,
       "loc": {
         "start": {
           "line": 25,
@@ -1911,8 +1975,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 563,
-      "end": 569,
+      "start": 570,
+      "end": 576,
       "loc": {
         "start": {
           "line": 26,
@@ -1939,8 +2003,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 570,
-      "end": 574,
+      "start": 577,
+      "end": 581,
       "loc": {
         "start": {
           "line": 26,
@@ -1965,8 +2029,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 574,
-      "end": 575,
+      "start": 581,
+      "end": 582,
       "loc": {
         "start": {
           "line": 26,
@@ -1991,8 +2055,8 @@
         "binop": null
       },
       "value": "reqPost",
-      "start": 575,
-      "end": 582,
+      "start": 582,
+      "end": 589,
       "loc": {
         "start": {
           "line": 26,
@@ -2016,8 +2080,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 582,
-      "end": 583,
+      "start": 589,
+      "end": 590,
       "loc": {
         "start": {
           "line": 26,
@@ -2042,8 +2106,8 @@
         "binop": null
       },
       "value": "data",
-      "start": 583,
-      "end": 587,
+      "start": 590,
+      "end": 594,
       "loc": {
         "start": {
           "line": 26,
@@ -2068,8 +2132,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 587,
-      "end": 588,
+      "start": 594,
+      "end": 595,
       "loc": {
         "start": {
           "line": 26,
@@ -2093,8 +2157,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 589,
-      "end": 590,
+      "start": 596,
+      "end": 597,
       "loc": {
         "start": {
           "line": 26,
@@ -2120,8 +2184,8 @@
         "updateContext": null
       },
       "value": "",
-      "start": 590,
-      "end": 590,
+      "start": 597,
+      "end": 597,
       "loc": {
         "start": {
           "line": 26,
@@ -2145,8 +2209,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 590,
-      "end": 592,
+      "start": 597,
+      "end": 599,
       "loc": {
         "start": {
           "line": 26,
@@ -2171,8 +2235,8 @@
         "binop": null
       },
       "value": "formId",
-      "start": 592,
-      "end": 598,
+      "start": 599,
+      "end": 605,
       "loc": {
         "start": {
           "line": 26,
@@ -2196,8 +2260,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 598,
-      "end": 599,
+      "start": 605,
+      "end": 606,
       "loc": {
         "start": {
           "line": 26,
@@ -2223,8 +2287,8 @@
         "updateContext": null
       },
       "value": "/privacy",
-      "start": 599,
-      "end": 607,
+      "start": 606,
+      "end": 614,
       "loc": {
         "start": {
           "line": 26,
@@ -2248,8 +2312,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 607,
-      "end": 608,
+      "start": 614,
+      "end": 615,
       "loc": {
         "start": {
           "line": 26,
@@ -2273,8 +2337,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 608,
-      "end": 609,
+      "start": 615,
+      "end": 616,
       "loc": {
         "start": {
           "line": 26,
@@ -2299,8 +2363,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 609,
-      "end": 610,
+      "start": 616,
+      "end": 617,
       "loc": {
         "start": {
           "line": 26,
@@ -2324,8 +2388,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 612,
-      "end": 613,
+      "start": 619,
+      "end": 620,
       "loc": {
         "start": {
           "line": 27,
@@ -2349,15 +2413,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 614,
-      "end": 615,
+      "start": 622,
+      "end": 623,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 29,
           "column": 0
         },
         "end": {
-          "line": 28,
+          "line": 29,
           "column": 1
         }
       }
@@ -2375,15 +2439,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 615,
-      "end": 615,
+      "start": 623,
+      "end": 623,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 29,
           "column": 1
         },
         "end": {
-          "line": 28,
+          "line": 29,
           "column": 1
         }
       }

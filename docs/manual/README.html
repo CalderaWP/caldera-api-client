@@ -32,14 +32,23 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/overview.html"><a href="manual/overview.html" data-ice="link">Caldera API Overview</a></li>
-<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#provided-clients" data-ice="link">Provided Clients</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#forms-clients" data-ice="link">Forms Clients</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#privacy-settings" data-ice="link">Privacy Settings</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-local-settings-client" data-ice="link">CF Pro Local Settings Client</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#cf-pro-client" data-ice="link">CF Pro Client</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#entries" data-ice="link">Entries</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#acceptable-usage-of-admin-clients" data-ice="link">Acceptable Usage Of Admin Clients</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-caldera-forms-pro-local-settings" data-ice="link">Read or Update Caldera Forms Pro Local Settings</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#caldera-forms-pro-admin-client" data-ice="link">Caldera Forms Pro Admin Client</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#mocking-requests" data-ice="link">Mocking Requests</a></li>
-<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#example" data-ice="link">Example</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#examples-of-mocking-fetch" data-ice="link">Examples of Mocking Fetch</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#helpful-links-about-fetch-and-testing-with-fetch" data-ice="link">Helpful Links About Fetch and Testing With Fetch</a></li>
 </ul>
   </div>
 <div data-ice="manual">
@@ -54,6 +63,8 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#scripts" data-ice="link">Scripts</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#build-for-release" data-ice="link">Build for release</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#tests" data-ice="link">Tests</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#unit-tests" data-ice="link">Unit Tests</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/README.html"><a href="manual/README.html#acceptance-tests-with-browser--wordpress--caldera-forms" data-ice="link">Acceptance Tests With Browser/ WordPress/ Caldera Forms</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#type-checking-with-flow" data-ice="link">Type-checking With Flow</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#lint-code" data-ice="link">Lint Code</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#generate-documentation" data-ice="link">Generate Documentation</a></li>
@@ -86,25 +97,37 @@
 <li>npm</li>
 <li>Node</li>
 </ul>
-<h2 id="testing">Testing</h2><p>This boilerplate uses <a href="https://facebook.github.io/jest/">Facebook Jest</a>. Test are in the directory named <code>__tests__</code> at any level and start writing tests.</p>
-<ul>
-<li>Run test watcher<pre><code><code class="source-code prettyprint">yarn test</code>
-</code></pre></li>
-</ul>
-<h2 id="scripts">Scripts</h2><h3 id="build-for-release">Build for release</h3><ul>
+<h2 id="testing">Testing</h2><h2 id="scripts">Scripts</h2><h3 id="build-for-release">Build for release</h3><ul>
 <li><code>yarn build</code></li>
 <li>Runs tests, and flow type checks and Babel compiles with minification and source map.</li>
 </ul>
 <p>This script calls a pre, compile, and post subcommands.  For consistency, please call other scripts at those three events.</p>
-<h3 id="tests">Tests</h3><ul>
-<li><code>yarn test</code> : Test Watcher</li>
-<li><code>npm test:once</code> : Run Tests once</li>
+<h3 id="tests">Tests</h3><h4 id="unit-tests">Unit Tests</h4><p>This package uses <a href="https://facebook.github.io/jest/">Facebook Jest</a>. Test are in the directory named <code>__tests__</code> at any level and start writing tests.</p>
+<p>WordPress is not available during these tests.</p>
+<ul>
+<li>Run tests with watcher</li>
+<li><code>yarn test</code></li>
+<li>Run tests once</li>
+<li><code>yarn test:once</code></li>
 </ul>
+<h4 id="acceptance-tests-with-browser--wordpress--caldera-forms">Acceptance Tests With Browser/ WordPress/ Caldera Forms</h4><p>Requires</p>
+<ul>
+<li><a href="">Docker</a></li>
+<li><a href="">Docker Compose</a></li>
+</ul>
+<p>Install:
+<code>yarn wp-tests:install</code></p>
+<p>You should now see a WordPress at <a href="http://localhost:8888/">http://localhost:8888/</a></p>
 <h3 id="type-checking-with-flow">Type-checking With Flow</h3><ul>
 <li><code>yarn flow</code></li>
 </ul>
 <h3 id="lint-code">Lint Code</h3><ul>
+<li>Lint code once:</li>
 <li><code>yarn lint</code></li>
+<li>Lint and fix code once</li>
+<li><code>yarn lint:fix</code></li>
+<li>Run linter and fixer watch</li>
+<li><code>yarn lint:watch</code></li>
 </ul>
 <h3 id="generate-documentation">Generate Documentation</h3><ul>
 <li><code>npm run documentation</code></li>

@@ -31,6 +31,7 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
@@ -42,16 +43,28 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
 import {WpClient} from &apos;./WpClient&apos;;
 import {FormsClient} from &apos;./FormsClient&apos;;
+import {PrivacySettingsClient} from &apos;./PrivacySettingsClient&apos;;
 
-export function wpClientFactory(wpApiUrl: string, wpApiNonce: string,type: ?string): WpClient{
+/**
+ * Create a WordPress API client
+ * @param {String} wpApiUrl Root URL for the WordPress REST API of site
+ * @param {String} wpApiNonce The REST API nonce
+ * @param {String} type Optional. Type of client forms|privacy|generic Default is generic
+ * @returns {FormsClient|PrivacySettingsClient|WpClient}
+ */
+export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = &apos;generic&apos; ): WpClient {
 	let client = new WpClient(wpApiUrl);
-	switch( type ){
-	case &apos;forms&apos;:
-		client = new FormsClient(wpApiUrl);
-		break;
-	default:
-		client = new WpClient(wpApiUrl);
-		break;
+	switch (type) {
+		case &apos;forms&apos;:
+			client = new FormsClient(wpApiUrl);
+			break;
+		case &apos;privacy&apos; :
+			client = new PrivacySettingsClient(wpApiUrl);
+			break;
+		default:
+			client = new WpClient(wpApiUrl);
+			break;
+
 	}
 	client.setNonce(wpApiNonce);
 	return client;
