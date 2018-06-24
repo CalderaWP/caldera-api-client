@@ -1,12 +1,15 @@
 # caldera-api-client
 JavaScript API client for [Caldera Forms REST API)(https://calderaforms.com/doc/caldera-forms-rest-api/) and Caldera Forms Pro REST API.
+🌋 👀 [Documentation](https://calderalabs.org/caldera-api-client/)
 
 [![Build Status](https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master)](https://travis-ci.org/calderawp/caldera-api-client)
 [![Coverage Status](https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/calderawp/caldera-api-client?branch=master)
 
-🌋 👀 [Documentation](https://calderalabs.org/caldera-api-client/)
 
-### Usage
+## Install
+`npm i @caldera-labs/api-client`
+
+## Usage
 Create a form client and use it to get page one of form configs via API
 ```js
 import * as calderaApiClient from '@caldera-labs/api-client';
@@ -24,13 +27,11 @@ formsAdminApiClient(page).then(r => {
 });
 ```
 
-
 See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http://calderalabs.org/caldera-api-client/manual/overview.html#usage)
 
-## Install
-`npm i -D @caldera-labs/api-client`
 
-### Development Requirements
+
+## Development Requirements
 * [npm](https://www.npmjs.com/get-npm)
 * [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 * [Git]()
