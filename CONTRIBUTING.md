@@ -3,6 +3,7 @@ Thanks for your help. If you would like to contribute, you can [create a pull re
 
 Please review the readme for notes on development scripts and installation.
 
+This library uses Flow. Make sure to run flow checks before submitting your PR.
 ## Commits And Branches
 
 Please keep the following in mind:
