@@ -57,9 +57,9 @@
     <ul class="manual-toc">
       
     <li data-ice="manualNav" class="indent-h1" data-link="manual/README.html"><a href="manual/README.html" data-ice="link">caldera-api-client</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#install" data-ice="link">Install</a></li>
-<li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#development-requirements" data-ice="link">Development Requirements</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#usage" data-ice="link">Usage</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#development-requirements" data-ice="link">Development Requirements</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#testing" data-ice="link">Testing</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#scripts" data-ice="link">Scripts</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#build-for-release" data-ice="link">Build for release</a></li>
@@ -73,11 +73,12 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for [Caldera Forms REST API)(<a href="https://calderaforms.com/doc/caldera-forms-rest-api/">https://calderaforms.com/doc/caldera-forms-rest-api/</a>) and Caldera Forms Pro REST API.</p>
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="caldera-api-client">caldera-api-client</h1><p>JavaScript API client for <a href="https://calderaforms.com/doc/caldera-forms-rest-api/">Caldera Forms REST API</a> and Caldera Forms Pro REST API.
+&#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p>
 <p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p>
-<p>&#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p>
-<h3 id="usage">Usage</h3><p>Create a form client and use it to get page one of form configs via API</p>
+<h2 id="install">Install</h2><p><code>npm i @caldera-labs/api-client</code></p>
+<h2 id="usage">Usage</h2><p>Create a form client and use it to get page one of form configs via API</p>
 <pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
@@ -93,8 +94,7 @@ formsAdminApiClient(page).then(r =&gt; {
 });</code>
 </code></pre>
 <p>See: <a href="http://calderalabs.org/caldera-api-client/manual/overview.html#usage">http://calderalabs.org/caldera-api-client/manual/overview.html#usage</a></p>
-<h2 id="install">Install</h2><p><code>npm i -D @caldera-labs/api-client</code></p>
-<h3 id="development-requirements">Development Requirements</h3><ul>
+<h2 id="development-requirements">Development Requirements</h2><ul>
 <li><a href="https://www.npmjs.com/get-npm">npm</a></li>
 <li><a href="https://yarnpkg.com/lang/en/docs/install/#mac-stable">Yarn</a></li>
 <li><a href="">Git</a></li>
