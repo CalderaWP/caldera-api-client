@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/README.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manual/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,14 +46,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="330">
-                <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <first_editor relative-caret-position="390">
+                <caret line="26" column="84" lean-forward="true" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -119,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/globe.svg" />
         <option value="$PROJECT_DIR$/src/factory.js" />
@@ -165,6 +168,7 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -264,12 +268,12 @@
       <workItem from="1528929232660" duration="2705000" />
       <workItem from="1529802712212" duration="49000" />
       <workItem from="1529802853785" duration="100000" />
-      <workItem from="1530657012798" duration="588000" />
+      <workItem from="1530657012798" duration="668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61087000" />
+    <option name="totallyTimeSpent" value="61167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="168" y="23" width="1272" height="877" extended-state="0" />
@@ -377,7 +381,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__tests__/index.test.js" />
     <entry file="file://$PROJECT_DIR$/__tests__/client.test.js" />
     <entry file="file://$PROJECT_DIR$/dist/Client.js" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
@@ -648,10 +651,17 @@
     <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="330">
-            <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <first_editor relative-caret-position="390">
+            <caret line="26" column="84" lean-forward="true" selection-start-line="26" selection-start-column="84" selection-end-line="26" selection-end-column="84" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
