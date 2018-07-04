@@ -13,34 +13,34 @@ const settings = {
 	'privacyExporterEnabled': true
 };
 
-describe( 'PrivacySettingsClient', () => {
+describe('PrivacySettingsClient', () => {
 	beforeEach(() => {
 		fetch.resetMocks();
 	});
 
-	it( 'Gets the settings', () => {
+	it('Gets the settings', () => {
 		fetch.mockResponseOnce(new Response(JSON.stringify(settings)));
 
-		const client = new PrivacySettingsClient( '/forms', {}  );
+		const client = new PrivacySettingsClient('/forms', {});
 		client.getSettings('CF5b197831b60ae').then(res => {
 			expect(res).toEqual(settings);
-		},error => {
+		}, error => {
 			//nothing here, but test will generate an error without it.
 		});
 
 		expect(fetch.mock.calls).toHaveLength(1);
 	});
 
-	it( 'Updates the settings', () => {
+	it('Updates the settings', () => {
 		fetch.mockResponseOnce(new Response(JSON.stringify(settings)));
-		const client = new PrivacySettingsClient( '/forms', {}  );
-		client.updateSettings('CF5b197831b60ae',{
+		const client = new PrivacySettingsClient('/forms', {});
+		client.updateSettings('CF5b197831b60ae', {
 			'emailIdentifyingFields': ['fld_4917648'],
 			'piiFields': ['fld_9899154', 'fld_4917648'],
 			'privacyExporterEnabled': true
 		}).then(res => {
 			expect(res).toEqual(settings);
-		},error => {
+		}, error => {
 			//nothing here, but test will generate an error without it.
 		});
 

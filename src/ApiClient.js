@@ -182,6 +182,9 @@ export class ApiClient{
 	 */
 	handleResponse(response: Response): Object  {
 		if(response.ok) {
+			if( 'object' === typeof response.body.body ){
+				return response.body.body;
+			}
 			return response.json();
 		} else {
 			return {
