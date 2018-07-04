@@ -54,6 +54,8 @@ describe( 'Makes requests', () => {
 				const formsClient = new ApiClient( '/forms', {}  );
 				formsClient.makeRequest('/',{}).then(res => {
 					expect(JSON.parse(res.body.body)).toEqual(forms);
+				},error => {
+					//nothing here, but test will generate an error without it.
 				});
 				expect(fetch.mock.calls).toHaveLength(1);
 			});
@@ -65,6 +67,8 @@ describe( 'Makes requests', () => {
 				const formsClient = new ApiClient( '/forms', {}  );
 				formsClient.reqGet({},'').then(res => {
 					expect(res).toEqual(JSON.stringify(forms));
+				},error => {
+					//nothing here, but test will generate an error without it.
 				});
 
 				expect(fetch.mock.calls).toHaveLength(1);
@@ -78,6 +82,8 @@ describe( 'Makes requests', () => {
 			const formClient = new ApiClient('form/CF1');
 			formClient.makeRequest('',{},'POST').then(res => {
 				expect(res.body.body).toEqual(JSON.stringify(form));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 			expect(fetch.mock.calls).toHaveLength(1);
 		});
@@ -95,6 +101,8 @@ describe( 'Makes requests', () => {
 			const formsClient = new ApiClient( '/forms', {}  );
 			formsClient.reqPost({form},'/cf1').then(res => {
 				expect(res).toEqual(JSON.stringify(forms));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 
 			expect(fetch.mock.calls).toHaveLength(1);
@@ -107,6 +115,8 @@ describe( 'Makes requests', () => {
 			const formClient = new ApiClient('form/CF1');
 			formClient.makeRequest('',{},'PUT').then(res => {
 				expect(res.body.body).toEqual(JSON.stringify(form));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 			expect(fetch.mock.calls).toHaveLength(1);
 		});
@@ -116,6 +126,8 @@ describe( 'Makes requests', () => {
 			const formsClient = new ApiClient( '/forms', {}  );
 			formsClient.reqPut({form},'/cf1').then(res => {
 				expect(res).toEqual(JSON.stringify(forms));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 
 			expect(fetch.mock.calls).toHaveLength(1);
@@ -128,6 +140,8 @@ describe( 'Makes requests', () => {
 			const formClient = new ApiClient( '/forms/cf2',  );
 			formClient.makeRequest('',{}).then(res => {
 				expect(res.body.body).toEqual(JSON.stringify({delete:true}));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 
 			expect(fetch.mock.calls).toHaveLength(1);
@@ -138,6 +152,8 @@ describe( 'Makes requests', () => {
 			const formsClient = new ApiClient( '/forms', {}  );
 			formsClient.reqPut({form},'/cf1').then(res => {
 				expect(res).toEqual(JSON.stringify(forms));
+			},error => {
+				//nothing here, but test will generate an error without it.
 			});
 
 			expect(fetch.mock.calls).toHaveLength(1);

@@ -134,6 +134,8 @@ describe('testing api', () => {
     //assert on the response
     fetch('https://hiroy.club/api').then(res => {
       expect(res.data).toEqual('12345')
+    },error => {
+        //nothing here, but test will generate an error without it.
     });
 
     //assert on the times called and arguments given to fetch
@@ -175,3 +177,4 @@ describe('Forms API', () => {
 #### Helpful Links About Fetch and Testing With Fetch
 * [MDN Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [David Walsh blog post about Fetch](https://davidwalsh.name/fetch)
+* [Why tests using fetch mocks must catch errors](https://github.com/jefflau/jest-fetch-mock/issues/60#issuecomment-402489882)

@@ -24,6 +24,8 @@ describe( 'PrivacySettingsClient', () => {
 		const client = new PrivacySettingsClient( '/forms', {}  );
 		client.getSettings('CF5b197831b60ae').then(res => {
 			expect(res).toEqual(settings);
+		},error => {
+			//nothing here, but test will generate an error without it.
 		});
 
 		expect(fetch.mock.calls).toHaveLength(1);
@@ -38,6 +40,8 @@ describe( 'PrivacySettingsClient', () => {
 			'privacyExporterEnabled': true
 		}).then(res => {
 			expect(res).toEqual(settings);
+		},error => {
+			//nothing here, but test will generate an error without it.
 		});
 
 		expect(fetch.mock.calls).toHaveLength(1);

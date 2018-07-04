@@ -124,6 +124,8 @@ describe( 'GET layouts', () => {
 		fetch.mockResponseOnce(new Response(JSON.stringify(layouts)));
 		client.getLayouts().then(res => {
 			expect(res).toEqual(layouts);
+		},error => {
+			//nothing here, but test will generate an error without it.
 		});
 
 		expect(fetch.mock.calls).toHaveLength(1);
