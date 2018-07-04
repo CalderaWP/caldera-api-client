@@ -1,9 +1,9 @@
-import {EntriesClient} from "../src/EntriesClient";
+import {EntriesClient} from '../src/EntriesClient';
 
 const formId = 'CF5b197831b60ae';
-const entriesCollection = require("./mock-data/entries/CF5b197831b60ae.json");
-const entries26 = require("./mock-data/entries/CF5b197831b60ae/26.json");
-const entries27 = require("./mock-data/entries/CF5b197831b60ae/27.json");
+const entriesCollection = require('./mock-data/entries/CF5b197831b60ae.json');
+const entries26 = require('./mock-data/entries/CF5b197831b60ae/26.json');
+const entries27 = require('./mock-data/entries/CF5b197831b60ae/27.json');
 
 describe( 'Entries client', () => {
 	beforeEach(() => {
@@ -16,7 +16,7 @@ describe( 'Entries client', () => {
 		});
 
 		it( 'has the right number of mock entries', () => {
-			expect( Object.keys(entriesCollection).length ).toBe( 2 );
+			expect( Object.keys(entriesCollection) ).toHaveLength( 2 );
 		});
 
 		it( 'has entry 26', () => {

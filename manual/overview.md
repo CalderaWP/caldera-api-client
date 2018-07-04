@@ -76,6 +76,32 @@ client.getForm('CF123456').then(form => {
 });
 ```
 
+#### Get Saved Entries For A Form Or A Specific Entry
+```js
+//create entries client
+const client = wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+	'12345', //the nonce for REST API cookie authentication
+	'entry' //type of client to get
+);
+//Get page 1 of entries for form CF123456
+client.getEntries('CF123456',1).then(forms => {
+	console.log(forms); //Array of forms
+});
+
+//Get page 2 of entries for form CF123456
+client.getEntries('CF123456',2).then(forms => {
+	console.log(forms); //Array of forms
+});
+
+//Get entry 27 of  CF123456
+client.getEntries('CF123456',27).then(forms => {
+	console.log(forms); //Array of forms
+});
+
+
+```
+
 #### Read or Update Privacy Settings
 ```js
 //create forms client

@@ -44,6 +44,7 @@
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#full-example" data-ice="link">Full Example</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-saved-entries-for-a-form-or-a-specific-entry" data-ice="link">Get Saved Entries For A Form Or A Specific Entry</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-caldera-forms-pro-local-settings" data-ice="link">Read or Update Caldera Forms Pro Local Settings</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#caldera-forms-pro-admin-client" data-ice="link">Caldera Forms Pro Admin Client</a></li>
@@ -123,6 +124,29 @@ client.getForms(2).then(forms =&gt; {
 client.getForm(&apos;CF123456&apos;).then(form =&gt; {
     console.log(form); //Object containing form configuration
 });</code>
+</code></pre>
+<h4 id="get-saved-entries-for-a-form-or-a-specific-entry">Get Saved Entries For A Form Or A Specific Entry</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create entries client
+const client = wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;entry&apos; //type of client to get
+);
+//Get page 1 of entries for form CF123456
+client.getEntries(&apos;CF123456&apos;,1).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get page 2 of entries for form CF123456
+client.getEntries(&apos;CF123456&apos;,2).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get entry 27 of  CF123456
+client.getEntries(&apos;CF123456&apos;,27).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+</code>
 </code></pre>
 <h4 id="read-or-update-privacy-settings">Read or Update Privacy Settings</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
 const client = wpClientFactory(

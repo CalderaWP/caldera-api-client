@@ -6,6 +6,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "@caldera-labs/api-client/src/entriesclient.js~entriesclient",
+    "class/src/EntriesClient.js~EntriesClient.html",
+    "<span>EntriesClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/EntriesClient.js</span>",
+    "class"
+  ],
+  [
     "@caldera-labs/api-client/src/formsclient.js~formsclient",
     "class/src/FormsClient.js~FormsClient.html",
     "<span>FormsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/FormsClient.js</span>",
@@ -405,6 +411,36 @@ window.esdocSearchIndex = [
     "src/apiclient.js~apiclient#urlstring",
     "class/src/ApiClient.js~ApiClient.html#instance-method-urlString",
     "src/ApiClient.js~ApiClient#urlString",
+    "method"
+  ],
+  [
+    "src/entriesclient.js",
+    "file/src/EntriesClient.js.html",
+    "src/EntriesClient.js",
+    "file"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#getentries",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntries",
+    "src/EntriesClient.js~EntriesClient#getEntries",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#getentriesendpoint",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntriesEndpoint",
+    "src/EntriesClient.js~EntriesClient#getEntriesEndpoint",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#getentry",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntry",
+    "src/EntriesClient.js~EntriesClient#getEntry",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#getentryendpoint",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryEndpoint",
+    "src/EntriesClient.js~EntriesClient#getEntryEndpoint",
     "method"
   ],
   [

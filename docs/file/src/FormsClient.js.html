@@ -30,6 +30,7 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/FormsClient.js~FormsClient.html">FormsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
@@ -54,10 +55,10 @@ export class FormsClient extends WpClient {
 	 * @param {Numeric} page Optional. Default is 1
 	 * @returns {Promise&lt;any&gt;}
 	 */
-	getForms(page: number=1): Promise&lt;any&gt;{
+	getForms(page: number = 1): Promise&lt;any&gt; {
 		return this.reqGet({
-			page:page,
-			_wpnonce:this.nonce
+			page: page,
+			_wpnonce: this.nonce
 		});
 	}
 
@@ -67,11 +68,11 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise&lt;any&gt;}
 	 */
-	getForm(formId: string): Promise&lt;any&gt;{
+	getForm(formId: string): Promise&lt;any&gt; {
 		return this.reqGet({
-			preview:false,
-			_wpnonce:this.nonce
-		},this.getFormEndpoint(formId));
+			preview: false,
+			_wpnonce: this.nonce
+		}, this.getFormEndpoint(formId));
 	}
 
 	/**
@@ -80,7 +81,7 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {string}
 	 */
-	getFormEndpoint(formId: string) :string {
+	getFormEndpoint(formId: string): string {
 		return `forms/${formId}`;
 	}
 
@@ -90,11 +91,11 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise&lt;any&gt;}
 	 */
-	getFormPreview(formId: string): Promise&lt;any&gt;{
+	getFormPreview(formId: string): Promise&lt;any&gt; {
 		return this.reqGet({
-			preview:true,
-			_wpnonce:this.nonce
-		},this.getFormEndpoint(formId));
+			preview: true,
+			_wpnonce: this.nonce
+		}, this.getFormEndpoint(formId));
 	}
 
 
