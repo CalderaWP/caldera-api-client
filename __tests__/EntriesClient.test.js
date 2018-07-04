@@ -32,13 +32,25 @@ describe( 'Entries client', () => {
 		});
 	});
 
+	describe( 'Endpoint Urls', () => {
+		it( 'Forms entries list URL', () => {
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			expect( client.getEntriesEndpoint(formId)).toEqual('entries/CF5b197831b60ae');
+		});
+
+		it( 'Single entry URL', () => {
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			expect( client.getEntryEndpoint(formId,27)).toEqual('entries/CF5b197831b60ae/27');
+		});
+	});
+
 	describe( 'getting entries', () => {
 
 		it( 'Gets entries collection', () => {
 			fetch.mockResponseOnce(new Response(JSON.stringify({a:1})));
 			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
 			client.setNonce('aaaa-aa-a');
-			client.reqGet(formId).then(  response => {
+			client.getEntries(formId).then(  response => {
 				expect( response ).toEqual(entriesCollection);
 			},error => {});
 			expect(fetch.mock.calls).toHaveLength(1);
