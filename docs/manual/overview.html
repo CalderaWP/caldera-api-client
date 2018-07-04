@@ -168,6 +168,8 @@ it(&apos;Gets data from API&apos;, () =&gt; {
   //assert on the response
   fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
     expect(res.data).toEqual(&apos;12345&apos;)
+  },error =&gt; {
+      //nothing here, but test will generate an error without it.
   });
 
   //assert on the times called and arguments given to fetch
@@ -210,6 +212,7 @@ it(&apos;Gets data from API&apos;, () =&gt; {
 <h4 id="helpful-links-about-fetch-and-testing-with-fetch">Helpful Links About Fetch and Testing With Fetch</h4><ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">MDN Fetch docs</a></li>
 <li><a href="https://davidwalsh.name/fetch">David Walsh blog post about Fetch</a></li>
+<li><a href="https://github.com/jefflau/jest-fetch-mock/issues/60#issuecomment-402489882">Why tests using fetch mocks must catch errors</a></li>
 </ul>
 </div>
 </div>

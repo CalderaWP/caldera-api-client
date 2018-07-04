@@ -161,6 +161,8 @@ it(&apos;Gets data from API&apos;, () =&gt; {
   //assert on the response
   fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
     expect(res.data).toEqual(&apos;12345&apos;)
+  },error =&gt; {
+      //nothing here, but test will generate an error without it.
   });
 
   //assert on the times called and arguments given to fetch
@@ -202,6 +204,7 @@ it(&apos;Gets data from API&apos;, () =&gt; {
 </ul><h4>Helpful Links About Fetch and Testing With Fetch</h4><ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">MDN Fetch docs</a></li>
 <li><a href="https://davidwalsh.name/fetch">David Walsh blog post about Fetch</a></li>
+<li><a href="https://github.com/jefflau/jest-fetch-mock/issues/60#issuecomment-402489882">Why tests using fetch mocks must catch errors</a></li>
 </ul></div>
         <a data-ice="link" href="manual/overview.html"></a>
       </div>
@@ -210,7 +213,8 @@ it(&apos;Gets data from API&apos;, () =&gt; {
       <div class="manual-card">
         <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for <a href="https://calderaforms.com/doc/caldera-forms-rest-api/">Caldera Forms REST API</a> and Caldera Forms Pro REST API.
 &#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p><p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/calderawp/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/calderawp/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a></p><h2>Install</h2><p><code>npm i @caldera-labs/api-client</code></p><h2>Usage</h2><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
+<a href="https://coveralls.io/github/CalderaWP/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/CalderaWP/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a>
+<a href="https://calderalabs.org/caldera-api-client/source.htmlg"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a></p><h2>Install</h2><p><code>npm i @caldera-labs/api-client</code></p><h2>Usage</h2><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
     &apos;12345&apos;, //the nonce for REST API cookie authentication

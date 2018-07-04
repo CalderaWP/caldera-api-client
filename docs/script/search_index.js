@@ -480,6 +480,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/wpclient.js~wpclient#getnonce",
+    "class/src/WpClient.js~WpClient.html#instance-method-getNonce",
+    "src/WpClient.js~WpClient#getNonce",
+    "method"
+  ],
+  [
     "src/wpclient.js~wpclient#nonce",
     "class/src/WpClient.js~WpClient.html#instance-member-nonce",
     "src/WpClient.js~WpClient#nonce",
