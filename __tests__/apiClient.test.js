@@ -1,4 +1,4 @@
-import {ApiClient} from '../src/apiClient';
+import {ApiClient} from '../src/ApiClient';
 
 const form = {ID: 'CF1'};
 const forms = [
