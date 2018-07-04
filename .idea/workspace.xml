@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/apiClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apiClient.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,139 +16,86 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.31339285">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PrivacySettings.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PrivacySettingsClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ApiClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="40" column="35" selection-end-line="58" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="27.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/27.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="26.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/26.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="1" selection-end-line="27" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="overview.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/manual/overview.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="376">
-                    <caret line="81" column="30" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="30" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WpClient.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="wpClientFactory.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="23" column="19" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/manual/index.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="45">
-                    <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CF5b197831b60ae.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="51" column="9" selection-end-line="64" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="overview.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manual/overview.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="376">
+                <caret line="81" column="30" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpClient.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apiClient.test.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiClient.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="184" selection-start-line="184" selection-end-line="184" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wpClientFactory.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manual/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CF5b197831b60ae.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="51" column="9" selection-end-line="64" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -238,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/WpClient.js" />
         <option value="$PROJECT_DIR$/__tests__/FormsClient.test.js" />
         <option value="$PROJECT_DIR$/__tests__/ProLocalSettingsClient.test.js" />
-        <option value="$PROJECT_DIR$/__tests__/apiClient.test.js" />
         <option value="$PROJECT_DIR$/__tests__/ProClient.test.js" />
         <option value="$PROJECT_DIR$/src/ProClient.js" />
         <option value="$PROJECT_DIR$/.travis.yml" />
@@ -250,11 +197,12 @@
         <option value="$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae.json" />
         <option value="$PROJECT_DIR$/src/FormsClient.js" />
         <option value="$PROJECT_DIR$/src/EntriesClient.js" />
-        <option value="$PROJECT_DIR$/src/ApiClient.js" />
         <option value="$PROJECT_DIR$/__tests__/PrivacySettings.test.js" />
         <option value="$PROJECT_DIR$/src/wpClientFactory.js" />
         <option value="$PROJECT_DIR$/__tests__/WpClient.test.js" />
         <option value="$PROJECT_DIR$/__tests__/EntriesClient.test.js" />
+        <option value="$PROJECT_DIR$/src/ApiClient.js" />
+        <option value="$PROJECT_DIR$/__tests__/apiClient.test.js" />
       </list>
     </option>
   </component>
@@ -392,12 +340,12 @@
       <workItem from="1529802853785" duration="100000" />
       <workItem from="1530657012798" duration="2163000" />
       <workItem from="1530660971444" duration="716000" />
-      <workItem from="1530712585294" duration="11765000" />
+      <workItem from="1530712585294" duration="12483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75143000" />
+    <option name="totallyTimeSpent" value="75861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="533" y="23" width="1387" height="877" extended-state="0" />
@@ -411,7 +359,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info active="true" anchor="bottom" x="0" y="137" width="1092" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
       <window_info anchor="bottom" id="Flow" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16728625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31672862" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
@@ -692,27 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/27.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/26.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -734,13 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="35" selection-end-line="58" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -792,6 +712,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -806,24 +733,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
+    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
+        <state relative-caret-position="600">
+          <caret line="40" column="35" selection-end-line="58" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
+    <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/27.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/mock-data/entries/CF5b197831b60ae/26.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state relative-caret-position="164">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
         </state>
       </provider>
     </entry>
