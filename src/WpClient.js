@@ -19,4 +19,8 @@ export class WpClient extends ApiClient {
 		this.headers.set('X-WP-Nonce', this.nonce);
 	}
 
+	getNonce(){
+		return 'string' === typeof this.nonce ? this.nonce : '';
+	}
+
 }
