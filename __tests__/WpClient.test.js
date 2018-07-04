@@ -1,7 +1,7 @@
 import {wpClientFactory} from '../src/wpClientFactory';
 import {WpClient} from '../src/WpClient';
 import {FormsClient} from '../src/FormsClient';
-import {PrivacySettingsClient} from "../src/PrivacySettingsClient";
+import {PrivacySettingsClient} from '../src/PrivacySettingsClient';
 describe( 'Factory', () => {
 	it( 'Returns generic by default', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345' );

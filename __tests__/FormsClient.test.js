@@ -1,4 +1,4 @@
-import {FormsClient} from "../src/FormsClient";
+import {FormsClient} from '../src/FormsClient';
 
 
 describe( 'Forms Client', () => {
