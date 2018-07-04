@@ -21,6 +21,7 @@ export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: stri
 			client = new PrivacySettingsClient(wpApiUrl);
 			break;
 		case 'entries':
+		case 'entry':
 			client = new EntriesClient(wpApiUrl);
 			break;
 		default:

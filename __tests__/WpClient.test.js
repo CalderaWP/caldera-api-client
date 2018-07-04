@@ -19,8 +19,12 @@ describe( 'Factory', () => {
 		expect(  client ).toBeInstanceOf( PrivacySettingsClient );
 	});
 
-	it( 'Returns entries client when requested to.', () => {
+	it( 'Returns entries client when requested as "entries".', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345', 'entries' );
+		expect(  client ).toBeInstanceOf( EntriesClient );
+	});
+	it( 'Returns entries client when requested as "entry".', () => {
+		const client = wpClientFactory('https://hiroy.club', '12345', 'entry' );
 		expect(  client ).toBeInstanceOf( EntriesClient );
 	});
 
