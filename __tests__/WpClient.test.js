@@ -2,6 +2,7 @@ import {wpClientFactory} from '../src/wpClientFactory';
 import {WpClient} from '../src/WpClient';
 import {FormsClient} from '../src/FormsClient';
 import {PrivacySettingsClient} from '../src/PrivacySettingsClient';
+import {EntriesClient} from "../src/EntriesClient";
 describe( 'Factory', () => {
 	it( 'Returns generic by default', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345' );
@@ -16,6 +17,11 @@ describe( 'Factory', () => {
 	it( 'Returns privacy client when requested to.', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345', 'privacy' );
 		expect(  client ).toBeInstanceOf( PrivacySettingsClient );
+	});
+
+	it( 'Returns entries client when requested to.', () => {
+		const client = wpClientFactory('https://hiroy.club', '12345', 'entries' );
+		expect(  client ).toBeInstanceOf( EntriesClient );
 	});
 
 });
