@@ -12,10 +12,10 @@ export class FormsClient extends WpClient {
 	 * @param {Numeric} page Optional. Default is 1
 	 * @returns {Promise<any>}
 	 */
-	getForms(page: number=1): Promise<any>{
+	getForms(page: number = 1): Promise<any> {
 		return this.reqGet({
-			page:page,
-			_wpnonce:this.nonce
+			page: page,
+			_wpnonce: this.nonce
 		});
 	}
 
@@ -25,11 +25,11 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise<any>}
 	 */
-	getForm(formId: string): Promise<any>{
+	getForm(formId: string): Promise<any> {
 		return this.reqGet({
-			preview:false,
-			_wpnonce:this.nonce
-		},this.getFormEndpoint(formId));
+			preview: false,
+			_wpnonce: this.nonce
+		}, this.getFormEndpoint(formId));
 	}
 
 	/**
@@ -38,7 +38,7 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {string}
 	 */
-	getFormEndpoint(formId: string) :string {
+	getFormEndpoint(formId: string): string {
 		return `forms/${formId}`;
 	}
 
@@ -48,11 +48,11 @@ export class FormsClient extends WpClient {
 	 * @param {String} formId ID of form to request
 	 * @returns {Promise<any>}
 	 */
-	getFormPreview(formId: string): Promise<any>{
+	getFormPreview(formId: string): Promise<any> {
 		return this.reqGet({
-			preview:true,
-			_wpnonce:this.nonce
-		},this.getFormEndpoint(formId));
+			preview: true,
+			_wpnonce: this.nonce
+		}, this.getFormEndpoint(formId));
 	}
 
 

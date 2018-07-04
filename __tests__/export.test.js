@@ -16,4 +16,7 @@ describe( 'Exporting', () =>{
 	it( 'Exports FormsClient', () => {
 		expect( typeof cfApi.FormsClient ).toBe('function');
 	});
+	it( 'Exports EntriesClient', () => {
+		expect( typeof cfApi.EntriesClient ).toBe('function');
+	});
 });

@@ -44,6 +44,7 @@
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#full-example" data-ice="link">Full Example</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-saved-entries-for-a-form-or-a-specific-entry" data-ice="link">Get Saved Entries For A Form Or A Specific Entry</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-privacy-settings" data-ice="link">Read or Update Privacy Settings</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#read-or-update-caldera-forms-pro-local-settings" data-ice="link">Read or Update Caldera Forms Pro Local Settings</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#caldera-forms-pro-admin-client" data-ice="link">Caldera Forms Pro Admin Client</a></li>
@@ -121,6 +122,28 @@ client.getForms(2).then(forms =&gt; {
 client.getForm(&apos;CF123456&apos;).then(form =&gt; {
     console.log(form); //Object containing form configuration
 });</code>
+</code></pre><h4>Get Saved Entries For A Form Or A Specific Entry</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create entries client
+const client = wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
+    &apos;12345&apos;, //the nonce for REST API cookie authentication
+    &apos;entry&apos; //type of client to get
+);
+//Get page 1 of entries for form CF123456
+client.getEntries(&apos;CF123456&apos;,1).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get page 2 of entries for form CF123456
+client.getEntries(&apos;CF123456&apos;,2).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+//Get entry 27 of  CF123456
+client.getEntries(&apos;CF123456&apos;,27).then(forms =&gt; {
+    console.log(forms); //Array of forms
+});
+
+</code>
 </code></pre><h4>Read or Update Privacy Settings</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
 const client = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
@@ -211,8 +234,7 @@ it(&apos;Gets data from API&apos;, () =&gt; {
     </div>
 <div class="manual-card-wrap" data-ice="cards">
       <div class="manual-card">
-        <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for <a href="https://calderaforms.com/doc/caldera-forms-rest-api/">Caldera Forms REST API</a> and Caldera Forms Pro REST API.
-&#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p><p><a href="https://travis-ci.org/calderawp/caldera-api-client"><img src="https://travis-ci.org/calderawp/caldera-api-client.svg?branch=master" alt="Build Status"></a>
+        <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for <a href="https://calderaforms.com/doc/caldera-forms-rest-api/">Caldera Forms REST API</a> and Caldera Forms Pro REST API.</p><p>&#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p><p><a href="https://travis-ci.org/CalderaWP/caldera-api-client.svg"><img src="https://travis-ci.org/CalderaWP/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/CalderaWP/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/CalderaWP/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a>
 <a href="https://calderalabs.org/caldera-api-client/source.htmlg"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a></p><h2>Install</h2><p><code>npm i @caldera-labs/api-client</code></p><h2>Usage</h2><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
