@@ -66,6 +66,11 @@ describe( 'CF Pro client', () => {
 					}
 				);
 		});
+
+		it( 'returns an empty string for token if it does not have keys', () => {
+			const client = new ProClient(route);
+			expect(client.getToken()).toBe('');
+		});
 	});
 
 });
@@ -108,6 +113,8 @@ describe( 'Auth headers', () => {
 		expect(request.headers.get('X-CS-TOKEN')).toBe(token);
 	});
 
+
+
 });
 
 
@@ -129,5 +136,25 @@ describe( 'GET layouts', () => {
 		});
 
 		expect(fetch.mock.calls).toHaveLength(1);
+	});
+});
+
+describe( 'request data', () => {
+	it( 'Prepares GET request data, always with auth details, even if not present', () => {
+		const mockData = {
+			a: 1,
+			b: 2,
+			c: [
+				{
+					a: 2
+				}
+			]
+		};
+		const client = new ProClient(route);
+		expect( client.requestDataForGetRequests(mockData) ).toEqual({
+			...mockData,
+			public:0,
+			token: ''
+		});
 	});
 });

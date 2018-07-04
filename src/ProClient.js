@@ -94,7 +94,7 @@ export class ProClient extends ApiClient{
 	requestDataForGetRequests(data: ?Object = {}) {
 		return {
 			...data,
-			'public':this.publicKey,
+			'public': this.publicKey ? this.publicKey : 0,
 			token: this.getToken()
 		};
 	}
