@@ -1,0 +1,35 @@
+{
+  "id": "27",
+  "form_id": "CF5b197831b60ae",
+  "datestamp": "2018-06-07 18:53:45",
+  "status": "active",
+  "user": {
+    "id": "",
+    "name": "admin",
+    "email": ""
+  },
+  "fields": {
+    "fld_9899154": {
+      "id": "53",
+      "entry_id": "27",
+      "field_id": "fld_9899154",
+      "slug": "price",
+      "value": "101"
+    },
+    "fld_4917648": {
+      "id": "54",
+      "entry_id": "27",
+      "field_id": "fld_4917648",
+      "slug": "email",
+      "value": "1@nom.com"
+    },
+    "fld_1081036": {
+      "id": "56",
+      "entry_id": "27",
+      "field_id": "fld_1081036",
+      "slug": "total",
+      "value": "101.00"
+    }
+  },
+  "meta": []
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/wpClientFactory.js | Caldera API Client</title>
+  <title data-ice="title">src/EntriesClient.js | Caldera API Client</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -40,40 +40,64 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/wpClientFactory.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/EntriesClient.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//@flow
 import {WpClient} from &apos;./WpClient&apos;;
-import {FormsClient} from &apos;./FormsClient&apos;;
-import {PrivacySettingsClient} from &apos;./PrivacySettingsClient&apos;;
-import {EntriesClient} from &quot;./EntriesClient&quot;;
 
 /**
- * Create a WordPress API client
- * @param {String} wpApiUrl Root URL for the WordPress REST API of site
- * @param {String} wpApiNonce The REST API nonce
- * @param {String} type Optional. Type of client forms|privacy|generic Default is generic
- * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient}
+ * Client for accessing Caldera Forms entry data via Caldera Forms REST API
  */
-export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = &apos;generic&apos; ): WpClient {
-	let client = new WpClient(wpApiUrl);
-	switch (type) {
-		case &apos;forms&apos;:
-			client = new FormsClient(wpApiUrl);
-			break;
-		case &apos;privacy&apos; :
-			client = new PrivacySettingsClient(wpApiUrl);
-			break;
-		case &apos;entries&apos;:
-		case &apos;entry&apos;:
-			client = new EntriesClient(wpApiUrl);
-			break;
-		default:
-			client = new WpClient(wpApiUrl);
-			break;
+export class EntriesClient extends WpClient {
 
+	/**
+	 * Get one page of entries for a form
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {number} page Optional. Which page of entries to get. Default is 1.
+	 * @return {Promise&lt;any&gt;}
+	 */
+	getEntries(formId: string, page: number = 1): Promise&lt;any&gt; {
+		return this.reqGet({
+			page,
+			_wpnonce: this.nonce
+		}, this.getEntriesEndpoint(formId));
 	}
-	client.setNonce(wpApiNonce);
-	return client;
+
+	/**
+	 * Get a single entry of a form
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {String} entryId ID of entry to find.
+	 * @return {Promise&lt;any&gt;}
+	 */
+	getEntry(formId: string, entryId: number): Promise&lt;any&gt; {
+		return this.reqGet({
+			_wpnonce: this.nonce
+		}, this.getEntryEndpoint(formId, entryId));
+	}
+
+	/**
+	 * The endpoint URI for a collection of entries for one form.
+
+	 * @param {String} formId ID of form to get entries for.
+	 * @return {string}
+	 */
+	getEntriesEndpoint(formId: string): string {
+		return `entries/${formId}`;
+	}
+
+	/**
+	 * The endpoint URI for single entries
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {String} entryId ID of entry to find.
+	 * @return {string}
+	 */
+	getEntryEndpoint(formId: string, entryId: number): string {
+		return `${this.getEntriesEndpoint(formId)}/${entryId}`;
+	}
+
+
 }</code></pre>
 
 </div>
