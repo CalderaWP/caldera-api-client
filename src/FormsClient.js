@@ -16,7 +16,7 @@ export class FormsClient extends WpClient {
 		return this.reqGet({
 			page:page,
 			_wpnonce:this.nonce
-		});
+		},this.getFormsEndpoint());
 	}
 
 	/**

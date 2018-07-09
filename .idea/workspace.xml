@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/FormsClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/FormsClient.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FormsClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FormsClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,14 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.67702556">
+    <splitter split-orientation="horizontal" split-proportion="0.40647483">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="FormsClient.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+                <state relative-caret-position="169">
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
@@ -35,8 +34,8 @@
           <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+                <state relative-caret-position="259">
+                  <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/FormsClient.js" />
         <option value="$PROJECT_DIR$/__tests__/FormsClient.test.js" />
+        <option value="$PROJECT_DIR$/src/FormsClient.js" />
       </list>
     </option>
   </component>
@@ -172,9 +171,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="533" />
+    <option name="x" value="199" />
     <option name="y" value="23" />
-    <option name="width" value="1387" />
+    <option name="width" value="1598" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -272,10 +271,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70174000" />
+    <option name="totallyTimeSpent" value="70289000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="199" y="23" width="1387" height="877" extended-state="0" />
+    <frame x="199" y="23" width="1598" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -284,9 +283,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
-      <window_info active="true" anchor="bottom" x="593" y="420" width="1092" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info anchor="bottom" x="639" y="241" width="1092" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
       <window_info anchor="bottom" id="Flow" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33011153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28534704" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -682,17 +681,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
+    <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        <state relative-caret-position="169">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
+    <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+        <state relative-caret-position="259">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
