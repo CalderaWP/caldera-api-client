@@ -33,13 +33,22 @@ export class FormsClient extends WpClient {
 	}
 
 	/**
-	 * Get endpoint for requesting forms via API
+	 * Get endpoint for requesting one form via API
 	 *
 	 * @param {String} formId ID of form to request
 	 * @returns {string}
 	 */
 	getFormEndpoint(formId: string) :string {
-		return `forms/${formId}`;
+		return `${this.getFormsEndpoint()}/${formId}`;
+	}
+
+	/**
+	 * Get route endpoint for forms route
+	 *
+	 * @returns {string}
+	 */
+	getFormsEndpoint() :string {
+		return `forms`;
 	}
 
 	/**

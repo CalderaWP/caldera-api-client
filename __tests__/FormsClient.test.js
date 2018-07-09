@@ -19,7 +19,7 @@ describe( 'Forms Client', () => {
 		});
 		it( 'creates URL for forms endpoint correctly', () => {
 			const client = new FormsClient(formsApiRoute );
-			expect( client.getFormEndpoint() ).toEqual('forms/');
+			expect( client.getFormsEndpoint() ).toEqual('forms');
 		});
 	});
 
