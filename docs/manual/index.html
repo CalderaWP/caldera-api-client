@@ -91,7 +91,14 @@ Get an account&apos;s layouts from CF Pro. Client is designed for remote admin a
 <li>OK: Caldera Forms Pro UI that requires login</li>
 <li>NOT OK: Any publicly addressable page.</li>
 <li>NOT OK: Front-end rendering of a Caldera Form.</li>
-</ul><h2>Usage</h2><h3>Import With webpack</h3><p><code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p><h4>Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
+</ul><h2>Usage</h2><h3>Import With webpack</h3><ul>
+<li><p>Import everything
+<code>import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;</code></p>
+</li>
+<li><p>Import one sub-module
+<code>import {WpClient} from &apos;@caldera-labs/api-client&apos;;</code></p>
+</li>
+</ul><h4>Full Example</h4><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
@@ -102,7 +109,8 @@ const formsAdminApiClient = calderaApiClient.wpClientFactory(
 </li>
 <li><p><a href="https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication">Uses REST API cookie authentication</a></p>
 </li>
-</ul><h4>Get Forms or A Specific Form With The Forms Client</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
+</ul><h4>Get Forms or A Specific Form With The Forms Client</h4><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+//create forms client
 const client = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
@@ -122,7 +130,8 @@ client.getForms(2).then(forms =&gt; {
 client.getForm(&apos;CF123456&apos;).then(form =&gt; {
     console.log(form); //Object containing form configuration
 });</code>
-</code></pre><h4>Get Saved Entries For A Form Or A Specific Entry</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create entries client
+</code></pre><h4>Get Saved Entries For A Form Or A Specific Entry</h4><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+//create entries client
 const client = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
@@ -144,7 +153,8 @@ client.getEntries(&apos;CF123456&apos;,27).then(forms =&gt; {
 });
 
 </code>
-</code></pre><h4>Read or Update Privacy Settings</h4><pre><code class="lang-js"><code class="source-code prettyprint">//create forms client
+</code></pre><h4>Read or Update Privacy Settings</h4><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+//create forms client
 const client = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namepace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
@@ -164,7 +174,9 @@ client.updateSettings(&apos;CF12345&apos;,{
     console.log(settings); //Object with basic form info and the privacy settings
 });
 </code>
-</code></pre><h4>Read or Update Caldera Forms Pro Local Settings</h4><h3>Caldera Forms Pro Admin Client</h3><pre><code class="lang-js"><code class="source-code prettyprint">const client = new ProClient(&apos;https://app.calderaformspro.com&apos;);
+</code></pre><h4>Read or Update Caldera Forms Pro Local Settings</h4><h3>Caldera Forms Pro Admin Client</h3><pre><code class="lang-js"><code class="source-code prettyprint">import {ProClient} from &apos;@caldera-labs/api-client&apos;;
+
+const client = new ProClient(&apos;https://app.calderaformspro.com&apos;);
 client.setPublicKey(&apos;12345&apos;);
 client.setSecretKey(&apos;abcd1&apos;);
 client.getLayouts().then(res =&gt; {
@@ -180,7 +192,6 @@ beforeEach(() =&gt; {
 
 it(&apos;Gets data from API&apos;, () =&gt; {
   fetch.mockResponseOnce(JSON.stringify({ data: &apos;12345&apos; }))
-
   //assert on the response
   fetch(&apos;https://hiroy.club/api&apos;).then(res =&gt; {
     expect(res.data).toEqual(&apos;12345&apos;)
@@ -236,8 +247,9 @@ it(&apos;Gets data from API&apos;, () =&gt; {
       <div class="manual-card">
         <div data-ice="card"><h1>caldera-api-client</h1><p>JavaScript API client for <a href="https://calderaforms.com/doc/caldera-forms-rest-api/">Caldera Forms REST API</a> and Caldera Forms Pro REST API.</p><p>&#x1F30B; &#x1F440; <a href="https://calderalabs.org/caldera-api-client/">Documentation</a></p><p><a href="https://travis-ci.org/CalderaWP/caldera-api-client.svg"><img src="https://travis-ci.org/CalderaWP/caldera-api-client.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/CalderaWP/caldera-api-client?branch=master"><img src="https://coveralls.io/repos/github/CalderaWP/caldera-api-client/badge.svg?branch=master" alt="Coverage Status"></a>
-<a href="https://calderalabs.org/caldera-api-client/source.htmlg"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a></p><h2>Install</h2><p><code>npm i @caldera-labs/api-client</code></p><h2>Usage</h2><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
-const formsAdminApiClient = calderaApiClient.wpClientFactory(
+<a href="https://calderalabs.org/caldera-api-client/source.htmlg"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a></p><h2>Install</h2><p><code>npm i @caldera-labs/api-client</code></p><h2>Usage</h2><p>Create a form client and use it to get page one of form configs via API</p><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+
+const formsAdminApiClient = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
     &apos;forms&apos; //type of client to get

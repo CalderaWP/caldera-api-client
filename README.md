@@ -13,8 +13,9 @@ JavaScript API client for [Caldera Forms REST API](https://calderaforms.com/doc/
 ## Usage
 Create a form client and use it to get page one of form configs via API
 ```js
-import * as calderaApiClient from '@caldera-labs/api-client';
-const formsAdminApiClient = calderaApiClient.wpClientFactory(
+import {wpClientFactory} from '@caldera-labs/api-client';
+
+const formsAdminApiClient = wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namespace
     '12345', //the nonce for REST API cookie authentication
     'forms' //type of client to get

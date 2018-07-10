@@ -474,6 +474,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/formsclient.js~formsclient#getformsendpoint",
+    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormsEndpoint",
+    "src/FormsClient.js~FormsClient#getFormsEndpoint",
+    "method"
+  ],
+  [
     "src/privacysettingsclient.js",
     "file/src/PrivacySettingsClient.js.html",
     "src/PrivacySettingsClient.js",

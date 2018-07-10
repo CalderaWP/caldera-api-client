@@ -81,8 +81,9 @@
 <a href="https://calderalabs.org/caldera-api-client/source.htmlg"><img src="./manual/./docs/badge.svg" alt="Documentation Status"></a></p>
 <h2 id="install">Install</h2><p><code>npm i @caldera-labs/api-client</code></p>
 <h2 id="usage">Usage</h2><p>Create a form client and use it to get page one of form configs via API</p>
-<pre><code class="lang-js"><code class="source-code prettyprint">import * as calderaApiClient from &apos;@caldera-labs/api-client&apos;;
-const formsAdminApiClient = calderaApiClient.wpClientFactory(
+<pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+
+const formsAdminApiClient = wpClientFactory(
     &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, //root of Caldera Forms REST API namespace
     &apos;12345&apos;, //the nonce for REST API cookie authentication
     &apos;forms&apos; //type of client to get

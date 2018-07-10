@@ -34,11 +34,16 @@ Admin clients are designed to be used on pages that only someone who has access 
 ## Usage
 
 ### Import With webpack
+* Import everything
 `import * as calderaApiClient from '@caldera-labs/api-client';`
+
+* Import one sub-module
+`import {WpClient} from '@caldera-labs/api-client';`
+
 
 #### Full Example
 ```js
-import * as calderaApiClient from '@caldera-labs/api-client';
+import {wpClientFactory} from '@caldera-labs/api-client';
 const formsAdminApiClient = calderaApiClient.wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
     '12345', //the nonce for REST API cookie authentication
@@ -54,6 +59,7 @@ const formsAdminApiClient = calderaApiClient.wpClientFactory(
 
 #### Get Forms or A Specific Form With The Forms Client
 ```js
+import {wpClientFactory} from '@caldera-labs/api-client';
 //create forms client
 const client = wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
@@ -78,6 +84,7 @@ client.getForm('CF123456').then(form => {
 
 #### Get Saved Entries For A Form Or A Specific Entry
 ```js
+import {wpClientFactory} from '@caldera-labs/api-client';
 //create entries client
 const client = wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
@@ -104,6 +111,7 @@ client.getEntries('CF123456',27).then(forms => {
 
 #### Read or Update Privacy Settings
 ```js
+import {wpClientFactory} from '@caldera-labs/api-client';
 //create forms client
 const client = wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
@@ -130,6 +138,8 @@ client.updateSettings('CF12345',{
 ### Caldera Forms Pro Admin Client
 
 ```js
+import {ProClient} from '@caldera-labs/api-client';
+
 const client = new ProClient('https://app.calderaformspro.com');
 client.setPublicKey('12345');
 client.setSecretKey('abcd1');
@@ -156,7 +166,6 @@ describe('testing api', () => {
 
   it('Gets data from API', () => {
     fetch.mockResponseOnce(JSON.stringify({ data: '12345' }))
-
     //assert on the response
     fetch('https://hiroy.club/api').then(res => {
       expect(res.data).toEqual('12345')
