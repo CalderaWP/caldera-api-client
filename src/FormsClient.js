@@ -49,7 +49,7 @@ export class FormsClient extends WpClient {
 	 * @param {Object} args Options
 	 * @return {*}
 	 */
-	createForm(name: string,args : Object = {} ) :  Promise<any> {
+	createForm(name: string, args : Object = {} ) :  Promise<any> {
 		return this.reqPost({
 			...args,
 			name: name
