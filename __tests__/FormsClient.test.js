@@ -94,6 +94,25 @@ describe( 'Forms Client', () => {
 				name: 'new form'
 			};
 			fetch.mockResponseOnce(JSON.stringify(mockForm));
+			client.createForm('new form', ).then(  response => {
+				expect( response ).toEqual(mockForm);
+			}).catch((error) => {
+				// eslint-disable-next-line no-console
+				console.log(error);
+			});
+			expect(fetch.mock.calls).toHaveLength(1);
+
+
+		});
+
+		it( 'creates forms with options', () => {
+			const client = new FormsClient(formsApiRoute );
+			client.setNonce('12345');
+			const mockForm = {
+				ID: 'cf12345',
+				name: 'new form'
+			};
+			fetch.mockResponseOnce(JSON.stringify(mockForm));
 			client.createForm('new form', {
 				ID: 'cf12345'
 			}).then(  response => {
