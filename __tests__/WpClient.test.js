@@ -4,6 +4,7 @@ import {FormsClient} from '../src/FormsClient';
 import {PrivacySettingsClient} from '../src/PrivacySettingsClient';
 import {EntriesClient} from '../src/EntriesClient';
 import {GeneralSettingClient} from '../src/GeneralSettingClient';
+import {ProLocalSettingClient} from '../src/ProLocalSettingClient';
 describe( 'Factory', () => {
 	it( 'Returns generic by default', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345' );
@@ -31,6 +32,10 @@ describe( 'Factory', () => {
 	it( 'Returns general settings client when requested as "settings".', () => {
 		const client = wpClientFactory('https://hiroy.club', '12345', 'settings' );
 		expect( client ).toBeInstanceOf( GeneralSettingClient );
+	});
+	it( 'Returns pro local settings client when requested as "settings".', () => {
+		const client = wpClientFactory('https://hiroy.club', '12345', 'proLocal' );
+		expect( client ).toBeInstanceOf( ProLocalSettingClient );
 	});
 
 });

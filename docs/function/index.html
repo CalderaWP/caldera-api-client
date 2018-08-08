@@ -31,9 +31,11 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralSettingClient.js~GeneralSettingClient.html">GeneralSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareGeneralSettingsData">prepareGeneralSettingsData</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
 </ul>
 </div>
@@ -58,7 +60,36 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span><span class="code" data-ice="signature">(wpApiUrl: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, wpApiNonce: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></span>
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-prepareGeneralSettingsData">prepareGeneralSettingsData</a></span></span><span class="code" data-ice="signature">(styleIncludes: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, cdnEnable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): {styleIncludes: {grid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, form: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, alert: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}, otherSettings: {cdnEnable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}}</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Prepare data for</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span><span class="code" data-ice="signature">(wpApiUrl: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, wpApiNonce: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span> | <span><a href="class/src/GeneralSettingClient.js~GeneralSettingClient.html">GeneralSettingClient</a></span></span>
         </p>
       </div>
       <div>
@@ -79,6 +110,86 @@
 <div data-ice="details"><h2 data-ice="title">Static Public </h2>
 
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-function-prepareGeneralSettingsData">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">prepareGeneralSettingsData</span><span class="code" data-ice="signature">(styleIncludes: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, cdnEnable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): {styleIncludes: {grid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, form: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, alert: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}, otherSettings: {cdnEnable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}}</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/GeneralSettingClient.js.html#lineNumber9">source</a></span></span>
+    </span>
+  </h3>
+
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {prepareGeneralSettingsData} from &apos;<span><a href="file/src/GeneralSettingClient.js.html#lineNumber9">@caldera-labs/api-client/src/GeneralSettingClient.js</a></span>&apos;</code></pre></div>
+  
+  
+  <div data-ice="description"><p>Prepare data for</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">styleIncludes</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Style includes settings. Each value defaults to true</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">cdnEnable</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Is CDN enabled? Default false</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType">{styleIncludes: {grid: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, form: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>, alert: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}, otherSettings: {cdnEnable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="static-function-wpClientFactory">
     <span class="access" data-ice="access">public</span>
     
@@ -86,15 +197,15 @@
     
     
     
-    <span class="code" data-ice="name">wpClientFactory</span><span class="code" data-ice="signature">(wpApiUrl: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, wpApiNonce: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></span>
+    <span class="code" data-ice="name">wpClientFactory</span><span class="code" data-ice="signature">(wpApiUrl: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, wpApiNonce: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span> | <span><a href="class/src/GeneralSettingClient.js~GeneralSettingClient.html">GeneralSettingClient</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/wpClientFactory.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/wpClientFactory.js.html#lineNumber14">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {wpClientFactory} from &apos;<span><a href="file/src/wpClientFactory.js.html#lineNumber13">@caldera-labs/api-client/src/wpClientFactory.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {wpClientFactory} from &apos;<span><a href="file/src/wpClientFactory.js.html#lineNumber14">@caldera-labs/api-client/src/wpClientFactory.js</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Create a WordPress API client</p>
@@ -141,7 +252,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></td>
+          <td class="return-type code" data-ice="returnType"><span>FormsClient</span> | <span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span> | <span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span> | <span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span> | <span><a href="class/src/GeneralSettingClient.js~GeneralSettingClient.html">GeneralSettingClient</a></span></td>
           
         </tr>
       </tbody>

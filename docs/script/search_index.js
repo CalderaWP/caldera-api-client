@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "@caldera-labs/api-client/src/generalsettingclient.js~generalsettingclient",
+    "class/src/GeneralSettingClient.js~GeneralSettingClient.html",
+    "<span>GeneralSettingClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/GeneralSettingClient.js</span>",
+    "class"
+  ],
+  [
     "@caldera-labs/api-client/src/privacysettingsclient.js~privacysettingsclient",
     "class/src/PrivacySettingsClient.js~PrivacySettingsClient.html",
     "<span>PrivacySettingsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/PrivacySettingsClient.js</span>",
@@ -28,6 +34,12 @@ window.esdocSearchIndex = [
     "class/src/WpClient.js~WpClient.html",
     "<span>WpClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/WpClient.js</span>",
     "class"
+  ],
+  [
+    "@caldera-labs/api-client/src/generalsettingclient.js~preparegeneralsettingsdata",
+    "function/index.html#static-function-prepareGeneralSettingsData",
+    "<span>prepareGeneralSettingsData</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/GeneralSettingClient.js</span>",
+    "function"
   ],
   [
     "@caldera-labs/api-client/src/wpclientfactory.js~wpclientfactory",
@@ -435,6 +447,24 @@ window.esdocSearchIndex = [
     "src/entriesclient.js~entriesclient#getentryendpoint",
     "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryEndpoint",
     "src/EntriesClient.js~EntriesClient#getEntryEndpoint",
+    "method"
+  ],
+  [
+    "src/generalsettingclient.js",
+    "file/src/GeneralSettingClient.js.html",
+    "src/GeneralSettingClient.js",
+    "file"
+  ],
+  [
+    "src/generalsettingclient.js~generalsettingclient#getsettings",
+    "class/src/GeneralSettingClient.js~GeneralSettingClient.html#instance-method-getSettings",
+    "src/GeneralSettingClient.js~GeneralSettingClient#getSettings",
+    "method"
+  ],
+  [
+    "src/generalsettingclient.js~generalsettingclient#updatesettings",
+    "class/src/GeneralSettingClient.js~GeneralSettingClient.html#instance-method-updateSettings",
+    "src/GeneralSettingClient.js~GeneralSettingClient#updateSettings",
     "method"
   ],
   [

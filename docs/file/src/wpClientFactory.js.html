@@ -31,9 +31,11 @@
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ApiClient.js~ApiClient.html">ApiClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html">EntriesClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/GeneralSettingClient.js~GeneralSettingClient.html">GeneralSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/PrivacySettingsClient.js~PrivacySettingsClient.html">PrivacySettingsClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ProLocalSettingClient.js~ProLocalSettingClient.html">ProLocalSettingClient</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/WpClient.js~WpClient.html">WpClient</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-prepareGeneralSettingsData">prepareGeneralSettingsData</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-wpClientFactory">wpClientFactory</a></span></span></li>
 </ul>
 </div>
@@ -45,13 +47,14 @@ import {WpClient} from &apos;./WpClient&apos;;
 import {FormsClient} from &apos;./FormsClient&apos;;
 import {PrivacySettingsClient} from &apos;./PrivacySettingsClient&apos;;
 import {EntriesClient} from &quot;./EntriesClient&quot;;
+import {GeneralSettingClient} from &quot;./GeneralSettingClient&quot;;
 
 /**
  * Create a WordPress API client
  * @param {String} wpApiUrl Root URL for the WordPress REST API of site
  * @param {String} wpApiNonce The REST API nonce
  * @param {String} type Optional. Type of client forms|privacy|generic Default is generic
- * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient}
+ * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient|GeneralSettingClient}
  */
 export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = &apos;generic&apos; ): WpClient {
 	let client = new WpClient(wpApiUrl);
@@ -65,6 +68,9 @@ export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: stri
 		case &apos;entries&apos;:
 		case &apos;entry&apos;:
 			client = new EntriesClient(wpApiUrl);
+			break;
+		case &apos;settings&apos; :
+			client = new GeneralSettingClient(wpApiUrl);
 			break;
 		default:
 			client = new WpClient(wpApiUrl);

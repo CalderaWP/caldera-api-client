@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/WpClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/WpClient.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ast/source/wpClientFactory.js.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ast/source/wpClientFactory.js.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badge.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badge.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ApiClient.js~ApiClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/EntriesClient.js~EntriesClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/EntriesClient.js~EntriesClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/PrivacySettingsClient.js~PrivacySettingsClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/PrivacySettingsClient.js~PrivacySettingsClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/ProLocalSettingClient.js~ProLocalSettingClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/class/src/WpClient.js~WpClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/coverage.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/ApiClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/EntriesClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/EntriesClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/PrivacySettingsClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/ProLocalSettingClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/ProLocalSettingClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/WpClient.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/index.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/index.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/file/src/wpClientFactory.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/file/src/wpClientFactory.js.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/function/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/function/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/identifiers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/identifiers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/manual/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/manual/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/script/search_index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/script/search_index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wpClientFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/wpClientFactory.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,14 +37,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6995475">
+    <splitter split-orientation="horizontal" split-proportion="0.7080132">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="GenerallSettingsClient.test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -27,8 +52,8 @@
           <file leaf-file-name="WpClient.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="157">
-                  <caret line="45" selection-start-line="45" selection-end-line="45" />
+                <state relative-caret-position="322">
+                  <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
@@ -36,8 +61,8 @@
           <file leaf-file-name="wpClientFactory.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+                <state relative-caret-position="390">
+                  <caret line="31" column="22" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -46,7 +71,25 @@
             <entry file="file://$PROJECT_DIR$/src/WpClient.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
-                  <caret line="21" column="12" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="12" />
+                  <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProClient.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ProClient.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="525">
+                  <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProLocalSettingClient.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
                 </state>
               </provider>
             </entry>
@@ -54,12 +97,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="GeneralSettingClient.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/GeneralSettingClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="117">
-                  <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+                <state relative-caret-position="417">
+                  <caret line="46" selection-start-line="46" selection-end-line="46" />
                 </state>
               </provider>
             </entry>
@@ -74,12 +117,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/manual/overview.md" />
         <option value="$PROJECT_DIR$/__tests__/FormsClient.test.js" />
         <option value="$PROJECT_DIR$/src/FormsClient.js" />
         <option value="$PROJECT_DIR$/src/GeneralSettingClient.js" />
         <option value="$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/wpClientFactory.js" />
         <option value="$PROJECT_DIR$/__tests__/WpClient.test.js" />
       </list>
@@ -108,8 +151,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="411" />
-    <option name="y" value="144" />
+    <option name="x" value="75" />
+    <option name="y" value="72" />
     <option name="width" value="1401" />
     <option name="height" value="877" />
   </component>
@@ -121,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,7 +191,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,15 +242,16 @@
       <workItem from="1532820275718" duration="13000" />
       <workItem from="1532820487751" duration="107000" />
       <workItem from="1533660633219" duration="2097000" />
-      <workItem from="1533674150673" duration="2494000" />
+      <workItem from="1533674150673" duration="2786000" />
+      <workItem from="1533752424003" duration="468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10599000" />
+    <option name="totallyTimeSpent" value="11359000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="411" y="144" width="1401" height="877" extended-state="0" />
+    <frame x="75" y="72" width="1401" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -216,9 +260,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="0" y="79" width="802" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info anchor="bottom" x="0" y="79" width="802" height="719" id="Terminal" order="7" type="WINDOWED" weight="0.26875" />
       <window_info anchor="bottom" id="Flow" order="8" visible="true" weight="0.274359" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18690214" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32965416" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,11 +278,11 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32916668" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13237222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -246,14 +290,14 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" x="0" y="45" width="1526" height="594" id="Terminal" order="10" type="WINDOWED" visible="true" weight="0.26875" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32916668" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -262,6 +306,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/wpClientFactory.js</url>
+          <line>16</line>
+          <properties lambdaOrdinal="-1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/class/src/Client.js~Client.html" />
@@ -370,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/apiClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -432,16 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="20" selection-start-line="15" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -483,20 +522,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/GeneralSettingsClient.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/GeneralSettingsClient.js" />
     <entry file="file://$PROJECT_DIR$/dist/wpClientFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -528,38 +558,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
+    <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="234">
+            <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GeneralSettingClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        <state relative-caret-position="417">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WpClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="12" />
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
+    <entry file="file://$PROJECT_DIR$/src/ProClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="525">
+          <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wpClientFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/WpClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="322">
+          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
         </state>
       </provider>
     </entry>
