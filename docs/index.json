@@ -1389,219 +1389,6 @@
   {
     "__docId__": 71,
     "kind": "file",
-    "name": "src/FormsClient.js",
-    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Client for administrating forms on a WordPress site\n */\nexport class FormsClient extends WpClient {\n\n\t/**\n\t * Get forms\n\t *\n\t * @param {Numeric} page Optional. Default is 1\n\t * @returns {Promise<any>}\n\t */\n\tgetForms(page: number = 1): Promise<any> {\n\t\treturn this.reqGet({\n\n\t\t\tpage:page,\n\t\t\t_wpnonce:this.nonce\n\t\t},this.getFormsEndpoint());\n\t}\n\n\t/**\n\t * Get a form config\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetForm(formId: string): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\tpreview: false,\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getFormEndpoint(formId));\n\t}\n\n\t/**\n\t * Get endpoint for requesting one form via API\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {string}\n\t */\n\tgetFormEndpoint(formId: string) :string {\n\t\treturn `${this.getFormsEndpoint()}/${formId}`;\n\t}\n\n\t/**\n\t * Get route endpoint for forms route\n\t *\n\t * @returns {string}\n\t */\n\tgetFormsEndpoint() :string {\n\t\treturn `forms`;\n\t}\n\n\t/**\n\t * Get HTML preview of a form\n\t *\n\t * @param {String} formId ID of form to request\n\t * @returns {Promise<any>}\n\t */\n\tgetFormPreview(formId: string): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\tpreview: true,\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getFormEndpoint(formId));\n\t}\n\n\n}",
-    "static": true,
-    "longname": "/Users/josh/caldera-js/api-client/src/FormsClient.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 72,
-    "kind": "class",
-    "name": "FormsClient",
-    "memberof": "src/FormsClient.js",
-    "static": true,
-    "longname": "src/FormsClient.js~FormsClient",
-    "access": "public",
-    "export": true,
-    "importPath": "@caldera-labs/api-client/src/FormsClient.js",
-    "importStyle": "{FormsClient}",
-    "description": "Client for administrating forms on a WordPress site",
-    "lineNumber": 6,
-    "interface": false,
-    "extends": [
-      "src/WpClient.js~WpClient"
-    ]
-  },
-  {
-    "__docId__": 73,
-    "kind": "method",
-    "name": "getForms",
-    "memberof": "src/FormsClient.js~FormsClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/FormsClient.js~FormsClient#getForms",
-    "access": "public",
-    "description": "Get forms",
-    "lineNumber": 14,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{Promise<any>}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Numeric"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "page",
-        "description": "Optional. Default is 1"
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise<any>"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 74,
-    "kind": "method",
-    "name": "getForm",
-    "memberof": "src/FormsClient.js~FormsClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/FormsClient.js~FormsClient#getForm",
-    "access": "public",
-    "description": "Get a form config",
-    "lineNumber": 28,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{Promise<any>}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "String"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "formId",
-        "description": "ID of form to request"
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise<any>"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 75,
-    "kind": "method",
-    "name": "getFormEndpoint",
-    "memberof": "src/FormsClient.js~FormsClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/FormsClient.js~FormsClient#getFormEndpoint",
-    "access": "public",
-    "description": "Get endpoint for requesting one form via API",
-    "lineNumber": 41,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{string}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "String"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "formId",
-        "description": "ID of form to request"
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "string"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 76,
-    "kind": "method",
-    "name": "getFormsEndpoint",
-    "memberof": "src/FormsClient.js~FormsClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/FormsClient.js~FormsClient#getFormsEndpoint",
-    "access": "public",
-    "description": "Get route endpoint for forms route",
-    "lineNumber": 50,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{string}"
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "string"
-      ],
-      "spread": false,
-      "description": ""
-    },
-    "params": []
-  },
-  {
-    "__docId__": 77,
-    "kind": "method",
-    "name": "getFormPreview",
-    "memberof": "src/FormsClient.js~FormsClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/FormsClient.js~FormsClient#getFormPreview",
-    "access": "public",
-    "description": "Get HTML preview of a form",
-    "lineNumber": 60,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{Promise<any>}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "String"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "formId",
-        "description": "ID of form to request"
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise<any>"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 78,
-    "kind": "file",
     "name": "src/PrivacySettingsClient.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's privacy settings\n */\nexport class PrivacySettingsClient extends WpClient {\n\n\t/**\n\t * Get privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @returns {Promise}\n\t */\n\tgetSettings(formId: string): Promise<any> {\n\t\treturn this.reqGet({privacy:true},`forms/${formId}`);\n\t}\n\n\t/**\n\t * Update privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @param {Object} data New settings\n\t * @returns {Promise}\n\t */\n\tupdateSettings(formId: string,data: Object): Promise<any>{\n\t\treturn this.reqPost(data,`forms/${formId}/privacy`);\n\t}\n\n}\n",
     "static": true,
@@ -1611,7 +1398,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 79,
+    "__docId__": 72,
     "kind": "class",
     "name": "PrivacySettingsClient",
     "memberof": "src/PrivacySettingsClient.js",
@@ -1629,7 +1416,7 @@
     ]
   },
   {
-    "__docId__": 80,
+    "__docId__": 73,
     "kind": "method",
     "name": "getSettings",
     "memberof": "src/PrivacySettingsClient.js~PrivacySettingsClient",
@@ -1668,7 +1455,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 74,
     "kind": "method",
     "name": "updateSettings",
     "memberof": "src/PrivacySettingsClient.js~PrivacySettingsClient",
@@ -1717,7 +1504,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 75,
     "kind": "file",
     "name": "src/ProLocalSettingClient.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's CF Pro settings\n */\nexport class ProLocalSettingClient extends WpClient {\n\t/**\n\t * Get CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tgetSettings(): Promise<any> {\n\t\treturn this.reqGet({},'/settings/pro');\n\t}\n\n\t/**\n\t * Update CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tupdateSettings(data: Object): Promise<any>{\n\t\treturn this.reqPost(data,'/settings/pro');\n\t}\n}",
@@ -1728,7 +1515,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 83,
+    "__docId__": 76,
     "kind": "class",
     "name": "ProLocalSettingClient",
     "memberof": "src/ProLocalSettingClient.js",
@@ -1746,7 +1533,7 @@
     ]
   },
   {
-    "__docId__": 84,
+    "__docId__": 77,
     "kind": "method",
     "name": "getSettings",
     "memberof": "src/ProLocalSettingClient.js~ProLocalSettingClient",
@@ -1774,7 +1561,7 @@
     "params": []
   },
   {
-    "__docId__": 85,
+    "__docId__": 78,
     "kind": "method",
     "name": "updateSettings",
     "memberof": "src/ProLocalSettingClient.js~ProLocalSettingClient",
@@ -1809,7 +1596,7 @@
     ]
   },
   {
-    "__docId__": 86,
+    "__docId__": 79,
     "kind": "file",
     "name": "src/WpClient.js",
     "content": "//@flow\n\nimport {ApiClient} from './ApiClient';\n\nexport class WpClient extends ApiClient {\n\t/**\n\t * WP API for requests\n\t *\n\t * @type {String}\n\t */\n\tnonce: string;\n\t/**\n\t * Set nonce for requests\n\t *\n\t * @param {String} nonce\n\t */\n\tsetNonce(nonce: string) {\n\t\tthis.nonce= nonce;\n\t\tthis.headers.set('X-WP-Nonce', this.nonce);\n\t}\n\n\tgetNonce(){\n\t\treturn 'string' === typeof this.nonce ? this.nonce : '';\n\t}\n\n}",
@@ -1820,7 +1607,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 87,
+    "__docId__": 80,
     "kind": "class",
     "name": "WpClient",
     "memberof": "src/WpClient.js",
@@ -1839,7 +1626,7 @@
     ]
   },
   {
-    "__docId__": 88,
+    "__docId__": 81,
     "kind": "method",
     "name": "setNonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1865,7 +1652,7 @@
     "return": null
   },
   {
-    "__docId__": 89,
+    "__docId__": 82,
     "kind": "member",
     "name": "nonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1882,7 +1669,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 83,
     "kind": "method",
     "name": "getNonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1909,7 +1696,7 @@
     }
   },
   {
-    "__docId__": 91,
+    "__docId__": 84,
     "kind": "file",
     "name": "src/index.js",
     "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\nimport {wpClientFactory} from \"./wpClientFactory\";\nimport {ProLocalSettingClient} from \"./ProLocalSettingClient\";\nimport {PrivacySettingsClient} from \"./PrivacySettingsClient\";\nimport {WpClient} from \"./WpClient\";\nimport {FormsClient} from \"./FormsClient\";\nimport {EntriesClient} from \"./EntriesClient\";\n\nmodule.exports = {\n\twpClientFactory,\n\tPrivacySettingsClient,\n\tProLocalSettingClient,\n\tWpClient,\n\tFormsClient,\n\tEntriesClient\n};",
@@ -1920,7 +1707,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 92,
+    "__docId__": 85,
     "kind": "file",
     "name": "src/wpClientFactory.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\nimport {FormsClient} from './FormsClient';\nimport {PrivacySettingsClient} from './PrivacySettingsClient';\nimport {EntriesClient} from \"./EntriesClient\";\n\n/**\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient}\n */\nexport function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = 'generic' ): WpClient {\n\tlet client = new WpClient(wpApiUrl);\n\tswitch (type) {\n\t\tcase 'forms':\n\t\t\tclient = new FormsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'privacy' :\n\t\t\tclient = new PrivacySettingsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'entries':\n\t\tcase 'entry':\n\t\t\tclient = new EntriesClient(wpApiUrl);\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tclient = new WpClient(wpApiUrl);\n\t\t\tbreak;\n\n\t}\n\tclient.setNonce(wpApiNonce);\n\treturn client;\n}",
@@ -1931,7 +1718,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 93,
+    "__docId__": 86,
     "kind": "function",
     "name": "wpClientFactory",
     "memberof": "src/wpClientFactory.js",
@@ -2024,7 +1811,7 @@
     "kind": "manual",
     "longname": "/Users/josh/caldera-js/api-client/manual/overview.md",
     "name": "./manual/overview.md",
-    "content": "# Caldera API Overview\n\n\n## Provided Clients\n### Forms Clients\n__Admin Client__\n\nGet form configs and collections of forms config from a WordPress site.\n### Privacy Settings\n__Admin Client__\n\nGet and update a WordPress site's privacy settings\n\n### CF Pro Local Settings Client\n__Admin Client__\n\nGet and update a WordPress site's CF Pro settings\n\n### CF Pro Client\n__Admin Client__\nGet an account's layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.\n\n### Entries\nGet entries of a form.\n\n#### Acceptable Usage Of Admin Clients\nAdmin clients are designed to be used on pages that only someone who has access to the account or owns the current site will be authorized to view. These clients will expose secret keys, so they should only be used where the current user knows these secrets.\n\n* OK: Caldera Forms settings page that is accessible only to admin users\n* OK: Caldera Forms Pro UI that requires login\n* NOT OK: Any publicly addressable page.\n* NOT OK: Front-end rendering of a Caldera Form.\n\n## Usage\n\n### Import With webpack\n* Import everything\n`import * as calderaApiClient from '@caldera-labs/api-client';`\n\n* Import one sub-module\n`import {WpClient} from '@caldera-labs/api-client';`\n\n\n#### Full Example\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\nconst formsAdminApiClient = calderaApiClient.wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n    '12345', //the nonce for REST API cookie authentication\n    'forms' //type of client to get\n);\n```\n\n### WordPress Admin Clients\n\n* Get or update Caldera Forms form configs or other settings.\n\n* [Uses REST API cookie authentication](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication)\n\n#### Get Forms or A Specific Form With The Forms Client\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'forms' //type of client to get\n);\n//Get page 1 of forms\nclient.getForms(1).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get page 2 of forms\nclient.getForms(2).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get form CF123456's configuration\nclient.getForm('CF123456').then(form => {\n\tconsole.log(form); //Object containing form configuration\n});\n```\n\n#### Get Saved Entries For A Form Or A Specific Entry\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create entries client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'entry' //type of client to get\n);\n//Get page 1 of entries for form CF123456\nclient.getEntries('CF123456',1).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get page 2 of entries for form CF123456\nclient.getEntries('CF123456',2).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get entry 27 of  CF123456\nclient.getEntries('CF123456',27).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n\n```\n\n#### Read or Update Privacy Settings\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'privacy' //type of client to get ask for \"privacy\"\n);\n//Get privacy settings of form with ID CF12345\nclient.getSettings('CF12345').then(settings => {\n\tconsole.log(settings); //Object with basic form info and the privacy settings\n});\n\n//Update setting of form with ID CF12345\nclient.updateSettings('CF12345',{\n    'emailIdentifyingFields': ['fld_4917648'],\n    'piiFields': ['fld_9899154', 'fld_4917648'],\n    'privacyExporterEnabled': true\n}).then(settings => {\n    console.log(settings); //Object with basic form info and the privacy settings\n});\n\n```\n#### Read or Update Caldera Forms Pro Local Settings\n\n### Caldera Forms Pro Admin Client\n\n```js\nimport {ProClient} from '@caldera-labs/api-client';\n\nconst client = new ProClient('https://app.calderaformspro.com');\nclient.setPublicKey('12345');\nclient.setSecretKey('abcd1');\nclient.getLayouts().then(res => {\n    expect(res).toEqual(layouts);\n});\n```\n\n## Testing \n### Mocking Requests\nAll HTTP requests use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).\n\n\nYou can test using [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)\n\n#### Examples of Mocking Fetch\n* Mocking Fetch, in general:\n```js\ndescribe('testing api', () => {\n\t\n  beforeEach(() => {\n    fetch.resetMocks()\n  });\n\n  it('Gets data from API', () => {\n    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }))\n    //assert on the response\n    fetch('https://hiroy.club/api').then(res => {\n      expect(res.data).toEqual('12345')\n    },error => {\n        //nothing here, but test will generate an error without it.\n    });\n\n    //assert on the times called and arguments given to fetch\n    expect(fetch.mock.calls.length).toEqual(1);\n  })\n})\n```\n\n* Mocking API call that uses fetch.\n- Since our API clients use fetch, we need to setup a fetch mock before calling a client function.\n```js\ndescribe('Forms API', () => {\n\t//Data likely to be reused in multiple tests.\n\tconst form = {ID: 'CF1'};\n\tconst formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';\n\t\n\t//Reset before each test in this describe() closure for isolation\n\tbeforeEach(() => {\n\t\tfetch.resetMocks()\n\t});\n\n\t//Test once call per it() closure.\n\tit('Gets data from API', () => {\n\t\tfetch.mockResponseOnce(JSON.stringify(form));\n\n\t\t//Fetch and wait for response.\n\t\tclient.getForm('CF1').then(response => {\n\t\t\texpect(response).toEqual(form); //test response\n\t\t}).catch((error) => {\n\t\t\tconsole.log(error); //log error\n\t\t});\n\n\t\t//Make sure it ran.\n\t\texpect(fetch.mock.calls.length).toEqual(1);\n\t})\n});\n```\n\n#### Helpful Links About Fetch and Testing With Fetch\n* [MDN Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)\n* [David Walsh blog post about Fetch](https://davidwalsh.name/fetch)\n* [Why tests using fetch mocks must catch errors](https://github.com/jefflau/jest-fetch-mock/issues/60#issuecomment-402489882)",
+    "content": "# Caldera API Overview\n\n\n## Provided Clients\n### Forms Clients\n__Admin Client__\n\nGet form configs and collections of forms config from a WordPress site.\n### Privacy Settings\n__Admin Client__\n\nGet and update a WordPress site's privacy settings\n\n### CF Pro Local Settings Client\n__Admin Client__\n\nGet and update a WordPress site's CF Pro settings\n\n### CF Pro Client\n__Admin Client__\nGet an account's layouts from CF Pro. Client is designed for remote admin access to Caldera Forms Pro.\n\n### Entries\nGet entries of a form.\n\n#### Acceptable Usage Of Admin Clients\nAdmin clients are designed to be used on pages that only someone who has access to the account or owns the current site will be authorized to view. These clients will expose secret keys, so they should only be used where the current user knows these secrets.\n\n* OK: Caldera Forms settings page that is accessible only to admin users\n* OK: Caldera Forms Pro UI that requires login\n* NOT OK: Any publicly addressable page.\n* NOT OK: Front-end rendering of a Caldera Form.\n\n## Usage\n\n### Import With webpack\n* Import everything\n`import * as calderaApiClient from '@caldera-labs/api-client';`\n\n* Import one sub-module\n`import {WpClient} from '@caldera-labs/api-client';`\n\n\n#### Full Example\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\nconst formsAdminApiClient = calderaApiClient.wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n    '12345', //the nonce for REST API cookie authentication\n    'forms' //type of client to get\n);\n```\n\n### WordPress Admin Clients\n\n* Get or update Caldera Forms form configs or other settings.\n\n* [Uses REST API cookie authentication](https://developer.wordpress.org/rest-api/using-the-rest-api/authentication/#cookie-authentication)\n\n#### Get Forms or A Specific Form With The Forms Client\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'forms' //type of client to get\n);\n//Get page 1 of forms\nclient.getForms(1).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get page 2 of forms\nclient.getForms(2).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get form CF123456's configuration\nclient.getForm('CF123456').then(form => {\n\tconsole.log(form); //Object containing form configuration\n});\n```\n\n#### Get Saved Entries For A Form Or A Specific Entry\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create entries client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'entry' //type of client to get\n);\n//Get page 1 of entries for form CF123456\nclient.getEntries('CF123456',1).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get page 2 of entries for form CF123456\nclient.getEntries('CF123456',2).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n//Get entry 27 of  CF123456\nclient.getEntries('CF123456',27).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n\n\n```\n\n#### Create Or Clone A Form\nSee: https://github.com/CalderaWP/Caldera-Forms/pull/2692\n\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create entries client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'forms' //type of client to get\n);\nclient.createForm('Name of new form',{\n\tname: 'Say Hi', //Required. Name of new form\n\tID: 'CF12345',// OPTIONAL. ID of new form. Ignored if form with that ID exists\n\tclone: 'CF12345', //ID of form to clone.\n\ttype: 'primary', //Optional. Use primary, this will become important later\n\ttemplate: 'starter_contact_form' //Optional. Name of template to use\n}).then(forms => {\n\tconsole.log(forms); //Array of forms\n});\n```\n\n#### Read or Update Privacy Settings\n```js\nimport {wpClientFactory} from '@caldera-labs/api-client';\n//create forms client\nconst client = wpClientFactory(\n\t'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace\n\t'12345', //the nonce for REST API cookie authentication\n\t'privacy' //type of client to get ask for \"privacy\"\n);\n//Get privacy settings of form with ID CF12345\nclient.getSettings('CF12345').then(settings => {\n\tconsole.log(settings); //Object with basic form info and the privacy settings\n});\n\n//Update setting of form with ID CF12345\nclient.updateSettings('CF12345',{\n    'emailIdentifyingFields': ['fld_4917648'],\n    'piiFields': ['fld_9899154', 'fld_4917648'],\n    'privacyExporterEnabled': true\n}).then(settings => {\n    console.log(settings); //Object with basic form info and the privacy settings\n});\n\n```\n#### Read or Update Caldera Forms Pro Local Settings\n\n### Caldera Forms Pro Admin Client\n\n```js\nimport {ProClient} from '@caldera-labs/api-client';\n\nconst client = new ProClient('https://app.calderaformspro.com');\nclient.setPublicKey('12345');\nclient.setSecretKey('abcd1');\nclient.getLayouts().then(res => {\n    expect(res).toEqual(layouts);\n});\n```\n\n## Testing \n### Mocking Requests\nAll HTTP requests use the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).\n\n\nYou can test using [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)\n\n#### Examples of Mocking Fetch\n* Mocking Fetch, in general:\n```js\ndescribe('testing api', () => {\n\t\n  beforeEach(() => {\n    fetch.resetMocks()\n  });\n\n  it('Gets data from API', () => {\n    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }))\n    //assert on the response\n    fetch('https://hiroy.club/api').then(res => {\n      expect(res.data).toEqual('12345')\n    },error => {\n        //nothing here, but test will generate an error without it.\n    });\n\n    //assert on the times called and arguments given to fetch\n    expect(fetch.mock.calls.length).toEqual(1);\n  })\n})\n```\n\n* Mocking API call that uses fetch.\n- Since our API clients use fetch, we need to setup a fetch mock before calling a client function.\n```js\ndescribe('Forms API', () => {\n\t//Data likely to be reused in multiple tests.\n\tconst form = {ID: 'CF1'};\n\tconst formsApiRoute = 'https://wordpress.test/wp-json/cf-api/v2/forms';\n\t\n\t//Reset before each test in this describe() closure for isolation\n\tbeforeEach(() => {\n\t\tfetch.resetMocks()\n\t});\n\n\t//Test once call per it() closure.\n\tit('Gets data from API', () => {\n\t\tfetch.mockResponseOnce(JSON.stringify(form));\n\n\t\t//Fetch and wait for response.\n\t\tclient.getForm('CF1').then(response => {\n\t\t\texpect(response).toEqual(form); //test response\n\t\t}).catch((error) => {\n\t\t\tconsole.log(error); //log error\n\t\t});\n\n\t\t//Make sure it ran.\n\t\texpect(fetch.mock.calls.length).toEqual(1);\n\t})\n});\n```\n\n#### Helpful Links About Fetch and Testing With Fetch\n* [MDN Fetch docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)\n* [David Walsh blog post about Fetch](https://davidwalsh.name/fetch)\n* [Why tests using fetch mocks must catch errors](https://github.com/jefflau/jest-fetch-mock/issues/60#issuecomment-402489882)",
     "static": true,
     "access": "public"
   },

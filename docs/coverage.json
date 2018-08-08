@@ -1,7 +1,7 @@
 {
-  "coverage": "86.84%",
-  "expectCount": 38,
-  "actualCount": 33,
+  "coverage": "84.37%",
+  "expectCount": 32,
+  "actualCount": 27,
   "files": {
     "src/ApiClient.js": {
       "expectCount": 16,
@@ -15,11 +15,6 @@
     "src/EntriesClient.js": {
       "expectCount": 5,
       "actualCount": 5,
-      "undocumentLines": []
-    },
-    "src/FormsClient.js": {
-      "expectCount": 6,
-      "actualCount": 6,
       "undocumentLines": []
     },
     "src/PrivacySettingsClient.js": {

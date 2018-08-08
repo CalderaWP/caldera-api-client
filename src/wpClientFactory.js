@@ -3,13 +3,14 @@ import {WpClient} from './WpClient';
 import {FormsClient} from './FormsClient';
 import {PrivacySettingsClient} from './PrivacySettingsClient';
 import {EntriesClient} from "./EntriesClient";
+import {GeneralSettingClient} from "./GeneralSettingClient";
 
 /**
  * Create a WordPress API client
  * @param {String} wpApiUrl Root URL for the WordPress REST API of site
  * @param {String} wpApiNonce The REST API nonce
  * @param {String} type Optional. Type of client forms|privacy|generic Default is generic
- * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient}
+ * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient|GeneralSettingClient}
  */
 export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = 'generic' ): WpClient {
 	let client = new WpClient(wpApiUrl);
@@ -23,6 +24,9 @@ export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: stri
 		case 'entries':
 		case 'entry':
 			client = new EntriesClient(wpApiUrl);
+			break;
+		case 'settings' :
+			client = new GeneralSettingClient(wpApiUrl);
 			break;
 		default:
 			client = new WpClient(wpApiUrl);

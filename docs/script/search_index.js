@@ -12,12 +12,6 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "@caldera-labs/api-client/src/formsclient.js~formsclient",
-    "class/src/FormsClient.js~FormsClient.html",
-    "<span>FormsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/FormsClient.js</span>",
-    "class"
-  ],
-  [
     "@caldera-labs/api-client/src/privacysettingsclient.js~privacysettingsclient",
     "class/src/PrivacySettingsClient.js~PrivacySettingsClient.html",
     "<span>PrivacySettingsClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/PrivacySettingsClient.js</span>",
@@ -441,42 +435,6 @@ window.esdocSearchIndex = [
     "src/entriesclient.js~entriesclient#getentryendpoint",
     "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryEndpoint",
     "src/EntriesClient.js~EntriesClient#getEntryEndpoint",
-    "method"
-  ],
-  [
-    "src/formsclient.js",
-    "file/src/FormsClient.js.html",
-    "src/FormsClient.js",
-    "file"
-  ],
-  [
-    "src/formsclient.js~formsclient#getform",
-    "class/src/FormsClient.js~FormsClient.html#instance-method-getForm",
-    "src/FormsClient.js~FormsClient#getForm",
-    "method"
-  ],
-  [
-    "src/formsclient.js~formsclient#getformendpoint",
-    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormEndpoint",
-    "src/FormsClient.js~FormsClient#getFormEndpoint",
-    "method"
-  ],
-  [
-    "src/formsclient.js~formsclient#getformpreview",
-    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormPreview",
-    "src/FormsClient.js~FormsClient#getFormPreview",
-    "method"
-  ],
-  [
-    "src/formsclient.js~formsclient#getforms",
-    "class/src/FormsClient.js~FormsClient.html#instance-method-getForms",
-    "src/FormsClient.js~FormsClient#getForms",
-    "method"
-  ],
-  [
-    "src/formsclient.js~formsclient#getformsendpoint",
-    "class/src/FormsClient.js~FormsClient.html#instance-method-getFormsEndpoint",
-    "src/FormsClient.js~FormsClient#getFormsEndpoint",
     "method"
   ],
   [
