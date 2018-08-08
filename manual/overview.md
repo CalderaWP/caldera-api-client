@@ -109,6 +109,28 @@ client.getEntries('CF123456',27).then(forms => {
 
 ```
 
+#### Create Or Clone A Form
+See: https://github.com/CalderaWP/Caldera-Forms/pull/2692
+
+```js
+import {wpClientFactory} from '@caldera-labs/api-client';
+//create entries client
+const client = wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namepace
+	'12345', //the nonce for REST API cookie authentication
+	'forms' //type of client to get
+);
+client.createForm('Name of new form',{
+	name: 'Say Hi', //Required. Name of new form
+	ID: 'CF12345',// OPTIONAL. ID of new form. Ignored if form with that ID exists
+	clone: 'CF12345', //ID of form to clone.
+	type: 'primary', //Optional. Use primary, this will become important later
+	template: 'starter_contact_form' //Optional. Name of template to use
+}).then(forms => {
+	console.log(forms); //Array of forms
+});
+```
+
 #### Read or Update Privacy Settings
 ```js
 import {wpClientFactory} from '@caldera-labs/api-client';

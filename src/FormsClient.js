@@ -14,7 +14,6 @@ export class FormsClient extends WpClient {
 	 */
 	getForms(page: number = 1): Promise<any> {
 		return this.reqGet({
-
 			page:page,
 			_wpnonce:this.nonce
 		},this.getFormsEndpoint());
@@ -41,6 +40,20 @@ export class FormsClient extends WpClient {
 	 */
 	getFormEndpoint(formId: string) :string {
 		return `${this.getFormsEndpoint()}/${formId}`;
+	}
+
+	/**
+	 * Create a new form or clone an existing form
+	 *
+	 * @param {String} name Name for new form
+	 * @param {Object} args Options
+	 * @return {*}
+	 */
+	createForm(name: string, args : Object = {} ) :  Promise<any> {
+		return this.reqPost({
+			...args,
+			name: name
+		},this.getFormsEndpoint());
 	}
 
 	/**
