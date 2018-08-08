@@ -40,6 +40,12 @@ describe( 'WordPress Client', () => {
 		client.setNonce('x1');
 		expect( client.getNonce() ).toBe('x1');
 	});
+
+	it( 'Nonce getter does not make error when no nonce set', ( ) => {
+		const client = new FormsClient();
+		expect( client.getNonce() ).toBe('');
+	});
+
 	describe( 'sets nonce in requests', ()=> {
 		it( 'Adds the nonce to requests', () => {
 			const client = wpClientFactory('https://hiroy.club', '12345' );

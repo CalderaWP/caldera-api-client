@@ -5,8 +5,8 @@ JavaScript API client for [Caldera Forms REST API](https://calderaforms.com/doc/
 
 [![Build Status](https://travis-ci.org/CalderaWP/caldera-api-client.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-api-client.svg)
 [![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-api-client?branch=master)
-[![Documentation Status](./docs/badge.svg)](https://calderalabs.org/caldera-api-client/source.htmlg)
-
+[![Documentation Status](https://calderalabs.org/caldera-api-client/badge.svg)](https://calderalabs.org/caldera-api-client/source.html)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a2e2c1afbb3eae8a6635/maintainability)](https://codeclimate.com/github/CalderaWP/caldera-api-client/maintainability)
 ## Install
 `npm i @caldera-labs/api-client`
 
