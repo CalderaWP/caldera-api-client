@@ -48,6 +48,7 @@ import {FormsClient} from &apos;./FormsClient&apos;;
 import {PrivacySettingsClient} from &apos;./PrivacySettingsClient&apos;;
 import {EntriesClient} from &quot;./EntriesClient&quot;;
 import {GeneralSettingClient} from &quot;./GeneralSettingClient&quot;;
+import {ProLocalSettingClient} from &quot;./ProLocalSettingClient&quot;;
 
 /**
  * Create a WordPress API client
@@ -71,6 +72,9 @@ export function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: stri
 			break;
 		case &apos;settings&apos; :
 			client = new GeneralSettingClient(wpApiUrl);
+			break;
+		case &apos;proLocal&apos; :
+			client = new ProLocalSettingClient(wpApiUrl);
 			break;
 		default:
 			client = new WpClient(wpApiUrl);

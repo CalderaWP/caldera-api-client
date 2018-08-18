@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 493,
+  "end": 954,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 17,
+      "line": 25,
       "column": 2
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 493,
+    "end": 954,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 17,
+        "line": 25,
         "column": 2
       }
     },
@@ -581,110 +581,302 @@
         }
       },
       {
-        "type": "ExpressionStatement",
-        "start": 366,
-        "end": 493,
+        "type": "ImportDeclaration",
+        "start": 365,
+        "end": 405,
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 0
+          },
+          "end": {
+            "line": 9,
+            "column": 40
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "start": 374,
+            "end": 383,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 9
+              },
+              "end": {
+                "line": 9,
+                "column": 18
+              }
+            },
+            "imported": {
+              "type": "Identifier",
+              "start": 374,
+              "end": 383,
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 9
+                },
+                "end": {
+                  "line": 9,
+                  "column": 18
+                },
+                "identifierName": "ProClient"
+              },
+              "name": "ProClient"
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 374,
+              "end": 383,
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 9
+                },
+                "end": {
+                  "line": 9,
+                  "column": 18
+                },
+                "identifierName": "ProClient"
+              },
+              "name": "ProClient"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 391,
+          "end": 404,
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 26
+            },
+            "end": {
+              "line": 9,
+              "column": 39
+            }
+          },
+          "extra": {
+            "rawValue": "./ProClient",
+            "raw": "\"./ProClient\""
+          },
+          "value": "./ProClient"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 406,
+        "end": 468,
         "loc": {
           "start": {
             "line": 10,
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 10,
+            "column": 62
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "start": 415,
+            "end": 435,
+            "loc": {
+              "start": {
+                "line": 10,
+                "column": 9
+              },
+              "end": {
+                "line": 10,
+                "column": 29
+              }
+            },
+            "imported": {
+              "type": "Identifier",
+              "start": 415,
+              "end": 435,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 9
+                },
+                "end": {
+                  "line": 10,
+                  "column": 29
+                },
+                "identifierName": "GeneralSettingClient"
+              },
+              "name": "GeneralSettingClient"
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 415,
+              "end": 435,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 9
+                },
+                "end": {
+                  "line": 10,
+                  "column": 29
+                },
+                "identifierName": "GeneralSettingClient"
+              },
+              "name": "GeneralSettingClient"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 443,
+          "end": 467,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 37
+            },
+            "end": {
+              "line": 10,
+              "column": 61
+            }
+          },
+          "extra": {
+            "rawValue": "./GeneralSettingClient",
+            "raw": "\"./GeneralSettingClient\""
+          },
+          "value": "./GeneralSettingClient"
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Export factory and all clients\n * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}\n ",
+            "start": 470,
+            "end": 791,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ExpressionStatement",
+        "start": 792,
+        "end": 954,
+        "loc": {
+          "start": {
+            "line": 16,
+            "column": 0
+          },
+          "end": {
+            "line": 25,
             "column": 2
           }
         },
         "expression": {
           "type": "AssignmentExpression",
-          "start": 366,
-          "end": 492,
+          "start": 792,
+          "end": 953,
           "loc": {
             "start": {
-              "line": 10,
+              "line": 16,
               "column": 0
             },
             "end": {
-              "line": 17,
+              "line": 25,
               "column": 1
             }
           },
           "operator": "=",
           "left": {
             "type": "MemberExpression",
-            "start": 366,
-            "end": 380,
+            "start": 792,
+            "end": 806,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 16,
                 "column": 0
               },
               "end": {
-                "line": 10,
+                "line": 16,
                 "column": 14
               }
             },
             "object": {
               "type": "Identifier",
-              "start": 366,
-              "end": 372,
+              "start": 792,
+              "end": 798,
               "loc": {
                 "start": {
-                  "line": 10,
+                  "line": 16,
                   "column": 0
                 },
                 "end": {
-                  "line": 10,
+                  "line": 16,
                   "column": 6
                 },
                 "identifierName": "module"
               },
-              "name": "module"
+              "name": "module",
+              "leadingComments": null
             },
             "property": {
               "type": "Identifier",
-              "start": 373,
-              "end": 380,
+              "start": 799,
+              "end": 806,
               "loc": {
                 "start": {
-                  "line": 10,
+                  "line": 16,
                   "column": 7
                 },
                 "end": {
-                  "line": 10,
+                  "line": 16,
                   "column": 14
                 },
                 "identifierName": "exports"
               },
               "name": "exports"
             },
-            "computed": false
+            "computed": false,
+            "leadingComments": null
           },
           "right": {
             "type": "ObjectExpression",
-            "start": 383,
-            "end": 492,
+            "start": 809,
+            "end": 953,
             "loc": {
               "start": {
-                "line": 10,
+                "line": 16,
                 "column": 17
               },
               "end": {
-                "line": 17,
+                "line": 25,
                 "column": 1
               }
             },
             "properties": [
               {
                 "type": "ObjectProperty",
-                "start": 386,
-                "end": 401,
+                "start": 812,
+                "end": 827,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 17,
                     "column": 1
                   },
                   "end": {
-                    "line": 11,
+                    "line": 17,
                     "column": 16
                   }
                 },
@@ -693,15 +885,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 386,
-                  "end": 401,
+                  "start": 812,
+                  "end": 827,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 17,
                       "column": 1
                     },
                     "end": {
-                      "line": 11,
+                      "line": 17,
                       "column": 16
                     },
                     "identifierName": "wpClientFactory"
@@ -710,15 +902,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 386,
-                  "end": 401,
+                  "start": 812,
+                  "end": 827,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 17,
                       "column": 1
                     },
                     "end": {
-                      "line": 11,
+                      "line": 17,
                       "column": 16
                     },
                     "identifierName": "wpClientFactory"
@@ -731,15 +923,15 @@
               },
               {
                 "type": "ObjectProperty",
-                "start": 404,
-                "end": 425,
+                "start": 830,
+                "end": 851,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 18,
                     "column": 1
                   },
                   "end": {
-                    "line": 12,
+                    "line": 18,
                     "column": 22
                   }
                 },
@@ -748,15 +940,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 404,
-                  "end": 425,
+                  "start": 830,
+                  "end": 851,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 18,
                       "column": 1
                     },
                     "end": {
-                      "line": 12,
+                      "line": 18,
                       "column": 22
                     },
                     "identifierName": "PrivacySettingsClient"
@@ -765,15 +957,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 404,
-                  "end": 425,
+                  "start": 830,
+                  "end": 851,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 18,
                       "column": 1
                     },
                     "end": {
-                      "line": 12,
+                      "line": 18,
                       "column": 22
                     },
                     "identifierName": "PrivacySettingsClient"
@@ -786,15 +978,15 @@
               },
               {
                 "type": "ObjectProperty",
-                "start": 428,
-                "end": 449,
+                "start": 854,
+                "end": 875,
                 "loc": {
                   "start": {
-                    "line": 13,
+                    "line": 19,
                     "column": 1
                   },
                   "end": {
-                    "line": 13,
+                    "line": 19,
                     "column": 22
                   }
                 },
@@ -803,15 +995,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 428,
-                  "end": 449,
+                  "start": 854,
+                  "end": 875,
                   "loc": {
                     "start": {
-                      "line": 13,
+                      "line": 19,
                       "column": 1
                     },
                     "end": {
-                      "line": 13,
+                      "line": 19,
                       "column": 22
                     },
                     "identifierName": "ProLocalSettingClient"
@@ -820,15 +1012,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 428,
-                  "end": 449,
+                  "start": 854,
+                  "end": 875,
                   "loc": {
                     "start": {
-                      "line": 13,
+                      "line": 19,
                       "column": 1
                     },
                     "end": {
-                      "line": 13,
+                      "line": 19,
                       "column": 22
                     },
                     "identifierName": "ProLocalSettingClient"
@@ -841,15 +1033,15 @@
               },
               {
                 "type": "ObjectProperty",
-                "start": 452,
-                "end": 460,
+                "start": 878,
+                "end": 886,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 20,
                     "column": 1
                   },
                   "end": {
-                    "line": 14,
+                    "line": 20,
                     "column": 9
                   }
                 },
@@ -858,15 +1050,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 452,
-                  "end": 460,
+                  "start": 878,
+                  "end": 886,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 20,
                       "column": 1
                     },
                     "end": {
-                      "line": 14,
+                      "line": 20,
                       "column": 9
                     },
                     "identifierName": "WpClient"
@@ -875,15 +1067,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 452,
-                  "end": 460,
+                  "start": 878,
+                  "end": 886,
                   "loc": {
                     "start": {
-                      "line": 14,
+                      "line": 20,
                       "column": 1
                     },
                     "end": {
-                      "line": 14,
+                      "line": 20,
                       "column": 9
                     },
                     "identifierName": "WpClient"
@@ -896,15 +1088,15 @@
               },
               {
                 "type": "ObjectProperty",
-                "start": 463,
-                "end": 474,
+                "start": 889,
+                "end": 900,
                 "loc": {
                   "start": {
-                    "line": 15,
+                    "line": 21,
                     "column": 1
                   },
                   "end": {
-                    "line": 15,
+                    "line": 21,
                     "column": 12
                   }
                 },
@@ -913,15 +1105,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 463,
-                  "end": 474,
+                  "start": 889,
+                  "end": 900,
                   "loc": {
                     "start": {
-                      "line": 15,
+                      "line": 21,
                       "column": 1
                     },
                     "end": {
-                      "line": 15,
+                      "line": 21,
                       "column": 12
                     },
                     "identifierName": "FormsClient"
@@ -930,15 +1122,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 463,
-                  "end": 474,
+                  "start": 889,
+                  "end": 900,
                   "loc": {
                     "start": {
-                      "line": 15,
+                      "line": 21,
                       "column": 1
                     },
                     "end": {
-                      "line": 15,
+                      "line": 21,
                       "column": 12
                     },
                     "identifierName": "FormsClient"
@@ -951,15 +1143,15 @@
               },
               {
                 "type": "ObjectProperty",
-                "start": 477,
-                "end": 490,
+                "start": 903,
+                "end": 916,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 22,
                     "column": 1
                   },
                   "end": {
-                    "line": 16,
+                    "line": 22,
                     "column": 14
                   }
                 },
@@ -968,15 +1160,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 477,
-                  "end": 490,
+                  "start": 903,
+                  "end": 916,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 22,
                       "column": 1
                     },
                     "end": {
-                      "line": 16,
+                      "line": 22,
                       "column": 14
                     },
                     "identifierName": "EntriesClient"
@@ -985,15 +1177,15 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 477,
-                  "end": 490,
+                  "start": 903,
+                  "end": 916,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 22,
                       "column": 1
                     },
                     "end": {
-                      "line": 16,
+                      "line": 22,
                       "column": 14
                     },
                     "identifierName": "EntriesClient"
@@ -1003,10 +1195,139 @@
                 "extra": {
                   "shorthand": true
                 }
+              },
+              {
+                "type": "ObjectProperty",
+                "start": 919,
+                "end": 928,
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 10
+                  }
+                },
+                "method": false,
+                "shorthand": true,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 919,
+                  "end": 928,
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 10
+                    },
+                    "identifierName": "ProClient"
+                  },
+                  "name": "ProClient"
+                },
+                "value": {
+                  "type": "Identifier",
+                  "start": 919,
+                  "end": 928,
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 10
+                    },
+                    "identifierName": "ProClient"
+                  },
+                  "name": "ProClient"
+                },
+                "extra": {
+                  "shorthand": true
+                }
+              },
+              {
+                "type": "ObjectProperty",
+                "start": 931,
+                "end": 951,
+                "loc": {
+                  "start": {
+                    "line": 24,
+                    "column": 1
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 21
+                  }
+                },
+                "method": false,
+                "shorthand": true,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 931,
+                  "end": 951,
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 21
+                    },
+                    "identifierName": "GeneralSettingClient"
+                  },
+                  "name": "GeneralSettingClient"
+                },
+                "value": {
+                  "type": "Identifier",
+                  "start": 931,
+                  "end": 951,
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 1
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 21
+                    },
+                    "identifierName": "GeneralSettingClient"
+                  },
+                  "name": "GeneralSettingClient"
+                },
+                "extra": {
+                  "shorthand": true
+                }
               }
             ]
+          },
+          "leadingComments": null
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Export factory and all clients\n * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}\n ",
+            "start": 470,
+            "end": 791,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ],
     "directives": []
@@ -1041,6 +1362,22 @@
         "end": {
           "line": 2,
           "column": 19
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Export factory and all clients\n * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}\n ",
+      "start": 470,
+      "end": 791,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 3
         }
       }
     }
@@ -2178,6 +2515,388 @@
     },
     {
       "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 365,
+      "end": 371,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 372,
+      "end": 373,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 7
+        },
+        "end": {
+          "line": 9,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ProClient",
+      "start": 374,
+      "end": 383,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 9
+        },
+        "end": {
+          "line": 9,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 384,
+      "end": 385,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 19
+        },
+        "end": {
+          "line": 9,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 386,
+      "end": 390,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 21
+        },
+        "end": {
+          "line": 9,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./ProClient",
+      "start": 391,
+      "end": 404,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 26
+        },
+        "end": {
+          "line": 9,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 404,
+      "end": 405,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 39
+        },
+        "end": {
+          "line": 9,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 406,
+      "end": 412,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 413,
+      "end": 414,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 7
+        },
+        "end": {
+          "line": 10,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "GeneralSettingClient",
+      "start": 415,
+      "end": 435,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 9
+        },
+        "end": {
+          "line": 10,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 436,
+      "end": 437,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 30
+        },
+        "end": {
+          "line": 10,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 438,
+      "end": 442,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 32
+        },
+        "end": {
+          "line": 10,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./GeneralSettingClient",
+      "start": 443,
+      "end": 467,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 37
+        },
+        "end": {
+          "line": 10,
+          "column": 61
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 467,
+      "end": 468,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 61
+        },
+        "end": {
+          "line": 10,
+          "column": 62
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Export factory and all clients\n * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}\n ",
+      "start": 470,
+      "end": 791,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
         "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
@@ -2189,15 +2908,15 @@
         "binop": null
       },
       "value": "module",
-      "start": 366,
-      "end": 372,
+      "start": 792,
+      "end": 798,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 16,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 16,
           "column": 6
         }
       }
@@ -2215,15 +2934,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 372,
-      "end": 373,
+      "start": 798,
+      "end": 799,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 16,
           "column": 6
         },
         "end": {
-          "line": 10,
+          "line": 16,
           "column": 7
         }
       }
@@ -2241,15 +2960,15 @@
         "binop": null
       },
       "value": "exports",
-      "start": 373,
-      "end": 380,
+      "start": 799,
+      "end": 806,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 16,
           "column": 7
         },
         "end": {
-          "line": 10,
+          "line": 16,
           "column": 14
         }
       }
@@ -2268,15 +2987,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 381,
-      "end": 382,
+      "start": 807,
+      "end": 808,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 16,
           "column": 15
         },
         "end": {
-          "line": 10,
+          "line": 16,
           "column": 16
         }
       }
@@ -2293,15 +3012,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 383,
-      "end": 384,
+      "start": 809,
+      "end": 810,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 16,
           "column": 17
         },
         "end": {
-          "line": 10,
+          "line": 16,
           "column": 18
         }
       }
@@ -2319,15 +3038,15 @@
         "binop": null
       },
       "value": "wpClientFactory",
-      "start": 386,
-      "end": 401,
+      "start": 812,
+      "end": 827,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 17,
           "column": 1
         },
         "end": {
-          "line": 11,
+          "line": 17,
           "column": 16
         }
       }
@@ -2345,15 +3064,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 401,
-      "end": 402,
+      "start": 827,
+      "end": 828,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 17,
           "column": 16
         },
         "end": {
-          "line": 11,
+          "line": 17,
           "column": 17
         }
       }
@@ -2371,15 +3090,15 @@
         "binop": null
       },
       "value": "PrivacySettingsClient",
-      "start": 404,
-      "end": 425,
+      "start": 830,
+      "end": 851,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 18,
           "column": 1
         },
         "end": {
-          "line": 12,
+          "line": 18,
           "column": 22
         }
       }
@@ -2397,15 +3116,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 425,
-      "end": 426,
+      "start": 851,
+      "end": 852,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 18,
           "column": 22
         },
         "end": {
-          "line": 12,
+          "line": 18,
           "column": 23
         }
       }
@@ -2423,15 +3142,15 @@
         "binop": null
       },
       "value": "ProLocalSettingClient",
-      "start": 428,
-      "end": 449,
+      "start": 854,
+      "end": 875,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 19,
           "column": 1
         },
         "end": {
-          "line": 13,
+          "line": 19,
           "column": 22
         }
       }
@@ -2449,15 +3168,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 449,
-      "end": 450,
+      "start": 875,
+      "end": 876,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 19,
           "column": 22
         },
         "end": {
-          "line": 13,
+          "line": 19,
           "column": 23
         }
       }
@@ -2475,15 +3194,15 @@
         "binop": null
       },
       "value": "WpClient",
-      "start": 452,
-      "end": 460,
+      "start": 878,
+      "end": 886,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 20,
           "column": 1
         },
         "end": {
-          "line": 14,
+          "line": 20,
           "column": 9
         }
       }
@@ -2501,15 +3220,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 460,
-      "end": 461,
+      "start": 886,
+      "end": 887,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 20,
           "column": 9
         },
         "end": {
-          "line": 14,
+          "line": 20,
           "column": 10
         }
       }
@@ -2527,15 +3246,15 @@
         "binop": null
       },
       "value": "FormsClient",
-      "start": 463,
-      "end": 474,
+      "start": 889,
+      "end": 900,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 21,
           "column": 1
         },
         "end": {
-          "line": 15,
+          "line": 21,
           "column": 12
         }
       }
@@ -2553,15 +3272,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 474,
-      "end": 475,
+      "start": 900,
+      "end": 901,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 21,
           "column": 12
         },
         "end": {
-          "line": 15,
+          "line": 21,
           "column": 13
         }
       }
@@ -2579,16 +3298,120 @@
         "binop": null
       },
       "value": "EntriesClient",
-      "start": 477,
-      "end": 490,
+      "start": 903,
+      "end": 916,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 22,
           "column": 1
         },
         "end": {
-          "line": 16,
+          "line": 22,
           "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 916,
+      "end": 917,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 14
+        },
+        "end": {
+          "line": 22,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ProClient",
+      "start": 919,
+      "end": 928,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 1
+        },
+        "end": {
+          "line": 23,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 928,
+      "end": 929,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 10
+        },
+        "end": {
+          "line": 23,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "GeneralSettingClient",
+      "start": 931,
+      "end": 951,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 1
+        },
+        "end": {
+          "line": 24,
+          "column": 21
         }
       }
     },
@@ -2604,15 +3427,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 491,
-      "end": 492,
+      "start": 952,
+      "end": 953,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 25,
           "column": 0
         },
         "end": {
-          "line": 17,
+          "line": 25,
           "column": 1
         }
       }
@@ -2630,15 +3453,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 492,
-      "end": 493,
+      "start": 953,
+      "end": 954,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 25,
           "column": 1
         },
         "end": {
-          "line": 17,
+          "line": 25,
           "column": 2
         }
       }
@@ -2656,15 +3479,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 493,
-      "end": 493,
+      "start": 954,
+      "end": 954,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 25,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 25,
           "column": 2
         }
       }

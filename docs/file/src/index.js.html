@@ -50,14 +50,22 @@ import {PrivacySettingsClient} from &quot;./PrivacySettingsClient&quot;;
 import {WpClient} from &quot;./WpClient&quot;;
 import {FormsClient} from &quot;./FormsClient&quot;;
 import {EntriesClient} from &quot;./EntriesClient&quot;;
+import {ProClient} from &quot;./ProClient&quot;;
+import {GeneralSettingClient} from &quot;./GeneralSettingClient&quot;;
 
+/**
+ * Export factory and all clients
+ * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}
+ */
 module.exports = {
 	wpClientFactory,
 	PrivacySettingsClient,
 	ProLocalSettingClient,
 	WpClient,
 	FormsClient,
-	EntriesClient
+	EntriesClient,
+	ProClient,
+	GeneralSettingClient
 };</code></pre>
 
 </div>

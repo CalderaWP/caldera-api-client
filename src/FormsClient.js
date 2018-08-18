@@ -15,7 +15,8 @@ export class FormsClient extends WpClient {
 	getForms(page: number = 1): Promise<any> {
 		return this.reqGet({
 			page:page,
-			_wpnonce:this.nonce
+			_wpnonce:this.nonce,
+			details:true,
 		},this.getFormsEndpoint());
 	}
 
