@@ -1,6 +1,6 @@
 {
   "name": "@caldera-labs/api-client",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "API client for Caldera Forms and Caldera Forms Pro",
   "main": "./dist/index.js",
   "scripts": {
