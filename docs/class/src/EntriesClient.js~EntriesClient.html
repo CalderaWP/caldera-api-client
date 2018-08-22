@@ -103,6 +103,64 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html#instance-method-deleteEntries">deleteEntries</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Delete all entries of a form</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html#instance-method-deleteEntry">deleteEntry</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Delete a single entry of a form</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntries">getEntries</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, page: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
         </p>
       </div>
@@ -197,6 +255,64 @@
         
         
         <div data-ice="description"><p>The endpoint URI for single entries</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryResendEndpoint">getEntryResendEndpoint</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The resend endpoint URI for single entries</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EntriesClient.js~EntriesClient.html#instance-method-resendEntry">resendEntry</a></span></span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Resent a single entry of a form</p>
 </div>
       </div>
     </td>
@@ -692,6 +808,159 @@
 <div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-deleteEntries">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">deleteEntries</span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber52">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Delete all entries of a form</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">formId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of form to get entries for.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-deleteEntry">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">deleteEntry</span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber42">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Delete a single entry of a form</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">formId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of form to get entries for.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">entryId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of entry to find.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-getEntries">
     <span class="access" data-ice="access">public</span>
     
@@ -783,7 +1052,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber40">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber72">source</a></span></span>
     </span>
   </h3>
 
@@ -936,7 +1205,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber51">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber83">source</a></span></span>
     </span>
   </h3>
 
@@ -981,6 +1250,166 @@
       <tbody>
         <tr>
           <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-getEntryResendEndpoint">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">getEntryResendEndpoint</span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber94">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The resend endpoint URI for single entries</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">formId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of form to get entries for.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">entryId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of entry to find.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-resendEntry">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">resendEntry</span><span class="code" data-ice="signature">(formId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>, entryId: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/src/EntriesClient.js.html#lineNumber63">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Resent a single entry of a form</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">formId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of form to get entries for.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">entryId</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>ID of entry to find.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span>any</span>&gt;</td>
           
         </tr>
       </tbody>

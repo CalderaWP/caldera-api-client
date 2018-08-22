@@ -426,6 +426,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/entriesclient.js~entriesclient#deleteentries",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-deleteEntries",
+    "src/EntriesClient.js~EntriesClient#deleteEntries",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#deleteentry",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-deleteEntry",
+    "src/EntriesClient.js~EntriesClient#deleteEntry",
+    "method"
+  ],
+  [
     "src/entriesclient.js~entriesclient#getentries",
     "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntries",
     "src/EntriesClient.js~EntriesClient#getEntries",
@@ -447,6 +459,18 @@ window.esdocSearchIndex = [
     "src/entriesclient.js~entriesclient#getentryendpoint",
     "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryEndpoint",
     "src/EntriesClient.js~EntriesClient#getEntryEndpoint",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#getentryresendendpoint",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-getEntryResendEndpoint",
+    "src/EntriesClient.js~EntriesClient#getEntryResendEndpoint",
+    "method"
+  ],
+  [
+    "src/entriesclient.js~entriesclient#resendentry",
+    "class/src/EntriesClient.js~EntriesClient.html#instance-method-resendEntry",
+    "src/EntriesClient.js~EntriesClient#resendEntry",
     "method"
   ],
   [

@@ -1199,7 +1199,7 @@
     "__docId__": 65,
     "kind": "file",
     "name": "src/EntriesClient.js",
-    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Client for accessing Caldera Forms entry data via Caldera Forms REST API\n */\nexport class EntriesClient extends WpClient {\n\n\t/**\n\t * Get one page of entries for a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {number} page Optional. Which page of entries to get. Default is 1.\n\t * @return {Promise<any>}\n\t */\n\tgetEntries(formId: string, page: number = 1): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\tpage,\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getEntriesEndpoint(formId));\n\t}\n\n\t/**\n\t * Get a single entry of a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {Promise<any>}\n\t */\n\tgetEntry(formId: string, entryId: number): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getEntryEndpoint(formId, entryId));\n\t}\n\n\td\n\n\n\t/**\n\t * The endpoint URI for a collection of entries for one form.\n\n\t * @param {String} formId ID of form to get entries for.\n\t * @return {string}\n\t */\n\tgetEntriesEndpoint(formId: string): string {\n\t\treturn `entries/${formId}`;\n\t}\n\n\t/**\n\t * The endpoint URI for single entries\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {string}\n\t */\n\tgetEntryEndpoint(formId: string, entryId: number): string {\n\t\treturn `${this.getEntriesEndpoint(formId)}/${entryId}`;\n\t}\n\n\n}",
+    "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Client for accessing Caldera Forms entry data via Caldera Forms REST API\n */\nexport class EntriesClient extends WpClient {\n\n\t/**\n\t * Get one page of entries for a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {number} page Optional. Which page of entries to get. Default is 1.\n\t * @return {Promise<any>}\n\t */\n\tgetEntries(formId: string, page: number = 1): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\tpage,\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getEntriesEndpoint(formId));\n\t}\n\n\t/**\n\t * Get a single entry of a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {Promise<any>}\n\t */\n\tgetEntry(formId: string, entryId: number): Promise<any> {\n\t\treturn this.reqGet({\n\t\t\t_wpnonce: this.nonce\n\t\t}, this.getEntryEndpoint(formId, entryId));\n\t}\n\n\t/**\n\t * Delete a single entry of a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {Promise<any>}\n\t */\n\tdeleteEntry( formId: string, entryId: number ): Promise<any> {\n\t\treturn this.reqDelete(this.getEntryEndpoint( formId, entryId ) );\n\t}\n\n\t/**\n\t * Delete all entries of a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @return {Promise<any>}\n\t */\n\tdeleteEntries( formId: string ): Promise<any> {\n\t\treturn this.reqDelete(this.getEntriesEndpoint( formId ) );\n\t}\n\n\t/**\n\t * Resent a single entry of a form\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {Promise<any>}\n\t */\n\tresendEntry( formId: string, entryId: number ): Promise<any> {\n\t\treturn this.reqPost(this.getEntryEndpoint( formId, entryId ) );\n\t}\n\n\n\t/**\n\t * The endpoint URI for a collection of entries for one form.\n\n\t * @param {String} formId ID of form to get entries for.\n\t * @return {string}\n\t */\n\tgetEntriesEndpoint(formId: string): string {\n\t\treturn `entries/${formId}`;\n\t}\n\n\t/**\n\t * The endpoint URI for single entries\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {string}\n\t */\n\tgetEntryEndpoint(formId: string, entryId: number): string {\n\t\treturn `${this.getEntriesEndpoint(formId)}/${entryId}`;\n\t}\n\n\t/**\n\t * The resend endpoint URI for single entries\n\t *\n\t * @param {String} formId ID of form to get entries for.\n\t * @param {String} entryId ID of entry to find.\n\t * @return {string}\n\t */\n\tgetEntryResendEndpoint(formId: string, entryId: number): string {\n\t\treturn `${this.getEntriesEndpoint(formId)}/${entryId}/resend`;\n\t}\n\n\n}",
     "static": true,
     "longname": "/Users/josh/caldera-js/api-client/src/EntriesClient.js",
     "access": "public",
@@ -1313,6 +1313,125 @@
   {
     "__docId__": 69,
     "kind": "method",
+    "name": "deleteEntry",
+    "memberof": "src/EntriesClient.js~EntriesClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EntriesClient.js~EntriesClient#deleteEntry",
+    "access": "public",
+    "description": "Delete a single entry of a form",
+    "lineNumber": 42,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formId",
+        "description": "ID of form to get entries for."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "entryId",
+        "description": "ID of entry to find."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<any>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "deleteEntries",
+    "memberof": "src/EntriesClient.js~EntriesClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EntriesClient.js~EntriesClient#deleteEntries",
+    "access": "public",
+    "description": "Delete all entries of a form",
+    "lineNumber": 52,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formId",
+        "description": "ID of form to get entries for."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<any>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "resendEntry",
+    "memberof": "src/EntriesClient.js~EntriesClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EntriesClient.js~EntriesClient#resendEntry",
+    "access": "public",
+    "description": "Resent a single entry of a form",
+    "lineNumber": 63,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formId",
+        "description": "ID of form to get entries for."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "entryId",
+        "description": "ID of entry to find."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<any>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
     "name": "getEntriesEndpoint",
     "memberof": "src/EntriesClient.js~EntriesClient",
     "generator": false,
@@ -1321,7 +1440,7 @@
     "longname": "src/EntriesClient.js~EntriesClient#getEntriesEndpoint",
     "access": "public",
     "description": "The endpoint URI for a collection of entries for one form.",
-    "lineNumber": 40,
+    "lineNumber": 72,
     "params": [
       {
         "nullable": null,
@@ -1344,7 +1463,7 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 73,
     "kind": "method",
     "name": "getEntryEndpoint",
     "memberof": "src/EntriesClient.js~EntriesClient",
@@ -1354,7 +1473,7 @@
     "longname": "src/EntriesClient.js~EntriesClient#getEntryEndpoint",
     "access": "public",
     "description": "The endpoint URI for single entries",
-    "lineNumber": 51,
+    "lineNumber": 83,
     "params": [
       {
         "nullable": null,
@@ -1387,7 +1506,50 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 74,
+    "kind": "method",
+    "name": "getEntryResendEndpoint",
+    "memberof": "src/EntriesClient.js~EntriesClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EntriesClient.js~EntriesClient#getEntryResendEndpoint",
+    "access": "public",
+    "description": "The resend endpoint URI for single entries",
+    "lineNumber": 94,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formId",
+        "description": "ID of form to get entries for."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "entryId",
+        "description": "ID of entry to find."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 75,
     "kind": "file",
     "name": "src/GeneralSettingClient.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Prepare data for\n * @param {Object} styleIncludes Style includes settings. Each value defaults to true\n * @param {boolean} cdnEnable Is CDN enabled? Default false\n * @return {{styleIncludes: {grid: boolean, form: boolean, alert: boolean}, otherSettings: {cdnEnable: boolean}}}\n */\nexport const prepareGeneralSettingsData = (styleIncludes: Object = {}, cdnEnable : boolean = false ) : Object => {\n\n\treturn {\n\t\tstyleIncludes: {\n\t\t\tgrid: styleIncludes.hasOwnProperty( 'grid' ) ? styleIncludes.grid : true,\n\t\t\tform: styleIncludes.hasOwnProperty( 'form' ) ? styleIncludes.form : true,\n\t\t\talert: styleIncludes.hasOwnProperty( 'alert' ) ? styleIncludes.alert : true,\n\t\t},\n\t\totherSettings: {\n\t\t\tcdnEnable\n\t\t}\n\t}\n};\n\n/**\n * Get and update a site's general settings\n */\nexport class GeneralSettingClient extends WpClient {\n\t/**\n\t * Get general settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tgetSettings(): Promise<any> {\n\t\treturn this.reqGet({}, '/settings');\n\t}\n\n\t/**\n\t * Update general settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tupdateSettings(styleIncludes: Object, cdnEnable : boolean): Promise<any> {\n\n\t\treturn this.reqPost(prepareGeneralSettingsData(styleIncludes,cdnEnable), '/settings');\n\t}\n\n\n}",
@@ -1398,7 +1560,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 72,
+    "__docId__": 76,
     "kind": "function",
     "name": "prepareGeneralSettingsData",
     "memberof": "src/GeneralSettingClient.js",
@@ -1444,7 +1606,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 77,
     "kind": "class",
     "name": "GeneralSettingClient",
     "memberof": "src/GeneralSettingClient.js",
@@ -1462,7 +1624,7 @@
     ]
   },
   {
-    "__docId__": 74,
+    "__docId__": 78,
     "kind": "method",
     "name": "getSettings",
     "memberof": "src/GeneralSettingClient.js~GeneralSettingClient",
@@ -1490,7 +1652,7 @@
     "params": []
   },
   {
-    "__docId__": 75,
+    "__docId__": 79,
     "kind": "method",
     "name": "updateSettings",
     "memberof": "src/GeneralSettingClient.js~GeneralSettingClient",
@@ -1531,7 +1693,7 @@
     ]
   },
   {
-    "__docId__": 76,
+    "__docId__": 80,
     "kind": "file",
     "name": "src/PrivacySettingsClient.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's privacy settings\n */\nexport class PrivacySettingsClient extends WpClient {\n\n\t/**\n\t * Get privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @returns {Promise}\n\t */\n\tgetSettings(formId: string): Promise<any> {\n\t\treturn this.reqGet({privacy:true},`forms/${formId}`);\n\t}\n\n\t/**\n\t * Update privacy settings for a form\n\t *\n\t * @param {String} formId ID of form to get settings for\n\t * @param {Object} data New settings\n\t * @returns {Promise}\n\t */\n\tupdateSettings(formId: string,data: Object): Promise<any>{\n\t\treturn this.reqPost(data,`forms/${formId}/privacy`);\n\t}\n\n}\n",
@@ -1542,7 +1704,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 77,
+    "__docId__": 81,
     "kind": "class",
     "name": "PrivacySettingsClient",
     "memberof": "src/PrivacySettingsClient.js",
@@ -1560,7 +1722,7 @@
     ]
   },
   {
-    "__docId__": 78,
+    "__docId__": 82,
     "kind": "method",
     "name": "getSettings",
     "memberof": "src/PrivacySettingsClient.js~PrivacySettingsClient",
@@ -1599,7 +1761,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 83,
     "kind": "method",
     "name": "updateSettings",
     "memberof": "src/PrivacySettingsClient.js~PrivacySettingsClient",
@@ -1648,7 +1810,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 84,
     "kind": "file",
     "name": "src/ProLocalSettingClient.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\n\n/**\n * Get and update a WordPress site's CF Pro settings\n */\nexport class ProLocalSettingClient extends WpClient {\n\t/**\n\t * Get CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tgetSettings(): Promise<any> {\n\t\treturn this.reqGet({},'/settings/pro');\n\t}\n\n\t/**\n\t * Update CF Pro settings on current site\n\t *\n\t * @returns {Promise}\n\t */\n\tupdateSettings(data: Object): Promise<any>{\n\t\treturn this.reqPost(data,'/settings/pro');\n\t}\n}",
@@ -1659,7 +1821,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 81,
+    "__docId__": 85,
     "kind": "class",
     "name": "ProLocalSettingClient",
     "memberof": "src/ProLocalSettingClient.js",
@@ -1677,7 +1839,7 @@
     ]
   },
   {
-    "__docId__": 82,
+    "__docId__": 86,
     "kind": "method",
     "name": "getSettings",
     "memberof": "src/ProLocalSettingClient.js~ProLocalSettingClient",
@@ -1705,7 +1867,7 @@
     "params": []
   },
   {
-    "__docId__": 83,
+    "__docId__": 87,
     "kind": "method",
     "name": "updateSettings",
     "memberof": "src/ProLocalSettingClient.js~ProLocalSettingClient",
@@ -1740,7 +1902,7 @@
     ]
   },
   {
-    "__docId__": 84,
+    "__docId__": 88,
     "kind": "file",
     "name": "src/WpClient.js",
     "content": "//@flow\n\nimport {ApiClient} from './ApiClient';\n\nexport class WpClient extends ApiClient {\n\t/**\n\t * WP API for requests\n\t *\n\t * @type {String}\n\t */\n\tnonce: string;\n\t/**\n\t * Set nonce for requests\n\t *\n\t * @param {String} nonce\n\t */\n\tsetNonce(nonce: string) {\n\t\tthis.nonce= nonce;\n\t\tthis.headers.set('X-WP-Nonce', this.nonce);\n\t}\n\n\tgetNonce(){\n\t\treturn 'string' === typeof this.nonce ? this.nonce : '';\n\t}\n\n}",
@@ -1751,7 +1913,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 85,
+    "__docId__": 89,
     "kind": "class",
     "name": "WpClient",
     "memberof": "src/WpClient.js",
@@ -1770,7 +1932,7 @@
     ]
   },
   {
-    "__docId__": 86,
+    "__docId__": 90,
     "kind": "method",
     "name": "setNonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1796,7 +1958,7 @@
     "return": null
   },
   {
-    "__docId__": 87,
+    "__docId__": 91,
     "kind": "member",
     "name": "nonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1813,7 +1975,7 @@
     }
   },
   {
-    "__docId__": 88,
+    "__docId__": 92,
     "kind": "method",
     "name": "getNonce",
     "memberof": "src/WpClient.js~WpClient",
@@ -1840,7 +2002,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 93,
     "kind": "file",
     "name": "src/index.js",
     "content": "/*eslint no-undef: \"error\"*/\n/*eslint-env node*/\nimport {wpClientFactory} from \"./wpClientFactory\";\nimport {ProLocalSettingClient} from \"./ProLocalSettingClient\";\nimport {PrivacySettingsClient} from \"./PrivacySettingsClient\";\nimport {WpClient} from \"./WpClient\";\nimport {FormsClient} from \"./FormsClient\";\nimport {EntriesClient} from \"./EntriesClient\";\nimport {ProClient} from \"./ProClient\";\nimport {GeneralSettingClient} from \"./GeneralSettingClient\";\n\n/**\n * Export factory and all clients\n * @type {{wpClientFactory: wpClientFactory, PrivacySettingsClient: PrivacySettingsClient, ProLocalSettingClient: ProLocalSettingClient, WpClient: WpClient, FormsClient: FormsClient, EntriesClient: EntriesClient, ProClient: ProClient, GeneralSettingClient: GeneralSettingClient}}\n */\nmodule.exports = {\n\twpClientFactory,\n\tPrivacySettingsClient,\n\tProLocalSettingClient,\n\tWpClient,\n\tFormsClient,\n\tEntriesClient,\n\tProClient,\n\tGeneralSettingClient\n};",
@@ -1851,7 +2013,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 90,
+    "__docId__": 94,
     "kind": "file",
     "name": "src/wpClientFactory.js",
     "content": "//@flow\nimport {WpClient} from './WpClient';\nimport {FormsClient} from './FormsClient';\nimport {PrivacySettingsClient} from './PrivacySettingsClient';\nimport {EntriesClient} from \"./EntriesClient\";\nimport {GeneralSettingClient} from \"./GeneralSettingClient\";\nimport {ProLocalSettingClient} from \"./ProLocalSettingClient\";\n\n/**\n * Create a WordPress API client\n * @param {String} wpApiUrl Root URL for the WordPress REST API of site\n * @param {String} wpApiNonce The REST API nonce\n * @param {String} type Optional. Type of client forms|privacy|generic Default is generic\n * @returns {FormsClient|PrivacySettingsClient|WpClient|EntriesClient|GeneralSettingClient}\n */\nexport function wpClientFactory(wpApiUrl: string, wpApiNonce: string, type: string = 'generic' ): WpClient {\n\tlet client = new WpClient(wpApiUrl);\n\tswitch (type) {\n\t\tcase 'forms':\n\t\t\tclient = new FormsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'privacy' :\n\t\t\tclient = new PrivacySettingsClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'entries':\n\t\tcase 'entry':\n\t\t\tclient = new EntriesClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'settings' :\n\t\t\tclient = new GeneralSettingClient(wpApiUrl);\n\t\t\tbreak;\n\t\tcase 'proLocal' :\n\t\t\tclient = new ProLocalSettingClient(wpApiUrl);\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tclient = new WpClient(wpApiUrl);\n\t\t\tbreak;\n\n\t}\n\tclient.setNonce(wpApiNonce);\n\treturn client;\n}",
@@ -1862,7 +2024,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 91,
+    "__docId__": 95,
     "kind": "function",
     "name": "wpClientFactory",
     "memberof": "src/wpClientFactory.js",
