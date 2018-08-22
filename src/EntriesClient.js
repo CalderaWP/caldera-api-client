@@ -44,6 +44,16 @@ export class EntriesClient extends WpClient {
 		return this.reqDelete(this.getEntryEndpoint( formId, entryId ) );
 	}
 
+	/**
+	 * Resent a single entry of a form
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {String} entryId ID of entry to find.
+	 * @return {Promise<any>}
+	 */
+	resendEntry( formId: string, entryId: number ): Promise<any> {
+		return this.reqPost(this.getEntryEndpoint( formId, entryId ) );
+	}
 
 
 	/**
@@ -65,6 +75,17 @@ export class EntriesClient extends WpClient {
 	 */
 	getEntryEndpoint(formId: string, entryId: number): string {
 		return `${this.getEntriesEndpoint(formId)}/${entryId}`;
+	}
+
+	/**
+	 * The resend endpoint URI for single entries
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {String} entryId ID of entry to find.
+	 * @return {string}
+	 */
+	getEntryResendEndpoint(formId: string, entryId: number): string {
+		return `${this.getEntriesEndpoint(formId)}/${entryId}/resend`;
 	}
 
 

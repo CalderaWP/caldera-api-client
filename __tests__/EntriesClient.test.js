@@ -42,6 +42,11 @@ describe( 'Entries client', () => {
 			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
 			expect( client.getEntryEndpoint(formId,27)).toEqual('entries/CF5b197831b60ae/27');
 		});
+
+		it( 'Resend entry URL', () => {
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			expect( client.getEntryResendEndpoint(formId,27)).toEqual('entries/CF5b197831b60ae/27/resend');
+		});
 	});
 
 	describe( 'getting entries', () => {
@@ -67,14 +72,30 @@ describe( 'Entries client', () => {
 		});
 	});
 
+	describe( 'Resending entries', () => {
+		it( 'Resends a single entry', () => {
+			const r = {
+				resent: true,
+				entry_id: '26'
+			};
+			fetch.mockResponseOnce(new Response(JSON.stringify(r)));
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			client.resendEntry(formId,26).then(  response => {
+				expect( response ).toEqual({});
+			},error => {});
+			expect(fetch.mock.calls).toHaveLength(1);
+		});
+	});
+
 	describe( 'deleting entries', () => {
-
-
 		it( 'Deletes a single entry', () => {
-			fetch.mockResponseOnce(new Response(JSON.stringify({})));
+			const r = {
+				message: 'Entry Deleted'
+			};
+			fetch.mockResponseOnce(new Response(JSON.stringify(r)));
 			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
 			client.deleteEntry(formId,26).then(  response => {
-				expect( response ).toEqual({});
+				expect( response ).toEqual(r);
 			},error => {});
 			expect(fetch.mock.calls).toHaveLength(1);
 		});

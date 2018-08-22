@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EntriesClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntriesClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,62 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6168731">
+    <splitter split-orientation="horizontal" split-proportion="0.36869055">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GenerallSettingsClient.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="78" column="53" lean-forward="true" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PrivacySettings.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="export.test.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/export.test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
-                  <folding>
-                    <element signature="e#0#30#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProLocalSettingClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="34" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+                <state relative-caret-position="551">
+                  <caret line="86" column="26" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -88,7 +38,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="295">
+                  <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-320">
@@ -110,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/dist/index.min.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1605">
-                  <caret line="1" column="106207" selection-start-line="1" selection-start-column="106207" selection-end-line="1" selection-end-column="106207" />
+                  <caret line="1" column="125113" selection-start-line="1" selection-start-column="125113" selection-end-line="1" selection-end-column="125113" />
                 </state>
               </provider>
             </entry>
@@ -118,8 +77,8 @@
           <file leaf-file-name="ApiClient.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2835">
-                  <caret line="189" column="9" selection-start-line="183" selection-start-column="8" selection-end-line="189" selection-end-column="9" />
+                <state relative-caret-position="220">
+                  <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -159,15 +118,6 @@
               <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
-          <file leaf-file-name="PrivacySettingsClient.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/PrivacySettingsClient.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-second>
     </splitter>
@@ -183,6 +133,7 @@
     <findStrings>
       <find>json</find>
       <find>low</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/export.test.js" />
         <option value="$PROJECT_DIR$/setupJest.js" />
         <option value="$PROJECT_DIR$/src/FormsClient.js" />
+        <option value="$PROJECT_DIR$/src/ApiClient.js" />
         <option value="$PROJECT_DIR$/src/EntriesClient.js" />
         <option value="$PROJECT_DIR$/__tests__/EntriesClient.test.js" />
       </list>
@@ -230,9 +182,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
+    <option name="x" value="187" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1733" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -326,15 +278,15 @@
       <workItem from="1534772995099" duration="2180000" />
       <workItem from="1534798969388" duration="618000" />
       <workItem from="1534864283009" duration="1110000" />
-      <workItem from="1534886600375" duration="1518000" />
+      <workItem from="1534886600375" duration="1998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24552000" />
+    <option name="totallyTimeSpent" value="25032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="187" y="23" width="1733" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -343,9 +295,9 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32820514" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" x="0" y="79" width="802" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
-      <window_info anchor="bottom" id="Flow" order="8" visible="true" weight="0.17051283" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23175965" />
+      <window_info active="true" anchor="bottom" x="0" y="79" width="802" height="719" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.26875" />
+      <window_info anchor="bottom" id="Flow" order="8" weight="0.17051283" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916026" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -584,41 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/export.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GeneralSettingClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -632,7 +553,7 @@
     <entry file="file://$PROJECT_DIR$/dist/index.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
-          <caret line="1" column="106207" selection-start-line="1" selection-start-column="106207" selection-end-line="1" selection-end-column="106207" />
+          <caret line="1" column="125113" selection-start-line="1" selection-start-column="125113" selection-end-line="1" selection-end-column="125113" />
         </state>
       </provider>
     </entry>
@@ -654,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="189" column="9" selection-start-line="183" selection-start-column="8" selection-end-line="189" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -691,6 +605,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/export.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/PrivacySettings.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProLocalSettingClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-320">
@@ -698,17 +643,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApiClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        <state relative-caret-position="551">
+          <caret line="86" column="26" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="78" column="53" lean-forward="true" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+        <state relative-caret-position="295">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
         </state>
       </provider>
     </entry>
