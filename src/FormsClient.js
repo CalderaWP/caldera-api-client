@@ -58,6 +58,16 @@ export class FormsClient extends WpClient {
 	}
 
 	/**
+	 * Delete a form
+	 *
+	 * @param {String} formId
+	 * @return {Promise<any>}
+	 */
+	deleteForm( formId: string ) : Promise<any> {
+		return this.reqDelete(this.getFormEndpoint(formId));
+	}
+
+	/**
 	 * Get route endpoint for forms route
 	 *
 	 * @returns {string}
