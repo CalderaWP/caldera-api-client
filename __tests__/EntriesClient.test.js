@@ -67,4 +67,16 @@ describe( 'Entries client', () => {
 		});
 	});
 
+	describe( 'deleting entries', () => {
+
+
+		it( 'Deletes a single entry', () => {
+			fetch.mockResponseOnce(new Response(JSON.stringify({})));
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			client.deleteEntry(formId,26).then(  response => {
+				expect( response ).toEqual({});
+			},error => {});
+			expect(fetch.mock.calls).toHaveLength(1);
+		});
+	});
 });

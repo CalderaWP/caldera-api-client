@@ -34,6 +34,19 @@ export class EntriesClient extends WpClient {
 	}
 
 	/**
+	 * Delete a single entry of a form
+	 *
+	 * @param {String} formId ID of form to get entries for.
+	 * @param {String} entryId ID of entry to find.
+	 * @return {Promise<any>}
+	 */
+	deleteEntry( formId: string, entryId: number ): Promise<any> {
+		return this.reqDelete(this.getEntryEndpoint( formId, entryId ) );
+	}
+
+
+
+	/**
 	 * The endpoint URI for a collection of entries for one form.
 
 	 * @param {String} formId ID of form to get entries for.
