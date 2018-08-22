@@ -94,7 +94,9 @@ describe( 'Forms Client', () => {
 				name: 'new form'
 			};
 			fetch.mockResponseOnce(JSON.stringify(mockForm));
-			client.createForm('new form', ).then(  response => {
+			client.createForm('new form', {
+				ID: 'cf12345'
+			}).then(  response => {
 				expect( response ).toEqual(mockForm);
 			}).catch((error) => {
 				// eslint-disable-next-line no-console
@@ -105,18 +107,22 @@ describe( 'Forms Client', () => {
 
 		});
 
-		it( 'creates forms with options', () => {
+	});
+
+	describe( 'Delete form route', () => {
+		beforeEach(() => {
+			fetch.resetMocks();
+		});
+
+		it( 'creates forms', () => {
 			const client = new FormsClient(formsApiRoute );
 			client.setNonce('12345');
-			const mockForm = {
-				ID: 'cf12345',
-				name: 'new form'
+			const r = {
+				message: 'deleted'
 			};
-			fetch.mockResponseOnce(JSON.stringify(mockForm));
-			client.createForm('new form', {
-				ID: 'cf12345'
-			}).then(  response => {
-				expect( response ).toEqual(mockForm);
+			fetch.mockResponseOnce(JSON.stringify(r));
+			client.deleteForm('cf12345').then(  response => {
+				expect( response ).toEqual(r);
 			}).catch((error) => {
 				// eslint-disable-next-line no-console
 				console.log(error);

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/FormsClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/FormsClient.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,14 +12,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3035845">
+    <splitter split-orientation="horizontal" split-proportion="0.44257498">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+                <state relative-caret-position="177">
+                  <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FormsClient.test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="430">
+                  <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -37,16 +46,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="640">
-                  <caret line="114" column="3" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
+                  <caret line="114" column="3" lean-forward="true" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="FormsClient.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="445">
@@ -128,6 +137,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>delete</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -135,7 +149,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/manual/overview.md" />
-        <option value="$PROJECT_DIR$/__tests__/FormsClient.test.js" />
         <option value="$PROJECT_DIR$/src/GeneralSettingClient.js" />
         <option value="$PROJECT_DIR$/__tests__/GenerallSettingsClient.test.js" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -144,8 +157,9 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/export.test.js" />
         <option value="$PROJECT_DIR$/setupJest.js" />
-        <option value="$PROJECT_DIR$/src/EntriesClient.js" />
         <option value="$PROJECT_DIR$/src/FormsClient.js" />
+        <option value="$PROJECT_DIR$/src/EntriesClient.js" />
+        <option value="$PROJECT_DIR$/__tests__/FormsClient.test.js" />
       </list>
     </option>
   </component>
@@ -265,7 +279,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16858000" />
+    <option name="totallyTimeSpent" value="17767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="187" y="23" width="1733" height="877" extended-state="0" />
@@ -629,20 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="38" column="11" selection-start-line="26" selection-start-column="8" selection-end-line="38" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="114" column="3" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FormsClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -650,10 +650,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="114" column="3" lean-forward="true" selection-start-line="114" selection-start-column="3" selection-end-line="114" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        <state relative-caret-position="177">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__tests__/FormsClient.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
         </state>
       </provider>
     </entry>
