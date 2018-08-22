@@ -99,5 +99,17 @@ describe( 'Entries client', () => {
 			},error => {});
 			expect(fetch.mock.calls).toHaveLength(1);
 		});
+
+		it( 'Deletes all entries of form', () => {
+			const r = {
+				message: 'All Entry Deleted'
+			};
+			fetch.mockResponseOnce(new Response(JSON.stringify(r)));
+			const client = new EntriesClient('https://hiroy.club/wp-json/cf-api/v1');
+			client.deleteEntries(formId).then(  response => {
+				expect( response ).toEqual(r);
+			},error => {});
+			expect(fetch.mock.calls).toHaveLength(1);
+		});
 	});
 });

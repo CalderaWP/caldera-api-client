@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3667fff2-8480-411f-84f9-63b9c6d29702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/EntriesClient.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EntriesClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntriesClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,14 +12,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36869055">
+    <splitter split-orientation="horizontal" split-proportion="0.3972202">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="EntriesClient.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="86" column="26" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="26" />
+                <state relative-caret-position="385">
+                  <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
                 </state>
               </provider>
             </entry>
@@ -41,8 +40,8 @@
           <file leaf-file-name="EntriesClient.test.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="295">
-                  <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+                <state relative-caret-position="626">
+                  <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
@@ -278,12 +277,12 @@
       <workItem from="1534772995099" duration="2180000" />
       <workItem from="1534798969388" duration="618000" />
       <workItem from="1534864283009" duration="1110000" />
-      <workItem from="1534886600375" duration="1998000" />
+      <workItem from="1534886600375" duration="2085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25032000" />
+    <option name="totallyTimeSpent" value="25119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="187" y="23" width="1733" height="877" extended-state="0" />
@@ -652,15 +651,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EntriesClient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="86" column="26" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="26" />
+        <state relative-caret-position="385">
+          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__tests__/EntriesClient.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        <state relative-caret-position="626">
+          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
         </state>
       </provider>
     </entry>
