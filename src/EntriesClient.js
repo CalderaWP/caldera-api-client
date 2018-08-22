@@ -54,5 +54,4 @@ export class EntriesClient extends WpClient {
 		return `${this.getEntriesEndpoint(formId)}/${entryId}`;
 	}
 
-
 }
