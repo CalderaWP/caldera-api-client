@@ -51,6 +51,19 @@ const formsAdminApiClient = calderaApiClient.wpClientFactory(
 );
 ```
 
+#### Enabling Cross-Origin Requests
+By default, requests are same-origin only. Cross-origin requests are possible. The WP REST API nonce auth will not work cross-origin. You must implement your own auth.
+```js
+import {wpClientFactory} from '@caldera-labs/api-client';
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+	'https://hiroy.club/wp-json/cf-api/v2', 
+    '12345', 
+    'forms' 
+);
+formsAdminApiClient.setCorsMode(true);
+```
+
+
 ### WordPress Admin Clients
 
 * Get or update Caldera Forms form configs or other settings.

@@ -5,6 +5,27 @@ function removeForwardSlash(endpoint) {
 	return endpoint;
 }
 
+function createRequestArgs(method: string, headers: Headers, corsMode:boolean = true ){
+	const args = {
+		method,
+		redirect: 'follow',
+		headers
+	};
+
+	if( corsMode ){
+		return {
+			...args,
+			mode:'cors',
+		};
+	}else{
+		return {
+			...args,
+			mode:'same-origin',
+			credentials: 'same-origin',
+		};
+	}
+};
+
 //@flow
 /**
  * Generic API client
@@ -22,6 +43,13 @@ export class ApiClient{
 	 * @type {Headers}
 	 */
 	headers: Headers;
+
+	/**
+	 * Is CORS mode enabled?
+	 *
+	 * @type string
+	 */
+	corsMode: boolean;
 
 	/**
 	 *
@@ -46,6 +74,14 @@ export class ApiClient{
 	}
 
 	/**
+	 * Set CORS mode
+	 *
+	 * @param {boolean} corsMode
+	 */
+	setCorsMode(corsMode: boolean){
+		this.corsMode = corsMode;
+	}
+	/**
 	 * Make a request to an endpoint
 	 *
 	 * @param {String} endpoint
@@ -68,13 +104,7 @@ export class ApiClient{
 	 * @returns {Request}
 	 */
 	createRequest(endpoint: string, data: Object, method: string): Request {
-		let args = {
-			method,
-			mode:'same-origin',
-			credentials: 'same-origin',
-			redirect: 'follow',
-			headers: this.headers
-		};
+		let args = createRequestArgs(method,this.headers,this.corsMode);
 
 		if ('POST' === method || 'PUT' === method) {
 			args.body = JSON.stringify(data);
@@ -85,6 +115,7 @@ export class ApiClient{
 		return new Request(this.urlFromEndpoint(endpoint, method,data), args);
 
 	}
+
 	/**
 	 * Create URL for route with endpoint
 	 * @param endpoint
