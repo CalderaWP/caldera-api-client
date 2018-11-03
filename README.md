@@ -4,8 +4,7 @@ JavaScript API client for [Caldera Forms REST API](https://calderaforms.com/doc/
 🌋 👀 [Documentation](https://calderalabs.org/caldera-api-client/)
 
 [![Build Status](https://travis-ci.org/CalderaWP/caldera-api-client.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-api-client.svg)
-[![Coverage Status](https://coveralls.io/repos/github/CalderaWP/caldera-api-client/badge.svg?branch=master)](https://coveralls.io/github/CalderaWP/caldera-api-client?branch=master)
-[![Documentation Status](https://calderalabs.org/caldera-api-client/badge.svg)](https://calderalabs.org/caldera-api-client/source.html)
+[![Documentation Status](https://travis-ci.org/CalderaWP/caldera-api-client.svg?branch=master)](https://travis-ci.org/CalderaWP/caldera-api-client.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a2e2c1afbb3eae8a6635/maintainability)](https://codeclimate.com/github/CalderaWP/caldera-api-client/maintainability)
 ## Install
 `npm i @caldera-labs/api-client`
@@ -17,8 +16,8 @@ import {wpClientFactory} from '@caldera-labs/api-client';
 
 const formsAdminApiClient = wpClientFactory(
 	'https://hiroy.club/wp-json/cf-api/v2', //root of Caldera Forms REST API namespace
-    '12345', //the nonce for REST API cookie authentication
-    'forms' //type of client to get
+	'12345', //the nonce for REST API cookie authentication
+    	'forms' //type of client to get
 );
 let forms = [];
 formsAdminApiClient(page).then(r => {
@@ -30,8 +29,6 @@ formsAdminApiClient(page).then(r => {
 ```
 
 See: [http://calderalabs.org/caldera-api-client/manual/overview.html#usage](http://calderalabs.org/caldera-api-client/manual/overview.html#usage)
-
-
 
 ## Development Requirements
 * [npm](https://www.npmjs.com/get-npm)
