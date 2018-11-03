@@ -1,11 +1,5 @@
 window.esdocSearchIndex = [
   [
-    "@caldera-labs/api-client/src/apiclient.js~apiclient",
-    "class/src/ApiClient.js~ApiClient.html",
-    "<span>ApiClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/ApiClient.js</span>",
-    "class"
-  ],
-  [
     "@caldera-labs/api-client/src/entriesclient.js~entriesclient",
     "class/src/EntriesClient.js~EntriesClient.html",
     "<span>EntriesClient</span> <span class=\"search-result-import-path\">@caldera-labs/api-client/src/EntriesClient.js</span>",
@@ -328,96 +322,6 @@ window.esdocSearchIndex = [
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
     "src/.external-ecmascript.js~undefined",
     "external"
-  ],
-  [
-    "src/apiclient.js",
-    "file/src/ApiClient.js.html",
-    "src/ApiClient.js",
-    "file"
-  ],
-  [
-    "src/apiclient.js~apiclient#constructor",
-    "class/src/ApiClient.js~ApiClient.html#instance-constructor-constructor",
-    "src/ApiClient.js~ApiClient#constructor",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#createrequest",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-createRequest",
-    "src/ApiClient.js~ApiClient#createRequest",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#handleerror",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-handleError",
-    "src/ApiClient.js~ApiClient#handleError",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#handleresponse",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-handleResponse",
-    "src/ApiClient.js~ApiClient#handleResponse",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#headers",
-    "class/src/ApiClient.js~ApiClient.html#instance-member-headers",
-    "src/ApiClient.js~ApiClient#headers",
-    "member"
-  ],
-  [
-    "src/apiclient.js~apiclient#makerequest",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-makeRequest",
-    "src/ApiClient.js~ApiClient#makeRequest",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#reqdelete",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-reqDelete",
-    "src/ApiClient.js~ApiClient#reqDelete",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#reqget",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-reqGet",
-    "src/ApiClient.js~ApiClient#reqGet",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#reqpost",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-reqPost",
-    "src/ApiClient.js~ApiClient#reqPost",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#reqput",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-reqPut",
-    "src/ApiClient.js~ApiClient#reqPut",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#route",
-    "class/src/ApiClient.js~ApiClient.html#instance-member-route",
-    "src/ApiClient.js~ApiClient#route",
-    "member"
-  ],
-  [
-    "src/apiclient.js~apiclient#setheaders",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-setHeaders",
-    "src/ApiClient.js~ApiClient#setHeaders",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#urlfromendpoint",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-urlFromEndpoint",
-    "src/ApiClient.js~ApiClient#urlFromEndpoint",
-    "method"
-  ],
-  [
-    "src/apiclient.js~apiclient#urlstring",
-    "class/src/ApiClient.js~ApiClient.html#instance-method-urlString",
-    "src/ApiClient.js~ApiClient#urlString",
-    "method"
   ],
   [
     "src/entriesclient.js",

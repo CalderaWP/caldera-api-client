@@ -42,6 +42,7 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/overview.html"><a href="manual/overview.html#usage" data-ice="link">Usage</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#import-with-webpack" data-ice="link">Import With webpack</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#full-example" data-ice="link">Full Example</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#enabling-cross-origin-requests" data-ice="link">Enabling Cross-Origin Requests</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/overview.html"><a href="manual/overview.html#wordpress-admin-clients" data-ice="link">WordPress Admin Clients</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-forms-or-a-specific-form-with-the-forms-client" data-ice="link">Get Forms or A Specific Form With The Forms Client</a></li>
 <li data-ice="manualNav" class="indent-h4" data-link="manual/overview.html"><a href="manual/overview.html#get-saved-entries-for-a-form-or-a-specific-entry" data-ice="link">Get Saved Entries For A Form Or A Specific Entry</a></li>
@@ -105,6 +106,13 @@ const formsAdminApiClient = calderaApiClient.wpClientFactory(
     &apos;12345&apos;, //the nonce for REST API cookie authentication
     &apos;forms&apos; //type of client to get
 );</code>
+</code></pre><h4>Enabling Cross-Origin Requests</h4><p>By default, requests are same-origin only. Cross-origin requests are possible. The WP REST API nonce auth will not work cross-origin. You must implement your own auth.</p><pre><code class="lang-js"><code class="source-code prettyprint">import {wpClientFactory} from &apos;@caldera-labs/api-client&apos;;
+const formsAdminApiClient = calderaApiClient.wpClientFactory(
+    &apos;https://hiroy.club/wp-json/cf-api/v2&apos;, 
+    &apos;12345&apos;, 
+    &apos;forms&apos; 
+);
+formsAdminApiClient.setCorsMode(true);</code>
 </code></pre><h3>WordPress Admin Clients</h3><ul>
 <li><p>Get or update Caldera Forms form configs or other settings.</p>
 </li>
