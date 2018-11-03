@@ -5,7 +5,7 @@ function removeForwardSlash(endpoint) {
 	return endpoint;
 }
 
-function createRequestArgs(method: string, headers: Headers,corsMode:boolean = true ){
+function createRequestArgs(method: string, headers: Headers, corsMode:boolean = true ){
 	const args = {
 		method,
 		redirect: 'follow',
@@ -16,13 +16,13 @@ function createRequestArgs(method: string, headers: Headers,corsMode:boolean = t
 		return {
 			...args,
 			mode:'cors',
-		}
+		};
 	}else{
 		return {
 			...args,
 			mode:'same-origin',
 			credentials: 'same-origin',
-		}
+		};
 	}
 };
 

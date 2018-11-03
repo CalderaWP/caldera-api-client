@@ -107,6 +107,19 @@ describe('Makes requests', () => {
 			expect(fetch.mock.calls).toHaveLength(1);
 		});
 
+		it('Makes POST requests using reqPost and CORS mode set to true', () => {
+			fetch.mockResponseOnce(new Response(JSON.stringify(forms)));
+			const formsClient = new ApiClient('/forms', {});
+			formsClient.setCorsMode(true);
+			formsClient.reqPost({form}, '/cf1').then(res => {
+				expect(res).toEqual(JSON.stringify(forms));
+			}, error => {
+				//nothing here, but test will generate an error without it.
+			});
+
+			expect(fetch.mock.calls).toHaveLength(1);
+		});
+
 		it( 'sets CORS mode', () => {
 			const formsClient = new ApiClient('/forms', {});
 			formsClient.setCorsMode(true);
