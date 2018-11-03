@@ -106,6 +106,18 @@ describe('Makes requests', () => {
 
 			expect(fetch.mock.calls).toHaveLength(1);
 		});
+
+		it( 'sets CORS mode', () => {
+			const formsClient = new ApiClient('/forms', {});
+			formsClient.setCorsMode(true);
+			expect(formsClient.corsMode).toBe(true);
+
+			formsClient.setCorsMode(false);
+			expect(formsClient.corsMode).toBe(false);
+
+			formsClient.setCorsMode(true);
+			expect(formsClient.corsMode).toBe(true);
+		});
 	});
 
 	describe('PUT', () => {
